@@ -36,9 +36,9 @@ export default function Header() {
           href="/"
           className="flex items-center gap-2"
         >
-          <LogoIcon size={36} className="shrink-0" />
-          <span className="text-lg font-bold tracking-tight text-[#005bbf] dark:text-[#5BA3E6]">
-            oktools
+          <LogoIcon className="shrink-0" />
+          <span className="text-[1.1rem] font-extrabold tracking-tight text-gray-900 dark:text-gray-50">
+            ok<span className="text-[#005BBF] dark:text-[#5BA3E6]">tools</span>
           </span>
         </Link>
 
