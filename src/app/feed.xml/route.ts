@@ -3,14 +3,17 @@ import { tools } from "@/data/tools";
 const SITE_URL = "https://www.oktools.co.kr";
 
 export async function GET() {
+  const pubDate = new Date("2026-04-04").toUTCString();
+
   const items = tools
     .map(
       (tool) => `
     <item>
-      <title>${tool.name}</title>
+      <title><![CDATA[${tool.name}]]></title>
       <link>${SITE_URL}${tool.path}</link>
-      <description>${tool.description}</description>
-      <pubDate>${new Date().toUTCString()}</pubDate>
+      <guid isPermaLink="true">${SITE_URL}${tool.path}</guid>
+      <description><![CDATA[${tool.description}]]></description>
+      <pubDate>${pubDate}</pubDate>
     </item>`
     )
     .join("");
@@ -22,6 +25,7 @@ export async function GET() {
     <link>${SITE_URL}</link>
     <description>대출 계산기부터 타로카드까지, 44가지 도구를 깔끔한 디자인으로 무료 제공합니다.</description>
     <language>ko</language>
+    <lastBuildDate>${pubDate}</lastBuildDate>
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
     ${items}
   </channel>
@@ -29,7 +33,7 @@ export async function GET() {
 
   return new Response(feed, {
     headers: {
-      "Content-Type": "application/xml; charset=utf-8",
+      "Content-Type": "application/rss+xml; charset=utf-8",
       "Cache-Control": "s-maxage=3600, stale-while-revalidate",
     },
   });
