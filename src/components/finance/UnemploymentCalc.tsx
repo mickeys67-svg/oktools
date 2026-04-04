@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { formatNumber, formatWon, formatKoreanWon } from "@/lib/format-ko";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 // 지급기간 (일) - [50세 미만, 50세 이상/장애인]
 const DURATION_TABLE: { minYears: number; maxYears: number; under50: number; over50: number }[] = [
@@ -91,55 +92,31 @@ export default function UnemploymentCalc() {
           <p className="mt-1 text-xs text-gray-400">{formatKoreanWon(monthlySalary)}</p>
         </div>
 
-        {/* 나이 */}
+        {/* 나이 / 가입기간 / 근무시간 */}
         <div className="mb-5">
           <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">
-            만 나이
+            만 나이 / 가입기간 / 근무시간
           </label>
-          <input
-            type="number"
-            min={18}
-            max={70}
-            value={age}
-            onChange={(e) => setAge(Number(e.target.value))}
-            className={`${inputClass} text-right`}
-          />
-          <p className="mt-1 text-xs text-gray-400">
+          <div className="flex justify-center gap-2">
+            <NumberWheel
+              min={18} max={70} step={1} value={age} onChange={setAge}
+              unit="세"
+              accentClass="bg-finance/10 dark:bg-finance/20"
+            />
+            <NumberWheel
+              min={0} max={40} step={1} value={insuranceYears} onChange={setInsuranceYears}
+              unit="년"
+              accentClass="bg-finance/10 dark:bg-finance/20"
+            />
+            <NumberWheel
+              min={1} max={12} step={1} value={dailyHours} onChange={setDailyHours}
+              unit="시간"
+              accentClass="bg-finance/10 dark:bg-finance/20"
+            />
+          </div>
+          <p className="mt-1 text-center text-xs text-gray-400">
             {age >= 50 ? "50세 이상 (확대 지급기간 적용)" : "50세 미만"}
           </p>
-        </div>
-
-        {/* 고용보험 가입기간 */}
-        <div className="mb-5">
-          <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">
-            고용보험 가입기간 (년)
-          </label>
-          <input
-            type="number"
-            min={0}
-            max={40}
-            value={insuranceYears}
-            onChange={(e) => setInsuranceYears(Number(e.target.value))}
-            className={`${inputClass} text-right`}
-          />
-        </div>
-
-        {/* 1일 근무시간 */}
-        <div>
-          <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">
-            1일 근무시간
-          </label>
-          <div className="flex items-center gap-3">
-            <input
-              type="number"
-              min={1}
-              max={12}
-              value={dailyHours}
-              onChange={(e) => setDailyHours(Number(e.target.value))}
-              className={`${inputClass} text-right`}
-            />
-            <span className="shrink-0 text-sm text-gray-500">시간</span>
-          </div>
         </div>
       </div>
 

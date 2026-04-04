@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { formatNumber, formatWon, formatKoreanWon } from "@/lib/format-ko";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 const QUICK_DISCOUNTS = [10, 20, 30, 40, 50, 70];
 
@@ -32,14 +33,17 @@ export default function DiscountCalc() {
 
         <div>
           <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">할인율 (%)</label>
-          <input
-            type="number"
-            min="0"
-            max="100"
-            value={discount}
-            onChange={(e) => setDiscount(Math.min(100, Math.max(0, Number(e.target.value))))}
-            className="mb-2 w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
-          />
+          <div className="mb-3 flex justify-center">
+            <NumberWheel
+              min={0}
+              max={100}
+              value={discount}
+              onChange={setDiscount}
+              unit="%"
+              width={90}
+              accentClass="bg-life/10 dark:bg-life/20"
+            />
+          </div>
           <div className="flex flex-wrap gap-2">
             {QUICK_DISCOUNTS.map((d) => (
               <button

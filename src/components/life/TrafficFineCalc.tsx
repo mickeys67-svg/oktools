@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 type Tab = "speed" | "parking";
 type RoadType = "general" | "highway" | "school";
@@ -117,28 +118,29 @@ export default function TrafficFineCalc() {
 
           {/* Speed inputs */}
           <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-lg dark:border-gray-800 dark:bg-gray-900">
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="mb-1 block text-xs font-medium text-gray-500">제한속도 (km/h)</label>
-                <input
-                  type="number"
-                  min={30}
-                  max={110}
-                  value={speedLimit}
-                  onChange={(e) => setSpeedLimit(Number(e.target.value))}
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-50"
-                />
-              </div>
-              <div>
-                <label className="mb-1 block text-xs font-medium text-gray-500">실제속도 (km/h)</label>
-                <input
-                  type="number"
-                  min={0}
-                  value={actualSpeed}
-                  onChange={(e) => setActualSpeed(Number(e.target.value))}
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-50"
-                />
-              </div>
+            <div className="flex justify-center gap-6">
+              <NumberWheel
+                min={20}
+                max={120}
+                step={10}
+                value={Math.round(speedLimit / 10) * 10}
+                onChange={setSpeedLimit}
+                label="제한속도"
+                unit="km/h"
+                width={90}
+                accentClass="bg-life/10 dark:bg-life/20"
+              />
+              <NumberWheel
+                min={20}
+                max={200}
+                step={5}
+                value={Math.round(actualSpeed / 5) * 5}
+                onChange={setActualSpeed}
+                label="실제속도"
+                unit="km/h"
+                width={90}
+                accentClass="bg-life/10 dark:bg-life/20"
+              />
             </div>
             <div className="mt-3 rounded-lg bg-gray-50 px-4 py-2 text-center dark:bg-gray-800">
               <span className="text-xs text-gray-500">초과속도</span>

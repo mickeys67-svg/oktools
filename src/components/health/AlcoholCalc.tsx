@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 interface Preset {
   label: string;
@@ -73,15 +74,11 @@ export default function AlcoholCalc() {
           </div>
         </div>
 
-        <div>
-          <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">체중 (kg)</label>
-          <input
-            type="number"
-            min={30}
-            max={200}
-            value={weight}
-            onChange={(e) => setWeight(Number(e.target.value))}
-            className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-50"
+        <div className="flex justify-center">
+          <NumberWheel
+            min={30} max={200} value={weight} onChange={setWeight}
+            step={1} label="체중" unit="kg" width={90}
+            accentClass="bg-health/10 dark:bg-health/20"
           />
         </div>
       </div>

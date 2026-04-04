@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { calcBMR } from "@/lib/health";
 import { formatNumber } from "@/lib/format-ko";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 export default function BMRCalculator() {
   const [gender, setGender] = useState<"male" | "female">("male");
@@ -30,24 +31,23 @@ export default function BMRCalculator() {
             ))}
           </div>
         </div>
-        {/* Age */}
-        <div className="mb-4">
-          <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">나이 (세)</label>
-          <input type="number" min={1} max={120} value={age} onChange={(e) => setAge(Number(e.target.value))}
-            className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100" />
-        </div>
-        {/* Height & Weight */}
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">키 (cm)</label>
-            <input type="number" min={50} max={250} value={height} onChange={(e) => setHeight(Number(e.target.value))}
-              className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100" />
-          </div>
-          <div>
-            <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">체중 (kg)</label>
-            <input type="number" min={10} max={300} value={weight} onChange={(e) => setWeight(Number(e.target.value))}
-              className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100" />
-          </div>
+        {/* Age, Height & Weight Wheels */}
+        <div className="flex justify-center gap-4">
+          <NumberWheel
+            min={1} max={120} value={age} onChange={setAge}
+            step={1} label="나이" unit="세" width={80}
+            accentClass="bg-health/10 dark:bg-health/20"
+          />
+          <NumberWheel
+            min={50} max={250} value={height} onChange={setHeight}
+            step={1} label="키" unit="cm" width={80}
+            accentClass="bg-health/10 dark:bg-health/20"
+          />
+          <NumberWheel
+            min={10} max={300} value={weight} onChange={setWeight}
+            step={1} label="체중" unit="kg" width={80}
+            accentClass="bg-health/10 dark:bg-health/20"
+          />
         </div>
       </div>
 

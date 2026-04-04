@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { planets, calcPlanetWeight } from "@/data/planets";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 export default function PlanetWeightCalc() {
   const [weight, setWeight] = useState(70);
@@ -14,16 +15,17 @@ export default function PlanetWeightCalc() {
         <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">
           지구에서의 몸무게 (kg)
         </label>
-        <input
-          type="number"
-          inputMode="decimal"
-          step="0.1"
-          min="1"
-          max="500"
-          value={weight}
-          onChange={(e) => setWeight(Number(e.target.value))}
-          className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
-        />
+        <div className="flex justify-center">
+          <NumberWheel
+            min={1}
+            max={200}
+            value={weight}
+            onChange={setWeight}
+            unit="kg"
+            width={90}
+            accentClass="bg-space/10 dark:bg-space/20"
+          />
+        </div>
         <div className="mt-2 flex flex-wrap gap-2">
           {[50, 60, 70, 80, 90, 100].map((w) => (
             <button

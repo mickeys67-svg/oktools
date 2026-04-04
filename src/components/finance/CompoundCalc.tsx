@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { calcCompound } from "@/lib/finance";
 import { formatNumber, formatWon, formatKoreanWon } from "@/lib/format-ko";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 export default function CompoundCalc() {
   const [initial, setInitial] = useState(10_000_000);
@@ -36,16 +37,19 @@ export default function CompoundCalc() {
               className="w-full rounded-lg border border-gray-300 bg-white py-3 pl-8 pr-4 text-right text-lg font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100" />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">연 수익률 (%)</label>
-            <input type="number" step="0.5" min="0" max="30" value={rate} onChange={(e) => setRate(Number(e.target.value))}
-              className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100" />
-          </div>
-          <div>
-            <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">투자 기간 (년)</label>
-            <input type="number" min="1" max="50" value={years} onChange={(e) => setYears(Number(e.target.value))}
-              className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100" />
+        <div>
+          <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">연 수익률 / 투자 기간</label>
+          <div className="flex justify-center gap-2">
+            <NumberWheel
+              min={0} max={30} step={0.5} value={rate} onChange={setRate}
+              unit="%" format={(v) => v.toFixed(1)}
+              accentClass="bg-finance/10 dark:bg-finance/20"
+            />
+            <NumberWheel
+              min={1} max={50} step={1} value={years} onChange={setYears}
+              unit="년"
+              accentClass="bg-finance/10 dark:bg-finance/20"
+            />
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { calcLoan, type RepaymentType, type LoanResult } from "@/lib/finance";
 import { formatNumber, formatWon, formatKoreanWon, formatPercent } from "@/lib/format-ko";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 const QUICK_AMOUNTS = [
   { label: "5천만", value: 50_000_000 },
@@ -77,17 +78,15 @@ export default function LoanCalculator() {
         {/* Rate */}
         <div className="mb-5">
           <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">
-            연 이자율 (%)
+            연 이자율
           </label>
-          <input
-            type="number"
-            step="0.1"
-            min="0"
-            max="30"
-            value={rate}
-            onChange={(e) => setRate(Number(e.target.value))}
-            className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
-          />
+          <div className="flex justify-center">
+            <NumberWheel
+              min={0} max={30} step={0.1} value={rate} onChange={setRate}
+              unit="%" format={(v) => v.toFixed(1)}
+              accentClass="bg-finance/10 dark:bg-finance/20"
+            />
+          </div>
           <input
             type="range"
             min="0"
@@ -104,19 +103,20 @@ export default function LoanCalculator() {
           <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">
             대출 기간
           </label>
-          <div className="flex items-center gap-3">
-            <input
-              type="number"
-              min="1"
-              max="600"
-              value={months}
-              onChange={(e) => setMonths(Number(e.target.value))}
-              className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+          <div className="flex justify-center gap-2">
+            <NumberWheel
+              min={0} max={40} step={1} value={Math.floor(months / 12)}
+              onChange={(v) => setMonths(v * 12 + (months % 12))}
+              unit="년" accentClass="bg-finance/10 dark:bg-finance/20"
             />
-            <span className="shrink-0 text-sm text-gray-500">개월</span>
+            <NumberWheel
+              min={0} max={11} step={1} value={months % 12}
+              onChange={(v) => setMonths(Math.floor(months / 12) * 12 + v)}
+              unit="개월" accentClass="bg-finance/10 dark:bg-finance/20"
+            />
           </div>
-          <p className="mt-1 text-xs text-gray-400">
-            {Math.floor(months / 12)}년 {months % 12}개월
+          <p className="mt-1 text-center text-xs text-gray-400">
+            총 {months}개월 ({Math.floor(months / 12)}년 {months % 12}개월)
           </p>
           <div className="mt-2 flex flex-wrap gap-2">
             {[12, 24, 36, 60, 120, 240, 360].map((m) => (

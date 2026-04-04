@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { formatNumber, formatWon, formatKoreanWon, formatPercent } from "@/lib/format-ko";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 type IncomeType = "salary" | "business" | "freelancer";
 
@@ -159,16 +160,15 @@ export default function IncomeTaxCalc() {
         {(incomeType === "business" || incomeType === "freelancer") && (
           <div className="mb-5">
             <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">
-              필요경비율 (%)
+              필요경비율
             </label>
-            <input
-              type="number"
-              min={0}
-              max={100}
-              value={expenseRate}
-              onChange={(e) => setExpenseRate(Number(e.target.value))}
-              className={`${inputClass} text-right`}
-            />
+            <div className="flex justify-center">
+              <NumberWheel
+                min={0} max={100} step={1} value={expenseRate} onChange={setExpenseRate}
+                unit="%"
+                accentClass="bg-finance/10 dark:bg-finance/20"
+              />
+            </div>
           </div>
         )}
 

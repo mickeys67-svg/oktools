@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 type Tab = "number" | "lotto" | "coin" | "dice";
 
@@ -164,10 +165,16 @@ export default function RandomGenerator() {
               <input type="number" value={max} onChange={(e) => setMax(Number(e.target.value))}
                 className="w-full rounded-lg border border-gray-300 bg-white py-2.5 px-3 text-center text-sm font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100" />
             </div>
-            <div>
-              <label className="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400">개수</label>
-              <input type="number" min={1} max={100} value={count} onChange={(e) => setCount(Number(e.target.value))}
-                className="w-full rounded-lg border border-gray-300 bg-white py-2.5 px-3 text-center text-sm font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100" />
+            <div className="flex flex-col items-center">
+              <NumberWheel
+                min={1}
+                max={100}
+                value={count}
+                onChange={setCount}
+                label="개수"
+                width={70}
+                accentClass="bg-tools/10 dark:bg-tools/20"
+              />
             </div>
           </div>
           <label className="mb-4 flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">

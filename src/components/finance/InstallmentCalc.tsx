@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { calcInstallment } from "@/lib/finance";
 import { formatNumber, formatWon, formatKoreanWon } from "@/lib/format-ko";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 export default function InstallmentCalc() {
   const [price, setPrice] = useState(1_000_000);
@@ -65,16 +66,14 @@ export default function InstallmentCalc() {
           <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">
             할부 수수료율 (연 %)
           </label>
-          <input
-            type="number"
-            step="0.1"
-            min="0"
-            max="30"
-            value={feeRate}
-            onChange={(e) => setFeeRate(Number(e.target.value))}
-            className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
-          />
-          <p className="mt-1 text-xs text-gray-400">
+          <div className="flex justify-center">
+            <NumberWheel
+              min={0} max={30} step={0.1} value={feeRate} onChange={setFeeRate}
+              unit="%" format={(v) => v.toFixed(1)}
+              accentClass="bg-finance/10 dark:bg-finance/20"
+            />
+          </div>
+          <p className="mt-1 text-center text-xs text-gray-400">
             무이자 할부의 경우 0%로 설정하세요
           </p>
         </div>

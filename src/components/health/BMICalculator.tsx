@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { calcBMI, BMI_KOREAN_RANGES } from "@/lib/health";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 const QUICK_HEIGHTS = [155, 160, 165, 170, 175, 180];
 
@@ -20,22 +21,23 @@ export default function BMICalculator() {
   return (
     <div className="space-y-6">
       <div className="rounded-xl border border-gray-200 bg-white p-5 sm:p-6 dark:border-gray-800 dark:bg-gray-900">
-        {/* Height */}
-        <div className="mb-5">
-          <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">
-            키 (cm)
-          </label>
-          <input
-            type="number"
-            inputMode="decimal"
-            step="0.1"
-            min="100"
-            max="250"
-            value={height}
-            onChange={(e) => setHeight(Number(e.target.value))}
-            className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+        {/* Height & Weight Wheels */}
+        <div className="mb-5 flex justify-center gap-6">
+          <NumberWheel
+            min={100} max={250} value={height} onChange={setHeight}
+            step={1} label="키" unit="cm" width={90}
+            accentClass="bg-health/10 dark:bg-health/20"
           />
-          <div className="mt-2 flex flex-wrap gap-2">
+          <NumberWheel
+            min={20} max={300} value={weight} onChange={setWeight}
+            step={1} label="몸무게" unit="kg" width={90}
+            accentClass="bg-health/10 dark:bg-health/20"
+          />
+        </div>
+
+        {/* Quick Height Select */}
+        <div className="mb-5">
+          <div className="flex flex-wrap gap-2">
             {QUICK_HEIGHTS.map((h) => (
               <button
                 key={h}
@@ -52,22 +54,9 @@ export default function BMICalculator() {
           </div>
         </div>
 
-        {/* Weight */}
+        {/* Quick Weight Select */}
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">
-            몸무게 (kg)
-          </label>
-          <input
-            type="number"
-            inputMode="decimal"
-            step="0.1"
-            min="20"
-            max="300"
-            value={weight}
-            onChange={(e) => setWeight(Number(e.target.value))}
-            className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
-          />
-          <div className="mt-2 flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2">
             {[50, 60, 70, 80, 90, 100].map((w) => (
               <button
                 key={w}

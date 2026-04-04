@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 type VehicleType = "passenger" | "van" | "truck" | "special" | "electric";
 
@@ -117,25 +118,33 @@ export default function CarTaxCalc() {
           {needsCc && (
             <div>
               <label className="mb-1 block text-xs font-medium text-gray-500">배기량 (cc)</label>
-              <input
-                type="number"
-                min={0}
-                value={cc}
-                onChange={(e) => setCc(Number(e.target.value))}
-                className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-50"
-              />
+              <div className="flex justify-center">
+                <NumberWheel
+                  min={500}
+                  max={5000}
+                  step={100}
+                  value={Math.round(cc / 100) * 100}
+                  onChange={setCc}
+                  unit="cc"
+                  width={100}
+                  accentClass="bg-life/10 dark:bg-life/20"
+                />
+              </div>
             </div>
           )}
           <div>
             <label className="mb-1 block text-xs font-medium text-gray-500">최초등록년도</label>
-            <input
-              type="number"
-              min={1990}
-              max={new Date().getFullYear()}
-              value={regYear}
-              onChange={(e) => setRegYear(Number(e.target.value))}
-              className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-50"
-            />
+            <div className="flex justify-center">
+              <NumberWheel
+                min={2000}
+                max={2026}
+                value={regYear}
+                onChange={setRegYear}
+                unit="년"
+                width={100}
+                accentClass="bg-life/10 dark:bg-life/20"
+              />
+            </div>
           </div>
           {vehicleType !== "electric" && (
             <div className="flex items-center gap-3">

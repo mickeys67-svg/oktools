@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { calcSavings } from "@/lib/finance";
 import { formatNumber, formatWon, formatKoreanWon } from "@/lib/format-ko";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 const TAX_OPTIONS = [
   { label: "일반과세 (15.4%)", value: 15.4 },
@@ -33,16 +34,19 @@ export default function SavingsCalc() {
               className="w-full rounded-lg border border-gray-300 bg-white py-3 pl-8 pr-4 text-right text-lg font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100" />
           </div>
         </div>
-        <div className="mb-4 grid grid-cols-2 gap-3">
-          <div>
-            <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">연 이자율 (%)</label>
-            <input type="number" step="0.1" min="0" max="20" value={rate} onChange={(e) => setRate(Number(e.target.value))}
-              className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100" />
-          </div>
-          <div>
-            <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">기간 (개월)</label>
-            <input type="number" min="1" max="120" value={months} onChange={(e) => setMonths(Number(e.target.value))}
-              className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100" />
+        <div className="mb-4">
+          <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">연 이자율 / 기간</label>
+          <div className="flex justify-center gap-2">
+            <NumberWheel
+              min={0} max={20} step={0.1} value={rate} onChange={setRate}
+              unit="%" format={(v) => v.toFixed(1)}
+              accentClass="bg-finance/10 dark:bg-finance/20"
+            />
+            <NumberWheel
+              min={1} max={120} step={1} value={months} onChange={setMonths}
+              unit="개월"
+              accentClass="bg-finance/10 dark:bg-finance/20"
+            />
           </div>
         </div>
         <div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 interface AnimalInfo {
   name: string;
@@ -43,28 +44,16 @@ export default function ZodiacAnimalApp() {
       {/* 입력 */}
       <div className="rounded-xl border border-gray-200 bg-white p-5 sm:p-6 shadow-lg dark:border-gray-800 dark:bg-gray-900">
         <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-50">출생년도 입력</h2>
-        <div className="mb-3">
-          <input
-            type="number"
+        <div className="flex justify-center">
+          <NumberWheel
             min={1924}
             max={2030}
             value={year}
-            onChange={(e) => setYear(Number(e.target.value))}
-            className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-center text-xl font-bold text-gray-900 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-50"
+            onChange={setYear}
+            unit="년"
+            width={100}
+            accentClass="bg-fortune/10 dark:bg-fortune/20"
           />
-        </div>
-        <input
-          type="range"
-          min={1924}
-          max={2030}
-          value={year}
-          onChange={(e) => setYear(Number(e.target.value))}
-          className="w-full accent-amber-500"
-        />
-        <div className="mt-1 flex justify-between text-xs text-gray-400">
-          <span>1924</span>
-          <span>1970</span>
-          <span>2030</span>
         </div>
       </div>
 

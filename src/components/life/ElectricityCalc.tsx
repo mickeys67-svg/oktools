@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { formatNumber } from "@/lib/format-ko";
+import NumberWheel from "@/components/ui/NumberWheel";
 
 // 한국전력 주택용(저압) 2024 기준
 const TIERS = [
@@ -57,8 +58,18 @@ export default function ElectricityCalc() {
       <div className="rounded-xl border border-gray-200 bg-white p-5 sm:p-6 dark:border-gray-800 dark:bg-gray-900">
         <div className="mb-4">
           <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">월간 전력 사용량 (kWh)</label>
-          <input type="number" min={0} max={2000} value={kWh} onChange={(e) => setKWh(Number(e.target.value))}
-            className="w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-right text-lg font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100" />
+          <div className="flex justify-center">
+            <NumberWheel
+              min={0}
+              max={2000}
+              step={10}
+              value={Math.round(kWh / 10) * 10}
+              onChange={setKWh}
+              unit="kWh"
+              width={100}
+              accentClass="bg-life/10 dark:bg-life/20"
+            />
+          </div>
         </div>
         <input type="range" min={0} max={1000} value={kWh} onChange={(e) => setKWh(Number(e.target.value))}
           className="mb-3 w-full accent-pink-500" />
