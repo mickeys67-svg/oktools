@@ -3,10 +3,13 @@ import Link from "next/link";
 import MilitaryCalc from "@/components/life/MilitaryCalc";
 
 export const metadata: Metadata = {
-  title: "전역일 계산기 2025 - 군 복무기간 진급일 전역일",
+  title: "전역일 계산기 2026 - 군 복무기간 진급일 전역일",
   description:
     "무료 전역일 계산기로 군 복무기간과 전역 예정일을 계산하세요. 육군·해군·공군·해병대·사회복무요원 입대일 입력으로 진급일, 복무 진행률을 즉시 확인.",
   keywords: ["전역일계산기", "군복무기간", "전역일확인", "육군전역일", "공군전역일", "해군전역일", "해병대전역일", "사회복무요원전역일", "진급일계산", "군대전역일", "입대일기준전역일", "복무진행률"],
+  alternates: {
+    canonical: "/life/military",
+  },
 };
 
 export default function MilitaryPage() {

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "출생년도 입력으로 12간지 띠를 무료 확인하세요. 띠별 성격, 궁합, 유명인 정보까지 한눈에 알아볼 수 있습니다.",
   keywords: ["띠계산기", "12간지", "띠확인", "띠별성격", "띠별궁합", "올해띠", "용띠", "뱀띠", "말띠", "12지신", "나이띠계산", "출생년도띠"],
+  alternates: {
+    canonical: "/fortune/zodiac-animal",
+  },
 };
 
 export default function ZodiacAnimalPage() {
@@ -67,6 +70,18 @@ export default function ZodiacAnimalPage() {
             ],
           }),
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "운세·재미", "item": "https://www.oktools.co.kr/fortune" },
+            { "@type": "ListItem", "position": 3, "name": "띠 계산기" }
+          ]
+        }) }}
       />
     </div>
   );

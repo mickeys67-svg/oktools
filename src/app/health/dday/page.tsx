@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "무료 디데이 계산기로 남은 일수와 지난 일수를 계산하세요. 시험 D-Day, 기념일, 100일·200일 커플 디데이, 수능 카운트다운을 즉시 확인할 수 있습니다.",
   keywords: ["디데이계산기", "D-Day계산기", "날짜계산기", "남은일수계산", "기념일계산", "100일계산", "200일계산", "시험디데이", "수능디데이", "커플디데이"],
+  alternates: {
+    canonical: "/health/dday",
+  },
 };
 
 export default function DDayPage() {

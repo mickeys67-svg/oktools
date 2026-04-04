@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "무료 온라인 벽시계. 미니멀·클래식·네온·우주·레트로 5가지 테마, 전체화면 지원, 아날로그+디지털 동시 표시.",
   keywords: ["온라인시계", "전체화면시계", "벽시계", "디지털시계", "아날로그시계", "현재시각", "실시간시계", "네온시계", "큰화면시계"],
+  alternates: {
+    canonical: "/tools/clock",
+  },
 };
 
 export default function ClockPage() {

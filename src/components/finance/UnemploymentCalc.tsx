@@ -194,7 +194,7 @@ export default function UnemploymentCalc() {
           {/* 지급기간 표 */}
           <div className="mt-6">
             <h3 className="mb-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
-              실업급여 지급기간 (2025년)
+              실업급여 지급기간 (2026년)
             </h3>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">

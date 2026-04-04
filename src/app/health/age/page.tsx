@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "무료 만 나이 계산기로 생년월일 입력만으로 정확한 만나이, 생존 일수, 띠, 별자리를 확인하세요. 2023년 만나이 통일법 기준 자동 계산.",
   keywords: ["만나이계산기", "나이계산기", "만나이계산", "생년월일나이", "한국나이계산", "만나이통일법", "세는나이만나이", "띠계산", "별자리확인", "나이계산법"],
+  alternates: {
+    canonical: "/health/age",
+  },
 };
 
 export default function AgePage() {
@@ -68,6 +71,18 @@ export default function AgePage() {
             ],
           }),
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "건강 계산기", "item": "https://www.oktools.co.kr/health" },
+            { "@type": "ListItem", "position": 3, "name": "만 나이 계산기" }
+          ]
+        }) }}
       />
     </div>
   );

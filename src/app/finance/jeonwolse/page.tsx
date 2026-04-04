@@ -3,10 +3,13 @@ import Link from "next/link";
 import JeonwolseCalc from "@/components/finance/JeonwolseCalc";
 
 export const metadata: Metadata = {
-  title: "전월세 전환율 계산기 2025 - 전세 월세 환산 무료",
+  title: "전월세 전환율 계산기 2026 - 전세 월세 환산 무료",
   description:
     "무료 전월세 전환율 계산기로 전세를 월세로, 월세를 전세로 바로 환산하세요. 적정 월세 확인, 전세가율 조회, 부동산 전월세 계산.",
   keywords: ["전월세전환율", "전세월세전환", "전월세계산기", "월세전세환산", "전환율계산", "적정월세", "전세가율", "월세계산", "전세보증금", "부동산전월세"],
+  alternates: {
+    canonical: "/finance/jeonwolse",
+  },
 };
 
 export default function JeonwolsePage() {

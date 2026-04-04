@@ -343,7 +343,7 @@ export default function IncomeTaxCalc() {
           {/* 세율 구간표 */}
           <div className="mt-6">
             <h3 className="mb-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
-              2025년 종합소득세 세율표
+              2026년 종합소득세 세율표
             </h3>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">

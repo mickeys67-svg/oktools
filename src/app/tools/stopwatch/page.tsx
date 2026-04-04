@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "무료 온라인 스톱워치. 랩타임 기록, 큰 화면 표시 지원. 운동·공부·요리 시간 측정에 바로 사용하세요.",
   keywords: ["온라인스톱워치", "스톱워치", "랩타임", "시간측정", "운동시간", "스톱워치앱", "초시계", "타임측정"],
+  alternates: {
+    canonical: "/tools/stopwatch",
+  },
 };
 
 export default function StopwatchPage() {

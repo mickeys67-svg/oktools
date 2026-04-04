@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "꿈에서 본 동물·사람·장소의 의미를 무료로 풀이하세요. 돼지꿈, 뱀꿈, 치아꿈 등 길몽 흉몽을 상세하게 해석해드립니다.",
   keywords: ["꿈해몽", "꿈풀이", "꿈풀이사전", "돼지꿈", "뱀꿈", "치아꿈", "물꿈", "불꿈", "죽는꿈", "길몽흉몽", "태몽풀이", "꿈해석", "로또꿈"],
+  alternates: {
+    canonical: "/fortune/dream",
+  },
 };
 
 export default function DreamPage() {

@@ -261,7 +261,7 @@ export default function JeonwolseCalc() {
           <div className="mt-5 rounded-lg bg-blue-50 p-4 dark:bg-blue-950/30">
             <p className="text-xs text-blue-700 dark:text-blue-300">
               <strong>참고:</strong> 전월세 전환율은 한국은행 기준금리와 시장 상황에 따라
-              변동됩니다. 2025년 기준 법정 전환율 상한은 기준금리(연 3.0%) + 2.0% =
+              변동됩니다. 2026년 기준 법정 전환율 상한은 기준금리(연 3.0%) + 2.0% =
               5.0%입니다. 실제 계약 시 법정 상한을 초과하는 전환율 적용은 무효입니다.
             </p>
           </div>

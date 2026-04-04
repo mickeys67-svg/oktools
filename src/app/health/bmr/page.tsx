@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "무료 기초대사량 계산기로 BMR과 활동별 일일 권장 칼로리(TDEE)를 계산하세요. 성별·나이·키·체중 입력만으로 다이어트 칼로리 목표를 즉시 확인.",
   keywords: ["기초대사량계산기", "BMR계산기", "TDEE계산기", "일일칼로리계산", "기초대사량", "다이어트칼로리", "하루권장칼로리", "칼로리계산기", "활동대사량"],
+  alternates: {
+    canonical: "/health/bmr",
+  },
 };
 
 export default function BMRPage() {
@@ -21,6 +24,54 @@ export default function BMRPage() {
       <p className="mb-8 text-gray-500 dark:text-gray-400">Mifflin-St Jeor 공식으로 기초대사량(BMR)과 활동별 권장 칼로리를 계산합니다.</p>
       <BMRCalculator />
 
+      {/* Related Tools */}
+      <section className="mt-10">
+        <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-2">
+          <Link href="/health/bmi" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            BMI 계산기
+          </Link>
+          <Link href="/health/biorhythm" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            바이오리듬
+          </Link>
+          <Link href="/health/alcohol" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            알코올 분해 계산기
+          </Link>
+          <Link href="/health/age" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            나이 계산기
+          </Link>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "기초대사량(BMR)이란 무엇인가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "기초대사량(BMR, Basal Metabolic Rate)은 생명 유지에 필요한 최소 에너지량으로, 숨쉬기, 체온 유지, 장기 활동 등에 사용되는 칼로리입니다. 아무 활동도 하지 않아도 소모되는 에너지입니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "기초대사량을 높이려면 어떻게 해야 하나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "근육량을 늘리는 것이 가장 효과적입니다. 근력 운동을 통해 근육을 키우면 기초대사량이 올라갑니다. 또한 충분한 수면, 규칙적인 식사, 단백질 섭취도 도움이 됩니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "TDEE와 BMR의 차이는 무엇인가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "BMR은 아무 활동 없이 소모되는 기초 칼로리이고, TDEE(Total Daily Energy Expenditure)는 BMR에 일상 활동과 운동량을 반영한 하루 총 소모 칼로리입니다. 다이어트 시 TDEE를 기준으로 칼로리를 조절합니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "다이어트 시 하루 몇 칼로리를 먹어야 하나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "일반적으로 TDEE에서 300~500kcal를 줄인 양을 섭취하면 건강하게 감량할 수 있습니다. 다만 기초대사량 이하로 섭취하면 근손실과 요요 현상이 올 수 있으므로 BMR 이상은 섭취하는 것이 좋습니다." }
+            }
+          ]
+        }) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

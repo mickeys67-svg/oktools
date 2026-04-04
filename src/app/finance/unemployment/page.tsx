@@ -3,10 +3,13 @@ import Link from "next/link";
 import UnemploymentCalc from "@/components/finance/UnemploymentCalc";
 
 export const metadata: Metadata = {
-  title: "실업급여 계산기 2025 - 수령액 지급기간 자격 조회",
+  title: "실업급여 계산기 2026 - 수령액 지급기간 자격 조회",
   description:
-    "무료 실업급여 계산기로 예상 수령액과 지급기간을 바로 확인하세요. 2025년 기준 상한액 하한액 반영, 구직급여 자격 조건 조회.",
+    "무료 실업급여 계산기로 예상 수령액과 지급기간을 바로 확인하세요. 2026년 기준 상한액 하한액 반영, 구직급여 자격 조건 조회.",
   keywords: ["실업급여계산기", "실업급여수령액", "실업급여조건", "실업급여지급기간", "구직급여", "실업급여신청", "고용보험실업급여", "실업급여상한액", "실업급여하한액", "자발적퇴사실업급여"],
+  alternates: {
+    canonical: "/finance/unemployment",
+  },
 };
 
 export default function UnemploymentPage() {
@@ -52,7 +55,7 @@ export default function UnemploymentPage() {
           </li>
         </ul>
         <p className="mt-3 text-xs text-gray-400">
-          * 2025년 기준 근사치입니다. 정확한 금액은 고용센터에서 확인하세요.
+          * 2026년 기준 근사치입니다. 정확한 금액은 고용센터에서 확인하세요.
         </p>
       </section>
 

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "무료 타로카드 리딩, 토정비결, MBTI 궁합, 별자리 운세, 혈액형 궁합, 이름 궁합, 꿈해몽까지 한곳에서 무료로 확인하세요.",
   keywords: ["무료운세", "타로카드", "토정비결", "MBTI궁합", "꿈해몽", "별자리운세", "혈액형궁합", "이름궁합", "띠계산기", "오늘의운세"],
+  alternates: {
+    canonical: "/fortune",
+  },
 };
 
 export default function FortunePage() {
@@ -78,6 +81,17 @@ export default function FortunePage() {
               { "@type": "ListItem", "position": 8, "name": "띠 계산기", "url": "https://www.oktools.co.kr/fortune/zodiac-animal" }
             ]
           }
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "운세·재미" }
+          ]
         }) }}
       />
     </div>

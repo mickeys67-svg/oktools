@@ -3,10 +3,13 @@ import Link from "next/link";
 import { getToolsByCategory, getCategoryById } from "@/data/tools";
 
 export const metadata: Metadata = {
-  title: "금융 계산기 모음 2025 - 대출 연봉 세금 부동산 무료 계산",
+  title: "금융 계산기 모음 2026 - 대출 연봉 세금 부동산 무료 계산",
   description:
     "대출이자, 연봉실수령액, 퇴직금, 4대보험, 종합소득세, 취득세, 전월세전환율 등 15종 무료 금융 계산기. 바로 계산하고 확인하세요.",
   keywords: ["금융계산기", "대출이자계산", "연봉실수령액", "할부계산", "퇴직금계산", "적금이자", "예금이자", "복리계산", "최저시급", "전월세전환율", "4대보험", "부동산복비", "종합소득세", "실업급여", "취득세"],
+  alternates: {
+    canonical: "/finance",
+  },
 };
 
 export default function FinancePage() {
@@ -100,6 +103,17 @@ export default function FinancePage() {
               { "@type": "ListItem", "position": 14, "name": "취득세 계산기", "url": "https://www.oktools.co.kr/finance/acquisition-tax" }
             ]
           }
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "금융 계산기" }
+          ]
         }) }}
       />
     </div>

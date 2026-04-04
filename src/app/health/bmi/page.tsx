@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "무료 BMI 계산기로 체질량지수와 비만도를 측정하세요. 키와 몸무게 입력만으로 한국 비만학회 기준 저체중·정상·과체중·비만 단계를 즉시 확인할 수 있습니다.",
   keywords: ["BMI계산기", "체질량지수", "비만도측정", "비만도계산기", "BMI계산", "키몸무게비만", "표준체중계산", "한국비만기준", "비만학회기준", "적정체중", "다이어트체중"],
+  alternates: {
+    canonical: "/health/bmi",
+  },
 };
 
 export default function BMIPage() {
@@ -56,6 +59,25 @@ export default function BMIPage() {
         </p>
       </section>
 
+      {/* Related Tools */}
+      <section className="mt-10">
+        <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-2">
+          <Link href="/health/bmr" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            기초대사량 계산기
+          </Link>
+          <Link href="/health/biorhythm" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            바이오리듬
+          </Link>
+          <Link href="/health/age" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            나이 계산기
+          </Link>
+          <Link href="/health/dday" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            디데이 계산기
+          </Link>
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -79,9 +101,37 @@ export default function BMIPage() {
                   text: "한국 비만학회 기준 정상 BMI는 18.5~22.9입니다. WHO 기준(18.5~24.9)보다 낮으며, 한국인은 같은 BMI에서도 체지방률이 높아 별도 기준을 사용합니다.",
                 },
               },
+              {
+                "@type": "Question",
+                name: "BMI 25 이상이면 비만인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "한국 비만학회 기준 BMI 25 이상은 1단계 비만에 해당합니다. 23~24.9는 과체중(비만 전단계), 30 이상은 2단계 비만, 35 이상은 3단계 비만(고도비만)으로 분류됩니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "BMI의 한계는 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "BMI는 근육량과 체지방률을 구분하지 못합니다. 근육이 많은 사람은 BMI가 높게 나올 수 있고, 마른 비만(체지방률 높음)은 정상으로 나올 수 있어 체지방률 측정을 병행하는 것이 좋습니다.",
+                },
+              },
             ],
           }),
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "건강 계산기", "item": "https://www.oktools.co.kr/health" },
+            { "@type": "ListItem", "position": 3, "name": "BMI 계산기" }
+          ]
+        }) }}
       />
     </div>
   );

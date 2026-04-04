@@ -3,10 +3,13 @@ import Link from "next/link";
 import InstallmentCalc from "@/components/finance/InstallmentCalc";
 
 export const metadata: Metadata = {
-  title: "할부 계산기 - 카드할부 수수료 월납입금 무료 계산 2025",
+  title: "할부 계산기 - 카드할부 수수료 월납입금 무료 계산 2026",
   description:
     "무료 할부 계산기로 월 할부금과 총 수수료를 바로 확인하세요. 카드할부 이자율별 12개월, 24개월 할부금 계산 및 무이자 비교.",
   keywords: ["할부계산기", "카드할부이자", "무이자할부", "할부수수료계산", "월할부금", "12개월할부", "24개월할부", "할부이자율", "신용카드할부"],
+  alternates: {
+    canonical: "/finance/installment",
+  },
 };
 
 export default function InstallmentPage() {
@@ -29,6 +32,49 @@ export default function InstallmentPage() {
 
       <InstallmentCalc />
 
+      {/* Related Tools */}
+      <section className="mt-10">
+        <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-2">
+          <Link href="/finance/loan-calculator" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            대출 이자 계산기
+          </Link>
+          <Link href="/finance/deposit" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            예금 이자 계산기
+          </Link>
+          <Link href="/finance/savings" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            적금 계산기
+          </Link>
+          <Link href="/finance/compound-interest" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            복리 계산기
+          </Link>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "카드 할부 이자(수수료)는 어떻게 계산하나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "할부 수수료는 상품 금액에 할부 수수료율과 개월 수를 적용하여 계산합니다. 총 수수료 = 상품가격 × 수수료율(연) × 할부개월/12이며, 월 할부금 = (상품가격 + 총수수료) / 할부개월입니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "무이자 할부와 유이자 할부의 차이는?",
+              "acceptedAnswer": { "@type": "Answer", "text": "무이자 할부는 카드사가 수수료를 부담하여 소비자가 이자 없이 분할 납부하는 방식입니다. 유이자 할부는 소비자가 수수료(연 10~20% 수준)를 부담합니다. 무이자 할부라도 가맹점 수수료가 포함될 수 있습니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "할부 개월 수가 길수록 유리한가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "유이자 할부는 개월 수가 길어질수록 총 수수료가 커집니다. 월 납입금은 적어지지만 총 부담 금액이 증가하므로, 가능하면 짧은 기간으로 할부하는 것이 유리합니다." }
+            }
+          ]
+        }) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

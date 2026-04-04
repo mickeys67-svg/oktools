@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | 오케이툴즈",
   },
   description:
-    "대출이자 계산기, 연봉 실수령액, BMI, 바이오리듬, 단위변환, 타로, 전역일 계산기, 4대보험 등 53가지 무료 도구를 제공합니다. 한국형 특화 계산기.",
+    "대출이자 계산기, 연봉 실수령액, BMI, 바이오리듬, 단위변환, 타로, 전역일 계산기, 4대보험 등 44가지 무료 도구를 제공합니다. 한국형 특화 계산기.",
   keywords: [
     "계산기",
     "대출이자계산기",
@@ -48,14 +47,14 @@ export const metadata: Metadata = {
     siteName: "오케이툴즈",
     title: "오케이툴즈 - 계산기, 변환기, 유틸리티 모음",
     description:
-      "대출이자, 연봉, BMI, 단위변환, 전역일, 4대보험, 음주측정기 등 53가지 무료 도구",
+      "대출이자, 연봉, BMI, 단위변환, 전역일, 4대보험, 음주측정기 등 44가지 무료 도구",
     url: SITE_URL,
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "오케이툴즈 - 53가지 무료 온라인 도구",
+        alt: "오케이툴즈 - 44가지 무료 온라인 도구",
       },
     ],
   },
@@ -63,8 +62,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "오케이툴즈 - 계산기, 변환기, 유틸리티 모음",
     description:
-      "대출이자, 연봉, BMI, 단위변환, 전역일, 4대보험, 음주측정기 등 53가지 무료 도구",
-    images: ["/og-image.png"],
+      "대출이자, 연봉, BMI, 단위변환, 전역일, 4대보험, 음주측정기 등 44가지 무료 도구",
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
@@ -78,8 +77,10 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // Add your Google Search Console verification code here
-    // google: "your-verification-code",
+    google: "GOOGLE_VERIFICATION_CODE",
+    other: {
+      "naver-site-verification": "NAVER_VERIFICATION_CODE",
+    },
   },
   other: {
     "theme-color": "#4F46E5",
@@ -106,37 +107,12 @@ export default function RootLayout({
           crossOrigin="anonymous"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
         />
-        {/* Google AdSense - Replace with your publisher ID */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-        {/* Google Analytics 4 - Replace with your GA4 ID */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-          strategy="afterInteractive"
-        />
-        <Script id="ga4" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
-          `}
-        </Script>
         {/* Dark mode: prevent flash */}
-        <Script id="theme-init" strategy="beforeInteractive">
-          {`
-            (function() {
-              var theme = localStorage.getItem('theme');
-              if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-              }
-            })();
-          `}
-        </Script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark')}})()`,
+          }}
+        />
       </head>
       <body className="min-h-screen flex flex-col bg-surface text-gray-900 dark:bg-surface-dark dark:text-gray-50">
         <Header />
@@ -155,7 +131,7 @@ export default function RootLayout({
                   "@id": `${SITE_URL}/#organization`,
                   name: "오케이툴즈",
                   url: SITE_URL,
-                  logo: `${SITE_URL}/og-image.png`,
+                  logo: `${SITE_URL}/opengraph-image`,
                 },
                 {
                   "@type": "WebSite",
@@ -164,14 +140,6 @@ export default function RootLayout({
                   url: SITE_URL,
                   publisher: { "@id": `${SITE_URL}/#organization` },
                   inLanguage: "ko-KR",
-                  potentialAction: {
-                    "@type": "SearchAction",
-                    target: {
-                      "@type": "EntryPoint",
-                      urlTemplate: `${SITE_URL}/?q={search_term_string}`,
-                    },
-                    "query-input": "required name=search_term_string",
-                  },
                 },
               ],
             }),

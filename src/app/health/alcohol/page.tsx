@@ -3,10 +3,13 @@ import Link from "next/link";
 import AlcoholCalc from "@/components/health/AlcoholCalc";
 
 export const metadata: Metadata = {
-  title: "음주 측정기 - 혈중알코올농도 BAC 계산기 2025",
+  title: "음주 측정기 - 혈중알코올농도 BAC 계산기 2026",
   description:
     "무료 음주 측정기로 혈중알코올농도(BAC)를 계산하세요. 소주·맥주 음주량 입력으로 운전 가능 시간, 면허취소 기준, 알코올 분해 시간을 즉시 확인.",
   keywords: ["음주측정기", "혈중알코올농도", "BAC계산기", "음주운전기준", "알코올분해시간", "음주후운전가능시간", "소주몇잔음주운전", "음주측정기준", "면허취소기준", "0.03퍼센트"],
+  alternates: {
+    canonical: "/health/alcohol",
+  },
 };
 
 export default function AlcoholPage() {
@@ -66,6 +69,18 @@ export default function AlcoholPage() {
             ],
           }),
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "건강 계산기", "item": "https://www.oktools.co.kr/health" },
+            { "@type": "ListItem", "position": 3, "name": "음주 측정기" }
+          ]
+        }) }}
       />
     </div>
   );

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "무료 임신 주수 계산기로 출산예정일과 현재 임신 주수를 확인하세요. 마지막 생리일 입력만으로 삼분기, 아기 크기, 주차별 발달 정보를 즉시 제공합니다.",
   keywords: ["임신주수계산기", "출산예정일계산", "임신몇주", "임신주수확인", "마지막생리일출산예정일", "삼분기", "임신초기증상", "예정일계산기", "아기크기"],
+  alternates: {
+    canonical: "/health/pregnancy",
+  },
 };
 
 export default function PregnancyPage() {

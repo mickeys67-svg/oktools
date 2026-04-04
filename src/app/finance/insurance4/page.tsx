@@ -3,10 +3,13 @@ import Link from "next/link";
 import Insurance4Calc from "@/components/finance/Insurance4Calc";
 
 export const metadata: Metadata = {
-  title: "4대보험 계산기 2025 - 국민연금 건강보험 고용보험 계산",
+  title: "4대보험 계산기 2026 - 국민연금 건강보험 고용보험 계산",
   description:
-    "무료 4대보험 계산기로 국민연금, 건강보험, 고용보험, 장기요양보험료를 바로 확인하세요. 2025년 요율 반영, 직장인 사업주 부담금 조회.",
-  keywords: ["4대보험계산기", "4대보험요율", "국민연금계산", "건강보험료계산", "고용보험계산", "장기요양보험료", "4대보험료율2025", "직장인보험료", "사업주부담금", "보험료공제"],
+    "무료 4대보험 계산기로 국민연금, 건강보험, 고용보험, 장기요양보험료를 바로 확인하세요. 2026년 요율 반영, 직장인 사업주 부담금 조회.",
+  keywords: ["4대보험계산기", "4대보험요율", "국민연금계산", "건강보험료계산", "고용보험계산", "장기요양보험료", "4대보험료율2026", "직장인보험료", "사업주부담금", "보험료공제"],
+  alternates: {
+    canonical: "/finance/insurance4",
+  },
 };
 
 export default function Insurance4Page() {
@@ -31,7 +34,7 @@ export default function Insurance4Page() {
 
       <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
-          2025년 4대보험 요율 안내
+          2026년 4대보험 요율 안내
         </h2>
         <ul className="list-inside list-disc space-y-1">
           <li><strong>국민연금</strong>: 근로자 4.5% + 사업주 4.5% = 9.0% (월 소득 590만원 상한)</li>
@@ -40,7 +43,7 @@ export default function Insurance4Page() {
           <li><strong>고용보험</strong>: 근로자 0.9% + 사업주 0.9~1.65% (기업 규모별 차등)</li>
         </ul>
         <p className="mt-3 text-xs text-gray-400">
-          * 2025년 기준 요율이며, 산재보험은 전액 사업주 부담으로 업종별 요율이 다릅니다.
+          * 2026년 기준 요율이며, 산재보험은 전액 사업주 부담으로 업종별 요율이 다릅니다.
           실제 금액은 회사 정책에 따라 다를 수 있습니다.
         </p>
       </section>

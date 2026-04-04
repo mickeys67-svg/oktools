@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "지구 나이를 입력하면 화성·목성·토성 등 태양계 행성에서의 나이를 무료로 계산합니다. 공전주기 기반 우주 나이 확인.",
   keywords: ["행성나이계산기", "화성나이", "목성나이", "행성공전주기", "우주나이", "태양계나이", "행성년수"],
+  alternates: {
+    canonical: "/space/planet-age",
+  },
 };
 
 export default function PlanetAgePage() {

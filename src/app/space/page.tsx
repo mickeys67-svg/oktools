@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "무료 우주 계산기 모음. 행성 무게, 행성 나이, 우주 거리 변환, 빛 여행 시간 등 재미있는 우주과학 도구를 체험하세요.",
   keywords: ["우주계산기", "행성무게", "우주거리", "광년계산", "행성나이", "빛여행시간", "태양계", "우주과학"],
+  alternates: {
+    canonical: "/space",
+  },
 };
 
 export default function SpacePage() {
@@ -74,6 +77,17 @@ export default function SpacePage() {
               { "@type": "ListItem", "position": 4, "name": "행성 나이 계산기", "url": "https://www.oktools.co.kr/space/planet-age" }
             ]
           }
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "우주/과학" }
+          ]
         }) }}
       />
     </div>

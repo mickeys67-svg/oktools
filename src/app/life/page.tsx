@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "전기요금계산기, 학점계산기, 퍼센트계산, 할인율계산, 전역일계산기, 과태료조회, 자동차세계산 등 일상생활에 필요한 무료 계산기 도구 모음.",
   keywords: ["생활계산기", "전기요금계산", "학점계산기", "퍼센트계산", "할인율계산", "전역일계산기", "과태료조회", "자동차세계산"],
+  alternates: {
+    canonical: "/life",
+  },
 };
 
 export default function LifePage() {
@@ -64,6 +67,17 @@ export default function LifePage() {
               { "@type": "ListItem", "position": 7, "name": "자동차세 계산기", "url": "https://www.oktools.co.kr/life/car-tax" }
             ]
           }
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "생활 도구" }
+          ]
         }) }}
       />
     </div>

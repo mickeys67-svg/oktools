@@ -5,7 +5,7 @@ import { tools, categories } from "@/data/tools";
 export const metadata: Metadata = {
   title: "오케이툴즈 소개",
   description:
-    "오케이툴즈 - 53가지 무료 온라인 도구. 금융, 건강, 생활, 운세, 단위변환, 우주 카테고리의 계산기와 변환기를 무료로 이용하세요.",
+    "오케이툴즈 - 44가지 무료 온라인 도구. 금융, 건강, 생활, 운세, 단위변환, 우주 카테고리의 계산기와 변환기를 무료로 이용하세요.",
 };
 
 export default function AboutPage() {

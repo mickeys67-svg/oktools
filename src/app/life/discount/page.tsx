@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "무료 할인율 계산기로 할인가, 원래 가격, 할인 퍼센트를 계산하세요. 세일 가격 입력으로 할인 금액과 최종 가격을 즉시 확인할 수 있습니다.",
   keywords: ["할인율계산기", "할인가계산", "할인계산기", "세일계산", "할인퍼센트계산", "원래가격계산", "정가계산", "최종가격계산"],
+  alternates: {
+    canonical: "/life/discount",
+  },
 };
 
 export default function DiscountPage() {

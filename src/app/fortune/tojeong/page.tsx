@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "생년월일 입력으로 토정비결 상원·중원·하원 운세를 무료 확인하세요. 재물운, 연애운, 건강운, 직업운까지 한눈에 풀이합니다.",
   keywords: ["토정비결", "토정비결2026", "무료토정비결", "올해운세", "신년운세", "생년월일운세", "토정비결보기", "토정비결풀이", "재물운", "연애운", "건강운"],
+  alternates: {
+    canonical: "/fortune/tojeong",
+  },
 };
 
 export default function TojeongPage() {

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "무료 단위 변환기. 길이·무게·온도·면적·부피·속도·데이터 용량을 휠 방식으로 간편하게 변환하세요. 평수 계산기, cm인치 변환 지원.",
   keywords: ["단위변환기", "길이변환", "무게변환", "온도변환", "면적변환", "평수계산기", "cm인치변환", "kg파운드변환", "섭씨화씨변환", "부피변환", "속도변환", "데이터용량변환", "평방미터평변환"],
+  alternates: {
+    canonical: "/convert",
+  },
 };
 
 export default function ConvertPage() {
@@ -55,6 +58,54 @@ export default function ConvertPage() {
         </div>
       </section>
 
+      {/* Related Tools */}
+      <section className="mt-10">
+        <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-2">
+          <Link href="/life/percentage" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            퍼센트 계산기
+          </Link>
+          <Link href="/life/discount" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            할인율 계산기
+          </Link>
+          <Link href="/life/gpa" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            학점 계산기
+          </Link>
+          <Link href="/life/electricity" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            전기요금 계산기
+          </Link>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "1평은 몇 제곱미터(m²)인가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "1평은 약 3.3058m²입니다. 반대로 1m²는 약 0.3025평입니다. 부동산에서 33m²는 약 10평, 84m²는 약 25.4평에 해당합니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "1인치는 몇 cm인가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "1인치(inch)는 정확히 2.54cm입니다. TV, 모니터, 스마트폰 화면 크기를 표시할 때 인치 단위를 사용하며, 대각선 길이를 의미합니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "섭씨(°C)와 화씨(°F)는 어떻게 변환하나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "섭씨를 화씨로 변환: °F = °C × 9/5 + 32. 화씨를 섭씨로 변환: °C = (°F - 32) × 5/9. 예를 들어 섭씨 36.5도는 화씨 97.7도입니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "1kg은 몇 파운드(lb)인가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "1kg은 약 2.2046파운드(lb)입니다. 반대로 1파운드는 약 0.4536kg입니다. 해외직구나 운동 기구 무게 확인 시 자주 필요한 변환입니다." }
+            }
+          ]
+        }) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "온라인 시계, 타이머, 스톱워치, 글자수 세기, 랜덤 번호 생성기, 로또 번호 추천 등 무료 유틸리티 도구를 바로 사용하세요.",
   keywords: ["온라인도구", "무료유틸리티", "온라인시계", "타이머", "스톱워치", "글자수세기", "로또번호추천", "랜덤번호생성기"],
+  alternates: {
+    canonical: "/tools",
+  },
 };
 
 export default function ToolsPage() {
@@ -76,6 +79,17 @@ export default function ToolsPage() {
               { "@type": "ListItem", "position": 6, "name": "로또 번호 추천", "url": "https://www.oktools.co.kr/tools/lotto" }
             ]
           }
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "유틸리티" }
+          ]
         }) }}
       />
     </div>

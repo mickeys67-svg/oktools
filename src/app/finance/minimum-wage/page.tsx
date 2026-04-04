@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "무료 최저시급 계산기로 2025년, 2026년 최저임금 기준 월급과 연봉을 바로 확인하세요. 주휴수당 포함 시급, 알바 시급 계산.",
   keywords: ["최저시급2025", "최저시급2026", "최저임금", "최저시급월급", "주휴수당계산", "알바시급", "최저임금인상", "주휴수당포함시급", "최저시급연봉", "아르바이트시급"],
+  alternates: {
+    canonical: "/finance/minimum-wage",
+  },
 };
 
 export default function MinimumWagePage() {
@@ -44,6 +47,54 @@ export default function MinimumWagePage() {
         </p>
       </section>
 
+      {/* Related Tools */}
+      <section className="mt-10">
+        <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-2">
+          <Link href="/finance/salary" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            연봉 실수령액 계산기
+          </Link>
+          <Link href="/finance/income-tax" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            소득세 계산기
+          </Link>
+          <Link href="/finance/insurance4" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            4대보험 계산기
+          </Link>
+          <Link href="/finance/unemployment" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            실업급여 계산기
+          </Link>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "2025년 최저시급은 얼마인가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "2025년 최저시급은 10,030원입니다. 주 40시간 근무 기준 월급(주휴수당 포함)은 약 2,096,270원이며, 연봉으로 환산하면 약 25,155,240원입니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "주휴수당이란 무엇인가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "주휴수당은 주 15시간 이상 근무한 근로자에게 1주에 1일의 유급휴일을 보장하는 수당입니다. 주 40시간 근무 시 8시간분의 추가 임금이 지급되어, 실질 시급이 약 20% 높아집니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "2026년 최저시급은 얼마인가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "2026년 최저시급은 10,360원으로 2025년 대비 3.3%(330원) 인상되었습니다. 월급(주휴수당 포함) 기준 약 2,165,240원, 연봉 환산 약 25,982,880원입니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "최저시급 미만으로 급여를 받으면 어떻게 하나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "최저임금법에 따라 최저시급 미만 지급은 위법입니다. 고용노동부(1350)에 신고하거나 노동청에 진정을 제기할 수 있으며, 사업주는 3년 이하의 징역 또는 2천만원 이하의 벌금에 처할 수 있습니다." }
+            }
+          ]
+        }) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

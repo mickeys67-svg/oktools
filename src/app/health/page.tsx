@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "BMI계산기, 바이오리듬, 만나이계산, 기초대사량, 칼로리계산, 음주측정기, 임신주수, 디데이계산기를 무료로 이용하세요. 한국 기준 건강 계산 도구 모음.",
   keywords: ["건강계산기", "BMI계산기", "바이오리듬", "만나이계산", "기초대사량", "칼로리계산", "음주측정기", "임신주수계산", "디데이계산기"],
+  alternates: {
+    canonical: "/health",
+  },
 };
 
 export default function HealthPage() {
@@ -77,6 +80,17 @@ export default function HealthPage() {
               { "@type": "ListItem", "position": 7, "name": "음주 측정기", "url": "https://www.oktools.co.kr/health/alcohol" }
             ]
           }
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "건강 계산기" }
+          ]
         }) }}
       />
     </div>

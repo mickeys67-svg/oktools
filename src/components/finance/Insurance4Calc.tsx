@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { formatNumber, formatKoreanWon } from "@/lib/format-ko";
 
-// 2025년 4대보험 요율
+// 2026년 4대보험 요율
 const RATES = {
   nationalPension: {
     employee: 0.045,

@@ -3,10 +3,13 @@ import Link from "next/link";
 import IncomeTaxCalc from "@/components/finance/IncomeTaxCalc";
 
 export const metadata: Metadata = {
-  title: "종합소득세 계산기 2025 - 세율표 프리랜서 사업소득세",
+  title: "종합소득세 계산기 2026 - 세율표 프리랜서 사업소득세",
   description:
-    "무료 종합소득세 계산기로 소득세와 지방소득세를 바로 확인하세요. 2025년 세율표 적용, 프리랜서 3.3% 세금, 과세표준 실효세율 조회.",
-  keywords: ["종합소득세계산기", "소득세세율", "종합소득세율표2025", "프리랜서세금", "사업소득세", "3.3%세금", "소득세계산", "과세표준", "실효세율", "종소세신고"],
+    "무료 종합소득세 계산기로 소득세와 지방소득세를 바로 확인하세요. 2026년 세율표 적용, 프리랜서 3.3% 세금, 과세표준 실효세율 조회.",
+  keywords: ["종합소득세계산기", "소득세세율", "종합소득세율표2026", "프리랜서세금", "사업소득세", "3.3%세금", "소득세계산", "과세표준", "실효세율", "종소세신고"],
+  alternates: {
+    canonical: "/finance/income-tax",
+  },
 };
 
 export default function IncomeTaxPage() {
@@ -28,7 +31,7 @@ export default function IncomeTaxPage() {
         종합소득세 계산기
       </h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">
-        소득 유형과 금액을 입력하면 2025년 세율 기준으로 종합소득세를 계산합니다.
+        소득 유형과 금액을 입력하면 2026년 세율 기준으로 종합소득세를 계산합니다.
       </p>
 
       <IncomeTaxCalc />
@@ -53,7 +56,7 @@ export default function IncomeTaxPage() {
           </li>
         </ul>
         <p className="mt-3 text-xs text-gray-400">
-          * 2025년 기준 세율을 적용한 근사치입니다. 실제 세액은 각종 세액공제 및 감면에 따라 달라질 수
+          * 2026년 기준 세율을 적용한 근사치입니다. 실제 세액은 각종 세액공제 및 감면에 따라 달라질 수
           있습니다.
         </p>
       </section>
