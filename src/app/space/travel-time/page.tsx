@@ -21,6 +21,33 @@ export default function TravelTimePage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">빛 여행 시간 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">태양계 행성까지 다양한 이동 수단으로 걸리는 시간을 비교합니다.</p>
       <LightTravelCalc />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "빛 여행 시간 계산기",
+          "description": "빛, 비행기, KTX로 우주를 여행하면 걸리는 시간",
+          "url": "https://www.oktools.co.kr/space/travel-time",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "우주/과학", "item": "https://www.oktools.co.kr/space" },
+            { "@type": "ListItem", "position": 3, "name": "빛 여행 시간 계산기" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

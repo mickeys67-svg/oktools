@@ -21,6 +21,33 @@ export default function SpaceDistancePage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">우주 거리 변환</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">광년, AU, 파섹, km 등 우주 거리 단위를 변환합니다.</p>
       <SpaceDistanceCalc />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "우주 거리 변환",
+          "description": "광년, 천문단위, 파섹 등 우주 거리 변환",
+          "url": "https://www.oktools.co.kr/space/distance",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "우주/과학", "item": "https://www.oktools.co.kr/space" },
+            { "@type": "ListItem", "position": 3, "name": "우주 거리 변환" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

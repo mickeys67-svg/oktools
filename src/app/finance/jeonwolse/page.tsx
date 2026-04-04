@@ -42,6 +42,33 @@ export default function JeonwolsePage() {
           * 본 계산기는 참고용이며, 실제 계약 조건은 임대인과 협의하시기 바랍니다.
         </p>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "전월세 전환율 계산기",
+          "description": "전세 ↔ 월세 전환율 계산 및 환산가 비교",
+          "url": "https://www.oktools.co.kr/finance/jeonwolse",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "금융 계산기", "item": "https://www.oktools.co.kr/finance" },
+            { "@type": "ListItem", "position": 3, "name": "전월세 전환율 계산기" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

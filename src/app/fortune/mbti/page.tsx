@@ -38,6 +38,33 @@ export default function MBTIPage() {
           * MBTI 궁합은 재미와 참고 용도입니다. 실제 관계는 개인의 노력과 이해가 더 중요합니다.
         </p>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "MBTI 궁합",
+          "description": "MBTI 유형별 궁합 확인",
+          "url": "https://www.oktools.co.kr/fortune/mbti",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "운세/재미", "item": "https://www.oktools.co.kr/fortune" },
+            { "@type": "ListItem", "position": 3, "name": "MBTI 궁합" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

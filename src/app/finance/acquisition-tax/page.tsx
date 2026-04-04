@@ -55,6 +55,33 @@ export default function AcquisitionTaxPage() {
           있습니다.
         </p>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "취득세 계��기",
+          "description": "부동산 취득세, 지방교육세, 농어촌특별세 계산",
+          "url": "https://www.oktools.co.kr/finance/acquisition-tax",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "금융 계산기", "item": "https://www.oktools.co.kr/finance" },
+            { "@type": "ListItem", "position": 3, "name": "취��세 계산기" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

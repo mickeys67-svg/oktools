@@ -56,6 +56,29 @@ export default function FortunePage() {
           </Link>
         ))}
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "운세/재미",
+          "url": "https://www.oktools.co.kr/fortune",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "타로카드", "url": "https://www.oktools.co.kr/fortune/tarot" },
+              { "@type": "ListItem", "position": 2, "name": "토정비결", "url": "https://www.oktools.co.kr/fortune/tojeong" },
+              { "@type": "ListItem", "position": 3, "name": "별자리 운세", "url": "https://www.oktools.co.kr/fortune/zodiac" },
+              { "@type": "ListItem", "position": 4, "name": "MBTI 궁합", "url": "https://www.oktools.co.kr/fortune/mbti" },
+              { "@type": "ListItem", "position": 5, "name": "꿈해몽", "url": "https://www.oktools.co.kr/fortune/dream" },
+              { "@type": "ListItem", "position": 6, "name": "혈액형 궁합", "url": "https://www.oktools.co.kr/fortune/blood-type" },
+              { "@type": "ListItem", "position": 7, "name": "이름 궁합", "url": "https://www.oktools.co.kr/fortune/name-match" },
+              { "@type": "ListItem", "position": 8, "name": "띠 계산기", "url": "https://www.oktools.co.kr/fortune/zodiac-animal" }
+            ]
+          }
+        }) }}
+      />
     </div>
   );
 }

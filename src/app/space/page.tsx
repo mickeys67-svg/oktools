@@ -56,6 +56,25 @@ export default function SpacePage() {
           </Link>
         ))}
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "우주/과학",
+          "url": "https://www.oktools.co.kr/space",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "행성 무게 계산기", "url": "https://www.oktools.co.kr/space/planet-weight" },
+              { "@type": "ListItem", "position": 2, "name": "우주 거리 변환", "url": "https://www.oktools.co.kr/space/distance" },
+              { "@type": "ListItem", "position": 3, "name": "빛 여행 시간 계산기", "url": "https://www.oktools.co.kr/space/travel-time" },
+              { "@type": "ListItem", "position": 4, "name": "행성 나이 계산기", "url": "https://www.oktools.co.kr/space/planet-age" }
+            ]
+          }
+        }) }}
+      />
     </div>
   );
 }

@@ -56,6 +56,27 @@ export default function ToolsPage() {
           </Link>
         ))}
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "유틸리티",
+          "url": "https://www.oktools.co.kr/tools",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "온라인 시계", "url": "https://www.oktools.co.kr/tools/clock" },
+              { "@type": "ListItem", "position": 2, "name": "타이머", "url": "https://www.oktools.co.kr/tools/timer" },
+              { "@type": "ListItem", "position": 3, "name": "스톱워치", "url": "https://www.oktools.co.kr/tools/stopwatch" },
+              { "@type": "ListItem", "position": 4, "name": "글자수 세기", "url": "https://www.oktools.co.kr/tools/character-count" },
+              { "@type": "ListItem", "position": 5, "name": "랜덤 번호 생성기", "url": "https://www.oktools.co.kr/tools/random-number" },
+              { "@type": "ListItem", "position": 6, "name": "로또 번호 추천", "url": "https://www.oktools.co.kr/tools/lotto" }
+            ]
+          }
+        }) }}
+      />
     </div>
   );
 }

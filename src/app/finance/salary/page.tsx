@@ -44,6 +44,33 @@ export default function SalaryPage() {
           * 2025년 기준 요율을 적용한 근사치입니다. 실제 금액은 회사 정책 및 개인 상황에 따라 다를 수 있습니다.
         </p>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "연봉 실수령액 계산기",
+          "description": "4대 보험, 소득세 공제 후 실수령액 계산",
+          "url": "https://www.oktools.co.kr/finance/salary",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "금융 계산기", "item": "https://www.oktools.co.kr/finance" },
+            { "@type": "ListItem", "position": 3, "name": "연봉 실수령액 계산기" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

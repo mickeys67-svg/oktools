@@ -25,6 +25,33 @@ export default function TrafficFinePage() {
         속도위반, 주정차위반 과태료와 벌점을 간편하게 조회하세요.
       </p>
       <TrafficFineCalc />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "과태료 계산기",
+          "description": "속도위반, 주정차위반 과태료 및 벌점 조회",
+          "url": "https://www.oktools.co.kr/life/traffic-fine",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "생활 도구", "item": "https://www.oktools.co.kr/life" },
+            { "@type": "ListItem", "position": 3, "name": "과태료 계산기" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

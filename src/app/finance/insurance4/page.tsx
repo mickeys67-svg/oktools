@@ -43,6 +43,33 @@ export default function Insurance4Page() {
           실제 금액은 회사 정책에 따라 다를 수 있습니다.
         </p>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "4대보험 계산기",
+          "description": "국민연금, 건강보험, 고용보험 근로자/사업주 부담금 계산",
+          "url": "https://www.oktools.co.kr/finance/insurance4",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "금융 계산기", "item": "https://www.oktools.co.kr/finance" },
+            { "@type": "ListItem", "position": 3, "name": "4대보험 계산기" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

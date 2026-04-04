@@ -18,6 +18,33 @@ export default function CompoundInterestPage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">복리 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">초기 투자금과 월 적립금으로 복리 성장을 시뮬레이션합니다.</p>
       <CompoundCalc />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "복리 계산기",
+          "description": "복리 효과 시뮬레이션 및 투자 성장 계산",
+          "url": "https://www.oktools.co.kr/finance/compound-interest",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "금융 계산기", "item": "https://www.oktools.co.kr/finance" },
+            { "@type": "ListItem", "position": 3, "name": "복리 계산기" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

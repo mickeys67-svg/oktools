@@ -40,6 +40,33 @@ export default function LottoPage() {
           * 로또 번호 추천은 통계 기반 참고용이며, 당첨을 보장하지 않습니다. 도박에 주의하세요.
         </p>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "로또 번호 추천",
+          "description": "미출현 번호, 고빈도 번호, 균형 추천 등 로또 6/45 스마트 번호 추천",
+          "url": "https://www.oktools.co.kr/tools/lotto",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "유틸리티", "item": "https://www.oktools.co.kr/tools" },
+            { "@type": "ListItem", "position": 3, "name": "로또 번호 추천" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

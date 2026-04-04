@@ -5,7 +5,11 @@
       "Bash(cp -r /c/Users/micke/tempconverter/* /c/Users/micke/GOOGLEFORAD/)",
       "Bash(cp -r /c/Users/micke/tempconverter/.* /c/Users/micke/GOOGLEFORAD/)",
       "Bash(git commit:*)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "mcp__desktop-commander__read_file",
+      "mcp__desktop-commander__list_directory",
+      "mcp__desktop-commander__get_file_info",
+      "Bash(npx next:*)"
     ]
   }
 }

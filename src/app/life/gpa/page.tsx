@@ -18,6 +18,33 @@ export default function GPAPage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">학점 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">과목별 학점과 성적을 입력하여 평균 평점(GPA)을 계산합니다.</p>
       <GPACalculator />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "학점 계산기",
+          "description": "대학교 학점(GPA) 계산",
+          "url": "https://www.oktools.co.kr/life/gpa",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "생활 도구", "item": "https://www.oktools.co.kr/life" },
+            { "@type": "ListItem", "position": 3, "name": "학점 계산기" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

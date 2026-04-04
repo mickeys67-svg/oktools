@@ -72,6 +72,35 @@ export default function FinancePage() {
           </Link>
         ))}
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "금융 계산기",
+          "url": "https://www.oktools.co.kr/finance",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "대출 이자 계산기", "url": "https://www.oktools.co.kr/finance/loan-calculator" },
+              { "@type": "ListItem", "position": 2, "name": "할부 계산기", "url": "https://www.oktools.co.kr/finance/installment" },
+              { "@type": "ListItem", "position": 3, "name": "연봉 실수령액 계산기", "url": "https://www.oktools.co.kr/finance/salary" },
+              { "@type": "ListItem", "position": 4, "name": "퇴직금 계산기", "url": "https://www.oktools.co.kr/finance/retirement" },
+              { "@type": "ListItem", "position": 5, "name": "적금 이자 계산기", "url": "https://www.oktools.co.kr/finance/savings" },
+              { "@type": "ListItem", "position": 6, "name": "예금 이자 계산기", "url": "https://www.oktools.co.kr/finance/deposit" },
+              { "@type": "ListItem", "position": 7, "name": "복리 계산기", "url": "https://www.oktools.co.kr/finance/compound-interest" },
+              { "@type": "ListItem", "position": 8, "name": "최저시급 계산기", "url": "https://www.oktools.co.kr/finance/minimum-wage" },
+              { "@type": "ListItem", "position": 9, "name": "전월세 전환율 계산기", "url": "https://www.oktools.co.kr/finance/jeonwolse" },
+              { "@type": "ListItem", "position": 10, "name": "4대보험 계산기", "url": "https://www.oktools.co.kr/finance/insurance4" },
+              { "@type": "ListItem", "position": 11, "name": "부동산 중개보수 계산기", "url": "https://www.oktools.co.kr/finance/broker-fee" },
+              { "@type": "ListItem", "position": 12, "name": "종합소득세 계산기", "url": "https://www.oktools.co.kr/finance/income-tax" },
+              { "@type": "ListItem", "position": 13, "name": "실업급여 계산기", "url": "https://www.oktools.co.kr/finance/unemployment" },
+              { "@type": "ListItem", "position": 14, "name": "취득세 계산기", "url": "https://www.oktools.co.kr/finance/acquisition-tax" }
+            ]
+          }
+        }) }}
+      />
     </div>
   );
 }

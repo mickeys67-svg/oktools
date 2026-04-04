@@ -27,6 +27,33 @@ export default function PlanetWeightPage() {
       </p>
 
       <PlanetWeightCalc />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "행성 무게 계산기",
+          "description": "다른 행성에서의 내 몸무게 계산",
+          "url": "https://www.oktools.co.kr/space/planet-weight",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "우주/과학", "item": "https://www.oktools.co.kr/space" },
+            { "@type": "ListItem", "position": 3, "name": "행성 무게 계산기" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

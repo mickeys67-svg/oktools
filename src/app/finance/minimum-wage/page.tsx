@@ -42,6 +42,33 @@ export default function MinimumWagePage() {
           * 본 계산기는 참고용이며, 실제 급여는 근로계약 조건에 따라 달라질 수 있습니다.
         </p>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "최저시급 계산기",
+          "description": "2025/2026 최저시급 기준 일급, 주급, 월급, 연봉 계산",
+          "url": "https://www.oktools.co.kr/finance/minimum-wage",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "금융 계산기", "item": "https://www.oktools.co.kr/finance" },
+            { "@type": "ListItem", "position": 3, "name": "최저시급 계산기" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

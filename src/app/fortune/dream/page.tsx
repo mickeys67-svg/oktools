@@ -38,6 +38,33 @@ export default function DreamPage() {
           * 꿈해몽은 전통적 해석을 바탕으로 한 재미 콘텐츠입니다. 참고 용도로만 활용하세요.
         </p>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "꿈해몽",
+          "description": "꿈의 의미를 풀이하는 꿈해몽 사전",
+          "url": "https://www.oktools.co.kr/fortune/dream",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "운세/재미", "item": "https://www.oktools.co.kr/fortune" },
+            { "@type": "ListItem", "position": 3, "name": "꿈해몽" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

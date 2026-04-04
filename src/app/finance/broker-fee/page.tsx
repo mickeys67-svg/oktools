@@ -43,6 +43,33 @@ export default function BrokerFeePage() {
           실제 중개보수는 공인중개사와 협의하시기 바랍니다.
         </p>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "부동산 중개보수 계산기",
+          "description": "매매/전세 거래 시 중개보수(복비) 및 부가세 계산",
+          "url": "https://www.oktools.co.kr/finance/broker-fee",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "금융 계산기", "item": "https://www.oktools.co.kr/finance" },
+            { "@type": "ListItem", "position": 3, "name": "부동산 중개보수 계산기" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

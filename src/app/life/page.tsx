@@ -42,6 +42,28 @@ export default function LifePage() {
           </Link>
         ))}
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "생활 도구",
+          "url": "https://www.oktools.co.kr/life",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "전기요금 계산기", "url": "https://www.oktools.co.kr/life/electricity" },
+              { "@type": "ListItem", "position": 2, "name": "학점 계산기", "url": "https://www.oktools.co.kr/life/gpa" },
+              { "@type": "ListItem", "position": 3, "name": "퍼센트 계산기", "url": "https://www.oktools.co.kr/life/percentage" },
+              { "@type": "ListItem", "position": 4, "name": "할인율 계산기", "url": "https://www.oktools.co.kr/life/discount" },
+              { "@type": "ListItem", "position": 5, "name": "전역일 계산기", "url": "https://www.oktools.co.kr/life/military" },
+              { "@type": "ListItem", "position": 6, "name": "과태료 계산기", "url": "https://www.oktools.co.kr/life/traffic-fine" },
+              { "@type": "ListItem", "position": 7, "name": "자동차세 계산기", "url": "https://www.oktools.co.kr/life/car-tax" }
+            ]
+          }
+        }) }}
+      />
     </div>
   );
 }

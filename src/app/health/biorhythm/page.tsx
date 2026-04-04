@@ -54,6 +54,33 @@ export default function BiorhythmPage() {
           * 바이오리듬은 과학적으로 검증된 이론은 아닙니다. 재미와 참고 용도로만 활용하세요.
         </p>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "바이오리듬",
+          "description": "신체, 감성, 지성 바이오리듬 차트 확인",
+          "url": "https://www.oktools.co.kr/health/biorhythm",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "건강 계산기", "item": "https://www.oktools.co.kr/health" },
+            { "@type": "ListItem", "position": 3, "name": "바이오리듬" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

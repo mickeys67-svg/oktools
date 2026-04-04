@@ -56,6 +56,28 @@ export default function HealthPage() {
           </Link>
         ))}
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "건강 계산기",
+          "url": "https://www.oktools.co.kr/health",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "BMI 계산기", "url": "https://www.oktools.co.kr/health/bmi" },
+              { "@type": "ListItem", "position": 2, "name": "기초대사량 계산기", "url": "https://www.oktools.co.kr/health/bmr" },
+              { "@type": "ListItem", "position": 3, "name": "바이오리듬", "url": "https://www.oktools.co.kr/health/biorhythm" },
+              { "@type": "ListItem", "position": 4, "name": "만 나이 계산기", "url": "https://www.oktools.co.kr/health/age" },
+              { "@type": "ListItem", "position": 5, "name": "D-Day 계산기", "url": "https://www.oktools.co.kr/health/dday" },
+              { "@type": "ListItem", "position": 6, "name": "임신 주수 계산기", "url": "https://www.oktools.co.kr/health/pregnancy" },
+              { "@type": "ListItem", "position": 7, "name": "음주 측정기", "url": "https://www.oktools.co.kr/health/alcohol" }
+            ]
+          }
+        }) }}
+      />
     </div>
   );
 }

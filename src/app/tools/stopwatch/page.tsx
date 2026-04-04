@@ -27,6 +27,33 @@ export default function StopwatchPage() {
       </p>
 
       <StopwatchApp />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "스톱워치",
+          "description": "랩타임 기능 지원 온라인 스톱워치",
+          "url": "https://www.oktools.co.kr/tools/stopwatch",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "유틸리티", "item": "https://www.oktools.co.kr/tools" },
+            { "@type": "ListItem", "position": 3, "name": "스톱워치" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

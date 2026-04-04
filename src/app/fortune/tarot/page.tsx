@@ -42,6 +42,33 @@ export default function TarotPage() {
           * 타로카드 리딩은 재미와 참고 용도입니다. 중요한 결정은 전문가와 상담하세요.
         </p>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "타로카드",
+          "description": "무료 온라인 타로카드 리딩",
+          "url": "https://www.oktools.co.kr/fortune/tarot",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+          "inLanguage": "ko-KR"
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
+            { "@type": "ListItem", "position": 2, "name": "운세/재미", "item": "https://www.oktools.co.kr/fortune" },
+            { "@type": "ListItem", "position": 3, "name": "타로카드" }
+          ]
+        }) }}
+      />
     </div>
   );
 }

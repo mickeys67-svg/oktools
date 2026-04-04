@@ -4,13 +4,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
+const SITE_URL = "https://www.oktools.co.kr";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "오케이툴즈 - 계산기, 변환기, 유틸리티 모음",
     template: "%s | 오케이툴즈",
   },
   description:
-    "대출이자 계산기, 연봉 실수령액, BMI, 바이오리듬, 단위변환, 타로, 온라인 시계 등 61가지 무료 도구를 제공합니다. 깔끔한 디자인, 빠른 계산.",
+    "대출이자 계산기, 연봉 실수령액, BMI, 바이오리듬, 단위변환, 타로, 전역일 계산기, 4대보험 등 53가지 무료 도구를 제공합니다. 한국형 특화 계산기.",
   keywords: [
     "계산기",
     "대출이자계산기",
@@ -19,18 +22,71 @@ export const metadata: Metadata = {
     "BMI계산기",
     "단위변환",
     "평수계산기",
+    "전역일계산기",
+    "4대보험계산기",
+    "최저시급계산기",
+    "전월세전환율",
+    "음주측정기",
+    "혈액형궁합",
+    "이름궁합",
+    "종합소득세계산기",
+    "실업급여계산기",
+    "취득세계산기",
+    "과태료계산기",
+    "자동차세계산기",
     "바이오리듬",
     "온라인시계",
     "타로",
   ],
+  alternates: {
+    canonical: SITE_URL,
+    languages: { "ko-KR": SITE_URL },
+  },
   openGraph: {
     type: "website",
     locale: "ko_KR",
     siteName: "오케이툴즈",
+    title: "오케이툴즈 - 계산기, 변환기, 유틸리티 모음",
+    description:
+      "대출이자, 연봉, BMI, 단위변환, 전역일, 4대보험, 음주측정기 등 53가지 무료 도구",
+    url: SITE_URL,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "오케이툴즈 - 53가지 무료 온라인 도구",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "오케이툴즈 - 계산기, 변환기, 유틸리티 모음",
+    description:
+      "대출이자, 연봉, BMI, 단위변환, 전역일, 4대보험, 음주측정기 등 53가지 무료 도구",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    // Add your Google Search Console verification code here
+    // google: "your-verification-code",
+  },
+  other: {
+    "theme-color": "#4F46E5",
+    "color-scheme": "light dark",
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
   },
 };
 
@@ -42,10 +98,11 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <head>
+        {/* Preconnect to font CDN for performance */}
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
         {/* Pretendard Variable Font */}
         <link
           rel="stylesheet"
-          as="style"
           crossOrigin="anonymous"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
         />
@@ -85,6 +142,41 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+
+        {/* Organization + WebSite Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": `${SITE_URL}/#organization`,
+                  name: "오케이툴즈",
+                  url: SITE_URL,
+                  logo: `${SITE_URL}/og-image.png`,
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": `${SITE_URL}/#website`,
+                  name: "오케이툴즈",
+                  url: SITE_URL,
+                  publisher: { "@id": `${SITE_URL}/#organization` },
+                  inLanguage: "ko-KR",
+                  potentialAction: {
+                    "@type": "SearchAction",
+                    target: {
+                      "@type": "EntryPoint",
+                      urlTemplate: `${SITE_URL}/?q={search_term_string}`,
+                    },
+                    "query-input": "required name=search_term_string",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );
