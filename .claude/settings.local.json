@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(cp -r /c/Users/micke/tempconverter/* /c/Users/micke/GOOGLEFORAD/)",
+      "Bash(cp -r /c/Users/micke/tempconverter/.* /c/Users/micke/GOOGLEFORAD/)"
+    ]
+  }
+}

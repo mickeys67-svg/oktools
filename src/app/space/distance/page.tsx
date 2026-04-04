@@ -1,0 +1,26 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import SpaceDistanceCalc from "@/components/space/SpaceDistanceCalc";
+
+export const metadata: Metadata = {
+  title: "우주 거리 변환 - 광년, 천문단위(AU), 파섹, km 변환",
+  description:
+    "광년, 천문단위(AU), 파섹, km 등 우주 거리 단위를 변환합니다. 안드로메다까지 몇 광년인지 확인하세요.",
+};
+
+export default function SpaceDistancePage() {
+  return (
+    <div className="mx-auto max-w-[720px] px-4 py-8 sm:px-6 sm:py-12">
+      <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400">
+        <Link href="/" className="hover:text-primary-600">홈</Link>
+        <span className="mx-2">/</span>
+        <Link href="/space" className="hover:text-primary-600">우주/과학</Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-900 dark:text-gray-100">우주 거리 변환</span>
+      </nav>
+      <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">우주 거리 변환</h1>
+      <p className="mb-8 text-gray-500 dark:text-gray-400">광년, AU, 파섹, km 등 우주 거리 단위를 변환합니다.</p>
+      <SpaceDistanceCalc />
+    </div>
+  );
+}

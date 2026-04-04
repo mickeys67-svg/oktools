@@ -1,0 +1,32 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import StopwatchApp from "@/components/tools/StopwatchApp";
+
+export const metadata: Metadata = {
+  title: "온라인 스톱워치 - 랩타임 기능 지원",
+  description:
+    "랩타임 기록, 큰 화면 표시를 지원하는 온라인 스톱워치. 운동, 공부, 요리 시간 측정에 유용합니다.",
+};
+
+export default function StopwatchPage() {
+  return (
+    <div className="mx-auto max-w-[720px] px-4 py-8 sm:px-6 sm:py-12">
+      <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400">
+        <Link href="/" className="hover:text-primary-600">홈</Link>
+        <span className="mx-2">/</span>
+        <Link href="/tools" className="hover:text-primary-600">유틸리티</Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-900 dark:text-gray-100">스톱워치</span>
+      </nav>
+
+      <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">
+        온라인 스톱워치
+      </h1>
+      <p className="mb-8 text-gray-500 dark:text-gray-400">
+        시작 버튼을 누르면 시간이 측정됩니다. 랩 버튼으로 구간 기록을 남길 수 있습니다.
+      </p>
+
+      <StopwatchApp />
+    </div>
+  );
+}

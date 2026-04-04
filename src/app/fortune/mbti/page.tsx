@@ -1,0 +1,43 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import MBTICompatibility from "@/components/fortune/MBTICompatibility";
+
+export const metadata: Metadata = {
+  title: "MBTI 궁합 테스트 - 16가지 유형별 궁합 확인",
+  description:
+    "나와 상대방의 MBTI를 선택하면 궁합 점수와 관계 분석 결과를 확인할 수 있습니다. 16가지 유형별 성격 특성과 궁합.",
+};
+
+export default function MBTIPage() {
+  return (
+    <div className="mx-auto max-w-[720px] px-4 py-8 sm:px-6 sm:py-12">
+      <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400">
+        <Link href="/" className="hover:text-primary-600">홈</Link>
+        <span className="mx-2">/</span>
+        <Link href="/fortune" className="hover:text-primary-600">운세·재미</Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-900 dark:text-gray-100">MBTI 궁합</span>
+      </nav>
+
+      <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">
+        MBTI 궁합
+      </h1>
+      <p className="mb-8 text-gray-500 dark:text-gray-400">
+        나와 상대방의 MBTI를 선택하면 궁합 점수와 관계 분석을 확인합니다.
+      </p>
+
+      <MBTICompatibility />
+
+      <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">MBTI란?</h2>
+        <p>
+          MBTI(Myers-Briggs Type Indicator)는 캐서린 브릭스와 이사벨 마이어스가 개발한 성격 유형 검사입니다.
+          4가지 선호 지표(외향/내향, 감각/직관, 사고/감정, 판단/인식)의 조합으로 16가지 성격 유형을 분류합니다.
+        </p>
+        <p className="text-xs text-gray-400">
+          * MBTI 궁합은 재미와 참고 용도입니다. 실제 관계는 개인의 노력과 이해가 더 중요합니다.
+        </p>
+      </section>
+    </div>
+  );
+}

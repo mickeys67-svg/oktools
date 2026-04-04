@@ -1,0 +1,43 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import DreamApp from "@/components/fortune/DreamApp";
+
+export const metadata: Metadata = {
+  title: "꿈해몽 - 꿈 풀이 사전",
+  description:
+    "꿈에서 본 동물, 사람, 장소, 행동 등의 의미를 알아보세요. 길몽과 흉몽을 구분하여 상세하게 풀이해드립니다.",
+};
+
+export default function DreamPage() {
+  return (
+    <div className="mx-auto max-w-[720px] px-4 py-8 sm:px-6 sm:py-12">
+      <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400">
+        <Link href="/" className="hover:text-primary-600">홈</Link>
+        <span className="mx-2">/</span>
+        <Link href="/fortune" className="hover:text-primary-600">운세·재미</Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-900 dark:text-gray-100">꿈해몽</span>
+      </nav>
+
+      <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">
+        꿈해몽
+      </h1>
+      <p className="mb-8 text-gray-500 dark:text-gray-400">
+        꿈에서 본 것을 검색하거나 카테고리별로 꿈의 의미를 알아보세요.
+      </p>
+
+      <DreamApp />
+
+      <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">꿈해몽이란?</h2>
+        <p>
+          꿈해몽은 꿈에 나타난 상징이나 사건의 의미를 해석하는 것으로, 동양과 서양 모두에서 오랜 역사를 가지고 있습니다.
+          꿈은 무의식의 메시지를 담고 있다고 여겨지며, 길몽은 좋은 조짐을, 흉몽은 주의가 필요한 신호를 나타냅니다.
+        </p>
+        <p className="text-xs text-gray-400">
+          * 꿈해몽은 전통적 해석을 바탕으로 한 재미 콘텐츠입니다. 참고 용도로만 활용하세요.
+        </p>
+      </section>
+    </div>
+  );
+}
