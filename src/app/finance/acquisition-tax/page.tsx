@@ -38,28 +38,53 @@ export default function AcquisitionTaxPage() {
       <AcquisitionTaxCalc />
       <ResultAd />
 
-      <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
-          취득세 안내
-        </h2>
-        <ul className="list-inside list-disc space-y-1">
-          <li>
-            <strong>취득세</strong>는 부동산을 취득할 때 납부하는 지방세입니다.
-          </li>
-          <li>
-            <strong>다주택자 중과</strong>: 조정대상지역 2주택 8%, 3주택 이상 12%가 적용됩니다.
-          </li>
-          <li>
-            <strong>지방교육세</strong>: 취득세액의 10%
-          </li>
-          <li>
-            <strong>농어촌특별세</strong>: 전용면적 85m2 초과 주택 취득 시 취득세의 10%
-          </li>
-        </ul>
-        <p className="mt-3 text-xs text-gray-400">
-          * 2024년 기준 세율을 적용한 근사치입니다. 실제 세액은 감면 혜택 등에 따라 달라질 수
-          있습니다.
-        </p>
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+            취득세 계산기 사용 가이드
+          </h2>
+          <p>
+            취득세 계산기는 부동산 취득가액과 주택 수, 지역 등을 입력하면 취득세, 지방교육세, 농어촌특별세를 합산하여
+            총 세금을 계산해주는 도구입니다. 아파트, 빌라, 오피스텔 등을 매수하기 전에 취득 비용을 미리 파악할 수 있습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">주택 취득세율 안내</h3>
+          <ul className="list-inside list-disc space-y-1">
+            <li>1주택: 6억 이하 1%, 6~9억 1~3%, 9억 초과 3%</li>
+            <li>다주택자 중과(조정대상지역): 2주택 8%, 3주택 이상 12%</li>
+            <li>지방교육세: 취득세의 10%</li>
+            <li>농어촌특별세: 전용 85m2 초과 시 취득세의 10%</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">감면 혜택과 참고사항</h3>
+          <p>
+            생애최초 주택 구입 시 취득세 감면(200만원 한도)을 받을 수 있으며, 신혼부부 특별공급 주택이나
+            공공분양 주택도 감면 혜택이 적용될 수 있습니다. 취득세는 부동산 등기 시 납부해야 하며,
+            취득일로부터 60일 이내에 신고·납부하지 않으면 가산세(20%)가 부과됩니다.
+            정확한 세액은 지방자치단체 세무과나 세무사에게 확인하시기 바랍니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/finance/broker-fee" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            부동산 중개보수 계산기
+          </Link>
+          <Link href="/finance/jeonwolse" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            전월세 전환율 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+          <Link href="/fortune/tarot" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            타로카드
+          </Link>
+        </div>
       </section>
 
       <script

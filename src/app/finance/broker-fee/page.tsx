@@ -34,20 +34,50 @@ export default function BrokerFeePage() {
       <BrokerFeeCalc />
       <ResultAd />
 
-      <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
-          중개보수 안내
-        </h2>
-        <ul className="list-inside list-disc space-y-1">
-          <li>중개보수는 거래금액에 상한 요율을 곱한 금액 이내에서 협의</li>
-          <li>일정 금액 이하 거래는 한도액이 적용되어 요율 계산 금액보다 낮을 수 있음</li>
-          <li>부가가치세(10%)는 중개보수와 별도로 부과</li>
-          <li>중개보수는 매도인/매수인 또는 임대인/임차인 각각 부담</li>
-        </ul>
-        <p className="mt-3 text-xs text-gray-400">
-          * 주택 기준 요율표이며, 오피스텔/상가 등은 별도 요율이 적용됩니다.
-          실제 중개보수는 공인중개사와 협의하시기 바랍니다.
-        </p>
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+            부동산 중개보수 계산기 사용 가이드
+          </h2>
+          <p>
+            부동산 중개보수(복비) 계산기는 매매, 전세, 월세 거래 시 공인중개사에게 지불해야 하는 수수료를 미리 계산해주는 도구입니다.
+            부동산 거래 전에 예상 비용을 파악하여 자금 계획을 세울 때 활용할 수 있습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">중개보수 요율표 (주택)</h3>
+          <ul className="list-inside list-disc space-y-1">
+            <li>매매: 5천만원 미만 0.6%(한도 25만), 2억 미만 0.5%(한도 80만), 9억 미만 0.4%, 9억 이상 0.5~0.9% 이내 협의</li>
+            <li>임대(전세/월세): 5천만원 미만 0.5%(한도 20만), 1억 미만 0.4%(한도 30만), 6억 미만 0.3%, 6억 이상 0.4~0.8% 이내 협의</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">절약 팁과 주의사항</h3>
+          <p>
+            중개보수는 상한 요율 이내에서 협의할 수 있으므로, 거래 전에 수수료를 미리 확인하고 조율하는 것이 좋습니다.
+            부가가치세(10%)는 중개보수와 별도이며, 중개보수는 매도인/매수인(또는 임대인/임차인)이 각각 부담합니다.
+            오피스텔이나 상가는 주택과 다른 요율이 적용되므로 별도로 확인이 필요합니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/finance/jeonwolse" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            전월세 전환율 계산기
+          </Link>
+          <Link href="/finance/acquisition-tax" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            취득세 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+          <Link href="/fortune/tarot" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            타로카드
+          </Link>
+        </div>
       </section>
 
       <script

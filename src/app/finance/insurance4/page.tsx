@@ -34,20 +34,53 @@ export default function Insurance4Page() {
       <Insurance4Calc />
       <ResultAd />
 
-      <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
-          2026년 4대보험 요율 안내
-        </h2>
-        <ul className="list-inside list-disc space-y-1">
-          <li><strong>국민연금</strong>: 근로자 4.5% + 사업주 4.5% = 9.0% (월 소득 590만원 상한)</li>
-          <li><strong>건강보험</strong>: 근로자 3.545% + 사업주 3.545% = 7.09%</li>
-          <li><strong>장기요양보험</strong>: 건강보험료의 12.81%</li>
-          <li><strong>고용보험</strong>: 근로자 0.9% + 사업주 0.9~1.65% (기업 규모별 차등)</li>
-        </ul>
-        <p className="mt-3 text-xs text-gray-400">
-          * 2026년 기준 요율이며, 산재보험은 전액 사업주 부담으로 업종별 요율이 다릅니다.
-          실제 금액은 회사 정책에 따라 다를 수 있습니다.
-        </p>
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+            4대보험 계산기 사용 가이드
+          </h2>
+          <p>
+            4대보험 계산기는 월 급여를 입력하면 국민연금, 건강보험, 장기요양보험, 고용보험의 근로자 부담분과 사업주 부담분을
+            한눈에 확인할 수 있는 도구입니다. 급여 명세서의 공제 내역을 이해하거나 인건비를 산정할 때 유용합니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">2026년 4대보험 요율</h3>
+          <ul className="list-inside list-disc space-y-1">
+            <li><strong>국민연금</strong>: 근로자 4.5% + 사업주 4.5% = 9.0% (월 소득 590만원 상한)</li>
+            <li><strong>건강보험</strong>: 근로자 3.545% + 사업주 3.545% = 7.09%</li>
+            <li><strong>장기요양보험</strong>: 건강보험료의 12.81%</li>
+            <li><strong>고용보험</strong>: 근로자 0.9% + 사업주 0.9~1.65% (기업 규모별 차등)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">4대보험 참고사항</h3>
+          <p>
+            4대보험은 근로자와 사업주가 각각 부담하며, 산재보험은 전액 사업주가 납부합니다.
+            국민연금은 월 소득 상한(590만원)과 하한(37만원)이 있어 해당 범위 내에서만 보험료가 산정됩니다.
+            건강보험료는 매년 4월에 전년도 소득 기준으로 정산하므로 추가 납부나 환급이 발생할 수 있습니다.
+            비과세 수당(식대 월 20만원, 자가운전보조금 등)은 보험료 산정에서 제외됩니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/finance/salary" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            연봉 실수령액 계산기
+          </Link>
+          <Link href="/finance/minimum-wage" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            최저시급 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+          <Link href="/fortune/tarot" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            타로카드
+          </Link>
+        </div>
       </section>
 
       <script

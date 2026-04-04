@@ -34,19 +34,51 @@ export default function JeonwolsePage() {
       <JeonwolseCalc />
       <ResultAd />
 
-      <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
-          전월세 전환율이란?
-        </h2>
-        <ul className="list-inside list-disc space-y-1">
-          <li><strong>전환율 공식</strong>: (월세 x 12) / (전세보증금 - 월세보증금) x 100</li>
-          <li><strong>법정 상한</strong>: 한국은행 기준금리 + 2.0% (주택임대차보호법)</li>
-          <li><strong>활용</strong>: 전세와 월세 중 유리한 조건을 비교할 때 사용</li>
-          <li>전환율이 낮을수록 전세 대비 월세가 저렴한 것을 의미합니다</li>
-        </ul>
-        <p className="mt-3 text-xs text-gray-400">
-          * 본 계산기는 참고용이며, 실제 계약 조건은 임대인과 협의하시기 바랍니다.
-        </p>
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+            전월세 전환율 계산기 사용 가이드
+          </h2>
+          <p>
+            전월세 전환율 계산기는 전세를 월세로 바꾸거나, 월세를 전세로 환산할 때 적정 금액을 산출해주는 도구입니다.
+            전세 계약을 월세로 전환하려는 임대인이나, 전세와 반전세 중 유리한 조건을 비교하려는 임차인 모두에게 유용합니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">전환율 공식과 법정 상한</h3>
+          <p>
+            전환율 = (월세 x 12) / (전세보증금 - 월세보증금) x 100으로 계산합니다.
+            주택임대차보호법에 따라 전환율의 법정 상한은 한국은행 기준금리 + 2.0%입니다.
+            전환율이 낮을수록 전세 대비 월세가 저렴하다는 의미이며, 반대로 전환율이 높으면 전세가 유리합니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">전월세 선택 팁</h3>
+          <p>
+            전세는 목돈이 필요하지만 월 거주비 부담이 없고, 월세는 초기 자금이 적지만 매월 고정 지출이 발생합니다.
+            전세자금대출 금리와 전환율을 비교하여 전세대출 이자가 월세보다 낮다면 전세가, 높다면 월세가 유리할 수 있습니다.
+            계약 전 전입신고와 확정일자를 반드시 받아 보증금을 보호하시기 바랍니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/finance/broker-fee" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            부동산 중개보수 계산기
+          </Link>
+          <Link href="/finance/acquisition-tax" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            취득세 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+          <Link href="/fortune/tarot" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            타로카드
+          </Link>
+        </div>
       </section>
 
       <script

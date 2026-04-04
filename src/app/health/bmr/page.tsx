@@ -26,6 +26,35 @@ export default function BMRPage() {
       <BMRCalculator />
       <ResultAd />
 
+      {/* Info Section */}
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+            기초대사량 계산기 사용 가이드
+          </h2>
+          <p>
+            기초대사량(BMR) 계산기는 성별, 나이, 키, 체중을 입력하면 하루에 아무 활동 없이도 소모되는 최소 칼로리를 산출합니다.
+            여기에 활동 수준을 반영한 일일 총 에너지 소비량(TDEE)도 함께 계산하여, 다이어트나 체중 관리의 기준점을 제공합니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">Mifflin-St Jeor 공식</h3>
+          <p>
+            남성: BMR = (10 x 체중kg) + (6.25 x 키cm) - (5 x 나이) + 5,
+            여성: BMR = (10 x 체중kg) + (6.25 x 키cm) - (5 x 나이) - 161.
+            이 공식은 현재 가장 정확한 것으로 인정받고 있으며, 활동계수(1.2~1.9)를 곱하면 TDEE를 구할 수 있습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">다이어트 활용 팁</h3>
+          <p>
+            체중 감량을 원한다면 TDEE에서 300~500kcal를 줄인 양을 섭취하는 것이 건강한 방법입니다.
+            다만 BMR 이하로 섭취하면 근육 손실과 대사량 저하가 발생하므로, 기초대사량 이상은 반드시 섭취해야 합니다.
+            근력 운동으로 근육량을 늘리면 기초대사량 자체가 올라가 장기적으로 체중 관리에 유리합니다.
+          </p>
+        </div>
+      </section>
+
       <InArticleAd />
       {/* Related Tools */}
       <section className="mt-10">

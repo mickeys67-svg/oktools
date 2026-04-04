@@ -34,19 +34,33 @@ export default function MinimumWagePage() {
       <MinimumWageCalc />
       <ResultAd />
 
-      <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
-          최저임금 안내
-        </h2>
-        <ul className="list-inside list-disc space-y-1">
-          <li><strong>2025년 최저시급</strong>: 10,030원 (전년 대비 1.7% 인상)</li>
-          <li><strong>2026년 최저시급</strong>: 10,360원 (전년 대비 3.3% 인상)</li>
-          <li><strong>주휴수당</strong>: 주 15시간 이상 근무 시 1일분의 유급휴일 수당 지급</li>
-          <li><strong>월급 환산</strong>: 주 40시간 근무 + 주휴 8시간 = 월 209시간 기준</li>
-        </ul>
-        <p className="mt-3 text-xs text-gray-400">
-          * 본 계산기는 참고용이며, 실제 급여는 근로계약 조건에 따라 달라질 수 있습니다.
-        </p>
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+            최저시급 계산기 사용 가이드
+          </h2>
+          <p>
+            최저시급 계산기는 근무 시간과 연도를 입력하면 최저임금 기준으로 일급, 주급, 월급, 연봉을 계산해주는 도구입니다.
+            아르바이트 급여를 확인하거나, 사업주가 최저임금법을 준수하는지 검토할 때 유용합니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">2025~2026년 최저임금</h3>
+          <ul className="list-inside list-disc space-y-1">
+            <li><strong>2025년</strong>: 시급 10,030원 / 월급 약 2,096,270원 / 연봉 약 25,155,240원</li>
+            <li><strong>2026년</strong>: 시급 10,360원 / 월급 약 2,165,240원 / 연봉 약 25,982,880원</li>
+            <li><strong>주휴수당</strong>: 주 15시간 이상 근무 시 1일분의 유급휴일 수당 지급</li>
+            <li><strong>월급 환산</strong>: 주 40시간 + 주휴 8시간 = 월 209시간 기준</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">알바생이 알아야 할 사항</h3>
+          <p>
+            최저임금은 고용 형태(정규직, 계약직, 아르바이트)에 관계없이 모든 근로자에게 동일하게 적용됩니다.
+            수습 기간(3개월 이내)이라도 1년 이상 근로계약을 체결한 경우에만 10% 감액이 가능하며, 단순노무직은 감액 대상에서 제외됩니다.
+            최저임금 미만으로 급여를 받고 있다면 고용노동부(1350)에 신고하거나 노동청에 진정을 제기할 수 있습니다.
+          </p>
+        </div>
       </section>
 
       <InArticleAd />

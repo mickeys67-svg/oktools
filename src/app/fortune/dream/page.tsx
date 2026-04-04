@@ -34,15 +34,49 @@ export default function DreamPage() {
       <DreamApp />
       <ResultAd />
 
-      <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">꿈해몽이란?</h2>
-        <p>
-          꿈해몽은 꿈에 나타난 상징이나 사건의 의미를 해석하는 것으로, 동양과 서양 모두에서 오랜 역사를 가지고 있습니다.
-          꿈은 무의식의 메시지를 담고 있다고 여겨지며, 길몽은 좋은 조짐을, 흉몽은 주의가 필요한 신호를 나타냅니다.
-        </p>
-        <p className="text-xs text-gray-400">
-          * 꿈해몽은 전통적 해석을 바탕으로 한 재미 콘텐츠입니다. 참고 용도로만 활용하세요.
-        </p>
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">꿈해몽 가이드</h2>
+          <p>
+            꿈해몽은 꿈에 나타난 상징이나 사건의 의미를 해석하는 것으로, 동양과 서양 모두에서 오랜 역사를 가지고 있습니다.
+            꿈에서 본 동물, 사람, 장소, 상황 등을 검색하거나 카테고리별로 찾아보면 해당 꿈의 전통적 해석을 확인할 수 있습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">자주 찾는 꿈 해석</h3>
+          <p>
+            돼지꿈은 재물과 행운을 상징하는 대표적인 길몽이며, 뱀꿈은 재물운이나 변화를 암시합니다.
+            이빨이 빠지는 꿈은 가족의 건강에 대한 걱정을, 하늘을 나는 꿈은 목표 달성과 자유를 의미합니다.
+            물에 빠지는 꿈은 감정적 혼란을, 시험 보는 꿈은 현실의 불안감을 반영하는 것으로 해석됩니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">길몽과 흉몽</h3>
+          <p>
+            길몽은 좋은 조짐을 나타내는 꿈으로, 금은보화, 용, 태양, 임신 등의 상징이 대표적입니다.
+            흉몽은 주의가 필요한 신호를 담은 꿈이지만, 반드시 나쁜 일이 일어난다는 뜻은 아닙니다.
+            꿈해몽은 전통적 해석을 바탕으로 한 재미 콘텐츠이므로 참고 용도로만 활용하시기 바랍니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/fortune/tarot" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            타로카드
+          </Link>
+          <Link href="/fortune/tojeong" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            토정비결
+          </Link>
+          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            대출 이자 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+        </div>
       </section>
 
       <script

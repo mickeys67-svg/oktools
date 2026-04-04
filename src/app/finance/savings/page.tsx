@@ -25,6 +25,54 @@ export default function SavingsPage() {
       <SavingsCalc />
       <ResultAd />
 
+      {/* Info Section */}
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+            적금 이자 계산기 사용 가이드
+          </h2>
+          <p>
+            적금 이자 계산기는 매월 일정 금액을 납입했을 때 만기 시 받게 되는 원금, 이자, 세후 수령액을 미리 계산해주는 도구입니다.
+            목돈 마련 계획을 세우거나 은행별 적금 상품을 비교할 때 활용하면 좋습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">적금 이자 계산 방식</h3>
+          <p>
+            적금은 매월 납입하는 구조이므로, 첫 달 납입금은 만기까지 12개월간 이자가 붙지만 마지막 달 납입금은 1개월만 이자가 붙습니다.
+            단리 적금의 경우 이자 = 월납입금 x 금리 x (n x (n+1)) / (2 x 12)로 계산합니다(n = 납입 개월 수).
+            복리 적금은 매월 발생한 이자가 원금에 합산되어 다음 달 이자 계산에 반영됩니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">적금 활용 팁</h3>
+          <p>
+            적금 가입 시 우대금리 조건(급여이체, 카드 실적, 자동이체 등)을 충족하면 기본금리보다 0.2~1.0%p 높은 금리를 받을 수 있습니다.
+            이자에는 15.4%의 이자소득세가 부과되므로, 세금우대(9.5%)나 비과세 상품을 이용하면 실수령액이 늘어납니다.
+            중도해지 시에는 약정 금리보다 훨씬 낮은 중도해지 이율이 적용되므로 만기까지 유지하는 것이 중요합니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/finance/deposit" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            예금 이자 계산기
+          </Link>
+          <Link href="/finance/compound-interest" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            복리 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+          <Link href="/fortune/tarot" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            타로카드
+          </Link>
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

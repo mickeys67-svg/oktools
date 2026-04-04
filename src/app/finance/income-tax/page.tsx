@@ -38,29 +38,55 @@ export default function IncomeTaxPage() {
       <IncomeTaxCalc />
       <ResultAd />
 
-      <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
-          종합소득세 안내
-        </h2>
-        <ul className="list-inside list-disc space-y-1">
-          <li>
-            <strong>종합소득세</strong>는 근로소득, 사업소득, 이자/배당소득 등을 합산하여 과세합니다.
-          </li>
-          <li>
-            <strong>근로소득공제</strong>는 총급여에 따라 자동으로 계산됩니다.
-          </li>
-          <li>
-            <strong>프리랜서(3.3%)</strong>는 원천징수된 세금(기납부세액)을 차감하여 추가 납부 또는
-            환급 여부를 확인할 수 있습니다.
-          </li>
-          <li>
-            <strong>인적공제</strong>: 본인 150만원, 배우자 150만원, 부양가족 1인당 150만원
-          </li>
-        </ul>
-        <p className="mt-3 text-xs text-gray-400">
-          * 2026년 기준 세율을 적용한 근사치입니다. 실제 세액은 각종 세액공제 및 감면에 따라 달라질 수
-          있습니다.
-        </p>
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+            종합소득세 계산기 사용 가이드
+          </h2>
+          <p>
+            종합소득세 계산기는 근로소득, 사업소득, 프리랜서 소득 등 다양한 소득 유형에 대해 과세표준을 산출하고
+            2026년 세율 기준으로 납부해야 할 소득세와 지방소득세를 계산해주는 도구입니다.
+            5월 종합소득세 신고 전에 예상 세액을 미리 파악할 때 유용합니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">2026년 소득세 세율표</h3>
+          <ul className="list-inside list-disc space-y-1">
+            <li>1,400만원 이하: 6%</li>
+            <li>1,400만원 초과 ~ 5,000만원: 15% (누진공제 126만원)</li>
+            <li>5,000만원 초과 ~ 8,800만원: 24% (누진공제 576만원)</li>
+            <li>8,800만원 초과 ~ 1억 5천만원: 35% (누진공제 1,544만원)</li>
+            <li>1억 5천만원 초과 ~ 3억원: 38%, 3억원 초과 ~ 5억원: 40%, 5억원 초과 ~ 10억원: 42%, 10억원 초과: 45%</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">프리랜서 및 공제 안내</h3>
+          <p>
+            프리랜서는 소득의 3.3%(소득세 3% + 지방소득세 0.3%)가 원천징수되며, 5월에 종합소득세 신고를 통해
+            기납부세액을 정산합니다. 필요경비와 각종 공제를 적용하면 환급을 받을 수 있습니다.
+            인적공제(본인 150만원, 배우자 150만원, 부양가족 1인당 150만원)와 연금보험료 공제, 신용카드 소득공제 등을
+            빠짐없이 반영하는 것이 절세의 핵심입니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/finance/salary" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            연봉 실수령액 계산기
+          </Link>
+          <Link href="/finance/insurance4" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            4대보험 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+          <Link href="/fortune/tarot" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            타로카드
+          </Link>
+        </div>
       </section>
 
       <script

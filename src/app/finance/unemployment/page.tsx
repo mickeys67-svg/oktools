@@ -38,27 +38,53 @@ export default function UnemploymentPage() {
       <UnemploymentCalc />
       <ResultAd />
 
-      <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
-          실업급여 안내
-        </h2>
-        <ul className="list-inside list-disc space-y-1">
-          <li>
-            <strong>실업급여</strong>는 퇴직 전 평균임금의 60%를 지급합니다.
-          </li>
-          <li>
-            <strong>1일 상한액</strong>: 66,000원 / <strong>하한액</strong>: 최저임금 80% 기준
-          </li>
-          <li>
-            지급기간은 나이와 고용보험 가입기간에 따라 120~270일까지 차등 적용됩니다.
-          </li>
-          <li>
-            실업급여 신청은 퇴직 다음날부터 12개월 이내에 해야 합니다.
-          </li>
-        </ul>
-        <p className="mt-3 text-xs text-gray-400">
-          * 2026년 기준 근사치입니다. 정확한 금액은 고용센터에서 확인하세요.
-        </p>
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+            실업급여 계산기 사용 가이드
+          </h2>
+          <p>
+            실업급여 계산기는 퇴직 전 평균 월급과 고용보험 가입기간, 나이를 입력하면 예상 실업급여 일액과
+            총 수령액, 지급기간을 계산해주는 도구입니다. 퇴직을 앞두고 있거나 이직 기간의 생활비를 계획할 때 도움이 됩니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">실업급여 산정 기준</h3>
+          <ul className="list-inside list-disc space-y-1">
+            <li>구직급여일액 = 퇴직 전 평균임금의 60%</li>
+            <li>1일 상한액: 66,000원 / 하한액: 최저임금의 80% x 8시간</li>
+            <li>지급기간: 나이와 고용보험 가입기간에 따라 120~270일</li>
+            <li>신청기한: 퇴직 다음날부터 12개월 이내</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">수급 자격과 신청 방법</h3>
+          <p>
+            실업급여를 받으려면 고용보험 가입기간이 180일 이상이어야 하며, 비자발적 퇴사(권고사직, 계약만료, 정당한 이직 사유 등)에
+            해당해야 합니다. 자발적 퇴사도 임금체불, 직장 내 괴롭힘 등 정당한 사유가 있으면 수급 자격이 인정됩니다.
+            워크넷에서 구직 등록 후 거주지 관할 고용센터를 방문하여 수급자격 인정 신청을 하면 됩니다.
+            신청 후에는 1~4주 간격으로 구직활동을 보고하는 실업인정을 받아야 급여가 지급됩니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/finance/salary" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            연봉 실수령액 계산기
+          </Link>
+          <Link href="/finance/retirement" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            퇴직금 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+          <Link href="/fortune/tarot" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            타로카드
+          </Link>
+        </div>
       </section>
 
       <script

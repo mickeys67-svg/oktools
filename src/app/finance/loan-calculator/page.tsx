@@ -140,6 +140,23 @@ export default function LoanCalculatorPage() {
           ]
         }) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "대출 이자 계산기",
+          "url": "https://www.oktools.co.kr/finance/loan-calculator",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "All",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW"
+          },
+          "description": "무료 대출이자 계산기로 월상환액과 총이자를 확인하세요. 원리금균등, 원금균등, 만기일시 상환 방식별 상환 스케줄을 바로 조회할 수 있습니다."
+        }) }}
+      />
     </div>
   );
 }

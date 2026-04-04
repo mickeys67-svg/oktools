@@ -34,15 +34,50 @@ export default function NameMatchPage() {
       <NameMatchApp />
       <ResultAd />
 
-      <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">이름 궁합 원리</h2>
-        <p>
-          두 이름을 한 글자씩 번갈아 배치한 뒤, 각 글자의 한글 자모 획수를 구합니다.
-          인접한 두 숫자를 더해 일의 자리만 취하는 피라미드 방식으로 줄여나가 최종 2자리 궁합 점수를 산출합니다.
-        </p>
-        <p className="text-xs text-gray-400">
-          * 이름 궁합은 재미와 참고 용도입니다.
-        </p>
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">이름 궁합 테스트 가이드</h2>
+          <p>
+            이름 궁합 테스트는 두 사람의 이름을 한글 획수로 분석하여 궁합 점수를 산출하는 재미 콘텐츠입니다.
+            커플, 친구, 가족 간의 궁합을 가볍게 확인해볼 수 있으며, 이름만 입력하면 즉시 결과를 확인할 수 있습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">이름 궁합 계산 원리</h3>
+          <p>
+            두 이름을 한 글자씩 번갈아 배치한 뒤, 각 글자를 초성·중성·종성으로 분리하여 자모별 획수를 구합니다.
+            예를 들어 ㄱ=2획, ㄴ=2획, ㄷ=3획, ㅏ=2획 등 전통 획수표를 기반으로 합니다.
+            인접한 두 숫자를 더해 일의 자리만 취하는 피라미드 방식으로 줄여나가 최종 2자리 궁합 점수를 산출합니다.
+            같은 이름이라도 배치 순서에 따라 결과가 달라질 수 있습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">참고사항</h3>
+          <p>
+            이름 궁합은 과학적 근거가 아닌 전통적 놀이 문화에 기반한 재미 콘텐츠입니다.
+            실제 관계의 호환성은 서로에 대한 이해, 소통, 노력에 의해 결정되므로 결과는 가볍게 참고하시기 바랍니다.
+            학교나 모임에서 분위기를 띄우는 아이스브레이커로도 활용할 수 있습니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/fortune/mbti" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            MBTI 궁합
+          </Link>
+          <Link href="/fortune/blood-type" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            혈액형 궁합
+          </Link>
+          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            대출 이자 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+        </div>
       </section>
 
       <script

@@ -136,6 +136,23 @@ export default function BMIPage() {
           ]
         }) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "BMI 계산기",
+          "url": "https://www.oktools.co.kr/health/bmi",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "All",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW"
+          },
+          "description": "무료 BMI 계산기로 체질량지수와 비만도를 측정하세요. 키와 몸무게 입력만으로 한국 비만학회 기준 저체중·정상·과체중·비만 단계를 즉시 확인할 수 있습니다."
+        }) }}
+      />
     </div>
   );
 }

@@ -211,6 +211,30 @@ export const tools: Tool[] = [
     path: "/finance/acquisition-tax",
     icon: "FileText",
   },
+  {
+    id: "dsr",
+    name: "DSR 계산기",
+    description: "총부채원리금상환비율(DSR) 계산 및 최대 대출 가능액 확인",
+    category: "finance",
+    path: "/finance/dsr",
+    icon: "BarChart3",
+  },
+  {
+    id: "capital-gains-tax",
+    name: "양도소득세 계산기",
+    description: "부동산 양도소득세, 장기보유특별공제, 지방소득세 계산",
+    category: "finance",
+    path: "/finance/capital-gains-tax",
+    icon: "Scale",
+  },
+  {
+    id: "subscription",
+    name: "청약 가점 계산기",
+    description: "무주택기간, 부양가족수, 청약통장 기간별 청약 가점 점수 계산",
+    category: "finance",
+    path: "/finance/subscription",
+    icon: "ClipboardList",
+  },
 
   // ─── Health ───────────────────────────────────────────────────────
   {
@@ -500,6 +524,81 @@ export const tools: Tool[] = [
     category: "life",
     path: "/life/car-tax",
     icon: "Car",
+  },
+  // PHASE 3: 신규 금융 도구 (국민연금, 증여세, 연말정산)
+  {
+    id: "pension",
+    name: "국민연금 수령액 계산기",
+    description: "예상 국민연금 월 수령액과 총 납부액을 계산합니다",
+    category: "finance",
+    path: "/finance/pension",
+    icon: "Landmark",
+  },
+  {
+    id: "gift-tax",
+    name: "증여세 계산기",
+    description: "증여재산에 대한 증여세와 실효세율을 계산합니다",
+    category: "finance",
+    path: "/finance/gift-tax",
+    icon: "Gift",
+  },
+  {
+    id: "year-end-tax",
+    name: "연말정산 환급금 계산기",
+    description: "연말정산 예상 환급액 또는 추가납부액을 계산합니다",
+    category: "finance",
+    path: "/finance/year-end-tax",
+    icon: "Receipt",
+  },
+  // PHASE 3: 신규 건강 도구
+  {
+    id: "body-fat",
+    name: "체지방률 계산기",
+    description: "US Navy 방식으로 체지방률과 체지방량을 계산합니다",
+    category: "health",
+    path: "/health/body-fat",
+    icon: "Activity",
+  },
+  {
+    id: "pregnancy-week",
+    name: "임신 주수 계산기",
+    description: "마지막 생리일 기준 현재 임신 주수와 출산 예정일을 계산합니다",
+    category: "health",
+    path: "/health/pregnancy-week",
+    icon: "Baby",
+  },
+  {
+    id: "calorie",
+    name: "칼로리 계산기",
+    description: "기초대사량과 일일 권장 칼로리를 계산합니다",
+    category: "health",
+    path: "/health/calorie",
+    icon: "Flame",
+  },
+  // PHASE 3: 신규 생활 도구
+  {
+    id: "dday",
+    name: "D-Day 카운터",
+    description: "목표 날짜까지 남은 일수를 실시간으로 카운트합니다",
+    category: "life",
+    path: "/life/dday",
+    icon: "CalendarDays",
+  },
+  {
+    id: "parental-leave",
+    name: "육아휴직급여 계산기",
+    description: "육아휴직 기간별 월 급여와 총 수령액을 계산합니다",
+    category: "life",
+    path: "/life/parental-leave",
+    icon: "Baby",
+  },
+  {
+    id: "workdays",
+    name: "근무일수 계산기",
+    description: "기간 내 근무일수, 주말, 공휴일 수를 계산합니다",
+    category: "life",
+    path: "/life/workdays",
+    icon: "Calendar",
   },
 ];
 

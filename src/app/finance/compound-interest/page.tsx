@@ -25,6 +25,55 @@ export default function CompoundInterestPage() {
       <CompoundCalc />
       <ResultAd />
 
+      {/* Info Section */}
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+            복리 계산기 사용 가이드
+          </h2>
+          <p>
+            복리 계산기는 초기 투자금과 월 적립금을 입력하면 연 수익률에 따라 자산이 어떻게 성장하는지 시뮬레이션해주는 도구입니다.
+            장기 투자, 연금 계획, 목돈 마련 전략을 수립할 때 복리 효과를 눈으로 확인할 수 있습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">복리의 원리와 72법칙</h3>
+          <p>
+            복리는 이자가 원금에 합산되어 다음 기간에 더 큰 이자를 만들어내는 구조입니다. 아인슈타인이 "인류 최대의 발명"이라고
+            불렀다는 일화가 있을 만큼 장기간 적용하면 놀라운 효과를 발휘합니다.
+            72법칙은 투자 원금이 2배가 되는 기간을 간단히 추정하는 방법으로, 72를 연 수익률로 나누면 됩니다.
+            예를 들어 연 6% 수익이면 72 / 6 = 약 12년에 원금이 2배가 됩니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">투자 시 참고사항</h3>
+          <p>
+            복리 효과를 극대화하려면 가능한 일찍 시작하고, 꾸준히 적립하며, 수익을 재투자하는 것이 핵심입니다.
+            주식, ETF, 펀드 등의 실제 투자에서는 수익률이 매년 일정하지 않으므로, 계산 결과는 평균 수익률 기준의 참고치입니다.
+            인플레이션을 고려하면 실질 수익률은 명목 수익률보다 낮아지는 점도 감안하시기 바랍니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/finance/savings" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            적금 이자 계산기
+          </Link>
+          <Link href="/finance/deposit" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            예금 이자 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+          <Link href="/fortune/tarot" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            타로카드
+          </Link>
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

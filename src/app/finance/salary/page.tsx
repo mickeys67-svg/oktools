@@ -34,21 +34,35 @@ export default function SalaryPage() {
       <SalaryCalculator />
       <ResultAd />
 
-      <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
-          공제 항목 안내
-        </h2>
-        <ul className="list-inside list-disc space-y-1">
-          <li><strong>국민연금</strong>: 월 급여의 4.5% (근로자 부담분)</li>
-          <li><strong>건강보험</strong>: 월 급여의 3.545%</li>
-          <li><strong>장기요양보험</strong>: 건강보험의 12.95%</li>
-          <li><strong>고용보험</strong>: 월 급여의 0.9%</li>
-          <li><strong>소득세</strong>: 과세표준 구간별 누진세율 (6~45%)</li>
-          <li><strong>지방소득세</strong>: 소득세의 10%</li>
-        </ul>
-        <p className="mt-3 text-xs text-gray-400">
-          * 2026년 기준 요율을 적용한 근사치입니다. 실제 금액은 회사 정책 및 개인 상황에 따라 다를 수 있습니다.
-        </p>
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+            연봉 실수령액 계산기 사용 가이드
+          </h2>
+          <p>
+            연봉 실수령액 계산기는 세전 연봉을 입력하면 4대 보험과 소득세를 공제한 후 매월 실제로 통장에 입금되는 금액을
+            계산해주는 도구입니다. 연봉 협상, 이직 시 급여 비교, 생활비 계획 수립에 유용합니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">2026년 공제 항목과 요율</h3>
+          <ul className="list-inside list-disc space-y-1">
+            <li><strong>국민연금</strong>: 월 급여의 4.5% (근로자 부담분)</li>
+            <li><strong>건강보험</strong>: 월 급여의 3.545%</li>
+            <li><strong>장기요양보험</strong>: 건강보험의 12.95%</li>
+            <li><strong>고용보험</strong>: 월 급여의 0.9%</li>
+            <li><strong>소득세</strong>: 과세표준 구간별 누진세율 (6~45%)</li>
+            <li><strong>지방소득세</strong>: 소득세의 10%</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">실수령액을 높이는 팁</h3>
+          <p>
+            비과세 수당(식대 월 20만원, 자가운전보조금 월 20만원 등)은 4대보험과 소득세 산정에서 제외되므로 실수령액을 높이는
+            효과가 있습니다. 또한 부양가족 수에 따라 소득세 간이세액이 달라지므로, 부양가족 등록을 정확히 하는 것이 중요합니다.
+            연말정산 시 신용카드 공제, 의료비 공제, 교육비 공제 등을 빠짐없이 신청하면 추가 환급을 받을 수 있습니다.
+          </p>
+        </div>
       </section>
 
       <InArticleAd />

@@ -34,15 +34,49 @@ export default function ZodiacPage() {
       <ZodiacApp />
       <ResultAd />
 
-      <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">별자리 운세란?</h2>
-        <p>
-          별자리 운세는 태양이 태어난 시점에 위치한 황도 12궁의 별자리를 기반으로 운세를 점치는 서양 점성술의 일종입니다.
-          각 별자리는 불, 흙, 바람, 물의 네 가지 원소에 속하며 고유한 성격과 특성을 가집니다.
-        </p>
-        <p className="text-xs text-gray-400">
-          * 별자리 운세는 재미와 참고 용도입니다. 중요한 결정은 신중하게 판단하세요.
-        </p>
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">별자리 운세 가이드</h2>
+          <p>
+            별자리 운세는 태양이 태어난 시점에 위치한 황도 12궁의 별자리를 기반으로 운세를 점치는 서양 점성술의 일종입니다.
+            생년월일을 입력하거나 별자리를 직접 선택하면 오늘의 종합운, 연애운, 금전운, 건강운을 확인할 수 있습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">4대 원소와 12별자리</h3>
+          <p>
+            불(양자리, 사자자리, 사수자리)은 열정과 행동력, 흙(황소자리, 처녀자리, 염소자리)은 안정과 현실 감각,
+            바람(쌍둥이자리, 천칭자리, 물병자리)은 소통과 지적 호기심, 물(게자리, 전갈자리, 물고기자리)은 감성과 직관을 상징합니다.
+            같은 원소의 별자리끼리 궁합이 잘 맞는다고 알려져 있습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">별자리 확인 방법</h3>
+          <p>
+            별자리는 생일에 따라 결정됩니다. 양자리(3/21~4/19), 황소자리(4/20~5/20), 쌍둥이자리(5/21~6/21) 등
+            각 별자리마다 약 한 달의 기간이 할당됩니다. 경계일에 태어난 경우 연도에 따라 별자리가 달라질 수 있으니
+            정확한 생년월일로 확인하는 것이 좋습니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/fortune/tarot" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            타로카드
+          </Link>
+          <Link href="/fortune/tojeong" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            토정비결
+          </Link>
+          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            대출 이자 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+        </div>
       </section>
 
       <script

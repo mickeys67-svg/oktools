@@ -28,6 +28,51 @@ export default function PercentagePage() {
       <PercentageCalc />
       <ResultAd />
 
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">퍼센트 계산기 사용 가이드</h2>
+          <p>
+            퍼센트 계산기는 세 가지 모드를 제공합니다. 특정 숫자의 몇 퍼센트를 구하거나, 두 숫자 간의 증감률을 계산하거나,
+            한 숫자가 다른 숫자의 몇 퍼센트인지 구할 수 있습니다. 할인율 계산, 성적 비율, 매출 증감 분석 등 일상에서 자주 필요한 계산을 빠르게 수행합니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">세 가지 계산 모드</h3>
+          <p>
+            모드 1: A의 B%는 얼마? → A x B / 100 (예: 50,000의 20% = 10,000원).
+            모드 2: A에서 B로 몇% 변화? → (B - A) / A x 100 (예: 100에서 130으로 = 30% 증가).
+            모드 3: A는 B의 몇%? → A / B x 100 (예: 75는 150의 50%).
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">활용 사례</h3>
+          <p>
+            세일 할인 금액 계산, 연봉 인상률 확인, 시험 점수 비율 산출, 다이어트 목표 체중 대비 달성률,
+            매출 전월 대비 증감률 분석 등 퍼센트 계산이 필요한 거의 모든 상황에서 활용 가능합니다.
+            계산 결과는 소수점 둘째 자리까지 표시하여 정확한 비율을 확인할 수 있습니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/life/discount" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            할인율 계산기
+          </Link>
+          <Link href="/life/gpa" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            학점 계산기
+          </Link>
+          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            대출 이자 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

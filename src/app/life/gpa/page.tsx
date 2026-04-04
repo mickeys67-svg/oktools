@@ -26,6 +26,51 @@ export default function GPAPage() {
       <GPACalculator />
       <ResultAd />
 
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">학점 계산기 사용 가이드</h2>
+          <p>
+            학점 계산기는 과목별 이수 학점과 성적(A+, A0, B+ 등)을 입력하면 가중 평균 방식으로 평균 평점(GPA)을 계산해주는 도구입니다.
+            장학금 신청, 대학원 진학, 교환학생 지원 등 GPA가 필요한 상황에서 빠르게 확인할 수 있습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">GPA 계산 공식</h3>
+          <p>
+            GPA = (과목1 학점 x 성적점수 + 과목2 학점 x 성적점수 + ...) / 총 이수 학점.
+            4.5만점 기준 A+ = 4.5, A0 = 4.0, B+ = 3.5, B0 = 3.0, C+ = 2.5, C0 = 2.0, D+ = 1.5, D0 = 1.0, F = 0.0입니다.
+            4.3만점 기준은 A+ = 4.3, A0 = 4.0으로 최고점만 다르고 나머지는 동일합니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">학점 관리 팁</h3>
+          <p>
+            3학점 과목에서 받는 성적이 1학점 과목보다 GPA에 미치는 영향이 크므로, 학점이 큰 전공 과목에 집중하는 것이 유리합니다.
+            재수강(성적 정정)을 활용하면 낮은 성적을 개선할 수 있지만, 일부 대학은 재수강 횟수를 제한하거나 원래 성적을 표기합니다.
+            P/F(Pass/Fail) 과목은 GPA 계산에서 제외되므로 전략적으로 활용할 수 있습니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/life/percentage" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            퍼센트 계산기
+          </Link>
+          <Link href="/life/discount" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            할인율 계산기
+          </Link>
+          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            대출 이자 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

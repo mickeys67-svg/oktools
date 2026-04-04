@@ -28,6 +28,51 @@ export default function SpaceDistancePage() {
       <SpaceDistanceCalc />
       <ResultAd />
 
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">우주 거리 변환 사용 가이드</h2>
+          <p>
+            우주 거리 변환 도구는 광년, 천문단위(AU), 파섹(pc), 킬로미터(km) 등 우주에서 사용하는 거리 단위를 상호 변환해줍니다.
+            천문학 공부, 과학 보고서 작성, 우주 관련 뉴스 이해 시 거리 단위를 직관적으로 파악하는 데 도움이 됩니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">주요 거리 단위 설명</h3>
+          <p>
+            1 광년(light-year)은 빛이 1년간 이동하는 거리로 약 9.461조 km입니다.
+            1 AU(천문단위)는 지구와 태양 사이의 평균 거리로 약 1.496억 km입니다.
+            1 파섹(parsec)은 약 3.26광년으로, 전문 천문학에서 주로 사용됩니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">우주의 스케일</h3>
+          <p>
+            가장 가까운 별 프록시마 센타우리까지 약 4.24광년, 안드로메다 은하까지 약 254만 광년,
+            관측 가능한 우주의 끝까지 약 465억 광년입니다. 이처럼 우주의 거리는 일상적인 단위로 표현하기 어려울 만큼
+            광대하기 때문에 광년이나 파섹 같은 특별한 단위가 사용됩니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/space/travel-time" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            빛 여행 시간 계산기
+          </Link>
+          <Link href="/space/planet-weight" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            행성 무게 계산기
+          </Link>
+          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            대출 이자 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

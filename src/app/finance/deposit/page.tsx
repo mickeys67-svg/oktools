@@ -25,6 +25,35 @@ export default function DepositPage() {
       <DepositCalc />
       <ResultAd />
 
+      {/* Info Section */}
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+            예금 이자 계산기 사용 가이드
+          </h2>
+          <p>
+            예금 이자 계산기는 정기예금에 일정 금액을 맡겼을 때 만기 시 받게 되는 세후 이자와 총 수령액을 미리 계산해주는 도구입니다.
+            은행별 금리를 비교하거나 목돈 운용 계획을 세울 때 유용합니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">이자 계산 방식</h3>
+          <p>
+            단리는 원금에만 이자를 적용합니다. 세전이자 = 원금 x 연이자율 x 기간(년)으로 계산됩니다.
+            복리는 원금과 이자의 합계에 이자를 붙이므로 기간이 길수록 단리보다 유리합니다.
+            대부분의 정기예금은 단리 방식이며, 일부 특판 상품에서 복리를 적용합니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">세금 및 비과세 혜택</h3>
+          <p>
+            예금 이자에는 이자소득세 14%와 지방소득세 1.4%, 총 15.4%의 세금이 부과됩니다. 세금우대 저축(9.5%)이나
+            비과세 종합저축(세금 면제)을 활용하면 실제 수령액을 높일 수 있습니다.
+            비과세 종합저축은 만 65세 이상, 장애인 등이 가입 가능하며 5천만 원까지 비과세 혜택을 받을 수 있습니다.
+          </p>
+        </div>
+      </section>
+
       <InArticleAd />
       {/* Related Tools */}
       <section className="mt-10">

@@ -34,6 +34,51 @@ export default function PlanetWeightPage() {
       <PlanetWeightCalc />
       <ResultAd />
 
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">행성 무게 계산기 사용 가이드</h2>
+          <p>
+            행성 무게 계산기는 지구에서의 몸무게를 입력하면 태양계 각 행성과 달에서의 몸무게를 계산해주는 도구입니다.
+            행성별 중력 차이를 체감적으로 이해하거나 과학 교육 자료로 활용할 수 있습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">계산 원리</h3>
+          <p>
+            무게 = 질량 x 중력가속도입니다. 지구의 중력가속도는 9.8m/s2이며, 각 행성의 중력가속도를 지구와 비교한 비율을 곱해 계산합니다.
+            달은 지구의 약 1/6, 화성은 약 38%, 목성은 약 2.5배의 중력을 가집니다.
+            즉, 지구에서 60kg인 사람은 달에서 약 10kg, 목성에서는 약 150kg의 무게를 느끼게 됩니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">행성별 중력 비교</h3>
+          <p>
+            태양계에서 중력이 가장 강한 행성은 목성(2.53배)이고, 가장 약한 것은 달(0.166배)입니다.
+            화성(0.38배)은 인류가 이주를 꿈꾸는 행성으로, 지구보다 가벼운 몸을 경험할 수 있지만
+            근육과 뼈 약화의 위험도 있어 우주 의학의 중요한 연구 주제입니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/space/planet-age" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            행성 나이 계산기
+          </Link>
+          <Link href="/space/distance" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            우주 거리 변환
+          </Link>
+          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            대출 이자 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

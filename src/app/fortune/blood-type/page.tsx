@@ -34,15 +34,49 @@ export default function BloodTypePage() {
       <BloodTypeApp />
       <ResultAd />
 
-      <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">혈액형 궁합이란?</h2>
-        <p>
-          혈액형 궁합은 ABO 혈액형 분류에 따른 성격 유형을 바탕으로 두 사람의 관계 적합성을
-          재미로 알아보는 것입니다. 과학적 근거는 부족하지만, 한국과 일본에서 오랫동안 사랑받는 문화입니다.
-        </p>
-        <p className="text-xs text-gray-400">
-          * 혈액형 궁합은 재미와 참고 용도입니다. 실제 관계는 서로의 노력이 가장 중요합니다.
-        </p>
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">혈액형 궁합 가이드</h2>
+          <p>
+            혈액형 궁합은 ABO 혈액형 분류에 따른 성격 유형을 바탕으로 두 사람의 관계 적합성을 재미로 알아보는 테스트입니다.
+            나와 상대의 혈액형을 선택하면 연애, 우정, 직장 관계에서의 궁합 점수와 장단점을 확인할 수 있습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">혈액형별 성격 특성</h3>
+          <p>
+            A형은 꼼꼼하고 배려심이 깊으며, B형은 자유롭고 창의적인 성격으로 알려져 있습니다.
+            O형은 리더십이 강하고 사교적이며, AB형은 이성적이고 독특한 감성을 가졌다고 합니다.
+            이러한 분류는 과학적 근거보다는 한국과 일본에서 오랫동안 이어져 온 대중문화적 관습에 기반합니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">궁합 해석 방법</h3>
+          <p>
+            궁합 점수는 두 혈액형의 성격 특성이 얼마나 조화를 이루는지를 기준으로 산출됩니다.
+            높은 점수가 나왔다면 성격적 조화가 좋다는 의미이고, 낮은 점수라도 서로의 차이를 이해하면 좋은 관계를 만들 수 있습니다.
+            혈액형 궁합은 재미와 대화 소재로 활용하시고, 실제 관계에서는 서로의 노력이 가장 중요합니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/fortune/mbti" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            MBTI 궁합
+          </Link>
+          <Link href="/fortune/name-match" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            이름 궁합
+          </Link>
+          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            대출 이자 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+        </div>
       </section>
 
       <script

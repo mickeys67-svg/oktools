@@ -34,6 +34,50 @@ export default function StopwatchPage() {
       <StopwatchApp />
       <ResultAd />
 
+      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <div>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">온���인 스톱워치 사용 가이드</h2>
+          <p>
+            온라인 스톱워치는 브라우저에서 바로 사용할 수 있는 시간 측정 도구입니다. 앱 설치 없이 시작 버튼 한 번으로
+            정확한 시간 측정이 가능하며, 랩 기능으로 구간별 기록을 남길 수 있습니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">활용 사례</h3>
+          <p>
+            운동 시 세트 간 휴식 시간 측정, 달리기와 수영 구간 기록, 공부 시간 체크, 프레젠테이션 연습 시간 측정,
+            요리 시간 확인, 보드게임 턴 시간 제한 등 다양한 상황에서 활용할 수 있습니다.
+            랩 기능을 사용하면 각 구간별 소요 시간과 전체 누적 시간을 동시에 확인할 수 있어 기록 비교에 편리합니다.
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">스톱워치와 타이머의 차이</h3>
+          <p>
+            스톱워치는 0부터 시작해 경과 시간을 측정하는 도구이고, 타이머는 설정한 시간부터 0까지 카운트다운하는 도구입니다.
+            운동이나 시험처럼 소요 시간을 측정할 때는 스톱워치를, 라면이나 휴식처럼 정해진 시간을 기다릴 때는 타이머를 사용하세요.
+          </p>
+        </div>
+      </section>
+
+      {/* 관련 도구 */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Link href="/tools/timer" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            타이머
+          </Link>
+          <Link href="/tools/clock" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            온라인 시계
+          </Link>
+          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            대출 이자 계산기
+          </Link>
+          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            BMI 계산기
+          </Link>
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
