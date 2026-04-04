@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "무료 자동차세 계산기로 배기량별 자동차세를 계산하세요. 승용차·전기차 자동차세, 교육세, 차령 경감, 연납 할인액을 한번에 조회할 수 있습니다.",
   keywords: ["자동차세계산기", "자동차세조회", "자동차세연납", "���기량자동차세", "자동차세할인", "자동차세납부", "전기차자동차세", "교육세", "자동차세경감", "자동차세납부시기"],
+  openGraph: {
+    title: "자동차세 계산��� 2026 - 배기량별 자동차세 연납할인",
+    description:
+      "무료 자동차세 계산기로 배기량별 자동차��를 계산하세요. 승용차·전기차 자동차세, 교육세, 차령 경감, 연납 할인액을 한번에 조회할 수 있습니다.",
+  },
   alternates: {
     canonical: "/life/car-tax",
   },
@@ -77,6 +82,41 @@ export default function CarTaxPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "자동차세는 어떻게 계산하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "자동차세는 배기량(cc)에 cc당 세율을 곱하여 계산합니다. 비영업용 승용차 기준 1,000cc 이하는 cc당 80원, 1,600cc 이하는 140원, 1,600cc 초과는 200원입니다. 여기에 교육세(자동차세의 30%)가 추가됩니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "자동차세 연납 할인은 얼마인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "자동차세를 1월에 연납하면 약 4.6% 할인을 받을 수 있습니다(2026년 기준). 3월 납부 시 약 3.8%, 6월 약 2.5%, 9월 약 1.3% 할인됩니다. 연납 신청은 위택스(wetax.go.kr)에서 온라인으로 가능합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "전기차 자동차세는 얼마인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "전기차는 배기량이 없으므로 영업용 20,000원, 비영업용 100,000원의 정액 자동차세가 부과됩니다. 여기에 교육세 30%가 추가되어 비영업용 기준 연간 총 130,000원입니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

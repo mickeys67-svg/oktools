@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   description:
     "무료 타로카드 리딩, 토정비결, MBTI 궁합, 별자리 운세, 혈액형 궁합, 이름 궁합, 꿈해몽까지 한곳에서 무료로 확인하세요.",
   keywords: ["무료운세", "타로카드", "토정비결", "MBTI궁합", "꿈해몽", "별자리운세", "혈액형궁합", "이름궁합", "띠계산기", "오늘의운세"],
+  openGraph: {
+    title: "무료운세 모음 - 타로, 토정비결, MBTI궁합, 꿈해몽",
+    description:
+      "무료 타로카드 리딩, 토정비결, MBTI 궁합, 별자리 운세, 혈액형 궁합, 이름 궁합, 꿈해몽까지 한곳에서 무료로 확인하세요.",
+  },
   alternates: {
     canonical: "/fortune",
   },
@@ -36,6 +41,10 @@ export default function FortunePage() {
         </h1>
         <p className="text-gray-500 dark:text-gray-400">{category.description}</p>
       </div>
+
+      <section className="mb-8 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <p>타로카드, 토정비결, 별자리 운세, MBTI 궁합, 꿈해몽, 혈액형 궁합, 이름 궁합, 띠 계산기까지 다양한 운세와 궁합 콘텐츠를 무료로 즐기세요. 재미로 보는 오늘의 운세부터 전통 토정비결까지, 회원가입 없이 바로 결과를 확인할 수 있습니다.</p>
+      </section>
 
       <div className="grid gap-3">
         {tools.map((tool) => (

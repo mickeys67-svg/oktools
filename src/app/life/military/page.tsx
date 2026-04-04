@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "무료 전역일 계산기로 군 복무기간과 전역 예정일을 계산하세요. 육군·해군·공군·해병대·사회복무요원 입대일 입력으로 진급일, 복무 진행률을 즉시 확인.",
   keywords: ["전역일계산기", "군복무기간", "전역일확인", "육군전역일", "공군전역일", "해군전역일", "해병대전역일", "사회복무요원전역일", "진급일계산", "군대전역일", "입대일기준전역일", "복무진행률"],
+  openGraph: {
+    title: "전역일 계산기 2026 - 군 복무기간 진급�� 전역일",
+    description:
+      "무료 전역일 계산기로 군 복무기간��� 전역 예정일을 계산하세요. 육군·해군·공군·해병��·사회복무요��� 입대일 입력으로 진급일, 복무 진행률을 즉시 확인.",
+  },
   alternates: {
     canonical: "/life/military",
   },
@@ -77,6 +82,41 @@ export default function MilitaryPage() {
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
           "inLanguage": "ko-KR"
         }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "육군 복무기간은 얼마인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "2026년 기준 육군과 해병대의 복무기간은 18개월, 해군은 20개월, 공군은 21개월입니다. 입영일로부터 해당 기간이 지난 날의 전날이 전역 예정일이 됩니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "군대 진급 시기는 언제인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "육군 기준으로 이등병에서 일병 진급은 입대 후 3개월, 일병에서 상병은 7개월, 상병에서 병장은 13개월 시점입니다. 해군, 공군은 복무기간에 비례하여 진급 시점이 다소 다릅니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "전역일은 어떻게 계산하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "전역일은 입영일로부터 군종별 복무기간을 더한 날짜의 전날입니다. 예를 들어 육군은 입영일 + 18개월 - 1일이 전역 예정일입니다.",
+                },
+              },
+            ],
+          }),
+        }}
       />
       <script
         type="application/ld+json"

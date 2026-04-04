@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "무료 온라인 스톱워치. 랩타임 기록, 큰 화면 표시 지원. 운동·공부·요리 시간 측정에 바로 사용하세요.",
   keywords: ["온라인스톱워치", "스톱워치", "랩타임", "시간측정", "운동시간", "스톱워치앱", "초시계", "타임측정"],
+  openGraph: {
+    title: "온라인 스톱워치 - 랩타임 기록, 운동 시간 측정",
+    description:
+      "무료 온라인 스톱워치. 랩타임 기록, 큰 화면 표시 지원. 운동·공부·요리 시간 측정에 바로 사용하세요.",
+  },
   alternates: {
     canonical: "/tools/stopwatch",
   },
@@ -78,6 +83,33 @@ export default function StopwatchPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "스톱워치와 타이머의 차이는 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "스톱워치는 0부터 시작하여 경과 시간을 측정하는 도구이고, 타이머는 설정한 시간부터 0까지 카운트다운하는 도구입니다. 운동 기록이나 시험 시간 측정에는 스톱워치가, 요리나 휴식 시간 알림에는 타이머가 적합합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "랩타임 기능은 어떻게 사용하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "스톱워치가 작동 중일 때 랩(Lap) 버튼을 누르면 현재 시점의 경과 시간이 기록됩니다. 이전 랩과의 차이(구간 시간)와 전체 누적 시간을 동시에 확인할 수 있어 달리기, 수영 등 구간별 기록 비교에 유용합니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

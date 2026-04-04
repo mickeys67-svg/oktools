@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "생년월일로 나의 별자리를 확인하고, 오늘의 종합운·연애운·금전운·건강운을 무료로 확인하세요. 12별자리 성격과 궁합도 제공.",
   keywords: ["별자리운세", "오늘의별자리운세", "12별자리", "물병자리운세", "물고기자리운세", "양자리운세", "별자리성격", "별자리궁합", "별자리계산", "오늘운세"],
+  openGraph: {
+    title: "별자리 운세 - 12궁 오늘의 운세 무료",
+    description:
+      "생년월일로 나의 별자리를 확인하고, 오늘의 종합운·연애운·금전운·건강운을 무료로 확인하세요. 12별자리 성격과 궁합도 제공.",
+  },
   alternates: {
     canonical: "/fortune/zodiac",
   },
@@ -79,6 +84,41 @@ export default function ZodiacPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "내 별자리는 어떻게 알 수 있나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "별자리는 생일에 따라 결정됩니다. 양자리(3/21~4/19), 황소자리(4/20~5/20), 쌍둥이자리(5/21~6/21), 게자리(6/22~7/22), 사자자리(7/23~8/22), 처녀자리(8/23~9/22), 천칭자리(9/23~10/22), 전갈자리(10/23~11/21), 사수자리(11/22~12/21), 염소자리(12/22~1/19), 물병자리(1/20~2/18), 물고기자리(2/19~3/20)입니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "별자리 궁합이 잘 맞는 조합은 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "같은 원소의 별자리끼리 궁합이 좋다고 알려져 있습니다. 불(양자리-사자자리-사수자리), 흙(황소자리-처녀자리-염소자리), 바람(쌍둥이자리-천칭자리-물병자리), 물(게자리-전갈자리-물고기자리)이 각각 잘 맞는 조합입니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "별자리 운세는 과학적 근거가 있나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "별자리 운세는 서양 점성술에 기반한 것으로, 현대 과학에서는 천체의 위치가 개인의 운명에 영향을 준다는 직접적 근거를 인정하지 않습니다. 다만 수천 년의 역사를 가진 문화적 전통으로서, 자기 성찰의 도구나 재미로 활용하는 것이 좋습니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

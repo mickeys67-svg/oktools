@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PensionCalc from "@/components/finance/PensionCalc";
-import { ResultAd } from "@/components/ui/ToolPageAds";
+import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "국민연금 예상 수령액 계산기 2026 - 월 수령액 납부액 조회",
@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "연금계산",
     "국민연금수령액조회",
   ],
+  openGraph: {
+    title: "국민연금 예상 수령액 계산기 2026 - 월 수령액 납부액 조회",
+    description:
+      "무료 국민연금 계산기로 예상 월 수령액을 바로 확인하세요. 2026년 기준 납부액, 수령 시작 나이, 수령 대비 납부 비율까지 한눈에.",
+  },
   alternates: {
     canonical: "/finance/pension",
   },
@@ -81,6 +86,8 @@ export default function PensionPage() {
           </p>
         </div>
       </section>
+
+      <InArticleAd />
 
       {/* 관련 도구 */}
       <section className="mt-10">

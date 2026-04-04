@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import GiftTaxCalc from "@/components/finance/GiftTaxCalc";
-import { ResultAd } from "@/components/ui/ToolPageAds";
+import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "증여세 계산기 2026 - 세율표 공제한도 자동계산",
@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "부동산증여",
     "증여세절세",
   ],
+  openGraph: {
+    title: "증여세 계산기 2026 - 세율표 공제한도 자동계산",
+    description:
+      "무료 증여세 계산기로 증여세를 바로 확인하세요. 2026년 세율표 적용, 배우자/자녀 공제한도, 과세표준, 실효세율 자동 계산.",
+  },
   alternates: {
     canonical: "/finance/gift-tax",
   },
@@ -83,6 +88,8 @@ export default function GiftTaxPage() {
           </p>
         </div>
       </section>
+
+      <InArticleAd />
 
       {/* 관련 도구 */}
       <section className="mt-10">

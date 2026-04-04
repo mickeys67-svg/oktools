@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "무료 BMI 계산기로 체질량지수와 비만도를 측정하세요. 키와 몸무게 입력만으로 한국 비만학회 기준 저체중·정상·과체중·비만 단계를 즉시 확인할 수 있습니다.",
   keywords: ["BMI계산기", "체질량지수", "비만도측정", "비만도계산기", "BMI계산", "키몸무게비만", "표준체중계산", "한국비만기준", "비만학회기준", "적정체중", "다이어트체중"],
+  openGraph: {
+    title: "BMI 계산기 - 체질량지수 비만도 측정 (한국 기준)",
+    description:
+      "무료 BMI 계산기로 체질량지수와 비만도를 측정하세요. 키와 몸무게 입력만으로 한국 비만학회 기준 저체중·정상·과체중·비만 단계를 즉시 확인할 수 있습니다.",
+  },
   alternates: {
     canonical: "/health/bmi",
   },
@@ -59,6 +64,14 @@ export default function BMIPage() {
         <p className="mt-3 text-xs text-gray-400">
           * WHO 기준과 다릅니다. 한국인은 같은 BMI에서도 체지방률이 높아 더 낮은 기준을 적용합니다.
         </p>
+        <p className="mt-4">
+          BMI(Body Mass Index, 체질량지수)는 체중(kg)을 키(m)의 제곱으로 나눈 값으로, 비만도를 간편하게
+          판정하는 대표적인 지표입니다. 계산 공식은 BMI = 체중(kg) / 키(m)²이며, 키 170cm에 체중 70kg인
+          경우 BMI는 약 24.2로 과체중(비만 전단계)에 해당합니다. BMI는 간편하지만 근육량과 체지방률을
+          구분하지 못하는 한계가 있으므로, 보다 정확한 건강 평가를 위해 체지방률 측정이나 허리둘레 측정을
+          병행하는 것이 좋습니다. 정기적으로 BMI를 확인하면 체중 변화 추이를 파악하고 건강 관리 목표를
+          설정하는 데 도움이 됩니다.
+        </p>
       </section>
 
       <InArticleAd />
@@ -69,14 +82,14 @@ export default function BMIPage() {
           <Link href="/health/bmr" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
             기초대사량 계산기
           </Link>
-          <Link href="/health/biorhythm" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
-            바이오리듬
+          <Link href="/health/body-fat" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            체지방률 계산기
           </Link>
-          <Link href="/health/age" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
-            나이 계산기
+          <Link href="/health/calorie" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            칼로리 계산기
           </Link>
-          <Link href="/health/dday" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
-            디데이 계산기
+          <Link href="/health/alcohol" className="rounded-lg border border-gray-200 p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+            음주 계산기
           </Link>
         </div>
       </section>

@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "무료 온라인 타로카드 리딩. 메이저 아르카나 22장으로 원카드, 쓰리카드 스프레드를 체험하고 오늘의 타로 운세를 확인하세요.",
   keywords: ["타로카드", "무료타로", "온라인타로", "타로점", "원카드타로", "쓰리카드타로", "오늘의타로", "타로운세", "메이저아르카나", "타로카드의미", "연애타로"],
+  openGraph: {
+    title: "무료 타로카드 - 원카드 쓰리카드 온라인 타로 리딩",
+    description:
+      "무료 온라인 타로카드 리딩. 메이저 아르카나 22장으로 원카드, 쓰리카드 스프레드를 체험하고 오늘의 타로 운세를 확인하세요.",
+  },
   alternates: {
     canonical: "/fortune/tarot",
   },
@@ -70,15 +75,50 @@ export default function TarotPage() {
           <Link href="/fortune/blood-type" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
             혈액형 궁합
           </Link>
-          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
-            대출 이자 계산기
+          <Link href="/fortune/mbti" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            MBTI 궁합
           </Link>
-          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
-            BMI 계산기
+          <Link href="/fortune/zodiac-animal" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            띠별 운세
           </Link>
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "타로카드 원카드와 쓰리카드의 차이는 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "원카드는 한 장의 카드로 오늘의 핵심 메시지를 빠르게 확인하는 방식이고, 쓰리카드는 세 장을 뽑아 과거-현재-미래 또는 상황-원인-조언의 세 가지 관점에서 해석하는 방식입니다. 초보자에게는 원카드, 구체적인 상황 분석에는 쓰리카드가 적합합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "타로카드 역방향(리버스)은 어떤 의미인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "역방향 카드는 해당 카드의 에너지가 차단되거나 왜곡된 상태를 나타냅니다. 예를 들어 정방향의 '태양' 카드가 성공과 기쁨을 의미한다면, 역방향은 자신감 부족이나 지연을 암시할 수 있습니다. 반드시 부정적인 것은 아니며 내면을 돌아보라는 메시지로 해석합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "메이저 아르카나 22장에는 어떤 카드가 있나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "메이저 아르카나는 0번 바보(The Fool)부터 21번 세계(The World)까지 총 22장으로 구성됩니다. 마법사, 여사제, 여황제, 황제, 교황, 연인, 전차, 힘, 은둔자, 운명의 수레바퀴, 정의, 매달린 남자, 죽음, 절제, 악마, 탑, 별, 달, 태양, 심판 등이 포함됩니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

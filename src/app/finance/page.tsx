@@ -5,8 +5,13 @@ import { getToolsByCategory, getCategoryById } from "@/data/tools";
 export const metadata: Metadata = {
   title: "금융 계산기 모음 2026 - 대출 연봉 세금 부동산 무료 계산",
   description:
-    "대출이자, 연봉실수령액, 퇴직금, 4대보험, 종합소득세, 취득세, 전월세전환율 등 15종 무료 금융 계산기. 바로 계산하고 확인하세요.",
+    "대출이자, 연봉실수령액, 퇴직금, 4대보험, 종합소득세, 취득세, 전월세전환율 등 20종 무료 금융 계산기. 바로 계산하고 확인하세요.",
   keywords: ["금융계산기", "대출이자계산", "연봉실수령액", "할부계산", "퇴직금계산", "적금이자", "예금이자", "복리계산", "최저시급", "전월세전환율", "4대보험", "부동산복비", "종합소득세", "실업급여", "취득세"],
+  openGraph: {
+    title: "금융 계산기 모음 2026 - 대출 연봉 세금 부동산 무료 계산",
+    description:
+      "대출이자, 연봉실수령액, 퇴직금, 4대보험, 종합소득세, 취득세, 전월세전환율 등 20종 무료 금융 계산기. 바로 계산하고 확인하세요.",
+  },
   alternates: {
     canonical: "/finance",
   },
@@ -42,6 +47,10 @@ export default function FinancePage() {
           {category.description}
         </p>
       </div>
+
+      <section className="mb-8 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <p>대출 이자, 연봉 실수령액, 퇴직금, 적금/예금 이자, 복리, 최저시급, 전월세 전환율, 4대보험, 중개보수, 종합소득세, 실업급여, 취득세, DSR, 양도소득세, 청약 가점, 국민연금, 증여세, 연말정산까지 금융 생활에 필요한 20종 계산기를 무료로 제공합니다. 2026년 최신 세율과 기준을 반영하여 정확한 결과를 바로 확인하세요.</p>
+      </section>
 
       {/* Tool List */}
       <div className="grid gap-3">
@@ -100,7 +109,13 @@ export default function FinancePage() {
               { "@type": "ListItem", "position": 11, "name": "부동산 중개보수 계산기", "url": "https://www.oktools.co.kr/finance/broker-fee" },
               { "@type": "ListItem", "position": 12, "name": "종합소득세 계산기", "url": "https://www.oktools.co.kr/finance/income-tax" },
               { "@type": "ListItem", "position": 13, "name": "실업급여 계산기", "url": "https://www.oktools.co.kr/finance/unemployment" },
-              { "@type": "ListItem", "position": 14, "name": "취득세 계산기", "url": "https://www.oktools.co.kr/finance/acquisition-tax" }
+              { "@type": "ListItem", "position": 14, "name": "취득세 계산기", "url": "https://www.oktools.co.kr/finance/acquisition-tax" },
+              { "@type": "ListItem", "position": 15, "name": "DSR 계산기", "url": "https://www.oktools.co.kr/finance/dsr" },
+              { "@type": "ListItem", "position": 16, "name": "양도소득세 계산기", "url": "https://www.oktools.co.kr/finance/capital-gains-tax" },
+              { "@type": "ListItem", "position": 17, "name": "청약 가점 계산기", "url": "https://www.oktools.co.kr/finance/subscription" },
+              { "@type": "ListItem", "position": 18, "name": "국민연금 수령액 계산기", "url": "https://www.oktools.co.kr/finance/pension" },
+              { "@type": "ListItem", "position": 19, "name": "증여세 계산기", "url": "https://www.oktools.co.kr/finance/gift-tax" },
+              { "@type": "ListItem", "position": 20, "name": "연말정산 환급금 계산기", "url": "https://www.oktools.co.kr/finance/year-end-tax" }
             ]
           }
         }) }}

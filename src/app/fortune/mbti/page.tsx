@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "나와 상대 MBTI를 선택하면 궁합 점수와 관계 분석을 무료로 확인하세요. 16유형 연애·친구·직장 궁합 총정리.",
   keywords: ["MBTI궁합", "MBTI궁합테스트", "MBTI연애궁합", "INFP궁합", "ENFP궁합", "INTJ궁합", "MBTI성격유형", "MBTI테스트", "16유형궁합", "MBTI커플궁합"],
+  openGraph: {
+    title: "MBTI 궁합 테스트 - 16유형 연애 친구 궁합",
+    description:
+      "나와 상대 MBTI를 선택하면 궁합 점수와 관계 분석을 무료로 확인하세요. 16유형 연애·친구·직장 궁합 총정리.",
+  },
   alternates: {
     canonical: "/fortune/mbti",
   },
@@ -70,15 +75,50 @@ export default function MBTIPage() {
           <Link href="/fortune/name-match" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
             이름 궁합
           </Link>
-          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
-            대출 이자 계산기
+          <Link href="/fortune/tarot" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            타로카드
           </Link>
-          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
-            BMI 계산기
+          <Link href="/fortune/zodiac-animal" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            띠별 운세
           </Link>
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "MBTI 궁합이 가장 좋은 조합은 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "MBTI에서 궁합이 좋다고 알려진 대표적 조합은 INFP-ENFJ, INTJ-ENTP, ISFJ-ESFP, ISTJ-ESTP 등입니다. 일반적으로 일부 지표는 같고 일부는 다른 보완적 조합이 좋은 궁합으로 평가됩니다. 다만 실제 관계에서는 개인의 성숙도와 소통 노력이 더 중요합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "MBTI 4가지 지표는 무엇을 의미하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "MBTI는 4가지 선호 지표로 구성됩니다. E(외향)/I(내향)은 에너지 방향, S(감각)/N(직관)은 정보 인식 방식, T(사고)/F(감정)은 판단 기준, J(판단)/P(인식)은 생활 양식을 나타냅니다. 이 조합으로 INTJ, ENFP 등 16가지 성격 유형이 만들어집니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "MBTI가 같으면 궁합이 좋은가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "같은 MBTI끼리는 서로를 잘 이해하고 공감대가 높다는 장점이 있지만, 비슷한 약점을 공유하여 문제 해결이 어려울 수 있습니다. 예를 들어 P형끼리 만나면 계획성이 부족해질 수 있고, J형끼리는 주도권 다툼이 생길 수 있습니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

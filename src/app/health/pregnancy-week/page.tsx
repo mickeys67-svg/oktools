@@ -4,9 +4,9 @@ import PregnancyWeekCalc from "@/components/health/PregnancyWeekCalc";
 import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
-  title: "임신 주수 계산기 - 출산 예정일 자동 계산",
+  title: "태아 성장 계산기 - 주수별 태아 크기와 발달 확인",
   description:
-    "무료 임신 주수 계산기로 현재 임신 주수와 출산 예정일을 확인하세요. 마지막 생리일 입력만으로 임신 진행률, 삼분기, 태아 크기 정보를 즉시 확인할 수 있습니다.",
+    "마지막 생리일을 입력하면 현재 태아 크기(키, 몸무게), 주수별 발달 단계, 출산 예정일을 확인할 수 있습니다. 임신 진행률과 삼분기 정보를 한눈에 제공합니다.",
   keywords: [
     "임신주수계산기",
     "출산예정일계산",
@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "임신진행률",
     "삼분기계산",
   ],
+  openGraph: {
+    title: "태아 성장 계산기 - 주수별 태아 크기와 발달 확인",
+    description:
+      "마지막 생리일을 입력하면 현재 태아 크기(키, 몸무게), 주수별 발달 단계, 출산 예정일을 확인할 수 있습니다. 임신 진행률과 삼분기 정보를 한눈에 제공합니다.",
+  },
   alternates: {
     canonical: "/health/pregnancy-week",
   },

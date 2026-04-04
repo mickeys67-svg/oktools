@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "무료 학점 계산기로 대학교 평균 평점(GPA)을 계산하세요. 과목별 학점·성적 입력으로 4.5만점, 4.3만점 기준 GPA를 즉시 확인할 수 있습니다.",
   keywords: ["학점계산기", "GPA계산기", "대학학점계산", "평균평점계산", "4.5만점학점", "4.3만점학점", "학점평균", "성적계산기", "학점관리"],
+  openGraph: {
+    title: "학�� 계산기 - 대학교 GPA 평균평점 계산 (4.5/4.3)",
+    description:
+      "무료 학점 계산기로 대학교 평균 평점(GPA)을 계산하세요. 과목별 학점·성적 입력으로 4.5만점, 4.3만점 기준 GPA를 즉시 확인할 수 있습니다.",
+  },
   alternates: {
     canonical: "/life/gpa",
   },
@@ -71,6 +76,41 @@ export default function GPAPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "4.5 만점 기준 학점 계산은 어떻게 하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "4.5 만점 기준에서 A+는 4.5, A0는 4.0, B+는 3.5, B0는 3.0 등으로 환산합니다. 평균 학점은 각 과목의 (학점 x 성적 점수)를 합산한 뒤 총 이수 학점으로 나누어 계산합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "4.5 만점을 4.0 만점으로 변환하는 방법은?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "일반적으로 4.5 만점 학점에 4.0/4.5(약 0.889)를 곱하면 4.0 만점으로 환산할 수 있습니다. 예를 들어 4.5 만점에서 3.8이면 4.0 만점으로 약 3.38이 됩니다. 다만 대학원이나 유학 지원 시 기관마다 변환 기준이 다를 수 있습니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "취업 시 학점 기준은 보통 얼마인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "대기업 기준 4.5 만점에서 3.5 이상이면 무난하고, 3.0 이상이면 지원 가능한 곳이 많습니다. 공기업은 일부 3.0 이상 컷을 두기도 합니다. 학점보다 직무 경험, 자격증, 어학 점수를 종합적으로 평가하는 추세입니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

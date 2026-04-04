@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   description:
     "BMI계산기, 바이오리듬, 만나이계산, 기초대사량, 칼로리계산, 음주측정기, 임신주수, 디데이계산기를 무료로 이용하세요. 한국 기준 건강 계산 도구 모음.",
   keywords: ["건강계산기", "BMI계산기", "바이오리듬", "만나이계산", "기초대사량", "칼로리계산", "음주측정기", "임신주수계산", "디데이계산기"],
+  openGraph: {
+    title: "건강 계산기 모음 - BMI 바이오리듬 만나이 기초대사량 무료",
+    description:
+      "BMI계산기, 바이오리듬, 만나이계산, 기초대사량, 칼로리계산, 음주측정기, 임신주수, 디데이계산기를 무료로 이용하세요. 한국 기준 건강 계산 도구 모음.",
+  },
   alternates: {
     canonical: "/health",
   },
@@ -36,6 +41,10 @@ export default function HealthPage() {
         </h1>
         <p className="text-gray-500 dark:text-gray-400">{category.description}</p>
       </div>
+
+      <section className="mb-8 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <p>BMI, 기초대사량, 체지방률 등 신체 지표부터 바이오리듬, 만 나이, 음주 측정, 임신 주수, 칼로리 계산까지 건강 관리에 필요한 계산기를 한곳에 모았습니다. 한국 기준에 맞춰 정확하게 계산하고, 결과를 즉시 확인하세요. 회원가입 없이 누구나 무료로 이용할 수 있습니다.</p>
+      </section>
 
       <div className="grid gap-3">
         {tools.map((tool) => (
@@ -77,7 +86,10 @@ export default function HealthPage() {
               { "@type": "ListItem", "position": 4, "name": "만 나이 계산기", "url": "https://www.oktools.co.kr/health/age" },
               { "@type": "ListItem", "position": 5, "name": "D-Day 계산기", "url": "https://www.oktools.co.kr/health/dday" },
               { "@type": "ListItem", "position": 6, "name": "임신 주수 계산기", "url": "https://www.oktools.co.kr/health/pregnancy" },
-              { "@type": "ListItem", "position": 7, "name": "음주 측정기", "url": "https://www.oktools.co.kr/health/alcohol" }
+              { "@type": "ListItem", "position": 7, "name": "음주 측정기", "url": "https://www.oktools.co.kr/health/alcohol" },
+              { "@type": "ListItem", "position": 8, "name": "체지방률 계산기", "url": "https://www.oktools.co.kr/health/body-fat" },
+              { "@type": "ListItem", "position": 9, "name": "임신 주수 계산기 (상세)", "url": "https://www.oktools.co.kr/health/pregnancy-week" },
+              { "@type": "ListItem", "position": 10, "name": "칼로리 계산기", "url": "https://www.oktools.co.kr/health/calorie" }
             ]
           }
         }) }}

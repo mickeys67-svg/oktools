@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "무료 퍼센트 계산기로 증가율, 감소율, 비율을 계산하세요. A의 B%는? A에서 B로 몇% 변화? A는 B의 몇%? 세 가지 모드를 즉시 이용할 수 있습니다.",
   keywords: ["퍼센트계산기", "퍼센트계산", "백분율계산", "퍼센트증가율", "퍼센트감소율", "비율계산기", "할인퍼센트", "증감률계산"],
+  openGraph: {
+    title: "퍼센트 계산기 - % ��가 감소 비��� 계산",
+    description:
+      "무료 퍼센트 계산기로 증가��, 감소율, 비율을 계산하세요. A의 B%는? A에서 B로 몇% 변���? A는 B의 몇%? 세 가지 모드를 즉시 이용할 수 있습니다.",
+  },
   alternates: {
     canonical: "/life/percentage",
   },
@@ -73,6 +78,33 @@ export default function PercentagePage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "퍼센트 증가율은 어떻게 계산하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "퍼센트 증가율 = ((새 값 - 원래 값) / 원래 값) x 100입니다. 예를 들어 100에서 130으로 증가했다면 (130-100)/100 x 100 = 30% 증가입니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "A의 B%는 어떻게 구하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A x B / 100으로 계산합니다. 예를 들어 500의 20%는 500 x 20 / 100 = 100입니다. 할인 계산, 세금 계산, 팁 계산 등에 자주 사용되는 기본 퍼센트 공식입니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

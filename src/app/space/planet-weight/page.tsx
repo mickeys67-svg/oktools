@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "지구 몸무게를 입력하면 달·화성·목성 등 태양계 행성에서의 몸무게를 무료로 계산합니다. 행성별 중력 비교.",
   keywords: ["행성무게계산기", "달에서몸무게", "화성무게", "목성무게", "행성중력", "우주몸무게", "태양계행성", "중력비교"],
+  openGraph: {
+    title: "행성 무게 계산기 - 달 화성 목성에서의 내 몸무게",
+    description:
+      "지구 몸무게를 입력하면 달·화성·목성 등 태양계 행성에서의 몸무게를 무료로 계산합니다. 행성별 중력 비교.",
+  },
   alternates: {
     canonical: "/space/planet-weight",
   },
@@ -79,6 +84,41 @@ export default function PlanetWeightPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "달에서 몸무게는 얼마나 되나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "달의 중력은 지구의 약 1/6(0.166배)입니다. 지구에서 60kg인 사람은 달에서 약 10kg으로 측정됩니다. 이 때문에 우주비행사들이 달에서 높이 점프하고 가볍게 움직일 수 있었습니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "목성에서 내 몸무게는 얼마인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "목성의 표면 중력은 지구의 약 2.53배입니다. 지구에서 60kg인 사람은 목성에서 약 152kg으로 느껴집니다. 목성은 태양계에서 가장 큰 행성으로 중력도 가장 강합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "행성마다 몸무게가 다른 이유는 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "몸무게는 질량에 중력가속도를 곱한 값입니다. 각 행성의 질량과 크기가 다르기 때문에 표면 중력이 달라지고, 같은 질량의 물체라도 행성에 따라 다른 무게로 측정됩니다. 질량 자체는 어디서든 동일합니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

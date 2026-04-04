@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "GOOGLE_VERIFICATION_CODE",
+    // google: DNS 도메인 인증 사용 중 (메타 태그 불필요)
     other: {
       "naver-site-verification": "naver88beb20b4255fa30a98d713917c45eb3",
     },

@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "무료 과태료 계산기로 속도위반·주정차위반 과태료와 벌점을 조회하세요. 일반도로, 고속도로, 어린이보호구역 기준 벌금과 면허정지 기준을 즉시 확인.",
   keywords: ["과태료계산기", "속도위반과태료", "주정차위반과태료", "교통벌금", "벌점조회", "어린이보호구역과태료", "고속도로과태료", "면허정지기준", "속도위반벌점", "교통범칙금"],
+  openGraph: {
+    title: "과태료 계산기 - 속도위반 주정차위반 벌점 조회",
+    description:
+      "무료 과태료 계산기로 속도위반·주정��위반 ��태료와 벌점을 조회하세요. 일반도로, 고속도로, 어린이보호구�� 기준 벌금과 면허정지 기준을 즉시 확인.",
+  },
   alternates: {
     canonical: "/life/traffic-fine",
   },
@@ -77,6 +82,41 @@ export default function TrafficFinePage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "속도위반 과태료는 얼마인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "일반도로 기준 20km/h 초과 시 승용차 4만원, 40km/h 초과 시 7만원, 60km/h 초과 시 10만원, 80km/h 초과 시 13만원의 과태료가 부과됩니다. 범칙금(현장 적발)의 경우 금액이 다르며 벌점도 부과됩니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "과태료와 범칙금의 차이는 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "과태료는 무인 카메라 등으로 적발되어 차량 소유자에게 부과되는 행정 제재이며, 벌점이 없습니다. 범칙금은 경찰관에 의해 현장에서 운전자에게 직접 부과되며 벌점이 함께 부과됩니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "벌점이 쌓이면 어떻게 되나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "벌점 40점 이상이면 면허정지(1점당 1일), 벌점 누적 121점 이상이면 면허취소 처분을 받습니다. 1년간 벌점이 없으면 누적 벌점이 소멸되며, 특별교육 이수 시 20점까지 감경받을 수 있습니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

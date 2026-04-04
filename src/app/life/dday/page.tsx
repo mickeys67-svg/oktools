@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "날짜세기",
     "디데이앱",
   ],
+  openGraph: {
+    title: "D-Day 카운터 - 디데이 날짜 계산기",
+    description:
+      "무료 D-Day 카운터로 목표 날짜까지 남은 일수를 실시간으로 확인하��요. 시험, 기념일, 여행 등 중요한 날까지의 카운트다운을 시간/분/초 단위로 제공합니다.",
+  },
   alternates: {
     canonical: "/life/dday",
   },
@@ -47,12 +52,24 @@ export default function DDayPage() {
 
       <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
-          D-Day 활용법
+          D-Day 카운터 활용법
         </h2>
-        <p>
+        <p className="mb-3">
           시험일, 기념일, 출산 예정일, 여행, 프로젝트 마감일 등 중요한 날짜까지의 남은 일수를
           한눈에 확인하세요. 실시간 카운트다운으로 시간, 분, 초 단위까지 확인할 수 있습니다.
           과거 날짜를 입력하면 해당 날로부터 며칠이 지났는지(D+)도 확인 가능합니다.
+        </p>
+        <p className="mb-3">
+          수능, 공무원 시험, 자격증 시험 등 목표 시험일까지 남은 공부 일수를 파악하거나,
+          커플 100일, 200일, 1주년 등 기념일을 계산하는 데 활용할 수 있습니다.
+          여행 출발일까지 준비 기간을 확인하거나, 프로젝트 마감까지 남은 작업일을
+          파악하는 데에도 유용합니다.
+        </p>
+        <p>
+          D-Day 표기법은 한국에서 널리 사용되는 날짜 카운트다운 방식입니다.
+          D-30은 목표일 30일 전, D-Day(D+0)는 당일, D+30은 목표일로부터 30일이 지난 날을 의미합니다.
+          군대 전역일, 입사일 기준 근속 일수, 아기 태어난 지 며칠째인지 등
+          다양한 상황에서 D-Day 카운터를 활용해 보세요.
         </p>
       </section>
 

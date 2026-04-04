@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   description:
     "온라인 시계, 타이머, 스톱워치, 글자수 세기, 랜덤 번호 생성기, 로또 번호 추천 등 무료 유틸리티 도구를 바로 사용하세요.",
   keywords: ["온라인도구", "무료유틸리티", "온라인시계", "타이머", "스톱워치", "글자수세기", "로또번호추천", "랜덤번호생성기"],
+  openGraph: {
+    title: "온라인 도구 모음 - 시계, 타이머, 글자수 세기, 로또",
+    description:
+      "온라인 시계, 타이머, 스톱워치, 글자수 세기, 랜덤 번호 생성기, 로또 번호 추천 등 무료 유틸리티 도구를 바로 사용하세요.",
+  },
   alternates: {
     canonical: "/tools",
   },
@@ -36,6 +41,10 @@ export default function ToolsPage() {
         </h1>
         <p className="text-gray-500 dark:text-gray-400">{category.description}</p>
       </div>
+
+      <section className="mb-8 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <p>온라인 시계, 카운트다운 타이머, 스톱워치, 글자수 세기, 랜덤 번호 생성기, 로또 번호 추천 등 일상에서 바로 쓸 수 있는 유틸리티 도구 모음입니다. 앱 설치 없이 브라우저에서 즉시 사용할 수 있으며, PC와 모바일 모두 최적화되어 있습니다.</p>
+      </section>
 
       <div className="grid gap-3">
         {tools.map((tool) => (

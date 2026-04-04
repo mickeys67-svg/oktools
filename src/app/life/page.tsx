@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   description:
     "전기요금계산기, 학점계산기, 퍼센트계산, 할인율계산, 전역일계산기, 과태료조회, 자동차세계산 등 일상생활에 필요한 무료 계산기 도구 모음.",
   keywords: ["생활계산기", "전기요금계산", "학점계산기", "퍼센트계산", "할인율계산", "전역일계산기", "과태료조회", "자동차세계산"],
+  openGraph: {
+    title: "생활 계산기 모음 - 전기요금 학점 퍼센트 할인율 무료",
+    description:
+      "전기요금계산기, 학점계산기, 퍼센트계산, 할인율계산, 전역일계산기, 과태료조회, 자동차세계산 등 일상생활에 필요한 무료 계산기 도구 모음.",
+  },
   alternates: {
     canonical: "/life",
   },
@@ -30,6 +35,11 @@ export default function LifePage() {
         <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">{category.name}</h1>
         <p className="text-gray-500 dark:text-gray-400">{category.description}</p>
       </div>
+
+      <section className="mb-8 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <p>전기요금, 학점(GPA), 퍼센트, 할인율, 전역일, 과태료, 자동차세, D-Day, 육아휴직급여, 근무일수 등 일상생활에서 자주 필요한 계산기를 모았습니다. 복잡한 공식을 몰라도 숫자만 입력하면 즉시 결과를 확인할 수 있어 누구나 간편하게 사용할 수 있습니다.</p>
+      </section>
+
       <div className="grid gap-3">
         {tools.map((tool) => (
           <Link key={tool.id} href={tool.path}
@@ -64,7 +74,10 @@ export default function LifePage() {
               { "@type": "ListItem", "position": 4, "name": "할인율 계산기", "url": "https://www.oktools.co.kr/life/discount" },
               { "@type": "ListItem", "position": 5, "name": "전역일 계산기", "url": "https://www.oktools.co.kr/life/military" },
               { "@type": "ListItem", "position": 6, "name": "과태료 계산기", "url": "https://www.oktools.co.kr/life/traffic-fine" },
-              { "@type": "ListItem", "position": 7, "name": "자동차세 계산기", "url": "https://www.oktools.co.kr/life/car-tax" }
+              { "@type": "ListItem", "position": 7, "name": "자동차세 계산기", "url": "https://www.oktools.co.kr/life/car-tax" },
+              { "@type": "ListItem", "position": 8, "name": "D-Day 카운터", "url": "https://www.oktools.co.kr/life/dday" },
+              { "@type": "ListItem", "position": 9, "name": "육아휴직급여 계산기", "url": "https://www.oktools.co.kr/life/parental-leave" },
+              { "@type": "ListItem", "position": 10, "name": "근무일수 계산기", "url": "https://www.oktools.co.kr/life/workdays" }
             ]
           }
         }) }}

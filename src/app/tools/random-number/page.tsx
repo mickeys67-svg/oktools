@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "랜덤 번호 생성기 - 로또 주사위 동전 던지기",
   description: "무료 랜덤 번호 생성기. 로또 번호, 주사위 굴리기, 동전 던지기, 추첨 번호 등 다양한 무작위 생성 도구를 바로 사용하세요.",
   keywords: ["랜덤번호생성기", "랜덤숫자", "로또번호", "추첨번호", "주사위굴리기", "동전던지기", "무작위번호", "제비뽑기", "랜덤뽑기"],
+  openGraph: {
+    title: "랜덤 번호 생성기 - 로또 주사위 동전 던지기",
+    description: "무료 랜덤 번호 생성기. 로또 번호, 주사위 굴리기, 동전 던지기, 추첨 번호 등 다양한 무작위 생성 도구를 바로 사용하세요.",
+  },
   alternates: {
     canonical: "/tools/random-number",
   },
@@ -69,6 +73,33 @@ export default function RandomNumberPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "랜덤 번호 생성기는 공정한가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "이 도구는 브라우저의 암호학적 난수 생성기(Crypto.getRandomValues)를 사용하여 예측 불가능한 무작위 값을 생성합니다. 각 숫자가 나올 확률이 균등하므로 추첨, 제비뽑기 등 공정한 무작위 선택에 적합합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "랜덤 번호 생성기로 로또 번호를 뽑을 수 있나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "네, 1~45 범위에서 6개의 중복 없는 랜덤 번호를 생성하면 로또 번호로 사용할 수 있습니다. 다만 모든 번호 조합의 당첨 확률은 동일하므로 당첨을 보장하지 않습니다. 통계 기반 추천이 필요하면 로또 번호 추천 도구를 이용하세요.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

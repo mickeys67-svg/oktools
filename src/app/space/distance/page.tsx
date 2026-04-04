@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "광년, 천문단위(AU), 파섹, km 등 우주 거리 단위를 무료로 변환하세요. 안드로메다까지 몇 광년인지 바로 확인.",
   keywords: ["우주거리변환", "광년변환", "천문단위", "AU변환", "파섹", "광년km변환", "우주거리단위", "안드로메다거리"],
+  openGraph: {
+    title: "우주 거리 변환 - 광년 AU 파섹 km 변환기",
+    description:
+      "광년, 천문단위(AU), 파섹, km 등 우주 거리 단위를 무료로 변환하세요. 안드로메다까지 몇 광년인지 바로 확인.",
+  },
   alternates: {
     canonical: "/space/distance",
   },
@@ -73,6 +78,33 @@ export default function SpaceDistancePage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "1광년은 몇 km인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "1광년은 빛이 1년 동안 이동하는 거리로 약 9조 4,607억 km(9.461 x 10^12 km)입니다. 빛의 속도는 초속 약 30만 km이며, 가장 가까운 별인 프록시마 센타우리까지 약 4.24광년 떨어져 있습니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "천문단위(AU)는 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "천문단위(AU, Astronomical Unit)는 지구에서 태양까지의 평균 거리를 기준으로 한 단위로 약 1억 4,960만 km입니다. 태양계 내 행성 간 거리를 나타낼 때 주로 사용하며, 화성은 약 1.52AU, 목성은 약 5.2AU 떨어져 있습니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

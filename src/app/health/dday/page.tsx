@@ -4,10 +4,15 @@ import DDayCalc from "@/components/health/DDayCalc";
 import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
-  title: "D-Day 계산기 - 디데이 날짜 계산, 남은 일수 확인",
+  title: "기념일 디데이 계산기 - 100일 200일 커플 기념일 계산",
   description:
-    "무료 디데이 계산기로 남은 일수와 지난 일수를 계산하세요. 시험 D-Day, 기념일, 100일·200일 커플 디데이, 수능 카운트다운을 즉시 확인할 수 있습니다.",
-  keywords: ["디데이계산기", "D-Day계산기", "날짜계산기", "남은일수계산", "기념일계산", "100일계산", "200일계산", "시험디데이", "수능디데이", "커플디데이"],
+    "커플 100일, 200일, 1주년 기념일과 시험 디데이를 무료로 계산하세요. 날짜 간 일수 차이, 남은 일수, 지난 일수를 바로 확인할 수 있습니다.",
+  keywords: ["기념일계산기", "100일계산", "200일계산", "커플디데이", "기념일디데이", "날짜차이계산", "일수계산"],
+  openGraph: {
+    title: "기념일 디데이 계산기 - 100일 200일 커플 기념일 계산",
+    description:
+      "커플 100일, 200일, 1주년 기념일과 시험 디데이를 무료로 계산하세요. 날짜 간 일수 차이, 남은 일수, 지난 일수를 바로 확인할 수 있습니다.",
+  },
   alternates: {
     canonical: "/health/dday",
   },
@@ -62,14 +67,14 @@ export default function DDayPage() {
           <Link href="/health/age" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
             만 나이 계산기
           </Link>
-          <Link href="/health/pregnancy" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+          <Link href="/health/pregnancy-week" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
             임신 주수 계산기
           </Link>
-          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
-            대출 이자 계산기
+          <Link href="/life/dday" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            D-Day 카운터
           </Link>
-          <Link href="/fortune/tarot" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
-            타로카드
+          <Link href="/health/biorhythm" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            바이오리듬
           </Link>
         </div>
       </section>

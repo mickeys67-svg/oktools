@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "두 사람 이름을 입력하면 한글 획수 기반 피라미드 방식으로 궁합 점수를 무료 계산합니다. 커플 이름 궁합 테스트.",
   keywords: ["이름궁합", "이름궁합테스트", "이름궁합계산기", "이름으로궁합보기", "한글이름궁합", "획수궁합", "커플이름궁합", "연인궁합", "이름점"],
+  openGraph: {
+    title: "이름 궁합 테스트 - 획수로 보는 궁합 점수",
+    description:
+      "두 사람 이름을 입력하면 한글 획수 기반 피라미드 방식으로 궁합 점수를 무료 계산합니다. 커플 이름 궁합 테스트.",
+  },
   alternates: {
     canonical: "/fortune/name-match",
   },
@@ -80,6 +85,41 @@ export default function NameMatchPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "이름 궁합은 어떤 원리로 계산하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "이름 궁합은 한글 자모의 획수를 이용한 피라미드 방식으로 계산합니다. 두 사람의 이름을 한 글자씩 번갈아 배치한 뒤 초성, 중성, 종성으로 분리하여 획수를 구하고, 인접한 두 수를 더해 일의 자리만 취하는 과정을 반복하여 최종 2자리 궁합 점수를 산출합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "이름 궁합 점수 몇 점이면 좋은 궁합인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "일반적으로 70점 이상이면 좋은 궁합, 80점 이상이면 환상의 궁합으로 해석합니다. 다만 이름 궁합은 과학적 근거가 아닌 전통 놀이 문화에 기반한 재미 콘텐츠이므로, 결과에 너무 의미를 부여하기보다 가볍게 즐기시기 바랍니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "이름 순서를 바꾸면 결과가 달라지나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "네, 이름을 입력하는 순서에 따라 결과가 달라질 수 있습니다. 이름을 번갈아 배치하는 과정에서 순서가 바뀌면 획수 조합이 달라지기 때문입니다. 재미로 양쪽 순서 모두 해보고 비교해 보는 것도 좋습니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

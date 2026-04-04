@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "생년월일 입력으로 토정비결 상원·중원·하원 운세를 무료 확인하세요. 재물운, 연애운, 건강운, 직업운까지 한눈에 풀이합니다.",
   keywords: ["토정비결", "토정비결2026", "무료토정비결", "올해운세", "신년운세", "생년월일운세", "토정비결보기", "토정비결풀이", "재물운", "연애운", "건강운"],
+  openGraph: {
+    title: "토정비결 2026 - 생년월일 무료 운세 (상중하원)",
+    description:
+      "생년월일 입력으로 토정비결 상원·중원·하원 운세를 무료 확인하세요. 재물운, 연애운, 건강운, 직업운까지 한눈에 풀이합니다.",
+  },
   alternates: {
     canonical: "/fortune/tojeong",
   },
@@ -80,6 +85,41 @@ export default function TojeongPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "토정비결은 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "토정비결은 조선 시대 학자 이지함(호: 토정)이 만든 것으로 알려진 한국 전통 운세입니다. 음력 생년월일을 기반으로 한 해를 상원(1~4월), 중원(5~8월), 하원(9~12월) 세 시기로 나누어 각 기간의 운세를 풀이합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "토정비결은 음력과 양력 중 어떤 것으로 보나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "토정비결은 전통적으로 음력 생년월일을 기준으로 합니다. 양력 생일을 알고 있다면 음력으로 변환하여 입력해야 정확한 결과를 얻을 수 있습니다. 본 도구에서는 양력 입력 시 자동으로 음력 변환하여 계산합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "토정비결의 상원, 중원, 하원은 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "토정비결은 한 해를 세 시기로 나누어 운세를 봅니다. 상원은 1월부터 4월까지, 중원은 5월부터 8월까지, 하원은 9월부터 12월까지의 운세를 나타냅니다. 각 시기별로 재물운, 건강운, 직업운 등이 다르게 나타날 수 있습니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

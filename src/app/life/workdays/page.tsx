@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "근로일수",
     "한국공휴일2026",
   ],
+  openGraph: {
+    title: "공휴일/근무일수 계산기 - 2026년 한국 공휴일 기준",
+    description:
+      "무료 근무일수 계산기로 기간 내 근무일, 주말, 공휴일 수를 계산하세요. 2026년 대한민국 공휴일(대체��휴일 포함) 기준으�� 정확한 근무일수를 확인할 수 있습니다.",
+  },
   alternates: {
     canonical: "/life/workdays",
   },
@@ -46,6 +51,17 @@ export default function WorkdaysPage() {
       <ResultAd />
 
       <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+          근무일수 계산기 사용 가이드
+        </h2>
+        <p className="mb-4">
+          근무일수 계산기는 시작일과 종료일 사이의 평일(근무일), 주말, 공휴일 수를 자동으로 계산하는 도구입니다.
+          프로젝트 일정 수립, 급여 정산, 연차 계획, 계약 기간 산정 등 다양한 업무에서 정확한 근무일수 파악이 필요할 때
+          유용합니다. 2026년 대한민국 공휴일과 대체공휴일을 모두 반영하여 계산하므로, 별도로 달력을 확인할 필요 없이
+          정확한 영업일 수를 바로 확인할 수 있습니다. 주말(토/일)에 겹치는 공휴일은 이중 차감하지 않으며,
+          대체공휴일이 적용되는 경우 자동으로 반영됩니다.
+        </p>
+
         <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
           2026년 대한민국 공휴일
         </h2>

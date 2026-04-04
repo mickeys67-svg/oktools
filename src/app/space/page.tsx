@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   description:
     "무료 우주 계산기 모음. 행성 무게, 행성 나이, 우주 거리 변환, 빛 여행 시간 등 재미있는 우주과학 도구를 체험하세요.",
   keywords: ["우주계산기", "행성무게", "우주거리", "광년계산", "행성나이", "빛여행시간", "태양계", "우주과학"],
+  openGraph: {
+    title: "우주 계산기 - 행성 무게, 우주 거리, 빛 여행 시간",
+    description:
+      "무료 우주 계산기 모음. 행성 무게, 행성 나이, 우주 거리 변환, 빛 여행 시간 등 재미있는 우주과학 도구를 체험하세요.",
+  },
   alternates: {
     canonical: "/space",
   },
@@ -36,6 +41,10 @@ export default function SpacePage() {
         </h1>
         <p className="text-gray-500 dark:text-gray-400">{category.description}</p>
       </div>
+
+      <section className="mb-8 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+        <p>다른 행성에서의 내 몸무게와 나이를 계산하고, 광년/천문단위/파섹 등 우주 거리를 변환하며, 빛이나 비행기로 우주를 여행하면 얼마나 걸리는지 확인해 보세요. 태양계와 우주에 대한 호기심을 재미있는 계산으로 풀어보는 과학 도구 모음입니다.</p>
+      </section>
 
       <div className="grid gap-3">
         {tools.map((tool) => (

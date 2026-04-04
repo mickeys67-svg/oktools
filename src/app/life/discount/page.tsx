@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "무료 할인율 계산기로 할인가, 원래 가격, 할인 퍼센트를 계산하세요. 세일 가격 입력으로 할인 금액과 최종 가격을 즉시 확인할 수 있습니다.",
   keywords: ["할인율계산기", "할인가계산", "할인계산기", "세일계산", "할인퍼센트계산", "원래가격계산", "정가계산", "최종가격계산"],
+  openGraph: {
+    title: "할인율 계산기 - 할인가 원래가격 역산",
+    description:
+      "무료 할인율 계산기로 ��인가, 원래 가격, 할인 퍼센트를 계산하세요. 세일 가격 입력으로 할인 금액과 최종 가격을 즉시 확인할 수 있습니다.",
+  },
   alternates: {
     canonical: "/life/discount",
   },
@@ -73,6 +78,33 @@ export default function DiscountPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "할인율은 어떻게 계산하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "할인율 = (원래 가격 - 할인 가격) / 원래 가격 x 100입니다. 예를 들어 50,000원짜리 상품을 35,000원에 구매했다면 (50,000-35,000)/50,000 x 100 = 30% 할인입니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "중복 할인은 어떻게 계산하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "30% 할인 후 추가 10% 할인이면 총 40% 할인이 아닙니다. 원래 가격에 0.7을 곱한 뒤 다시 0.9를 곱하면 0.63, 즉 37% 할인이 됩니다. 중복 할인은 순차적으로 적용되므로 단순 합산보다 할인율이 적습니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

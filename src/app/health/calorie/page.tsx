@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "감량칼로리",
     "활동대사량",
   ],
+  openGraph: {
+    title: "칼로리 계산기 - 기초대사량 일일 권장 칼로리 계산",
+    description:
+      "무료 칼로리 계산기로 기초대사량(BMR)과 일일 권장 칼로리를 계산하세요. Mifflin-St Jeor 공식 기반으로 감량, 유지, 증량 목표별 칼로리를 확인할 수 있습니다.",
+  },
   alternates: {
     canonical: "/health/calorie",
   },
@@ -62,6 +67,12 @@ export default function CaloriePage() {
         <p className="mt-3">
           TDEE(일일 총 에너지 소비량)는 BMR에 활동 계수를 곱하여 산출합니다.
           체중 감량을 위해서는 TDEE보다 500kcal 적게, 증량을 위해서는 500kcal 더 섭취하는 것이 일반적입니다.
+        </p>
+        <p className="mt-3">
+          활동 계수는 거의 운동하지 않음(1.2), 가벼운 운동(1.375), 보통 운동(1.55), 활발한 운동(1.725),
+          매우 활발한 운동(1.9) 5단계로 구분됩니다. 체중 감량 시에는 TDEE에서 500kcal을 줄이면 주당 약
+          0.5kg 감량이 가능하지만, 기초대사량(BMR) 이하로 섭취하면 근손실과 요요 현상이 발생할 수 있으므로
+          주의가 필요합니다. 균형 잡힌 식단과 규칙적인 운동을 병행하는 것이 건강한 체중 관리의 핵심입니다.
         </p>
       </section>
 

@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "글자수 세기 - 공백포함 제외, 바이트 계산기",
   description: "무료 글자수 세기 도구. 공백 포함·제외 글자수, 단어수, 바이트수를 실시간 계산하세요. 자기소개서·이력서·SNS 글자수 확인.",
   keywords: ["글자수세기", "글자수카운터", "자기소개서글자수", "이력서글자수", "바이트계산", "공백포함글자수", "공백제외글자수", "한글글자수", "SNS글자수"],
+  openGraph: {
+    title: "글자수 세기 - 공백포함 제외, 바이트 계산기",
+    description: "무료 글자수 세기 도구. 공백 포함·제외 글자수, 단어수, 바이트수를 실시간 계산하세요. 자기소개서·이력서·SNS 글자수 확인.",
+  },
   alternates: {
     canonical: "/tools/character-count",
   },
@@ -70,6 +74,41 @@ export default function CharacterCountPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "자기소개서 글자수는 공백 포함인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "대부분의 자기소개서와 입사 지원서는 '공백 포함' 글자수를 기준으로 합니다. 다만 일부 기업이나 공공기관은 '공백 제외' 기준을 사용하기도 하므로, 모집 요강에 명시된 기준을 반드시 확인하세요.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "한글 1글자는 몇 바이트인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "한글은 인코딩 방식에 따라 다릅니다. UTF-8 기준으로 한글 1글자는 3바이트이고, EUC-KR 기준으로는 2바이트입니다. 영문, 숫자, 기본 특수문자는 두 인코딩 모두 1바이트입니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "트위터(X) 글자수 제한은 몇 자인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "트위터(X)의 일반 게시물은 280자까지 작성할 수 있습니다. 한글, 영문 모두 동일하게 1글자로 카운트됩니다. X Premium 구독자는 최대 25,000자까지 작성 가능합니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

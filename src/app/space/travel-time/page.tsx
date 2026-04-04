@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "태양계 행성까지 빛·비행기·KTX·자동차로 여행하면 얼마나 걸리는지 무료로 계산하세요. 화성·달까지 시간 비교.",
   keywords: ["빛여행시간", "우주여행시간", "광속", "빛의속도", "화성까지시간", "달까지시간", "태양까지시간", "우주여행"],
+  openGraph: {
+    title: "빛 여행 시간 계산기 - 빛 비행기 KTX 우주여행",
+    description:
+      "태양계 행성까지 빛·비행기·KTX·자동차로 여행하면 얼마나 걸리는지 무료로 계산하세요. 화성·달까지 시간 비교.",
+  },
   alternates: {
     canonical: "/space/travel-time",
   },
@@ -73,6 +78,33 @@ export default function TravelTimePage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "빛의 속도로 달까지 얼마나 걸리나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "빛의 속도(초속 약 30만 km)로 달까지 약 1.3초가 걸립니다. 지구에서 달까지의 평균 거리는 약 38만 4,400km입니다. 아폴로 우주선은 약 3일이 소요되었습니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "화성까지 비행기로 가면 얼마나 걸리나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "화성까지 최소 거리(약 5,500만 km)기준으로 시속 900km 비행기로 약 7년, 빛의 속도로는 약 3분이 걸립니다. 실제 화성 탐사선은 호만 전이 궤도를 이용하여 약 7~9개월이 소요됩니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

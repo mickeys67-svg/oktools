@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "지구 나이를 입력하면 화성·목성·토성 등 태양계 행성에서의 나이를 무료로 계산합니다. 공전주기 기반 우주 나이 확인.",
   keywords: ["행성나이계산기", "화성나이", "목성나이", "행성공전주기", "우주나이", "태양계나이", "행성년수"],
+  openGraph: {
+    title: "행성 나이 계산기 - 화성 목성에서의 내 나이",
+    description:
+      "지구 나이를 입력하면 화성·목성·토성 등 태양계 행성에서의 나이를 무료로 계산합니다. 공전주기 기반 우주 나이 확인.",
+  },
   alternates: {
     canonical: "/space/planet-age",
   },
@@ -73,6 +78,33 @@ export default function PlanetAgePage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "화성에서 내 나이는 어떻게 되나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "화성의 공전주기는 지구의 약 1.88배이므로, 지구 나이를 1.88로 나누면 화성 나이를 알 수 있습니다. 예를 들어 지구에서 30세인 사람은 화성에서 약 16세입니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "목성에서 1년은 지구 시간으로 얼마인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "목성의 공전주기는 지구의 약 11.86년입니다. 따라서 목성에서 1년은 지구 시간으로 약 11년 10개월에 해당합니다. 지구에서 30세인 사람은 목성에서 약 2.5세밖에 되지 않습니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

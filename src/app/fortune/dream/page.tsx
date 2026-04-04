@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "꿈에서 본 동물·사람·장소의 의미를 무료로 풀이하세요. 돼지꿈, 뱀꿈, 치아꿈 등 길몽 흉몽을 상세하게 해석해드립니다.",
   keywords: ["꿈해몽", "꿈풀이", "꿈풀이사전", "돼지꿈", "뱀꿈", "치아꿈", "물꿈", "불꿈", "죽는꿈", "길몽흉몽", "태몽풀이", "꿈해석", "로또꿈"],
+  openGraph: {
+    title: "꿈해몽 - 꿈 풀이 사전, 길몽 흉몽 확인",
+    description:
+      "꿈에서 본 동물·사람·장소의 의미를 무료로 풀이하세요. 돼지꿈, 뱀꿈, 치아꿈 등 길몽 흉몽을 상세하게 해석해드립니다.",
+  },
   alternates: {
     canonical: "/fortune/dream",
   },
@@ -70,15 +75,50 @@ export default function DreamPage() {
           <Link href="/fortune/tojeong" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
             토정비결
           </Link>
-          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
-            대출 이자 계산기
+          <Link href="/fortune/zodiac" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            별자리 운세
           </Link>
-          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
-            BMI 계산기
+          <Link href="/fortune/name-match" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            이름 궁합
           </Link>
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "돼지꿈은 어떤 의미인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "돼지꿈은 대표적인 길몽으로, 재물운과 행운을 상징합니다. 특히 큰 돼지나 황금 돼지가 나오는 꿈은 큰 재물이 들어올 조짐으로 해석되며, 로또를 사기도 합니다. 돼지를 안는 꿈은 재산 증가, 돼지가 집에 들어오는 꿈은 횡재를 의미합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "이빨이 빠지는 꿈은 무슨 뜻인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "이빨이 빠지는 꿈은 가족이나 가까운 사람의 건강에 대한 무의식적 걱정을 반영하는 것으로 해석됩니다. 윗니가 빠지면 윗사람(부모), 아랫니가 빠지면 아랫사람(자녀)과 관련된 걱정을 나타낸다고 합니다. 스트레스나 불안감의 반영일 수도 있습니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "뱀꿈은 길몽인가요 흉몽인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "뱀꿈은 상황에 따라 길몽과 흉몽 모두 될 수 있습니다. 큰 뱀이나 금빛 뱀을 보는 꿈은 재물운이 올라가는 길몽이고, 뱀에 물리는 꿈은 예상치 못한 재물을 얻거나 건강에 주의하라는 의미입니다. 뱀이 도망가는 꿈은 기회를 놓칠 수 있다는 경고로 해석됩니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "나와 상대 혈액형을 선택하면 연애·우정·직장 궁합을 무료로 확인하세요. A형, B형, O형, AB형 성격과 궁합 총정리.",
   keywords: ["혈액형궁합", "혈액형성격", "A형성격", "B형성격", "O형성격", "AB형성격", "혈액형별궁합", "연애궁합", "혈액형테스트", "커플궁합"],
+  openGraph: {
+    title: "혈액형 궁합 - A B O AB형 궁합 테스트",
+    description:
+      "나와 상대 혈액형을 선택하면 연애·우정·직장 궁합을 무료로 확인하세요. A형, B형, O형, AB형 성격과 궁합 총정리.",
+  },
   alternates: {
     canonical: "/fortune/blood-type",
   },
@@ -70,15 +75,50 @@ export default function BloodTypePage() {
           <Link href="/fortune/name-match" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
             이름 궁합
           </Link>
-          <Link href="/finance/loan-calculator" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
-            대출 이자 계산기
+          <Link href="/fortune/tarot" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            타로카드
           </Link>
-          <Link href="/health/bmi" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
-            BMI 계산기
+          <Link href="/fortune/zodiac" className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-primary-500 dark:hover:text-primary-400">
+            별자리 운세
           </Link>
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "혈액형 궁합에서 가장 잘 맞는 조합은 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "대중적으로 O형과 A형 조합이 가장 좋은 궁합으로 알려져 있습니다. O형의 적극적이고 넓은 포용력이 A형의 섬세하고 신중한 성격과 잘 어울린다고 합니다. AB형과 O형, B형과 O형도 좋은 궁합으로 평가됩니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "혈액형별 성격은 과학적 근거가 있나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "혈액형과 성격의 연관성은 과학적으로 입증되지 않았습니다. 1970년대 일본에서 대중화된 개념으로, 한국과 일본에서 문화적으로 널리 퍼져 있습니다. 재미와 대화 소재로는 좋지만, 실제 사람의 성격은 혈액형보다 환경, 경험, 교육 등에 의해 형성됩니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "AB형은 왜 특이하다고 하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "AB형은 전체 인구의 약 11% 정도로 비교적 적은 비율을 차지하며, A형과 B형의 특성을 모두 가지고 있다고 알려져 있습니다. 이중적이고 예측하기 어려운 성격으로 묘사되지만, 이는 문화적 인식일 뿐 과학적 근거는 없습니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
