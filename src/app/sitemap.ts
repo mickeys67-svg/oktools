@@ -37,6 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/finance/income-tax`, priority: 0.8 },
     { url: `${BASE_URL}/finance/unemployment`, priority: 0.8 },
     { url: `${BASE_URL}/finance/acquisition-tax`, priority: 0.8 },
+    { url: `${BASE_URL}/finance/dsr`, priority: 0.8 },
+    { url: `${BASE_URL}/finance/capital-gains-tax`, priority: 0.8 },
+    { url: `${BASE_URL}/finance/subscription`, priority: 0.8 },
+    { url: `${BASE_URL}/finance/pension`, priority: 0.8 },
+    { url: `${BASE_URL}/finance/gift-tax`, priority: 0.8 },
+    { url: `${BASE_URL}/finance/year-end-tax`, priority: 0.8 },
     // Health
     { url: `${BASE_URL}/health/bmi`, priority: 0.8 },
     { url: `${BASE_URL}/health/bmr`, priority: 0.8 },
@@ -45,6 +51,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/health/dday`, priority: 0.8 },
     { url: `${BASE_URL}/health/pregnancy`, priority: 0.8 },
     { url: `${BASE_URL}/health/alcohol`, priority: 0.8 },
+    { url: `${BASE_URL}/health/body-fat`, priority: 0.8 },
+    { url: `${BASE_URL}/health/pregnancy-week`, priority: 0.8 },
+    { url: `${BASE_URL}/health/calorie`, priority: 0.8 },
     // Tools
     { url: `${BASE_URL}/tools/clock`, priority: 0.8 },
     { url: `${BASE_URL}/tools/timer`, priority: 0.8 },
@@ -74,6 +83,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/life/military`, priority: 0.8 },
     { url: `${BASE_URL}/life/traffic-fine`, priority: 0.8 },
     { url: `${BASE_URL}/life/car-tax`, priority: 0.8 },
+    { url: `${BASE_URL}/life/dday`, priority: 0.8 },
+    { url: `${BASE_URL}/life/parental-leave`, priority: 0.8 },
+    { url: `${BASE_URL}/life/workdays`, priority: 0.8 },
   ].map((p) => ({ ...p, lastModified: LAST_MODIFIED, changeFrequency: "weekly" as const }));
 
   return [...staticPages, ...categoryPages, ...toolPages];

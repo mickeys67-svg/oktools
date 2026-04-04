@@ -577,7 +577,7 @@ export const tools: Tool[] = [
   },
   // PHASE 3: 신규 생활 도구
   {
-    id: "dday",
+    id: "dday-counter",
     name: "D-Day 카운터",
     description: "목표 날짜까지 남은 일수를 실시간으로 카운트합니다",
     category: "life",
