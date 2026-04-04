@@ -113,6 +113,12 @@ export default function RootLayout({
             __html: `(function(){var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark')}})()`,
           }}
         />
+        {/* Google AdSense */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1642090914820195"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="min-h-screen flex flex-col bg-surface text-gray-900 dark:bg-surface-dark dark:text-gray-50">
         <Header />
