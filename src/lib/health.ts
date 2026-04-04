@@ -352,7 +352,7 @@ export function calcPregnancy(lastPeriodDate: Date, today: Date): PregnancyResul
   if (weeks >= 28) {
     trimester = 3;
     trimesterLabel = "후기 (3삼분기)";
-  } else if (weeks >= 14) {
+  } else if (weeks >= 13) {
     trimester = 2;
     trimesterLabel = "중기 (2삼분기)";
   }

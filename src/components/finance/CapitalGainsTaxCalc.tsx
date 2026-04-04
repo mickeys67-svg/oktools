@@ -40,11 +40,12 @@ function calcCapitalGainsTax(params: {
     };
   }
 
-  // 장기보유특별공제 (일반 부동산: 3년 이상 보유 시 연 2%, 최대 30%)
+  // 장기보유특별공제 (일반 부동산: 3년 이상 보유 시 보유연수×2%, 최대 30%)
+  // 3년=6%, 4년=8%, 5년=10% ... 15년=30%
   let longTermDeductionRate = 0;
   let longTermDeduction = 0;
   if (applyLongTermDeduction && holdingYears >= 3) {
-    longTermDeductionRate = Math.min((holdingYears - 2) * 2, 30);
+    longTermDeductionRate = Math.min(holdingYears * 2, 30);
     longTermDeduction = Math.round(capitalGain * (longTermDeductionRate / 100));
   }
 
@@ -197,7 +198,7 @@ export default function CapitalGainsTaxCalc() {
               className="h-5 w-5 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
             />
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-              장기보유특별공제 적용 (3년 이상 보유 시 연 2%, 최대 30%)
+              장기보유특별공제 적용 (3년 이상 보유연수×2%, 최대 30%)
             </span>
           </label>
         </div>

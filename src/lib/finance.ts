@@ -209,31 +209,40 @@ export function calcSalary(
   const longTermCare = healthInsurance * 0.1295; // 건강보험의 12.95%
   const employmentInsurance = taxableMonthly * 0.009;
 
-  // 소득세 (간이세액표 근사치 - 과세표준 구간별)
+  // 소득세 (간이세액표 근사치)
+  // 1) 근로소득공제 적용
   const annualTaxable = taxableMonthly * 12;
+  let earnedIncomeDeduction = 0;
+  if (annualTaxable <= 5_000_000) earnedIncomeDeduction = annualTaxable * 0.7;
+  else if (annualTaxable <= 15_000_000) earnedIncomeDeduction = 3_500_000 + (annualTaxable - 5_000_000) * 0.4;
+  else if (annualTaxable <= 45_000_000) earnedIncomeDeduction = 7_500_000 + (annualTaxable - 15_000_000) * 0.15;
+  else if (annualTaxable <= 100_000_000) earnedIncomeDeduction = 12_000_000 + (annualTaxable - 45_000_000) * 0.05;
+  else earnedIncomeDeduction = 14_750_000 + (annualTaxable - 100_000_000) * 0.02;
+
+  // 2) 인적공제 (본인 150만 + 부양가족 1인당 150만)
+  const personalExemption = 1_500_000 + (dependents - 1) * 1_500_000;
+
+  // 3) 과세표준
+  const taxBase = Math.max(0, annualTaxable - earnedIncomeDeduction - personalExemption);
+
   let annualTax = 0;
-
-  if (annualTaxable <= 14_000_000) {
-    annualTax = annualTaxable * 0.06;
-  } else if (annualTaxable <= 50_000_000) {
-    annualTax = 840_000 + (annualTaxable - 14_000_000) * 0.15;
-  } else if (annualTaxable <= 88_000_000) {
-    annualTax = 6_240_000 + (annualTaxable - 50_000_000) * 0.24;
-  } else if (annualTaxable <= 150_000_000) {
-    annualTax = 15_360_000 + (annualTaxable - 88_000_000) * 0.35;
-  } else if (annualTaxable <= 300_000_000) {
-    annualTax = 37_060_000 + (annualTaxable - 150_000_000) * 0.38;
-  } else if (annualTaxable <= 500_000_000) {
-    annualTax = 94_060_000 + (annualTaxable - 300_000_000) * 0.4;
-  } else if (annualTaxable <= 1_000_000_000) {
-    annualTax = 174_060_000 + (annualTaxable - 500_000_000) * 0.42;
+  if (taxBase <= 14_000_000) {
+    annualTax = taxBase * 0.06;
+  } else if (taxBase <= 50_000_000) {
+    annualTax = 840_000 + (taxBase - 14_000_000) * 0.15;
+  } else if (taxBase <= 88_000_000) {
+    annualTax = 6_240_000 + (taxBase - 50_000_000) * 0.24;
+  } else if (taxBase <= 150_000_000) {
+    annualTax = 15_360_000 + (taxBase - 88_000_000) * 0.35;
+  } else if (taxBase <= 300_000_000) {
+    annualTax = 37_060_000 + (taxBase - 150_000_000) * 0.38;
+  } else if (taxBase <= 500_000_000) {
+    annualTax = 94_060_000 + (taxBase - 300_000_000) * 0.4;
+  } else if (taxBase <= 1_000_000_000) {
+    annualTax = 174_060_000 + (taxBase - 500_000_000) * 0.42;
   } else {
-    annualTax = 384_060_000 + (annualTaxable - 1_000_000_000) * 0.45;
+    annualTax = 384_060_000 + (taxBase - 1_000_000_000) * 0.45;
   }
-
-  // 부양가족 공제 (근사치: 1인당 연 150만원 세액공제 효과)
-  const dependentDeduction = (dependents - 1) * 150_000 * 12 * 0.15;
-  annualTax = Math.max(0, annualTax - dependentDeduction);
 
   const incomeTax = annualTax / 12;
   const localIncomeTax = incomeTax * 0.1;

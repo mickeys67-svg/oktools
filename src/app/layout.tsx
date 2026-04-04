@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "오케이툴즈 - 44가지 무료 온라인 도구",
+        alt: "오케이툴즈 - 59가지 무료 온라인 도구",
       },
     ],
   },
@@ -134,6 +134,7 @@ export default function RootLayout({
             />
           </div>
           <p className="mt-1 text-[10px] text-gray-300 dark:text-gray-700">광고</p>
+          <script dangerouslySetInnerHTML={{ __html: `try{(window.adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}` }} />
         </div>
         <main className="flex-1">{children}</main>
         <Footer />

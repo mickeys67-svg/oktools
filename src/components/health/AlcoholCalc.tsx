@@ -40,7 +40,8 @@ export default function AlcoholCalc() {
     if (weight <= 0) return null;
     const genderFactor = gender === "male" ? 0.68 : 0.55;
     const totalMl = ml * cups;
-    const rawBac = (totalMl * (pct / 100) * 0.7894) / (weight * genderFactor) - hours * 0.015;
+    // Widmark: BAC(%) = (순수알코올g) / (체중kg × 성별계수 × 10) - 시간 × 0.015
+    const rawBac = (totalMl * (pct / 100) * 0.7894) / (weight * genderFactor * 10) - hours * 0.015;
     const bac = Math.max(0, rawBac);
     const decompositionHours = rawBac > 0 ? rawBac / 0.015 : 0;
     return { bac, decompositionHours };
