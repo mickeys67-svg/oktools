@@ -106,11 +106,11 @@ export default function HomePage() {
       {/* SEO Content */}
       <section className="mt-16 rounded-xl bg-gray-50 p-6 sm:p-8 dark:bg-gray-900">
         <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">
-          올툴즈 소개
+          오케이툴즈 소개
         </h2>
         <div className="space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
           <p>
-            올툴즈는 대출이자 계산기, 연봉 실수령액 계산기, BMI 계산기, 바이오리듬,
+            오케이툴즈는 대출이자 계산기, 연봉 실수령액 계산기, BMI 계산기, 바이오리듬,
             단위변환, 타로카드, 온라인 시계 등 일상에서 자주 필요한 도구를 한곳에 모은
             종합 도구 사이트입니다.
           </p>

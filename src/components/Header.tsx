@@ -36,9 +36,9 @@ export default function Header() {
           className="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-primary-400"
         >
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600 text-sm font-extrabold text-white">
-            올
+            OK
           </span>
-          <span className="hidden sm:inline">올툴즈</span>
+          <span className="hidden sm:inline">오케이툴즈</span>
         </Link>
 
         {/* Desktop Nav */}

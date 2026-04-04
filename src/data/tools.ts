@@ -340,6 +340,64 @@ export const tools: Tool[] = [
     icon: "CalendarClock",
   },
 
+  // ─── Convert ──────────────────────────────────────────────────────
+  {
+    id: "length-convert",
+    name: "길이 변환",
+    description: "미터, 피트, 인치, 킬로미터, 마일 등 길이 단위 변환",
+    category: "convert",
+    path: "/length",
+    icon: "Ruler",
+  },
+  {
+    id: "weight-convert",
+    name: "무게 변환",
+    description: "킬로그램, 파운드, 온스, 그램 등 무게 단위 변환",
+    category: "convert",
+    path: "/weight",
+    icon: "Scale",
+  },
+  {
+    id: "temperature-convert",
+    name: "온도 변환",
+    description: "섭씨, 화씨, 켈빈 온도 단위 변환",
+    category: "convert",
+    path: "/temperature",
+    icon: "Thermometer",
+  },
+  {
+    id: "area-convert",
+    name: "면적 변환",
+    description: "제곱미터, 에이커, 평, 제곱피트 등 면적 단위 변환",
+    category: "convert",
+    path: "/area",
+    icon: "Square",
+  },
+  {
+    id: "volume-convert",
+    name: "부피 변환",
+    description: "리터, 갤런, 컵, 밀리리터 등 부피 단위 변환",
+    category: "convert",
+    path: "/volume",
+    icon: "Beaker",
+  },
+  {
+    id: "speed-convert",
+    name: "속도 변환",
+    description: "km/h, mph, m/s, 노트 등 속도 단위 변환",
+    category: "convert",
+    path: "/speed",
+    icon: "Gauge",
+  },
+  {
+    id: "data-convert",
+    name: "데이터 변환",
+    description: "바이트, KB, MB, GB, TB 등 데이터 용량 변환",
+    category: "convert",
+    path: "/data",
+    icon: "HardDrive",
+  },
+
   // ─── Life ─────────────────────────────────────────────────────────
   {
     id: "electricity",

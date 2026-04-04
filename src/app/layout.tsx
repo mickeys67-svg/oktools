@@ -6,8 +6,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "올툴즈 - 계산기, 변환기, 유틸리티 모음",
-    template: "%s | 올툴즈",
+    default: "오케이툴즈 - 계산기, 변환기, 유틸리티 모음",
+    template: "%s | 오케이툴즈",
   },
   description:
     "대출이자 계산기, 연봉 실수령액, BMI, 바이오리듬, 단위변환, 타로, 온라인 시계 등 61가지 무료 도구를 제공합니다. 깔끔한 디자인, 빠른 계산.",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    siteName: "올툴즈",
+    siteName: "오케이툴즈",
   },
   robots: {
     index: true,

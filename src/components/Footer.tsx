@@ -83,9 +83,9 @@ export default function Footer() {
           <div className="col-span-2 sm:col-span-1">
             <div className="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-primary-400">
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600 text-sm font-extrabold text-white">
-                올
+                OK
               </span>
-              올툴즈
+              오케이툴즈
             </div>
             <p className="mt-3 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
               계산기, 변환기, 유틸리티까지.
@@ -97,7 +97,7 @@ export default function Footer() {
 
         <div className="mt-10 border-t border-gray-200 pt-6 dark:border-gray-800">
           <p className="text-center text-xs text-gray-400 dark:text-gray-500">
-            &copy; {new Date().getFullYear()} 올툴즈. All rights reserved.
+            &copy; {new Date().getFullYear()} 오케이툴즈. All rights reserved.
           </p>
         </div>
       </div>
