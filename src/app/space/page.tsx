@@ -3,9 +3,10 @@ import Link from "next/link";
 import { getToolsByCategory, getCategoryById } from "@/data/tools";
 
 export const metadata: Metadata = {
-  title: "우주/과학 - 행성 무게, 우주 거리, 빛 여행 시간 계산기",
+  title: "우주 계산기 - 행성 무게, 우주 거리, 빛 여행 시간",
   description:
-    "다른 행성에서의 내 몸무게, 우주 거리 변환, 빛 여행 시간 등 재미있는 우주/과학 계산기 모음.",
+    "무료 우주 계산기 모음. 행성 무게, 행성 나이, 우주 거리 변환, 빛 여행 시간 등 재미있는 우주과학 도구를 체험하세요.",
+  keywords: ["우주계산기", "행성무게", "우주거리", "광년계산", "행성나이", "빛여행시간", "태양계", "우주과학"],
 };
 
 export default function SpacePage() {

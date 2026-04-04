@@ -3,9 +3,10 @@ import Link from "next/link";
 import NameMatchApp from "@/components/fortune/NameMatchApp";
 
 export const metadata: Metadata = {
-  title: "이름 궁합 테스트 - 이름으로 보는 우리의 궁합",
+  title: "이름 궁합 테스트 - 획수로 보는 궁합 점수",
   description:
-    "한글 자모 획수 기반 전통 이름 궁합 테스트. 두 사람의 이름을 입력하면 피라미드 방식으로 궁합 점수를 계산합니다.",
+    "두 사람 이름을 입력하면 한글 획수 기반 피라미드 방식으로 궁합 점수를 무료 계산합니다. 커플 이름 궁합 테스트.",
+  keywords: ["이름궁합", "이름궁합테스트", "이름궁합계산기", "이름으로궁합보기", "한글이름궁합", "획수궁합", "커플이름궁합", "연인궁합", "이름점"],
 };
 
 export default function NameMatchPage() {

@@ -3,9 +3,10 @@ import Link from "next/link";
 import AlcoholCalc from "@/components/health/AlcoholCalc";
 
 export const metadata: Metadata = {
-  title: "음주 측정기 - 혈중 알코올 농도(BAC) 계산기",
+  title: "음주 측정기 - 혈중알코올농도 BAC 계산기 2025",
   description:
-    "Widmark 공식으로 혈중 알코올 농도(BAC)를 계산합니다. 성별, 체중, 음주량, 경과 시간을 입력하면 현재 BAC와 운전 가능 여부를 확인할 수 있습니다.",
+    "무료 음주 측정기로 혈중알코올농도(BAC)를 계산하세요. 소주·맥주 음주량 입력으로 운전 가능 시간, 면허취소 기준, 알코올 분해 시간을 즉시 확인.",
+  keywords: ["음주측정기", "혈중알코올농도", "BAC계산기", "음주운전기준", "알코올분해시간", "음주후운전가능시간", "소주몇잔음주운전", "음주측정기준", "면허취소기준", "0.03퍼센트"],
 };
 
 export default function AlcoholPage() {

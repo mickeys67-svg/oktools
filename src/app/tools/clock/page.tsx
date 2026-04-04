@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import ClockApp from "@/components/tools/ClockApp";
 
 export const metadata: Metadata = {
-  title: "온라인 시계 - 아름다운 전체화면 벽시계",
+  title: "온라인 시계 - 전체화면 벽시계, 5가지 테마",
   description:
-    "미니멀, 클래식, 네온, 우주, 레트로 5가지 테마의 아름다운 온라인 벽시계. 전체화면 지원, 아날로그+디지털 동시 표시.",
+    "무료 온라인 벽시계. 미니멀·클래식·네온·우주·레트로 5가지 테마, 전체화면 지원, 아날로그+디지털 동시 표시.",
+  keywords: ["온라인시계", "전체화면시계", "벽시계", "디지털시계", "아날로그시계", "현재시각", "실시간시계", "네온시계", "큰화면시계"],
 };
 
 export default function ClockPage() {

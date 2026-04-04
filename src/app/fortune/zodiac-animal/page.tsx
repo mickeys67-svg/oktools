@@ -3,9 +3,10 @@ import Link from "next/link";
 import ZodiacAnimalApp from "@/components/fortune/ZodiacAnimalApp";
 
 export const metadata: Metadata = {
-  title: "띠 계산기 - 12간지 띠 확인 및 띠별 성격, 궁합",
+  title: "띠 계산기 - 12간지 띠 성격 궁합 확인",
   description:
-    "출생년도를 입력하면 12간지 띠를 확인하고, 띠별 성격, 궁합, 유명인 정보를 알아볼 수 있습니다.",
+    "출생년도 입력으로 12간지 띠를 무료 확인하세요. 띠별 성격, 궁합, 유명인 정보까지 한눈에 알아볼 수 있습니다.",
+  keywords: ["띠계산기", "12간지", "띠확인", "띠별성격", "띠별궁합", "올해띠", "용띠", "뱀띠", "말띠", "12지신", "나이띠계산", "출생년도띠"],
 };
 
 export default function ZodiacAnimalPage() {

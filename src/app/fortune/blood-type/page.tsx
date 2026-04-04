@@ -3,9 +3,10 @@ import Link from "next/link";
 import BloodTypeApp from "@/components/fortune/BloodTypeApp";
 
 export const metadata: Metadata = {
-  title: "혈액형 궁합 - A B O AB 혈액형별 궁합 테스트",
+  title: "혈액형 궁합 - A B O AB형 궁합 테스트",
   description:
-    "나와 상대의 혈액형을 선택하면 연애, 우정, 직장 궁합을 확인할 수 있습니다. A형, B형, O형, AB형 궁합 총정리.",
+    "나와 상대 혈액형을 선택하면 연애·우정·직장 궁합을 무료로 확인하세요. A형, B형, O형, AB형 성격과 궁합 총정리.",
+  keywords: ["혈액형궁합", "혈액형성격", "A형성격", "B형성격", "O형성격", "AB형성격", "혈액형별궁합", "연애궁합", "혈액형테스트", "커플궁합"],
 };
 
 export default function BloodTypePage() {

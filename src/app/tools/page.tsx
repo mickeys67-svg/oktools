@@ -3,9 +3,10 @@ import Link from "next/link";
 import { getToolsByCategory, getCategoryById } from "@/data/tools";
 
 export const metadata: Metadata = {
-  title: "유틸리티 도구 - 시계, 타이머, 스톱워치, 글자수 세기",
+  title: "온라인 도구 모음 - 시계, 타이머, 글자수 세기, 로또",
   description:
-    "온라인 시계, 타이머, 스톱워치, 글자수 세기, 랜덤 번호 생성기 등 무료 유틸리티 도구 모음.",
+    "온라인 시계, 타이머, 스톱워치, 글자수 세기, 랜덤 번호 생성기, 로또 번호 추천 등 무료 유틸리티 도구를 바로 사용하세요.",
+  keywords: ["온라인도구", "무료유틸리티", "온라인시계", "타이머", "스톱워치", "글자수세기", "로또번호추천", "랜덤번호생성기"],
 };
 
 export default function ToolsPage() {

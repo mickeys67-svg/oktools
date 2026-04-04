@@ -3,9 +3,10 @@ import Link from "next/link";
 import CarTaxCalc from "@/components/life/CarTaxCalc";
 
 export const metadata: Metadata = {
-  title: "자동차세 계산기 - 배기량별 자동차세 조회",
+  title: "자동차세 계산기 2025 - 배기량별 자동차세 연납할인",
   description:
-    "승용차, 승합차, 화물차, 전기차 자동차세 계산기. 배기량, 차령 경감, 교육세, 연납 할인까지 한번에 조회.",
+    "무료 자동차세 계산기로 배기량별 자동차세를 계산하세요. 승용차·전기차 자동차세, 교육세, 차령 경감, 연납 할인액을 한번에 조회할 수 있습니다.",
+  keywords: ["자동차세계산기", "자동차세조회", "자동차세연납", "배기량자동차세", "자동차세할인", "자동차세납부", "전기차자동차세", "교육세", "자동차세경감", "자동차세납부시기"],
 };
 
 export default function CarTaxPage() {

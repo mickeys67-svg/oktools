@@ -3,9 +3,10 @@ import Link from "next/link";
 import Insurance4Calc from "@/components/finance/Insurance4Calc";
 
 export const metadata: Metadata = {
-  title: "4대보험 계산기 - 국민연금 건강보험 고용보험 산재보험",
+  title: "4대보험 계산기 2025 - 국민연금 건강보험 고용보험 계산",
   description:
-    "월 급여를 입력하면 국민연금, 건강보험, 장기요양보험, 고용보험 등 4대보험 근로자/사업주 부담금을 계산합니다.",
+    "무료 4대보험 계산기로 국민연금, 건강보험, 고용보험, 장기요양보험료를 바로 확인하세요. 2025년 요율 반영, 직장인 사업주 부담금 조회.",
+  keywords: ["4대보험계산기", "4대보험요율", "국민연금계산", "건강보험료계산", "고용보험계산", "장기요양보험료", "4대보험료율2025", "직장인보험료", "사업주부담금", "보험료공제"],
 };
 
 export default function Insurance4Page() {

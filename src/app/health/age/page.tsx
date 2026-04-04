@@ -3,9 +3,10 @@ import Link from "next/link";
 import AgeCalculator from "@/components/health/AgeCalculator";
 
 export const metadata: Metadata = {
-  title: "만 나이 계산기 - 생년월일로 정확한 만 나이 계산",
+  title: "만 나이 계산기 - 생년월일로 정확한 만나이 확인",
   description:
-    "생년월일을 입력하면 만 나이, 생존 일수, 다음 생일까지 남은 일수, 띠, 별자리를 계산합니다. 2023년 만 나이 통일법 기준.",
+    "무료 만 나이 계산기로 생년월일 입력만으로 정확한 만나이, 생존 일수, 띠, 별자리를 확인하세요. 2023년 만나이 통일법 기준 자동 계산.",
+  keywords: ["만나이계산기", "나이계산기", "만나이계산", "생년월일나이", "한국나이계산", "만나이통일법", "세는나이만나이", "띠계산", "별자리확인", "나이계산법"],
 };
 
 export default function AgePage() {

@@ -3,8 +3,10 @@ import Link from "next/link";
 import PercentageCalc from "@/components/life/PercentageCalc";
 
 export const metadata: Metadata = {
-  title: "퍼센트 계산기 - 퍼센트 증가/감소, 비율 계산",
-  description: "퍼센트 계산: A의 B%는? A에서 B로 몇 % 변화? A는 B의 몇 %? 세 가지 모드를 지원합니다.",
+  title: "퍼센트 계산기 - % 증가 감소 비율 계산",
+  description:
+    "무료 퍼센트 계산기로 증가율, 감소율, 비율을 계산하세요. A의 B%는? A에서 B로 몇% 변화? A는 B의 몇%? 세 가지 모드를 즉시 이용할 수 있습니다.",
+  keywords: ["퍼센트계산기", "퍼센트계산", "백분율계산", "퍼센트증가율", "퍼센트감소율", "비율계산기", "할인퍼센트", "증감률계산"],
 };
 
 export default function PercentagePage() {

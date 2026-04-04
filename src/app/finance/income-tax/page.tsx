@@ -3,9 +3,10 @@ import Link from "next/link";
 import IncomeTaxCalc from "@/components/finance/IncomeTaxCalc";
 
 export const metadata: Metadata = {
-  title: "종합소득세 계산기 - 소득세 세율 계산",
+  title: "종합소득세 계산기 2025 - 세율표 프리랜서 사업소득세",
   description:
-    "2025년 종합소득세율을 기준으로 근로소득, 사업소득, 프리랜서 소득의 소득세와 지방소득세를 계산합니다. 과세표준, 실효세율 확인.",
+    "무료 종합소득세 계산기로 소득세와 지방소득세를 바로 확인하세요. 2025년 세율표 적용, 프리랜서 3.3% 세금, 과세표준 실효세율 조회.",
+  keywords: ["종합소득세계산기", "소득세세율", "종합소득세율표2025", "프리랜서세금", "사업소득세", "3.3%세금", "소득세계산", "과세표준", "실효세율", "종소세신고"],
 };
 
 export default function IncomeTaxPage() {

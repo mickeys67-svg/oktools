@@ -3,9 +3,10 @@ import Link from "next/link";
 import MBTICompatibility from "@/components/fortune/MBTICompatibility";
 
 export const metadata: Metadata = {
-  title: "MBTI 궁합 테스트 - 16가지 유형별 궁합 확인",
+  title: "MBTI 궁합 테스트 - 16유형 연애 친구 궁합",
   description:
-    "나와 상대방의 MBTI를 선택하면 궁합 점수와 관계 분석 결과를 확인할 수 있습니다. 16가지 유형별 성격 특성과 궁합.",
+    "나와 상대 MBTI를 선택하면 궁합 점수와 관계 분석을 무료로 확인하세요. 16유형 연애·친구·직장 궁합 총정리.",
+  keywords: ["MBTI궁합", "MBTI궁합테스트", "MBTI연애궁합", "INFP궁합", "ENFP궁합", "INTJ궁합", "MBTI성격유형", "MBTI테스트", "16유형궁합", "MBTI커플궁합"],
 };
 
 export default function MBTIPage() {

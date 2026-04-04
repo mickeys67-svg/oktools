@@ -3,8 +3,9 @@ import Link from "next/link";
 import CompoundCalc from "@/components/finance/CompoundCalc";
 
 export const metadata: Metadata = {
-  title: "복리 계산기 - 복리 효과 시뮬레이션, 투자 성장 계산",
-  description: "초기 투자금, 월 적립금, 예상 수익률을 입력하면 복리 효과로 자산이 얼마나 성장하는지 시뮬레이션합니다.",
+  title: "복리 계산기 - 복리 효과 투자 수익 시뮬레이션 무료",
+  description: "무료 복리 계산기로 투자 수익을 시뮬레이션하세요. 초기 투자금, 월 적립금, 수익률 입력 후 자산 증식 효과를 바로 확인. 72법칙 적용.",
+  keywords: ["복리계산기", "복리이자계산", "복리효과", "투자수익계산", "적립식투자", "복리72법칙", "자산증식", "장기투자시뮬레이션"],
 };
 
 export default function CompoundInterestPage() {

@@ -3,9 +3,10 @@ import Link from "next/link";
 import LottoRecommender from "@/components/tools/LottoRecommender";
 
 export const metadata: Metadata = {
-  title: "로또 번호 추천 - 미출현 번호, 통계 기반 스마트 추천",
+  title: "로또 번호 추천 - 미출현번호 통계 기반 스마트 추천",
   description:
-    "미출현 번호, 고빈도 번호, 균형 추천 등 다양한 전략으로 로또 6/45 번호를 추천받으세요. 역대 당첨번호 통계 분석 제공.",
+    "무료 로또 번호 추천. 미출현 번호, 고빈도 번호, 균형 추천 등 4가지 전략으로 로또 6/45 번호를 생성하세요. 당첨번호 통계 분석.",
+  keywords: ["로또번호추천", "로또번호생성", "로또당첨번호", "로또6/45", "로또통계", "미출현번호", "로또번호조합", "로또예측", "로또분석", "이번주로또", "로또자동번호"],
 };
 
 export default function LottoPage() {

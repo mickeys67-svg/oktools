@@ -3,9 +3,10 @@ import Link from "next/link";
 import StopwatchApp from "@/components/tools/StopwatchApp";
 
 export const metadata: Metadata = {
-  title: "온라인 스톱워치 - 랩타임 기능 지원",
+  title: "온라인 스톱워치 - 랩타임 기록, 운동 시간 측정",
   description:
-    "랩타임 기록, 큰 화면 표시를 지원하는 온라인 스톱워치. 운동, 공부, 요리 시간 측정에 유용합니다.",
+    "무료 온라인 스톱워치. 랩타임 기록, 큰 화면 표시 지원. 운동·공부·요리 시간 측정에 바로 사용하세요.",
+  keywords: ["온라인스톱워치", "스톱워치", "랩타임", "시간측정", "운동시간", "스톱워치앱", "초시계", "타임측정"],
 };
 
 export default function StopwatchPage() {

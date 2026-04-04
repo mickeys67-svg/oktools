@@ -3,9 +3,10 @@ import Link from "next/link";
 import TojeongApp from "@/components/fortune/TojeongApp";
 
 export const metadata: Metadata = {
-  title: "토정비결 2026 - 생년월일로 보는 올해의 운세",
+  title: "토정비결 2026 - 생년월일 무료 운세 (상중하원)",
   description:
-    "생년월일을 입력하면 토정비결 상원·중원·하원 운세를 확인할 수 있습니다. 재물운, 애정운, 건강운, 직업운까지 한눈에.",
+    "생년월일 입력으로 토정비결 상원·중원·하원 운세를 무료 확인하세요. 재물운, 연애운, 건강운, 직업운까지 한눈에 풀이합니다.",
+  keywords: ["토정비결", "토정비결2026", "무료토정비결", "올해운세", "신년운세", "생년월일운세", "토정비결보기", "토정비결풀이", "재물운", "연애운", "건강운"],
 };
 
 export default function TojeongPage() {

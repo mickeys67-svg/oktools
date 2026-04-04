@@ -3,9 +3,10 @@ import Link from "next/link";
 import LoanCalculator from "@/components/finance/LoanCalculator";
 
 export const metadata: Metadata = {
-  title: "대출 이자 계산기 - 원리금균등/원금균등/만기일시 상환 계산",
+  title: "대출 이자 계산기 - 원리금균등 원금균등 만기일시 2025",
   description:
-    "대출 이자를 쉽고 정확하게 계산하세요. 원리금균등, 원금균등, 만기일시 상환 방식별 월 상환액, 총 이자, 상환 스케줄을 한눈에 확인할 수 있습니다.",
+    "무료 대출이자 계산기로 월상환액과 총이자를 확인하세요. 원리금균등, 원금균등, 만기일시 상환 방식별 상환 스케줄을 바로 조회할 수 있습니다.",
+  keywords: ["대출이자계산기", "주택담보대출계산기", "원리금균등상환", "원금균등상환", "만기일시상환", "대출이자계산", "월상환액계산", "대출상환스케줄", "은행대출이자", "전세대출이자", "신용대출이자율", "대출금리비교"],
 };
 
 export default function LoanCalculatorPage() {

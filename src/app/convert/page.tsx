@@ -3,9 +3,10 @@ import Link from "next/link";
 import WheelConverter from "@/components/convert/WheelConverter";
 
 export const metadata: Metadata = {
-  title: "단위 변환 - 길이, 무게, 온도, 면적, 부피, 속도, 데이터",
+  title: "단위 변환기 - 길이 무게 온도 면적 부피 속도 데이터",
   description:
-    "휠 방식으로 간편하게! 길이, 무게, 온도, 면적, 부피, 속도, 데이터 용량 등 다양한 단위를 무료로 변환하세요.",
+    "무료 단위 변환기. 길이·무게·온도·면적·부피·속도·데이터 용량을 휠 방식으로 간편하게 변환하세요. 평수 계산기, cm인치 변환 지원.",
+  keywords: ["단위변환기", "길이변환", "무게변환", "온도변환", "면적변환", "평수계산기", "cm인치변환", "kg파운드변환", "섭씨화씨변환", "부피변환", "속도변환", "데이터용량변환", "평방미터평변환"],
 };
 
 export default function ConvertPage() {

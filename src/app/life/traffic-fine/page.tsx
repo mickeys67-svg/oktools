@@ -3,9 +3,10 @@ import Link from "next/link";
 import TrafficFineCalc from "@/components/life/TrafficFineCalc";
 
 export const metadata: Metadata = {
-  title: "과태료 계산기 - 속도위반 주정차위반 벌금 조회",
+  title: "과태료 계산기 - 속도위반 주정차위반 벌점 조회",
   description:
-    "속도위반 과태료, 벌점, 주정차위반 과태료를 조회할 수 있는 계산기. 일반도로, 고속도로, 어린이보호구역 기준 제공.",
+    "무료 과태료 계산기로 속도위반·주정차위반 과태료와 벌점을 조회하세요. 일반도로, 고속도로, 어린이보호구역 기준 벌금과 면허정지 기준을 즉시 확인.",
+  keywords: ["과태료계산기", "속도위반과태료", "주정차위반과태료", "교통벌금", "벌점조회", "어린이보호구역과태료", "고속도로과태료", "면허정지기준", "속도위반벌점", "교통범칙금"],
 };
 
 export default function TrafficFinePage() {

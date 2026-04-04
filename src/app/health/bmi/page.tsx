@@ -3,9 +3,10 @@ import Link from "next/link";
 import BMICalculator from "@/components/health/BMICalculator";
 
 export const metadata: Metadata = {
-  title: "BMI 계산기 - 체질량지수 측정, 한국 비만학회 기준",
+  title: "BMI 계산기 - 체질량지수 비만도 측정 (한국 기준)",
   description:
-    "키와 몸무게를 입력하면 BMI(체질량지수)를 계산합니다. 한국 비만학회 기준으로 저체중, 정상, 과체중, 비만 단계를 확인하세요.",
+    "무료 BMI 계산기로 체질량지수와 비만도를 측정하세요. 키와 몸무게 입력만으로 한국 비만학회 기준 저체중·정상·과체중·비만 단계를 즉시 확인할 수 있습니다.",
+  keywords: ["BMI계산기", "체질량지수", "비만도측정", "비만도계산기", "BMI계산", "키몸무게비만", "표준체중계산", "한국비만기준", "비만학회기준", "적정체중", "다이어트체중"],
 };
 
 export default function BMIPage() {

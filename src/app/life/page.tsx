@@ -3,8 +3,10 @@ import Link from "next/link";
 import { getToolsByCategory, getCategoryById } from "@/data/tools";
 
 export const metadata: Metadata = {
-  title: "생활 도구 - 전기요금, 학점, 퍼센트, 할인율 계산기",
-  description: "전기요금, 학점, 퍼센트, 할인율 등 일상생활에 유용한 계산기 모음.",
+  title: "생활 계산기 모음 - 전기요금 학점 퍼센트 할인율 무료",
+  description:
+    "전기요금계산기, 학점계산기, 퍼센트계산, 할인율계산, 전역일계산기, 과태료조회, 자동차세계산 등 일상생활에 필요한 무료 계산기 도구 모음.",
+  keywords: ["생활계산기", "전기요금계산", "학점계산기", "퍼센트계산", "할인율계산", "전역일계산기", "과태료조회", "자동차세계산"],
 };
 
 export default function LifePage() {

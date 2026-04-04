@@ -3,9 +3,10 @@ import Link from "next/link";
 import { getToolsByCategory, getCategoryById } from "@/data/tools";
 
 export const metadata: Metadata = {
-  title: "운세·재미 - 타로카드, 토정비결, MBTI 궁합, 꿈해몽",
+  title: "무료운세 모음 - 타로, 토정비결, MBTI궁합, 꿈해몽",
   description:
-    "무료 타로카드 리딩, 토정비결, MBTI 궁합, 별자리 운세, 꿈해몽 등 운세와 재미 도구 모음.",
+    "무료 타로카드 리딩, 토정비결, MBTI 궁합, 별자리 운세, 혈액형 궁합, 이름 궁합, 꿈해몽까지 한곳에서 무료로 확인하세요.",
+  keywords: ["무료운세", "타로카드", "토정비결", "MBTI궁합", "꿈해몽", "별자리운세", "혈액형궁합", "이름궁합", "띠계산기", "오늘의운세"],
 };
 
 export default function FortunePage() {

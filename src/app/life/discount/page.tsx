@@ -3,8 +3,10 @@ import Link from "next/link";
 import DiscountCalc from "@/components/life/DiscountCalc";
 
 export const metadata: Metadata = {
-  title: "할인율 계산기 - 할인가, 할인율, 원래 가격 계산",
-  description: "원래 가격과 할인율을 입력하면 할인 금액과 최종 가격을 계산합니다.",
+  title: "할인율 계산기 - 할인가 원래가격 역산",
+  description:
+    "무료 할인율 계산기로 할인가, 원래 가격, 할인 퍼센트를 계산하세요. 세일 가격 입력으로 할인 금액과 최종 가격을 즉시 확인할 수 있습니다.",
+  keywords: ["할인율계산기", "할인가계산", "할인계산기", "세일계산", "할인퍼센트계산", "원래가격계산", "정가계산", "최종가격계산"],
 };
 
 export default function DiscountPage() {

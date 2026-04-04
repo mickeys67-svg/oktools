@@ -3,9 +3,10 @@ import Link from "next/link";
 import TimerApp from "@/components/tools/TimerApp";
 
 export const metadata: Metadata = {
-  title: "온라인 타이머 - 카운트다운 타이머, 프리셋 지원",
+  title: "온라인 타이머 - 카운트다운 라면타이머 운동타이머",
   description:
-    "라면 타이머, 운동 타이머 등 다양한 프리셋을 지원하는 온라인 카운트다운 타이머. 소리 알림, 큰 화면 표시.",
+    "무료 온라인 카운트다운 타이머. 라면 타이머, 운동 타이머, 공부 타이머 등 프리셋 지원, 소리 알림, 큰 화면 표시.",
+  keywords: ["온라인타이머", "카운트다운타이머", "라면타이머", "운동타이머", "공부타이머", "요리타이머", "3분타이머", "5분타이머", "10분타이머", "뽀모도로"],
 };
 
 export default function TimerPage() {

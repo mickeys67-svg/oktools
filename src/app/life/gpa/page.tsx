@@ -3,8 +3,10 @@ import Link from "next/link";
 import GPACalculator from "@/components/life/GPACalculator";
 
 export const metadata: Metadata = {
-  title: "학점 계산기 - 대학교 GPA 평균 평점 계산",
-  description: "과목별 학점과 성적을 입력하면 평균 평점(GPA)을 계산합니다. 4.5 및 4.3 만점 지원.",
+  title: "학점 계산기 - 대학교 GPA 평균평점 계산 (4.5/4.3)",
+  description:
+    "무료 학점 계산기로 대학교 평균 평점(GPA)을 계산하세요. 과목별 학점·성적 입력으로 4.5만점, 4.3만점 기준 GPA를 즉시 확인할 수 있습니다.",
+  keywords: ["학점계산기", "GPA계산기", "대학학점계산", "평균평점계산", "4.5만점학점", "4.3만점학점", "학점평균", "성적계산기", "학점관리"],
 };
 
 export default function GPAPage() {

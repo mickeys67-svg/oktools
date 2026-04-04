@@ -3,8 +3,9 @@ import Link from "next/link";
 import SavingsCalc from "@/components/finance/SavingsCalc";
 
 export const metadata: Metadata = {
-  title: "적금 이자 계산기 - 월 납입금, 금리별 만기 수령액 계산",
-  description: "매월 적금 납입금과 금리를 입력하면 만기 수령액과 세후 이자를 계산합니다.",
+  title: "적금 이자 계산기 2025 - 만기 수령액 세후이자 무료 계산",
+  description: "무료 적금 이자 계산기로 월 납입금, 금리별 만기 수령액을 바로 확인하세요. 단리 복리 적금 세후이자 계산, 적금 추천 비교.",
+  keywords: ["적금이자계산기", "적금만기수령액", "적금이자계산", "월적금이자", "단리복리적금", "적금추천", "정기적금이자", "세후이자계산"],
 };
 
 export default function SavingsPage() {

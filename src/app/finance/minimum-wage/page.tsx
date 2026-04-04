@@ -3,9 +3,10 @@ import Link from "next/link";
 import MinimumWageCalc from "@/components/finance/MinimumWageCalc";
 
 export const metadata: Metadata = {
-  title: "최저시급 계산기 - 2025/2026 최저임금 월급 계산",
+  title: "최저시급 계산기 2025 2026 - 최저임금 월급 연봉 계산",
   description:
-    "2025년, 2026년 최저시급 기준으로 일급, 주급, 월급, 연봉을 계산합니다. 주휴수당 포함/미포함 선택 가능.",
+    "무료 최저시급 계산기로 2025년, 2026년 최저임금 기준 월급과 연봉을 바로 확인하세요. 주휴수당 포함 시급, 알바 시급 계산.",
+  keywords: ["최저시급2025", "최저시급2026", "최저임금", "최저시급월급", "주휴수당계산", "알바시급", "최저임금인상", "주휴수당포함시급", "최저시급연봉", "아르바이트시급"],
 };
 
 export default function MinimumWagePage() {

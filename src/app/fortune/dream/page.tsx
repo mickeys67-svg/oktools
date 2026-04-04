@@ -3,9 +3,10 @@ import Link from "next/link";
 import DreamApp from "@/components/fortune/DreamApp";
 
 export const metadata: Metadata = {
-  title: "꿈해몽 - 꿈 풀이 사전",
+  title: "꿈해몽 - 꿈 풀이 사전, 길몽 흉몽 확인",
   description:
-    "꿈에서 본 동물, 사람, 장소, 행동 등의 의미를 알아보세요. 길몽과 흉몽을 구분하여 상세하게 풀이해드립니다.",
+    "꿈에서 본 동물·사람·장소의 의미를 무료로 풀이하세요. 돼지꿈, 뱀꿈, 치아꿈 등 길몽 흉몽을 상세하게 해석해드립니다.",
+  keywords: ["꿈해몽", "꿈풀이", "꿈풀이사전", "돼지꿈", "뱀꿈", "치아꿈", "물꿈", "불꿈", "죽는꿈", "길몽흉몽", "태몽풀이", "꿈해석", "로또꿈"],
 };
 
 export default function DreamPage() {

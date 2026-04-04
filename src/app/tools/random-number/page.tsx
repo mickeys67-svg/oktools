@@ -3,8 +3,9 @@ import Link from "next/link";
 import RandomGenerator from "@/components/tools/RandomGenerator";
 
 export const metadata: Metadata = {
-  title: "랜덤 번호 생성기 - 로또, 주사위, 동전 던지기",
-  description: "로또 번호, 랜덤 숫자, 동전 던지기, 주사위 굴리기 등 다양한 랜덤 생성 도구를 제공합니다.",
+  title: "랜덤 번호 생성기 - 로또 주사위 동전 던지기",
+  description: "무료 랜덤 번호 생성기. 로또 번호, 주사위 굴리기, 동전 던지기, 추첨 번호 등 다양한 무작위 생성 도구를 바로 사용하세요.",
+  keywords: ["랜덤번호생성기", "랜덤숫자", "로또번호", "추첨번호", "주사위굴리기", "동전던지기", "무작위번호", "제비뽑기", "랜덤뽑기"],
 };
 
 export default function RandomNumberPage() {

@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { categories, getPopularTools, getToolsByCategory } from "@/data/tools";
+
+export const metadata: Metadata = {
+  title: "오케이툴즈 - 무료 온라인 계산기 53종 모음 | 금융, 건강, 생활",
+  description: "대출이자, 연봉실수령액, BMI, 전역일, 4대보험, 전월세전환율, 음주측정기, 혈액형궁합 등 53가지 무료 계산기. 설치 없이 바로 사용.",
+  keywords: ["무료 계산기", "온라인 계산기", "대출이자계산기", "연봉실수령액계산기", "BMI계산기", "전역일계산기", "4대보험계산기", "전월세전환율", "단위변환", "퍼센트계산기", "학점계산기", "타로", "혈액형궁합", "로또번호추천"],
+};
 
 export default function HomePage() {
   const popularTools = getPopularTools();

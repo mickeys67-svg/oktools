@@ -3,9 +3,10 @@ import Link from "next/link";
 import BiorhythmChart from "@/components/health/BiorhythmChart";
 
 export const metadata: Metadata = {
-  title: "바이오리듬 계산기 - 오늘의 신체·감성·지성 리듬 차트",
+  title: "바이오리듬 계산기 - 오늘의 신체 감성 지성 리듬",
   description:
-    "생년월일을 입력하면 신체(23일), 감성(28일), 지성(33일) 바이오리듬 차트를 확인할 수 있습니다. 30일 리듬 그래프와 오늘의 컨디션 점수.",
+    "무료 바이오리듬 계산기로 오늘의 신체·감성·지성 리듬을 확인하세요. 생년월일 입력만으로 30일 바이오리듬 차트와 컨디션 점수를 즉시 제공합니다.",
+  keywords: ["바이오리듬", "바이오리듬계산기", "바이오리듬차트", "오늘의바이오리듬", "신체리듬", "감성리듬", "지성리듬", "컨디션확인", "바이오리듬보기"],
 };
 
 export default function BiorhythmPage() {

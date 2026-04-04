@@ -3,9 +3,10 @@ import Link from "next/link";
 import InstallmentCalc from "@/components/finance/InstallmentCalc";
 
 export const metadata: Metadata = {
-  title: "할부 계산기 - 카드 할부 수수료 및 월 할부금 계산",
+  title: "할부 계산기 - 카드할부 수수료 월납입금 무료 계산 2025",
   description:
-    "상품 가격과 할부 개월수를 입력하면 월 할부금, 총 수수료, 총 결제금액을 계산합니다. 무이자 할부 비교에 유용합니다.",
+    "무료 할부 계산기로 월 할부금과 총 수수료를 바로 확인하세요. 카드할부 이자율별 12개월, 24개월 할부금 계산 및 무이자 비교.",
+  keywords: ["할부계산기", "카드할부이자", "무이자할부", "할부수수료계산", "월할부금", "12개월할부", "24개월할부", "할부이자율", "신용카드할부"],
 };
 
 export default function InstallmentPage() {

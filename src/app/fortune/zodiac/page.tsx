@@ -3,9 +3,10 @@ import Link from "next/link";
 import ZodiacApp from "@/components/fortune/ZodiacApp";
 
 export const metadata: Metadata = {
-  title: "별자리 운세 - 12궁 오늘의 운세",
+  title: "별자리 운세 - 12궁 오늘의 운세 무료",
   description:
-    "생년월일로 나의 별자리를 확인하고, 오늘의 종합운, 연애운, 금전운, 건강운을 무료로 확인하세요.",
+    "생년월일로 나의 별자리를 확인하고, 오늘의 종합운·연애운·금전운·건강운을 무료로 확인하세요. 12별자리 성격과 궁합도 제공.",
+  keywords: ["별자리운세", "오늘의별자리운세", "12별자리", "물병자리운세", "물고기자리운세", "양자리운세", "별자리성격", "별자리궁합", "별자리계산", "오늘운세"],
 };
 
 export default function ZodiacPage() {

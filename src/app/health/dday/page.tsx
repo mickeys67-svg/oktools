@@ -3,8 +3,10 @@ import Link from "next/link";
 import DDayCalc from "@/components/health/DDayCalc";
 
 export const metadata: Metadata = {
-  title: "D-Day 계산기 - 디데이, 날짜 차이 계산",
-  description: "특정 날짜까지 남은 일수 또는 지난 일수를 계산합니다. 시험, 기념일, 여행 등 D-Day를 확인하세요.",
+  title: "D-Day 계산기 - 디데이 날짜 계산, 남은 일수 확인",
+  description:
+    "무료 디데이 계산기로 남은 일수와 지난 일수를 계산하세요. 시험 D-Day, 기념일, 100일·200일 커플 디데이, 수능 카운트다운을 즉시 확인할 수 있습니다.",
+  keywords: ["디데이계산기", "D-Day계산기", "날짜계산기", "남은일수계산", "기념일계산", "100일계산", "200일계산", "시험디데이", "수능디데이", "커플디데이"],
 };
 
 export default function DDayPage() {

@@ -3,9 +3,10 @@ import Link from "next/link";
 import SpaceDistanceCalc from "@/components/space/SpaceDistanceCalc";
 
 export const metadata: Metadata = {
-  title: "우주 거리 변환 - 광년, 천문단위(AU), 파섹, km 변환",
+  title: "우주 거리 변환 - 광년 AU 파섹 km 변환기",
   description:
-    "광년, 천문단위(AU), 파섹, km 등 우주 거리 단위를 변환합니다. 안드로메다까지 몇 광년인지 확인하세요.",
+    "광년, 천문단위(AU), 파섹, km 등 우주 거리 단위를 무료로 변환하세요. 안드로메다까지 몇 광년인지 바로 확인.",
+  keywords: ["우주거리변환", "광년변환", "천문단위", "AU변환", "파섹", "광년km변환", "우주거리단위", "안드로메다거리"],
 };
 
 export default function SpaceDistancePage() {

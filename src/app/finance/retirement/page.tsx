@@ -3,8 +3,9 @@ import Link from "next/link";
 import RetirementCalc from "@/components/finance/RetirementCalc";
 
 export const metadata: Metadata = {
-  title: "퇴직금 계산기 - 근속연수 기반 퇴직금 계산",
-  description: "입사일, 퇴사일, 평균 월급을 입력하면 퇴직금을 계산합니다.",
+  title: "퇴직금 계산기 2025 - 근속연수별 퇴직금 자동 계산",
+  description: "무료 퇴직금 계산기로 입사일, 퇴사일, 평균 월급 입력 후 퇴직금을 바로 확인하세요. 근속연수별 퇴직금 정산, 세금 공제액까지 조회 가능.",
+  keywords: ["퇴직금계산기", "퇴직금계산방법", "퇴직금계산법", "퇴직금정산", "퇴직금지급기준", "퇴직금세금", "근속연수퇴직금", "1년미만퇴직금", "퇴직연금"],
 };
 
 export default function RetirementPage() {

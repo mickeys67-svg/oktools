@@ -3,9 +3,10 @@ import Link from "next/link";
 import { getToolsByCategory, getCategoryById } from "@/data/tools";
 
 export const metadata: Metadata = {
-  title: "건강 계산기 - BMI, 바이오리듬, 만나이, D-Day 계산",
+  title: "건강 계산기 모음 - BMI 바이오리듬 만나이 기초대사량 무료",
   description:
-    "BMI 계산기, 바이오리듬 차트, 만 나이 계산기, D-Day 계산기를 무료로 이용하세요. 한국 비만학회 기준 적용.",
+    "BMI계산기, 바이오리듬, 만나이계산, 기초대사량, 칼로리계산, 음주측정기, 임신주수, 디데이계산기를 무료로 이용하세요. 한국 기준 건강 계산 도구 모음.",
+  keywords: ["건강계산기", "BMI계산기", "바이오리듬", "만나이계산", "기초대사량", "칼로리계산", "음주측정기", "임신주수계산", "디데이계산기"],
 };
 
 export default function HealthPage() {

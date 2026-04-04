@@ -3,9 +3,10 @@ import Link from "next/link";
 import TarotApp from "@/components/fortune/TarotApp";
 
 export const metadata: Metadata = {
-  title: "무료 타로카드 리딩 - 원카드, 쓰리카드 스프레드",
+  title: "무료 타로카드 - 원카드 쓰리카드 온라인 타로 리딩",
   description:
-    "무료 온라인 타로카드 리딩. 메이저 아르카나 22장으로 원카드, 쓰리카드(과거·현재·미래) 스프레드를 체험하세요.",
+    "무료 온라인 타로카드 리딩. 메이저 아르카나 22장으로 원카드, 쓰리카드 스프레드를 체험하고 오늘의 타로 운세를 확인하세요.",
+  keywords: ["타로카드", "무료타로", "온라인타로", "타로점", "원카드타로", "쓰리카드타로", "오늘의타로", "타로운세", "메이저아르카나", "타로카드의미", "연애타로"],
 };
 
 export default function TarotPage() {

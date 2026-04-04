@@ -3,8 +3,9 @@ import Link from "next/link";
 import DepositCalc from "@/components/finance/DepositCalc";
 
 export const metadata: Metadata = {
-  title: "예금 이자 계산기 - 예금 금리별 세후 이자 계산",
-  description: "예금 금액과 금리를 입력하면 만기 수령액과 세후 이자를 계산합니다.",
+  title: "예금 이자 계산기 2025 - 정기예금 세후이자 무료 계산",
+  description: "무료 예금 이자 계산기로 금리별 만기 수령액과 세후 이자를 바로 확인하세요. 1억 예금이자, 이자소득세 계산, 예금 금리 비교.",
+  keywords: ["예금이자계산기", "정기예금이자", "예금이자계산", "세후이자", "예금만기수령액", "예금금리비교", "1억예금이자", "이자소득세"],
 };
 
 export default function DepositPage() {

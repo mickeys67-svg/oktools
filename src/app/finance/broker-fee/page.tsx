@@ -3,9 +3,10 @@ import Link from "next/link";
 import BrokerFeeCalc from "@/components/finance/BrokerFeeCalc";
 
 export const metadata: Metadata = {
-  title: "부동산 중개보수 계산기 - 매매 전세 복비 계산",
+  title: "부동산 복비 계산기 2025 - 중개보수 수수료 무료 계산",
   description:
-    "부동산 매매, 전세, 임대차 거래 시 중개보수(복비)를 계산합니다. 2024년 기준 요율표 적용, 부가세 포함 총 비용을 확인하세요.",
+    "무료 부동산 복비 계산기로 매매, 전세, 임대차 중개보수를 바로 확인하세요. 2025년 요율표 적용, 아파트 복비 및 공인중개사 수수료 조회.",
+  keywords: ["부동산중개보수", "복비계산기", "부동산복비", "중개수수료계산", "매매중개보수", "전세복비", "부동산수수료", "아파트복비", "공인중개사수수료", "중개보수요율표"],
 };
 
 export default function BrokerFeePage() {

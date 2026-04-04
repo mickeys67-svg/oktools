@@ -3,8 +3,9 @@ import Link from "next/link";
 import CharacterCount from "@/components/tools/CharacterCount";
 
 export const metadata: Metadata = {
-  title: "글자수 세기 - 공백 포함/제외, 바이트 계산",
-  description: "글자수, 단어수, 바이트수를 실시간으로 세어줍니다. 자기소개서, 이력서, SNS 글자수 제한 확인에 유용합니다.",
+  title: "글자수 세기 - 공백포함 제외, 바이트 계산기",
+  description: "무료 글자수 세기 도구. 공백 포함·제외 글자수, 단어수, 바이트수를 실시간 계산하세요. 자기소개서·이력서·SNS 글자수 확인.",
+  keywords: ["글자수세기", "글자수카운터", "자기소개서글자수", "이력서글자수", "바이트계산", "공백포함글자수", "공백제외글자수", "한글글자수", "SNS글자수"],
 };
 
 export default function CharacterCountPage() {
