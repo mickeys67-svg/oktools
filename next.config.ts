@@ -41,6 +41,15 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   output: "standalone",
 
+  async rewrites() {
+    return [
+      {
+        source: "/naver88beb20b4255fa30a98d713917c45eb3.html",
+        destination: "/api/naver-verify",
+      },
+    ];
+  },
+
   async headers() {
     return [
       {
