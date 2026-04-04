@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { categories, getToolsByCategory, type Category } from "@/data/tools";
+import { LogoIcon } from "@/components/Logo";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -33,12 +34,12 @@ export default function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-primary-400"
+          className="flex items-center gap-2"
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600 text-sm font-extrabold text-white">
-            OK
+          <LogoIcon size={36} className="shrink-0" />
+          <span className="text-lg font-bold tracking-tight text-[#005bbf] dark:text-[#5BA3E6]">
+            oktools
           </span>
-          <span className="hidden sm:inline">오케이툴즈</span>
         </Link>
 
         {/* Desktop Nav */}
