@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MBTICompatibility from "@/components/fortune/MBTICompatibility";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "MBTI 궁합 테스트 - 16유형 연애 친구 궁합",
@@ -31,6 +32,7 @@ export default function MBTIPage() {
       </p>
 
       <MBTICompatibility />
+      <ResultAd />
 
       <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">MBTI란?</h2>

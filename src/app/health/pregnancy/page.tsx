@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PregnancyCalc from "@/components/health/PregnancyCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "임신 주수 계산기 - 출산예정일 삼분기 확인",
@@ -23,6 +24,7 @@ export default function PregnancyPage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">임신 주수 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">마지막 생리 시작일 기준으로 임신 주수와 출산 예정일을 계산합니다.</p>
       <PregnancyCalc />
+      <ResultAd />
 
       <script
         type="application/ld+json"

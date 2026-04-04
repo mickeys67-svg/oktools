@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RetirementCalc from "@/components/finance/RetirementCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "퇴직금 계산기 2026 - 근속연수별 퇴직금 자동 계산",
@@ -22,6 +23,7 @@ export default function RetirementPage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">퇴직금 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">입사일, 퇴사일, 평균 월급을 입력하면 퇴직금을 계산합니다.</p>
       <RetirementCalc />
+      <ResultAd />
 
       <script
         type="application/ld+json"

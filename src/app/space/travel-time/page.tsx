@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LightTravelCalc from "@/components/space/LightTravelCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "빛 여행 시간 계산기 - 빛 비행기 KTX 우주여행",
@@ -25,6 +26,7 @@ export default function TravelTimePage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">빛 여행 시간 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">태양계 행성까지 다양한 이동 수단으로 걸리는 시간을 비교합니다.</p>
       <LightTravelCalc />
+      <ResultAd />
 
       <script
         type="application/ld+json"

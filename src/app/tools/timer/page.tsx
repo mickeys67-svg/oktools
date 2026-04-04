@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import TimerApp from "@/components/tools/TimerApp";
+import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "온라인 타이머 - 카운트다운 라면타이머 운동타이머",
@@ -31,7 +32,9 @@ export default function TimerPage() {
       </p>
 
       <TimerApp />
+      <ResultAd />
 
+      <InArticleAd />
       {/* Related Tools */}
       <section className="mt-10">
         <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>

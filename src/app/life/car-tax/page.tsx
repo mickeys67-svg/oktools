@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CarTaxCalc from "@/components/life/CarTaxCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "자동차세 계산기 2026 - 배기량별 자동차세 연납할인",
@@ -29,6 +30,7 @@ export default function CarTaxPage() {
         차량 유형과 배기량을 입력하면 자동차세, 교육세, 연납 할인액을 계산해 드립니다.
       </p>
       <CarTaxCalc />
+      <ResultAd />
 
       <script
         type="application/ld+json"

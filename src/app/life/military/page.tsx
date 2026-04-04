@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MilitaryCalc from "@/components/life/MilitaryCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "전역일 계산기 2026 - 군 복무기간 진급일 전역일",
@@ -29,6 +30,7 @@ export default function MilitaryPage() {
         입대일과 군종을 선택하면 전역 예정일, 복무 진행률, 진급 일정을 한눈에 확인할 수 있습니다.
       </p>
       <MilitaryCalc />
+      <ResultAd />
 
       {/* SEO content */}
       <section className="mt-12 space-y-4 rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm text-gray-600 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-400">

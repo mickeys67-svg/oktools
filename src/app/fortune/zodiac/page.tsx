@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ZodiacApp from "@/components/fortune/ZodiacApp";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "별자리 운세 - 12궁 오늘의 운세 무료",
@@ -31,6 +32,7 @@ export default function ZodiacPage() {
       </p>
 
       <ZodiacApp />
+      <ResultAd />
 
       <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">별자리 운세란?</h2>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ZodiacAnimalApp from "@/components/fortune/ZodiacAnimalApp";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "띠 계산기 - 12간지 띠 성격 궁합 확인",
@@ -31,6 +32,7 @@ export default function ZodiacAnimalPage() {
       </p>
 
       <ZodiacAnimalApp />
+      <ResultAd />
 
       <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">12간지란?</h2>

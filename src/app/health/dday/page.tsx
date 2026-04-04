@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import DDayCalc from "@/components/health/DDayCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "D-Day 계산기 - 디데이 날짜 계산, 남은 일수 확인",
@@ -23,6 +24,7 @@ export default function DDayPage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">D-Day 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">목표 날짜까지 남은 일수와 지난 일수를 계산합니다.</p>
       <DDayCalc />
+      <ResultAd />
 
       <script
         type="application/ld+json"

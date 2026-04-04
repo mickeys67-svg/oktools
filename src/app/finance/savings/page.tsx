@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SavingsCalc from "@/components/finance/SavingsCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "적금 이자 계산기 2026 - 만기 수령액 세후이자 무료 계산",
@@ -22,6 +23,7 @@ export default function SavingsPage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">적금 이자 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">월 납입금, 금리, 기간을 입력하면 만기 수령액을 계산합니다.</p>
       <SavingsCalc />
+      <ResultAd />
 
       <script
         type="application/ld+json"

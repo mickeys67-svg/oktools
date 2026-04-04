@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import TojeongApp from "@/components/fortune/TojeongApp";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "토정비결 2026 - 생년월일 무료 운세 (상중하원)",
@@ -31,6 +32,7 @@ export default function TojeongPage() {
       </p>
 
       <TojeongApp />
+      <ResultAd />
 
       <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">토정비결이란?</h2>

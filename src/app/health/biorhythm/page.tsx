@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BiorhythmChart from "@/components/health/BiorhythmChart";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "바이오리듬 계산기 - 오늘의 신체 감성 지성 리듬",
@@ -31,6 +32,7 @@ export default function BiorhythmPage() {
       </p>
 
       <BiorhythmChart />
+      <ResultAd />
 
       <section className="mt-10 space-y-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">

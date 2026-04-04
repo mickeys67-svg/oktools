@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RandomGenerator from "@/components/tools/RandomGenerator";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "랜덤 번호 생성기 - 로또 주사위 동전 던지기",
@@ -22,6 +23,7 @@ export default function RandomNumberPage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">랜덤 번호 생성기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">로또 번호, 랜덤 숫자, 동전 던지기, 주사위 등 다양한 랜덤 도구입니다.</p>
       <RandomGenerator />
+      <ResultAd />
 
       <script
         type="application/ld+json"

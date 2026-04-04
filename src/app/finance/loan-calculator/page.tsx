@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LoanCalculator from "@/components/finance/LoanCalculator";
+import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "대출 이자 계산기 - 원리금균등 원금균등 만기일시 2026",
@@ -38,6 +39,7 @@ export default function LoanCalculatorPage() {
 
       {/* Calculator */}
       <LoanCalculator />
+      <ResultAd />
 
       {/* Info Section */}
       <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
@@ -62,6 +64,7 @@ export default function LoanCalculatorPage() {
         </div>
       </section>
 
+      <InArticleAd />
       {/* Related Tools */}
       <section className="mt-10">
         <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>

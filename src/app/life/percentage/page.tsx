@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PercentageCalc from "@/components/life/PercentageCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "퍼센트 계산기 - % 증가 감소 비율 계산",
@@ -25,6 +26,7 @@ export default function PercentagePage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">퍼센트 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">퍼센트 계산 세 가지 모드를 지원합니다.</p>
       <PercentageCalc />
+      <ResultAd />
 
       <script
         type="application/ld+json"

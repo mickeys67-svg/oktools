@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BMICalculator from "@/components/health/BMICalculator";
+import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "BMI 계산기 - 체질량지수 비만도 측정 (한국 기준)",
@@ -31,6 +32,7 @@ export default function BMIPage() {
       </p>
 
       <BMICalculator />
+      <ResultAd />
 
       <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
@@ -59,6 +61,7 @@ export default function BMIPage() {
         </p>
       </section>
 
+      <InArticleAd />
       {/* Related Tools */}
       <section className="mt-10">
         <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>

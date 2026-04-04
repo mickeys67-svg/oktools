@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import GPACalculator from "@/components/life/GPACalculator";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "학점 계산기 - 대학교 GPA 평균평점 계산 (4.5/4.3)",
@@ -23,6 +24,7 @@ export default function GPAPage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">학점 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">과목별 학점과 성적을 입력하여 평균 평점(GPA)을 계산합니다.</p>
       <GPACalculator />
+      <ResultAd />
 
       <script
         type="application/ld+json"

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ElectricityCalc from "@/components/life/ElectricityCalc";
+import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "전기요금 계산기 2026 - 한전 누진세 전기세 계산",
@@ -23,7 +24,9 @@ export default function ElectricityPage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">전기요금 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">한국전력 주택용(저압) 누진세를 반영하여 전기요금을 계산합니다.</p>
       <ElectricityCalc />
+      <ResultAd />
 
+      <InArticleAd />
       {/* Related Tools */}
       <section className="mt-10">
         <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>

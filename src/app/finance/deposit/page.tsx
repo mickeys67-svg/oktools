@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import DepositCalc from "@/components/finance/DepositCalc";
+import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "예금 이자 계산기 2026 - 정기예금 세후이자 무료 계산",
@@ -22,7 +23,9 @@ export default function DepositPage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">예금 이자 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">예금 금액, 금리, 기간을 입력하면 세후 이자와 만기 수령액을 계산합니다.</p>
       <DepositCalc />
+      <ResultAd />
 
+      <InArticleAd />
       {/* Related Tools */}
       <section className="mt-10">
         <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>

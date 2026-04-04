@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AcquisitionTaxCalc from "@/components/finance/AcquisitionTaxCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "취득세 계산기 2026 - 부동산 주택 다주택자 취득세율",
@@ -35,6 +36,7 @@ export default function AcquisitionTaxPage() {
       </p>
 
       <AcquisitionTaxCalc />
+      <ResultAd />
 
       <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">

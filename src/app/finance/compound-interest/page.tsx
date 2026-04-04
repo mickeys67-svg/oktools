@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CompoundCalc from "@/components/finance/CompoundCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "복리 계산기 - 복리 효과 투자 수익 시뮬레이션 무료",
@@ -22,6 +23,7 @@ export default function CompoundInterestPage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">복리 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">초기 투자금과 월 적립금으로 복리 성장을 시뮬레이션합니다.</p>
       <CompoundCalc />
+      <ResultAd />
 
       <script
         type="application/ld+json"

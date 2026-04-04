@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import TrafficFineCalc from "@/components/life/TrafficFineCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "과태료 계산기 - 속도위반 주정차위반 벌점 조회",
@@ -29,6 +30,7 @@ export default function TrafficFinePage() {
         속도위반, 주정차위반 과태료와 벌점을 간편하게 조회하세요.
       </p>
       <TrafficFineCalc />
+      <ResultAd />
 
       <script
         type="application/ld+json"

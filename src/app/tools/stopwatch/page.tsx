@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import StopwatchApp from "@/components/tools/StopwatchApp";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "온라인 스톱워치 - 랩타임 기록, 운동 시간 측정",
@@ -31,6 +32,7 @@ export default function StopwatchPage() {
       </p>
 
       <StopwatchApp />
+      <ResultAd />
 
       <script
         type="application/ld+json"

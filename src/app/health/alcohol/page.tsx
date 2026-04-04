@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AlcoholCalc from "@/components/health/AlcoholCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "음주 측정기 - 혈중알코올농도 BAC 계산기 2026",
@@ -31,6 +32,7 @@ export default function AlcoholPage() {
       </p>
 
       <AlcoholCalc />
+      <ResultAd />
 
       <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">Widmark 공식이란?</h2>

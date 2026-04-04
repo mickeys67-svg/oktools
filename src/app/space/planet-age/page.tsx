@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PlanetAgeCalc from "@/components/space/PlanetAgeCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "행성 나이 계산기 - 화성 목성에서의 내 나이",
@@ -25,6 +26,7 @@ export default function PlanetAgePage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">행성 나이 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">내 나이가 다른 행성에서는 몇 살인지 확인해보세요.</p>
       <PlanetAgeCalc />
+      <ResultAd />
 
       <script
         type="application/ld+json"

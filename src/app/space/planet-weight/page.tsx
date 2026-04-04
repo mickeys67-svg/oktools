@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PlanetWeightCalc from "@/components/space/PlanetWeightCalc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "행성 무게 계산기 - 달 화성 목성에서의 내 몸무게",
@@ -31,6 +32,7 @@ export default function PlanetWeightPage() {
       </p>
 
       <PlanetWeightCalc />
+      <ResultAd />
 
       <script
         type="application/ld+json"

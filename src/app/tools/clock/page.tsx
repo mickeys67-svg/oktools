@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ClockApp from "@/components/tools/ClockApp";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "온라인 시계 - 전체화면 벽시계, 5가지 테마",
@@ -15,6 +16,7 @@ export default function ClockPage() {
   return (
     <>
       <ClockApp />
+      <ResultAd />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

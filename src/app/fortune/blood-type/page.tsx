@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BloodTypeApp from "@/components/fortune/BloodTypeApp";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "혈액형 궁합 - A B O AB형 궁합 테스트",
@@ -31,6 +32,7 @@ export default function BloodTypePage() {
       </p>
 
       <BloodTypeApp />
+      <ResultAd />
 
       <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">혈액형 궁합이란?</h2>

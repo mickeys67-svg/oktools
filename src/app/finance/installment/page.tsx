@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import InstallmentCalc from "@/components/finance/InstallmentCalc";
+import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "할부 계산기 - 카드할부 수수료 월납입금 무료 계산 2026",
@@ -31,7 +32,9 @@ export default function InstallmentPage() {
       </p>
 
       <InstallmentCalc />
+      <ResultAd />
 
+      <InArticleAd />
       {/* Related Tools */}
       <section className="mt-10">
         <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>

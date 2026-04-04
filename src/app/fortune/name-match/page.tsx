@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import NameMatchApp from "@/components/fortune/NameMatchApp";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "이름 궁합 테스트 - 획수로 보는 궁합 점수",
@@ -31,6 +32,7 @@ export default function NameMatchPage() {
       </p>
 
       <NameMatchApp />
+      <ResultAd />
 
       <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">이름 궁합 원리</h2>

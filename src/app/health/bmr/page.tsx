@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BMRCalculator from "@/components/health/BMRCalculator";
+import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "기초대사량 계산기 - BMR TDEE 일일 칼로리 계산",
@@ -23,7 +24,9 @@ export default function BMRPage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">기초대사량 계산기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">Mifflin-St Jeor 공식으로 기초대사량(BMR)과 활동별 권장 칼로리를 계산합니다.</p>
       <BMRCalculator />
+      <ResultAd />
 
+      <InArticleAd />
       {/* Related Tools */}
       <section className="mt-10">
         <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>

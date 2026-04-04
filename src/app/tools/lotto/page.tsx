@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LottoRecommender from "@/components/tools/LottoRecommender";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "로또 번호 추천 - 미출현번호 통계 기반 스마트 추천",
@@ -31,6 +32,7 @@ export default function LottoPage() {
       </p>
 
       <LottoRecommender />
+      <ResultAd />
 
       <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">추천 모드 설명</h2>

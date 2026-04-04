@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CharacterCount from "@/components/tools/CharacterCount";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "글자수 세기 - 공백포함 제외, 바이트 계산기",
@@ -22,6 +23,7 @@ export default function CharacterCountPage() {
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">글자수 세기</h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">텍스트를 입력하면 글자수, 단어수, 바이트수를 실시간으로 계산합니다.</p>
       <CharacterCount />
+      <ResultAd />
 
       <script
         type="application/ld+json"

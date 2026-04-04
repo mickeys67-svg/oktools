@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import DreamApp from "@/components/fortune/DreamApp";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "꿈해몽 - 꿈 풀이 사전, 길몽 흉몽 확인",
@@ -31,6 +32,7 @@ export default function DreamPage() {
       </p>
 
       <DreamApp />
+      <ResultAd />
 
       <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">꿈해몽이란?</h2>

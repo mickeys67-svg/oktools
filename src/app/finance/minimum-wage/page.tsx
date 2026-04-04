@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MinimumWageCalc from "@/components/finance/MinimumWageCalc";
+import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "최저시급 계산기 2025 2026 - 최저임금 월급 연봉 계산",
@@ -31,6 +32,7 @@ export default function MinimumWagePage() {
       </p>
 
       <MinimumWageCalc />
+      <ResultAd />
 
       <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
@@ -47,6 +49,7 @@ export default function MinimumWagePage() {
         </p>
       </section>
 
+      <InArticleAd />
       {/* Related Tools */}
       <section className="mt-10">
         <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>

@@ -122,6 +122,19 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col bg-surface text-gray-900 dark:bg-surface-dark dark:text-gray-50">
         <Header />
+        {/* Leaderboard ad — below header */}
+        <div className="border-b border-gray-100 bg-gray-50/50 py-2 text-center dark:border-gray-800 dark:bg-gray-900/50">
+          <div className="mx-auto min-h-[50px] max-w-[728px] sm:min-h-[90px]">
+            <ins
+              className="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-client="ca-pub-1642090914820195"
+              data-ad-format="horizontal"
+              data-full-width-responsive="true"
+            />
+          </div>
+          <p className="mt-1 text-[10px] text-gray-300 dark:text-gray-700">광고</p>
+        </div>
         <main className="flex-1">{children}</main>
         <Footer />
 

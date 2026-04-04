@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import TarotApp from "@/components/fortune/TarotApp";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "무료 타로카드 - 원카드 쓰리카드 온라인 타로 리딩",
@@ -31,6 +32,7 @@ export default function TarotPage() {
       </p>
 
       <TarotApp />
+      <ResultAd />
 
       <section className="mt-10 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">타로카드란?</h2>

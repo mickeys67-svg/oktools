@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SalaryCalculator from "@/components/finance/SalaryCalculator";
+import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "연봉 실수령액 계산기 2026 - 4대보험 소득세 공제 후 월급",
@@ -31,6 +32,7 @@ export default function SalaryPage() {
       </p>
 
       <SalaryCalculator />
+      <ResultAd />
 
       <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
@@ -49,6 +51,7 @@ export default function SalaryPage() {
         </p>
       </section>
 
+      <InArticleAd />
       {/* Related Tools */}
       <section className="mt-10">
         <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">관련 도구</h2>

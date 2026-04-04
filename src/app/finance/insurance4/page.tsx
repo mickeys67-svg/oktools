@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Insurance4Calc from "@/components/finance/Insurance4Calc";
+import { ResultAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
   title: "4대보험 계산기 2026 - 국민연금 건강보험 고용보험 계산",
@@ -31,6 +32,7 @@ export default function Insurance4Page() {
       </p>
 
       <Insurance4Calc />
+      <ResultAd />
 
       <section className="mt-10 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
