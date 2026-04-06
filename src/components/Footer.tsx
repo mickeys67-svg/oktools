@@ -5,7 +5,7 @@ export default function Footer() {
   const popular = getPopularTools().slice(0, 6);
 
   return (
-    <footer className="mt-16 border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950">
+    <footer role="contentinfo" aria-label="사이트 정보" className="mt-16 border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950">
       <div className="mx-auto max-w-[1200px] px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
           {/* Categories */}

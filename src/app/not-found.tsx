@@ -6,11 +6,11 @@ export default function NotFound() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-20 text-center">
-      <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+      <h1 className="text-6xl font-bold text-gray-300 dark:text-gray-600 mb-4">404</h1>
+      <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
         페이지를 찾을 수 없습니다
       </h2>
-      <p className="text-gray-600 mb-8">
+      <p className="text-gray-600 dark:text-gray-400 mb-8">
         요청하신 페이지가 존재하지 않거나 이동되었을 수 있습니다.
       </p>
 
@@ -22,7 +22,7 @@ export default function NotFound() {
       </Link>
 
       <div className="text-left">
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">
+        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">
           인기 도구 바로가기
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -30,9 +30,9 @@ export default function NotFound() {
             <Link
               key={tool.id}
               href={tool.path}
-              className="flex items-center gap-2 p-3 rounded-lg border border-gray-200 hover:border-primary-400 hover:bg-primary-50 transition-colors"
+              className="flex items-center gap-2 p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-primary-400 hover:bg-primary-50 dark:hover:bg-gray-800 transition-colors"
             >
-              <span className="font-medium text-gray-900">{tool.name}</span>
+              <span className="font-medium text-gray-900 dark:text-gray-100">{tool.name}</span>
             </Link>
           ))}
         </div>

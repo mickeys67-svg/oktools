@@ -13,11 +13,14 @@ const securityHeaders = [
   { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains; preload" },
   // Only send origin as referrer for cross-origin requests
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-  // Restrict browser features
+  // Restrict browser features (expanded)
   {
     key: "Permissions-Policy",
-    value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+    value: "camera=(), microphone=(), geolocation=(), interest-cohort=(), payment=(), usb=(), bluetooth=(), serial=(), hid=(), ambient-light-sensor=(), accelerometer=(), gyroscope=(), magnetometer=()",
   },
+  // Cross-Origin headers
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
+  { key: "Cross-Origin-Resource-Policy", value: "same-site" },
   // Content Security Policy
   {
     key: "Content-Security-Policy",

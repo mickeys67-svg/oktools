@@ -127,6 +127,13 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-surface text-gray-900 dark:bg-surface-dark dark:text-gray-50">
+        {/* Skip Navigation — WCAG 2.1 AA Accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-primary-600 focus:px-4 focus:py-2 focus:text-white focus:shadow-lg"
+        >
+          본문 바로가기
+        </a>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -152,7 +159,7 @@ export default function RootLayout({
           <p className="mt-1 text-[10px] text-gray-300 dark:text-gray-700">광고</p>
           <script dangerouslySetInnerHTML={{ __html: `try{(window.adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}` }} />
         </div>
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">{children}</main>
         <Footer />
 
         {/* Organization + WebSite Schema */}
