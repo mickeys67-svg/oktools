@@ -135,6 +135,38 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+
+      {/* JSON-LD: CollectionPage + ItemList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "오케이툴즈 - 무료 온라인 계산기 59종 모음",
+            description:
+              "대출이자, 연봉실수령액, BMI, 전역일, 4대보험, 전월세전환율 등 59가지 무료 계산기",
+            url: "https://www.oktools.co.kr",
+            inLanguage: "ko-KR",
+            isPartOf: { "@id": "https://www.oktools.co.kr/#website" },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            itemListElement: popularTools.map((tool, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: tool.name,
+              url: `https://www.oktools.co.kr${tool.path}`,
+            })),
+          }),
+        }}
+      />
     </div>
   );
 }
