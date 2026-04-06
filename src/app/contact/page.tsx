@@ -37,10 +37,10 @@ export default function ContactPage() {
             <div>
               <h3 className="font-semibold text-gray-800">이메일</h3>
               <a
-                href="mailto:contact@oktools.app"
+                href="mailto:mickeys67@gmail.com"
                 className="text-blue-600 hover:underline"
               >
-                contact@oktools.app
+                mickeys67@gmail.com
               </a>
             </div>
           </div>
