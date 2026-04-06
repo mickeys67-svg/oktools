@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "출산휴가급여",
   ],
   openGraph: {
+    url: "/life/parental-leave",
     title: "육아휴직급여 계산기 - 2026년 기준 월별 수령액",
     description:
       "무료 육아휴직급여 계산기로 2026년 기준 월별 수령액과 총 급여를 계산하세요. 통상임금과 휴직 기간을 입력하면 첫���/둘째 구��에 따른 육아휴직급여를 확인할 수 있습니다.",

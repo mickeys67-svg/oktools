@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "체성분분석",
   ],
   openGraph: {
+    url: "/health/body-fat",
     title: "체지방률 계산기 - US Navy 공식 체지방 측정",
     description:
       "무료 체지방률 계산기로 US Navy 공식 기반 체지방률을 측정하세요. 허리둘레, 목둘레, 키를 입력하면 체지방률(%), 체지방량, 제지방량과 판정 결과를 즉시 확인할 수 있습니다.",

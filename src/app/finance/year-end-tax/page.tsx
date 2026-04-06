@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "13월의월급",
   ],
   openGraph: {
+    url: "/finance/year-end-tax",
     title: "연말정산 환급금 계산기 2026 - 예상 환급액 공제 자동계산",
     description:
       "무료 연말정산 계산기로 예상 환급액을 바로 확인하세요. 신용카드, 의료비, 교육비, 기부금, 연금저축 공제 반영. 2026년 세율 기준.",

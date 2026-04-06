@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "활동대사량",
   ],
   openGraph: {
+    url: "/health/calorie",
     title: "칼로리 계산기 - 기초대사량 일일 권장 칼로리 계산",
     description:
       "무료 칼로리 계산기로 기초대사량(BMR)과 일일 권장 칼로리를 계산하세요. Mifflin-St Jeor 공식 기반으로 감량, 유지, 증량 목표별 칼로리를 확인할 수 있습니다.",

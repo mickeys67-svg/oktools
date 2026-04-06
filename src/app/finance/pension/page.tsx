@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "국민연금수령액조회",
   ],
   openGraph: {
+    url: "/finance/pension",
     title: "국민연금 예상 수령액 계산기 2026 - 월 수령액 납부액 조회",
     description:
       "무료 국민연금 계산기로 예상 월 수령액을 바로 확인하세요. 2026년 기준 납부액, 수령 시작 나이, 수령 대비 납부 비율까지 한눈에.",

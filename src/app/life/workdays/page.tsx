@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "한국공휴일2026",
   ],
   openGraph: {
+    url: "/life/workdays",
     title: "공휴일/근무일수 계산기 - 2026년 한국 공휴일 기준",
     description:
       "무료 근무일수 계산기로 기간 내 근무일, 주말, 공휴일 수를 계산하세요. 2026년 대한민국 공휴일(대체��휴일 포함) 기준으�� 정확한 근무일수를 확인할 수 있습니다.",

@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "디데이앱",
   ],
   openGraph: {
+    url: "/life/dday",
     title: "D-Day 카운터 - 디데이 날짜 계산기",
     description:
       "무료 D-Day 카운터로 목표 날짜까지 남은 일수를 실시간으로 확인하��요. 시험, 기념일, 여행 등 중요한 날까지의 카운트다운을 시간/분/초 단위로 제공합니다.",

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "개인정보 처리방침",
   description: "오케이툴즈 개인정보 처리방침 - 수집 정보, 쿠키, 제3자 서비스 안내",
   openGraph: {
+    url: "/privacy",
     title: "개인정보 처리방침",
     description: "오케이툴즈 개인정보 처리방침 - 수집 정보, 쿠키, 제3자 서비스 안내",
   },

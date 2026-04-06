@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description:
     "오케이툴즈 - 59가지 무료 온라인 도구. 금융, 건강, 생활, 운세, 단위변환, 우주 카테고리의 계산기와 변환기를 무료로 이용하세요.",
   openGraph: {
+    url: "/about",
     title: "오케이툴즈 소개",
     description:
       "오케이툴즈 - 59가지 무료 온라인 도구. 금융, 건강, 생활, 운세, 단위변환, 우주 카테고리의 계산기와 변환기를 무료로 이용하세요.",

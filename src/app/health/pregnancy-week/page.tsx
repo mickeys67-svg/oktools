@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "삼분기계산",
   ],
   openGraph: {
+    url: "/health/pregnancy-week",
     title: "태아 성장 계산기 - 주수별 태아 크기와 발달 확인",
     description:
       "마지막 생리일을 입력하면 현재 태아 크기(키, 몸무게), 주수별 발달 단계, 출산 예정일을 확인할 수 있습니다. 임신 진행률과 삼분기 정보를 한눈에 제공합니다.",

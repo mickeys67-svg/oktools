@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "문의하기",
   description: "오케이툴즈 문의하기 - 서비스 관련 문의, 건의사항, 오류 신고",
   openGraph: {
+    url: "/contact",
     title: "문의하기",
     description: "오케이툴즈 문의하기 - 서비스 관련 문의, 건의사항, 오류 신고",
   },

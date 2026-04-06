@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "증여세절세",
   ],
   openGraph: {
+    url: "/finance/gift-tax",
     title: "증여세 계산기 2026 - 세율표 공제한도 자동계산",
     description:
       "무료 증여세 계산기로 증여세를 바로 확인하세요. 2026년 세율표 적용, 배우자/자녀 공제한도, 과세표준, 실효세율 자동 계산.",
