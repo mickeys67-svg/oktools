@@ -25,9 +25,7 @@ function calcElectricity(kWh: number) {
     const tierAmount = tierKWh * tier.rate;
     energyCharge += tierAmount;
     breakdown.push({ label: tier.label, kWh: tierKWh, amount: Math.round(tierAmount) });
-    if (kWh <= tier.max || tier.max === Infinity) {
-      baseFee = tier.baseFee;
-    }
+    baseFee = tier.baseFee; // 마지막으로 사용한 단계의 기본요금 적용
     remaining -= tierKWh;
     prevMax = tier.max;
   }

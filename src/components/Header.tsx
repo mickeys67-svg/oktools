@@ -203,6 +203,15 @@ function MobileCategory({
 function ThemeToggle() {
   const [dark, setDark] = useState(false);
 
+  // 마운트 시 localStorage / 시스템 설정과 동기화
+  useEffect(() => {
+    const stored = localStorage.getItem("theme");
+    const isDark =
+      stored === "dark" ||
+      (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    setDark(isDark);
+  }, []);
+
   const toggle = () => {
     const next = !dark;
     setDark(next);

@@ -20,7 +20,7 @@ function pad(n: number): string {
 }
 
 export default function ClockApp() {
-  const [now, setNow] = useState(new Date());
+  const [now, setNow] = useState<Date | null>(null);
   const [theme, setTheme] = useState<Theme>("minimal");
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showControls, setShowControls] = useState(true);
@@ -28,8 +28,9 @@ export default function ClockApp() {
   const containerRef = useRef<HTMLDivElement>(null);
   const hideTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
 
-  // Update clock
+  // Update clock — also sets initial value on mount to avoid hydration mismatch
   useEffect(() => {
+    setNow(new Date());
     const interval = setInterval(() => setNow(new Date()), smoothSecond ? 50 : 1000);
     return () => clearInterval(interval);
   }, [smoothSecond]);
@@ -63,6 +64,14 @@ export default function ClockApp() {
     document.addEventListener("fullscreenchange", handler);
     return () => document.removeEventListener("fullscreenchange", handler);
   }, []);
+
+  if (!now) {
+    return (
+      <div className="flex h-[300px] items-center justify-center text-gray-400">
+        시계 로딩 중...
+      </div>
+    );
+  }
 
   const hours = now.getHours();
   const minutes = now.getMinutes();

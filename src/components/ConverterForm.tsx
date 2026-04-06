@@ -78,15 +78,15 @@ export default function ConverterForm({ categoryId, initialFrom, initialTo }: Co
   const toUnitData = category.units.find((u) => u.id === toUnit);
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+    <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 dark:bg-gray-900">
       <div className="grid md:grid-cols-[1fr_auto_1fr] gap-4 items-end">
         {/* From */}
         <div>
-          <label className="block text-sm font-medium text-gray-600 mb-2">From</label>
+          <label className="block text-sm font-medium text-gray-600 mb-2 dark:text-gray-400">From</label>
           <select
             value={fromUnit}
             onChange={(e) => handleFromUnitChange(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg mb-2 bg-white text-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg mb-2 bg-white text-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
           >
             {category.units.map((unit) => (
               <option key={unit.id} value={unit.id}>
@@ -98,7 +98,7 @@ export default function ConverterForm({ categoryId, initialFrom, initialTo }: Co
             type="number"
             value={fromValue}
             onChange={(e) => handleFromChange(e.target.value)}
-            className="w-full px-4 py-4 text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-800"
+            className="w-full px-4 py-4 text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
             placeholder="Enter value"
           />
         </div>
@@ -107,7 +107,7 @@ export default function ConverterForm({ categoryId, initialFrom, initialTo }: Co
         <div className="flex justify-center pb-2">
           <button
             onClick={handleSwap}
-            className="p-3 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600 transition-colors"
+            className="p-3 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600 transition-colors dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-400"
             aria-label="Swap units"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -118,11 +118,11 @@ export default function ConverterForm({ categoryId, initialFrom, initialTo }: Co
 
         {/* To */}
         <div>
-          <label className="block text-sm font-medium text-gray-600 mb-2">To</label>
+          <label className="block text-sm font-medium text-gray-600 mb-2 dark:text-gray-400">To</label>
           <select
             value={toUnit}
             onChange={(e) => handleToUnitChange(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg mb-2 bg-white text-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg mb-2 bg-white text-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
           >
             {category.units.map((unit) => (
               <option key={unit.id} value={unit.id}>
@@ -134,7 +134,7 @@ export default function ConverterForm({ categoryId, initialFrom, initialTo }: Co
             type="number"
             value={toValue}
             onChange={(e) => handleToChange(e.target.value)}
-            className="w-full px-4 py-4 text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-800 bg-blue-50"
+            className="w-full px-4 py-4 text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-800 bg-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
             placeholder="Result"
           />
         </div>
@@ -142,10 +142,10 @@ export default function ConverterForm({ categoryId, initialFrom, initialTo }: Co
 
       {/* Formula display */}
       {fromUnitData && toUnitData && (
-        <div className="mt-6 p-4 bg-gray-50 rounded-lg text-center">
-          <p className="text-gray-600">
+        <div className="mt-6 p-4 bg-gray-50 rounded-lg text-center dark:bg-gray-800">
+          <p className="text-gray-600 dark:text-gray-400">
             <span className="font-semibold">1 {fromUnitData.name}</span> ={" "}
-            <span className="font-semibold text-blue-600">
+            <span className="font-semibold text-blue-600 dark:text-blue-400">
               {formatNumber(convert(categoryId, fromUnit, toUnit, 1))} {toUnitData.name}
             </span>
           </p>

@@ -5,16 +5,17 @@ import { useState, useMemo, useEffect } from "react";
 export default function DDayCounter() {
   const [targetDate, setTargetDate] = useState("");
   const [eventName, setEventName] = useState("");
-  const [now, setNow] = useState<Date>(new Date());
+  const [now, setNow] = useState<Date | null>(null);
 
-  // Real-time tick
+  // Set initial value on mount + real-time tick
   useEffect(() => {
+    setNow(new Date());
     const timer = setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
 
   const result = useMemo(() => {
-    if (!targetDate) return null;
+    if (!targetDate || !now) return null;
 
     const target = new Date(targetDate);
     target.setHours(0, 0, 0, 0);
