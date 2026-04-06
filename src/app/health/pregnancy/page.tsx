@@ -82,6 +82,33 @@ export default function PregnancyPage() {
 
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "출산 예정일은 어떻게 계산하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "출산 예정일은 마지막 생리 시작일에 280일(40주)을 더하여 계산합니다. 네겔레 공식으로는 마지막 생리 시작일의 월에 9를 더하고(또는 3을 빼고), 일에 7을 더합니다. 실제 분만은 예정일 전후 2주 이내에 이루어지는 것이 정상입니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "임신 주수는 어떻게 세나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "임신 주수는 마지막 생리 시작일부터 계산합니다. 실제 수정은 약 2주 후에 이루어지지만, 의학적으로는 생리 시작일을 기준으로 합니다. 임신 1주차는 실제로 아직 임신 전이며, 보통 임신 4~5주차에 임신을 확인하게 됩니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",

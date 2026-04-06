@@ -81,6 +81,33 @@ export default function DDayPage() {
 
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "D-Day는 어떻게 계산하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "D-Day는 목표 날짜에서 오늘 날짜를 빼서 계산합니다. 미래 날짜면 'D-N'(N일 남음), 과거 날짜면 'D+N'(N일 지남)으로 표시합니다. 사귄 날 100일, 시험일, 여행일 등을 카운트다운하는 데 사용합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "사귄 날 100일은 어떻게 세나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "사귄 날을 1일차로 세면 100일째는 사귄 날로부터 99일 후입니다. 예를 들어 1월 1일에 사귀기 시작했다면 100일은 4월 10일입니다. 일부는 사귄 다음 날을 1일로 계산하기도 하므로 커플 간 약속이 중요합니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",

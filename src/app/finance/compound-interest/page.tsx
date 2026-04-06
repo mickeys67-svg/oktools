@@ -80,6 +80,33 @@ export default function CompoundInterestPage() {
 
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "복리 효과란 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "복리 효과는 이자에 이자가 붙는 현상으로, 시간이 지날수록 자산이 기하급수적으로 증가합니다. 예를 들어 연 7% 복리로 투자하면 약 10년마다 원금이 2배가 됩니다. '72의 법칙'으로 원금이 2배 되는 기간을 간단히 계산할 수 있습니다(72 / 수익률).",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "월복리와 연복리의 차이는 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "연복리는 1년에 한 번, 월복리는 매월 이자를 원금에 합산합니다. 같은 연이율이라도 월복리가 연복리보다 실질 수익이 약간 더 높습니다. 예를 들어 연 12% 월복리의 실질 연이율은 약 12.68%입니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",

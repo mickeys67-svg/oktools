@@ -87,6 +87,33 @@ export default function BiorhythmPage() {
 
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "바이오리듬이란 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "바이오리듬은 생년월일을 기준으로 신체(23일 주기), 감성(28일 주기), 지성(33일 주기)의 세 가지 리듬이 사인파 형태로 변동한다는 이론입니다. 양의 구간은 활동적, 음의 구간은 저조한 시기로 해석합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "바이오리듬 위험일은 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "위험일(주의일)은 바이오리듬 곡선이 0선을 통과하는 날로, 리듬이 전환되어 불안정한 시기로 간주됩니다. 신체 리듬의 위험일에는 운동 부상, 감성 리듬의 위험일에는 감정 기복에 주의하라고 합니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",

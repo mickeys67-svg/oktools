@@ -79,6 +79,41 @@ export default function RetirementPage() {
 
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "퇴직금은 어떻게 계산하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "퇴직금 = 1일 평균임금 x 30일 x (재직일수 / 365)입니다. 1일 평균임금은 퇴직 전 3개월간 총 급여를 해당 기간의 총 일수로 나눈 금액입니다. 1년 이상 근무한 근로자에게 지급 의무가 있습니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "퇴직금 수령 조건은 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "동일 사업장에서 1년 이상 근무하고, 주 15시간 이상(월 60시간 이상) 일한 근로자는 퇴직금을 받을 수 있습니다. 정규직뿐 아니라 계약직, 아르바이트도 조건을 충족하면 퇴직금 지급 대상입니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "퇴직금에 세금이 붙나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "퇴직금에는 퇴직소득세가 부과됩니다. 근속연수공제, 환산급여공제 등을 적용한 후 세율을 곱하여 계산하며, 근속연수가 길수록 세금이 줄어듭니다. IRP 계좌로 이체하면 퇴직소득세를 이연할 수 있습니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",

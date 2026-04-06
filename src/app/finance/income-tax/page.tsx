@@ -96,6 +96,33 @@ export default function IncomeTaxPage() {
 
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "종합소득세 세율은 얼마인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "2026년 기준 종합소득세는 6단계 누진세율을 적용합니다. 1,400만원 이하 6%, 5,000만원 이하 15%, 8,800만원 이하 24%, 1.5억원 이하 35%, 3억원 이하 38%, 5억원 이하 40%, 10억원 이하 42%, 10억원 초과 45%입니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "프리랜서 종합소득세는 어떻게 신고하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "프리랜서(사업소득)는 매년 5월에 종합소득세를 신고해야 합니다. 경비를 인정받는 방식에 따라 단순경비율, 기준경비율, 장부 신고 중 선택할 수 있으며, 수입이 적으면 단순경비율이, 많으면 장부 작성이 유리합니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",

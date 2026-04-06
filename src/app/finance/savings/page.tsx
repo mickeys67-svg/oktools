@@ -79,6 +79,33 @@ export default function SavingsPage() {
 
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "적금 단리와 복리의 차이는 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "단리는 원금에만 이자가 붙고, 복리는 원금+이자에 이자가 붙습니다. 같은 금리라도 복리가 만기 수령액이 더 많습니다. 대부분의 시중 적금은 단리 방식이며, 일부 특판 적금이나 적립식 펀드가 복리 방식을 적용합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "적금 이자에 세금은 얼마나 내나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "일반 과세의 경우 이자소득의 15.4%(소득세 14% + 지방소득세 1.4%)가 원천징수됩니다. 비과세종합저축(65세 이상 등)이나 세금우대(9.5%) 적용이 가능한 경우 세금을 줄일 수 있습니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",

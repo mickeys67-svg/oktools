@@ -88,6 +88,33 @@ export default function JeonwolsePage() {
 
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "전월세 전환율이란 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "전월세 전환율은 전세금을 월세로 바꿀 때 적용하는 비율입니다. 예를 들어 전환율 5%에서 전세 1억원을 월세로 전환하면 월세는 약 41.7만원(1억 x 5% / 12)입니다. 2026년 법정 전환율 상한은 기준금리 + 2%입니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "전세와 월세 중 어느 것이 유리한가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "전세는 목돈이 필요하지만 월 지출이 없고, 월세는 초기 비용이 적지만 매월 지출이 발생합니다. 전세금을 투자하여 월세 이상의 수익을 올릴 수 있다면 월세가, 안정적인 주거를 원한다면 전세가 유리합니다. 금리가 높을수록 월세가 상대적으로 유리해집니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",

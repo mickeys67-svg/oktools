@@ -94,6 +94,41 @@ export default function UnemploymentPage() {
 
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "실업급여 수급 자격은 무엇인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "실업급여를 받으려면 이직 전 18개월간 고용보험 피보험기간이 180일 이상이어야 하며, 비자발적 퇴사(권고사직, 계약만료, 정당한 사유 등)여야 합니다. 자발적 퇴사는 원칙적으로 수급 대상이 아니지만, 정당한 사유가 있으면 인정됩니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "실업급여는 얼마나 받을 수 있나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "실업급여 일액은 퇴직 전 3개월 평균임금의 60%이며, 상한액은 1일 66,000원, 하한액은 최저임금의 80%입니다. 지급기간은 연령과 고용보험 가입기간에 따라 120일~270일입니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "실업급여 신청은 어떻게 하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "퇴사 후 워크넷(work.go.kr)에서 구직 등록을 한 뒤, 거주지 관할 고용센터를 방문하여 수급자격 인정 신청을 합니다. 이후 1~4주마다 고용센터에 출석하여 실업 인정을 받으면 급여가 지급됩니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",

@@ -108,6 +108,33 @@ export default function AcquisitionTaxPage() {
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "주택 취득세율은 얼마인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "1주택 기준 6억원 이하는 1%, 6억~9억은 1~3% 누진, 9억 초과는 3%입니다. 다주택자(조정대상지역 2주택 8%, 3주택 이상 12%)나 법인은 중과세율이 적용됩니다. 여기에 지방교육세, 농어촌특별세가 추가됩니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "생애최초 주택 취득세 감면은 얼마인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "생애최초 주택 구입 시 취득가액 12억원 이하 주택에 대해 취득세 200만원 한도 내에서 감면받을 수 있습니다. 부부 합산 소득 기준 없이 본인과 배우자 모두 주택을 소유한 이력이 없어야 합니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

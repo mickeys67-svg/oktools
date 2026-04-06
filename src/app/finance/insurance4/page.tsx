@@ -90,6 +90,41 @@ export default function Insurance4Page() {
 
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "4대보험 본인 부담률은 얼마인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "2026년 기준 근로자 부담분은 국민연금 4.5%, 건강보험 3.545%, 장기요양보험(건강보험의 12.95%), 고용보험 0.9%입니다. 회사도 동일 비율(또는 그 이상)을 부담합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "4대보험은 어떤 항목으로 구성되나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "4대보험은 국민연금, 건강보험(장기요양보험 포함), 고용보험, 산재보험 4가지입니다. 이 중 산재보험은 전액 사업주 부담이며, 나머지 3개는 근로자와 사업주가 분담합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "프리랜서도 4대보험에 가입해야 하나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "프리랜서(사업소득자)는 국민연금과 건강보험에 지역가입자로 가입해야 합니다. 고용보험은 자영업자 임의가입이 가능하며, 산재보험은 특수형태근로종사자에 해당하면 가입 대상입니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",

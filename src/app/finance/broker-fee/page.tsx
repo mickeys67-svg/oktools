@@ -87,6 +87,33 @@ export default function BrokerFeePage() {
 
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "부동산 중개보수(복비)는 얼마인가요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "중개보수는 거래 유형(매매/전세/월세)과 금액에 따라 상한 요율이 다릅니다. 매매 기준 5천만원 미만은 0.6%, 5천만~2억은 0.5%, 2억~9억은 0.4%, 9억~12억은 0.5%, 12억 초과는 0.7% 이내에서 협의합니다.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "중개보수에 부가세가 붙나요?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "개인 중개사는 부가세 면제이지만, 법인 중개업소나 일반과세자 중개사는 중개보수의 10% 부가가치세를 추가로 내야 합니다. 계약 전에 중개업소의 과세 유형을 확인하는 것이 좋습니다.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",
