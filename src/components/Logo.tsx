@@ -1,19 +1,26 @@
 "use client";
 
 /**
- * OKTools Logo — Clean typographic mark
- * "OK" in a rounded square badge + "tools" text
- * Inspired by world-class tool sites: clean, bold, instantly readable
+ * OKTools Logo — Squircle badge with OK letterforms
+ * O = circle stroke, K = vertical + diagonal strokes
+ * Color: Indigo #4F46E5 (dark: #6366F1)
  */
-export function LogoIcon({ className = "" }: { className?: string }) {
+export function LogoIcon({ className = "", size = 32 }: { className?: string; size?: number }) {
   return (
-    <div
-      className={`flex h-8 w-8 items-center justify-center rounded-lg bg-[#005BBF] dark:bg-[#2563EB] ${className}`}
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 100 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
       aria-hidden="true"
     >
-      <span className="text-[13px] font-extrabold leading-none tracking-tight text-white">
-        OK
-      </span>
-    </div>
+      <rect x="0" y="0" width="100" height="100" rx="30" className="fill-[#4F46E5] dark:fill-[#6366F1]" />
+      <circle cx="35" cy="50" r="15" stroke="white" strokeWidth="8" fill="none" />
+      <path d="M60 30 V70" stroke="white" strokeWidth="8" strokeLinecap="round" />
+      <path d="M60 50 L75 30" stroke="white" strokeWidth="8" strokeLinecap="round" />
+      <path d="M60 50 L75 70" stroke="white" strokeWidth="8" strokeLinecap="round" />
+    </svg>
   );
 }

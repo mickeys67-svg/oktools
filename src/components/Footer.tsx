@@ -82,9 +82,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 sm:col-span-1">
             <div className="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-primary-400">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600 text-sm font-extrabold text-white">
-                OK
-              </span>
+              <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="0" y="0" width="100" height="100" rx="30" className="fill-[#4F46E5] dark:fill-[#6366F1]" />
+                <circle cx="35" cy="50" r="15" stroke="white" strokeWidth="8" fill="none" />
+                <path d="M60 30 V70" stroke="white" strokeWidth="8" strokeLinecap="round" />
+                <path d="M60 50 L75 30" stroke="white" strokeWidth="8" strokeLinecap="round" />
+                <path d="M60 50 L75 70" stroke="white" strokeWidth="8" strokeLinecap="round" />
+              </svg>
               오케이툴즈
             </div>
             <p className="mt-3 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
