@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 
 const CLIENT_ID = "ca-pub-1642090914820195";
 
-function AdUnit({ format, className }: { format: string; className: string }) {
+function AdUnit({ slot, format, className }: { slot: string; format: string; className: string }) {
   const pushed = useRef(false);
 
   useEffect(() => {
@@ -25,6 +25,7 @@ function AdUnit({ format, className }: { format: string; className: string }) {
         className="adsbygoogle"
         style={{ display: "block" }}
         data-ad-client={CLIENT_ID}
+        data-ad-slot={slot}
         data-ad-format={format}
         data-full-width-responsive="true"
       />
@@ -42,6 +43,7 @@ function AdUnit({ format, className }: { format: string; className: string }) {
 export function ResultAd() {
   return (
     <AdUnit
+      slot="9442703372"
       format="auto"
       className="mx-auto my-8 max-w-[336px]"
     />
@@ -54,6 +56,7 @@ export function ResultAd() {
 export function InArticleAd() {
   return (
     <AdUnit
+      slot="7858158960"
       format="fluid"
       className="mx-auto my-8 max-w-[600px]"
     />
@@ -69,6 +72,7 @@ export function SidebarAd() {
     <div className="hidden xl:block">
       <div className="sticky top-20">
         <AdUnit
+          slot="1738435768"
           format="vertical"
           className="w-[300px]"
         />

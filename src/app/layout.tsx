@@ -144,6 +144,7 @@ export default function RootLayout({
               className="adsbygoogle"
               style={{ display: "block" }}
               data-ad-client="ca-pub-1642090914820195"
+              data-ad-slot="1738435768"
               data-ad-format="horizontal"
               data-full-width-responsive="true"
             />
