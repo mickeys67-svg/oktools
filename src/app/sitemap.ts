@@ -61,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/tools/character-count`, priority: 0.8 },
     { url: `${BASE_URL}/tools/random-number`, priority: 0.8 },
     { url: `${BASE_URL}/tools/lotto`, priority: 0.8 },
+    { url: `${BASE_URL}/tools/youtube-tracklist`, priority: 0.8 },
     // Fortune
     { url: `${BASE_URL}/fortune/tarot`, priority: 0.8 },
     { url: `${BASE_URL}/fortune/tojeong`, priority: 0.8 },

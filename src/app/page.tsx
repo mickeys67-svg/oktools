@@ -3,13 +3,13 @@ import Link from "next/link";
 import { categories, getPopularTools, getToolsByCategory } from "@/data/tools";
 
 export const metadata: Metadata = {
-  title: "오케이툴즈 - 무료 온라인 계산기 59종 모음 | 금융, 건강, 생활",
-  description: "대출이자, 연봉실수령액, BMI, 전역일, 4대보험, 전월세전환율, 음주측정기, 혈액형궁합 등 59가지 무료 계산기. 설치 없이 바로 사용.",
+  title: "오케이툴즈 - 무료 온라인 계산기 60종 모음 | 금융, 건강, 생활",
+  description: "대출이자, 연봉실수령액, BMI, 전역일, 4대보험, 전월세전환율, 음주측정기, 혈액형궁합 등 60가지 무료 계산기. 설치 없이 바로 사용.",
   keywords: ["무료 계산기", "온라인 계산기", "대출이자계산기", "연봉실수령액계산기", "BMI계산기", "전역일계산기", "4대보험계산기", "전월세전환율", "단위변환", "퍼센트계산기", "학점계산기", "타로", "혈액형궁합", "로또번호추천"],
   openGraph: {
     url: "/",
-    title: "오케이툴즈 - 무료 온라인 계산기 59종 모음 | 금융, 건강, 생활",
-    description: "대출이자, 연봉실수령액, BMI, 전역일, 4대보험, 전월세전환율, 음주측정기, 혈액형궁합 등 59가지 무료 계산기. 설치 없이 바로 사용.",
+    title: "오케이툴즈 - 무료 온라인 계산기 60종 모음 | 금융, 건강, 생활",
+    description: "대출이자, 연봉실수령액, BMI, 전역일, 4대보험, 전월세전환율, 음주측정기, 혈액형궁합 등 60가지 무료 계산기. 설치 없이 바로 사용.",
   },
   alternates: {
     canonical: "/",
@@ -30,7 +30,7 @@ export default function HomePage() {
           </span>
         </h1>
         <p className="mx-auto max-w-xl text-base text-gray-500 sm:text-lg dark:text-gray-400">
-          대출 계산기부터 타로카드까지, 59가지 도구를 깔끔한 디자인으로 무료 제공합니다.
+          대출 계산기부터 타로카드까지, 60가지 도구를 깔끔한 디자인으로 무료 제공합니다.
         </p>
       </section>
 
@@ -144,9 +144,9 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "오케이툴즈 - 무료 온라인 계산기 59종 모음",
+            name: "오케이툴즈 - 무료 온라인 계산기 60종 모음",
             description:
-              "대출이자, 연봉실수령액, BMI, 전역일, 4대보험, 전월세전환율 등 59가지 무료 계산기",
+              "대출이자, 연봉실수령액, BMI, 전역일, 4대보험, 전월세전환율 등 60가지 무료 계산기",
             url: "https://www.oktools.co.kr",
             inLanguage: "ko-KR",
             isPartOf: { "@id": "https://www.oktools.co.kr/#website" },

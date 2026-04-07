@@ -350,6 +350,14 @@ export const tools: Tool[] = [
     icon: "Clover",
     popular: true,
   },
+  {
+    id: "youtube-tracklist",
+    name: "YouTube 트랙리스트 생성기",
+    description: "유튜브 영상 설명란용 트랙리스트 타임스탬프 자동 생성",
+    category: "tools",
+    path: "/tools/youtube-tracklist",
+    icon: "ListMusic",
+  },
 
   // ─── Fortune ──────────────────────────────────────────────────────
   {

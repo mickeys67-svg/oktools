@@ -23,7 +23,7 @@ export async function GET() {
   <channel>
     <title>오케이툴즈 - 무료 온라인 도구 모음</title>
     <link>${SITE_URL}</link>
-    <description>대출 계산기부터 타로카드까지, 59가지 도구를 깔끔한 디자인으로 무료 제공합니다.</description>
+    <description>대출 계산기부터 타로카드까지, 60가지 도구를 깔끔한 디자인으로 무료 제공합니다.</description>
     <language>ko</language>
     <lastBuildDate>${pubDate}</lastBuildDate>
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>

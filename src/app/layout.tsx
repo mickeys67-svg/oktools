@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | 오케이툴즈",
   },
   description:
-    "대출이자, 연봉, BMI, DSR, 양도소득세, 증여세, 연말정산, 국민연금, 청약가점, 체지방률, 칼로리, 육아휴직, 로또번호 등 59가지 무료 도구를 제공합니다. 한국형 특화 계산기.",
+    "대출이자, 연봉, BMI, DSR, 양도소득세, 증여세, 연말정산, 국민연금, 청약가점, 체지방률, 칼로리, 육아휴직, 로또번호 등 60가지 무료 도구를 제공합니다. 한국형 특화 계산기.",
   keywords: [
     "계산기",
     "대출이자계산기",
@@ -47,14 +47,14 @@ export const metadata: Metadata = {
     siteName: "오케이툴즈",
     title: "오케이툴즈 - 계산기, 변환기, 유틸리티 모음",
     description:
-      "대출이자, 연봉, BMI, 단위변환, 전역일, 4대보험, 음주측정기 등 59가지 무료 도구",
+      "대출이자, 연봉, BMI, 단위변환, 전역일, 4대보험, 음주측정기 등 60가지 무료 도구",
     url: SITE_URL,
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "오케이툴즈 - 59가지 무료 온라인 도구",
+        alt: "오케이툴즈 - 60가지 무료 온라인 도구",
       },
     ],
   },
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "오케이툴즈 - 계산기, 변환기, 유틸리티 모음",
     description:
-      "대출이자, 연봉, BMI, 단위변환, 전역일, 4대보험, 음주측정기 등 59가지 무료 도구",
+      "대출이자, 연봉, BMI, 단위변환, 전역일, 4대보험, 음주측정기 등 60가지 무료 도구",
     images: ["/opengraph-image"],
   },
   robots: {
