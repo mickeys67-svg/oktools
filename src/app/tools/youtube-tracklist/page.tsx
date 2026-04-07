@@ -4,39 +4,52 @@ import YoutubeTracklist from "@/components/tools/YoutubeTracklist";
 import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 export const metadata: Metadata = {
-  title: "YouTube 트랙리스트 생성기 - 타임스탬프 자동 계산 | 유튜브 챕터 만들기",
+  title: "유튜브 타임스탬프 생성기 - 트랙리스트 자동 만들기 | YouTube 챕터 생성",
   description:
-    "음악 폴더를 선택하면 파일명과 재생시간을 자동으로 읽어 유튜브 설명란용 트랙리스트(챕터)를 생성합니다. 무음 구간 자동 감지, 파형 시각화, 드래그앤드롭 편집. 파일 업로드 없이 브라우저에서 바로 분석.",
+    "유튜브 타임스탬프를 자동으로 만들어주는 무료 온라인 도구. 음악 폴더 선택만으로 트랙리스트(챕터)를 즉시 생성하고, 한 파일에 여러 곡이 있으면 무음 구간을 자동 감지합니다. DJ 믹스, 컴필레이션 앨범, 라이브 공연 영상에 최적. 파일 업로드 없이 브라우저에서 바로 분석.",
   keywords: [
-    "유튜브 트랙리스트",
-    "YouTube tracklist",
-    "타임스탬프 생성기",
+    // 핵심 검색어 (높은 검색량)
+    "유튜브 타임스탬프",
     "유튜브 챕터",
     "유튜브 챕터 만들기",
-    "유튜브 설명란",
+    "유튜브 타임스탬프 만들기",
+    "유튜브 설명란 타임스탬프",
+    "타임스탬프 생성기",
+    "트랙리스트 생성기",
+    // 사용 시나리오 키워드
+    "유튜브 음악 타임스탬프",
+    "DJ 믹스 트랙리스트",
+    "유튜브 설명란 챕터",
+    "유튜브 재생목록 타임라인",
+    "유튜브 구간 나누기",
+    "음악 파일 구간 분리",
+    "무음 구간 감지",
+    // 롱테일 키워드
+    "유튜브 영상 챕터 넣는 법",
+    "유튜브 타임스탬프 자동",
     "트랙리스트 만들기",
-    "음악 타임라인",
+    "유튜브 설명란 작성",
+    // 영문 키워드
     "YouTube timestamp generator",
     "YouTube chapter maker",
-    "유튜브 타임스탬프",
-    "무음 구간 감지",
-    "유튜브 설명란 타임스탬프",
-    "음악 파일 분석",
+    "YouTube tracklist generator",
+    "YouTube description timestamp",
+    "auto chapter generator",
   ],
   openGraph: {
     url: "/tools/youtube-tracklist",
-    title: "YouTube 트랙리스트 생성기 - 타임스탬프 자동 계산 | 유튜브 챕터",
+    title: "유튜브 타임스탬프 생성기 - 트랙리스트 자동 만들기 | YouTube 챕터",
     description:
-      "음악 폴더 선택만으로 유튜브 챕터용 타임스탬프를 자동 생성합니다. 무음 구간 감지, 파형 시각화, 다양한 출력 형식 지원.",
+      "유튜브 타임스탬프를 자동으로 만들어주는 무료 도구. 음악 폴더 선택만으로 트랙리스트 챕터를 즉시 생성. 무음 구간 감지, 파형 시각화 지원.",
     type: "website",
     siteName: "오케이툴즈",
     locale: "ko_KR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "YouTube 트랙리스트 생성기 - 타임스탬프 자동 계산",
+    title: "유튜브 타임스탬프 생성기 - 트랙리스트 자동 만들기",
     description:
-      "음악 폴더 선택만으로 유튜브 챕터용 타임스탬프를 자동 생성합니다. 파일 업로드 없이 브라우저에서 바로 분석.",
+      "유튜브 타임스탬프를 자동으로 만들어주는 무료 도구. 음악 폴더 선택만으로 챕터를 즉시 생성합니다.",
   },
   alternates: {
     canonical: "/tools/youtube-tracklist",
@@ -63,11 +76,12 @@ export default function YoutubeTracklistPage() {
       </nav>
 
       <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">
-        YouTube 트랙리스트 생성기
+        유튜브 타임스탬프 · 트랙리스트 생성기
       </h1>
       <p className="mb-8 text-gray-500 dark:text-gray-400">
-        음악 폴더 또는 단일 파일을 선택하면 유튜브 설명란에 바로 붙여넣을 수 있는 트랙리스트를 자동으로 생성합니다.
-        파일은 업로드되지 않으며, 모든 분석은 브라우저에서 처리됩니다.
+        음악 폴더 또는 단일 파일을 선택하면 <strong className="text-gray-700 dark:text-gray-300">유튜브 챕터용 타임스탬프</strong>를
+        자동으로 생성합니다. DJ 믹스, 컴필레이션 앨범, 라이브 공연 영상의 설명란에 바로 붙여넣기하세요.
+        파일 업로드 없이 브라우저에서 안전하게 분석합니다.
       </p>
 
       <YoutubeTracklist />
@@ -78,7 +92,7 @@ export default function YoutubeTracklistPage() {
         {/* 사용 방법 */}
         <div>
           <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">
-            YouTube 트랙리스트 생성기 사용 방법
+            유튜브 타임스탬프 만들기 — 3가지 방법
           </h2>
           <p className="mb-3">
             이 도구는 세 가지 모드를 제공합니다. 각 모드는 서로 다른 상황에 최적화되어 있어
@@ -106,7 +120,7 @@ export default function YoutubeTracklistPage() {
         {/* 유튜브 챕터 가이드 */}
         <div>
           <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">
-            유튜브 챕터(타임스탬프) 설정 가이드
+            유튜브 영상 챕터 넣는 법 — 타임스탬프 설정 가이드
           </h2>
           <p className="mb-3">
             유튜브 영상 설명란에 타임스탬프 목록을 넣으면 시청자가 원하는 부분으로 바로 이동할 수 있는
@@ -173,7 +187,7 @@ export default function YoutubeTracklistPage() {
         {/* 활용 팁 */}
         <div>
           <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">
-            유튜브 트랙리스트 활용 팁
+            유튜브 음악 타임스탬프 활용 팁
           </h2>
           <div className="space-y-3">
             <div className="rounded-lg border-l-4 border-blue-400 bg-blue-50 p-3 dark:border-blue-600 dark:bg-blue-900/20">
@@ -336,9 +350,9 @@ export default function YoutubeTracklistPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "HowTo",
-            name: "유튜브 트랙리스트(챕터) 만드는 방법",
+            name: "유튜브 타임스탬프 만들기 — 챕터 트랙리스트 자동 생성",
             description:
-              "음악 파일로 유튜브 영상 설명란에 넣을 타임스탬프 트랙리스트를 자동으로 만드는 방법입니다.",
+              "음악 파일을 선택해 유튜브 영상 설명란에 넣을 타임스탬프와 트랙리스트를 자동으로 만드는 방법입니다.",
             totalTime: "PT2M",
             tool: [
               { "@type": "HowToTool", name: "웹 브라우저 (Chrome, Edge, Firefox 등)" },
@@ -387,10 +401,10 @@ export default function YoutubeTracklistPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            name: "YouTube 트랙리스트 생성기",
-            alternateName: "유튜브 챕터 만들기",
+            name: "유튜브 타임스탬프 생성기",
+            alternateName: ["유튜브 챕터 만들기", "YouTube 트랙리스트 생성기", "유튜브 구간 나누기"],
             description:
-              "음악 폴더를 선택하면 유튜브 설명란용 트랙리스트 타임스탬프를 자동 생성합니다. 무음 구간 감지, 파형 시각화, 드래그앤드롭 편집 지원.",
+              "유튜브 타임스탬프를 자동으로 만들어주는 무료 온라인 도구. 음악 폴더 선택만으로 챕터용 트랙리스트를 즉시 생성. 무음 구간 감지, 파형 시각화, 드래그앤드롭 편집 지원.",
             url: "https://www.oktools.co.kr/tools/youtube-tracklist",
             applicationCategory: "MultimediaApplication",
             operatingSystem: "Any",
