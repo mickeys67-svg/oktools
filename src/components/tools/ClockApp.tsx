@@ -90,8 +90,8 @@ export default function ClockApp() {
       ref={containerRef}
       onMouseMove={resetHideTimer}
       onTouchStart={resetHideTimer}
-      className={`relative flex min-h-[80vh] flex-col items-center justify-center ${
-        isFullscreen ? "min-h-screen" : ""
+      className={`relative flex flex-col items-center ${
+        isFullscreen ? "min-h-screen justify-center" : "py-8 sm:py-10"
       } ${getThemeBg(theme)}`}
     >
       {/* Back link (non-fullscreen only) */}
@@ -166,7 +166,9 @@ export default function ClockApp() {
 
       {/* Controls */}
       <div
-        className={`absolute bottom-6 left-0 right-0 flex flex-col items-center gap-3 transition-opacity duration-300 ${
+        className={`flex flex-col items-center gap-3 transition-opacity duration-300 ${
+          isFullscreen ? "absolute bottom-6 left-0 right-0" : "mt-8"
+        } ${
           showControls ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
