@@ -1,5 +1,8 @@
 # 페이지 색인 진단 및 가속 가이드 (oktools.co.kr)
 
+> **마지막 업데이트:** 2026-04-16
+> **세션 상태:** Stage 1·2 코드 작업 완료 + 운영 배포 완료 + Bing 인증 완료
+
 ## 배경
 
 대규모 분석 결과, 사이트의 기술적 SEO(canonical, sitemap, robots, JSON-LD, SSR)는
@@ -10,6 +13,35 @@
 3. **GSC에서 색인 요청이 직접 트리거되지 않음** — sitemap만 등록된 상태
 
 Stage 1·2에서 #1과 #3을 부분 해결했고, 이 문서는 **남은 수동 작업**을 안내합니다.
+
+---
+
+## 📋 이번 세션 작업 종합 (2026-04-16)
+
+### 커밋 히스토리
+
+| 커밋 | 내용 |
+| --- | --- |
+| `a42fa8c` | Stage 1·2·3 SEO 색인 가속 (thin 페이지 보강 + IndexNow + 가이드) |
+| `5fa0b95` | Cloud Build 타입 에러 fix (`MetadataRoute.Sitemap` url 변환) |
+| `424a58c` | clock UI 빈 공간 제거 (`min-h-[80vh]` → 자연 높이) |
+| `e08ac8c` | Bing Webmaster Tools 사이트 소유권 인증 파일 추가 |
+
+### 검색엔진 등록 상태
+
+| 검색엔진 | 인증 | sitemap 제출 | 색인 요청 |
+| --- | --- | --- | --- |
+| **Google** | ✅ DNS 도메인 인증 (자동) | ⏳ GSC에서 사용자 직접 | ⏳ 5개 페이지 사용자 완료 |
+| **네이버** | ✅ HTML 파일 인증 | ⏳ 서치어드바이저 사용자 직접 | ⏳ 변경 4개 페이지 추가 권장 |
+| **Bing** | ✅ `BingSiteAuth.xml` 인증 완료 | ⏳ Bing Webmaster 사용자 직접 | ⏳ Submit URLs 메뉴에서 |
+| **Yandex/Seznam/Yep** | (IndexNow 자동) | (IndexNow 자동) | ✅ IndexNow 핑 완료 |
+
+### 다국어 지원 의사결정
+
+**현재:** 한국어(ko-KR) 단일 언어. `next-intl`/`next-i18next` 미사용.
+**결정:** 다국어 지원 보류. 60개 도구 중 80%가 한국 특화(연봉실수령액, 4대보험,
+청약가점, 자동차세, 토정비결 등)라 다국어화 ROI가 매우 낮음. 한국어 색인이
+안정화된 후(6개월 이후) 보편 도구 15개만 별도 영문 사이트(`.com`)로 분리 검토.
 
 ---
 
@@ -83,13 +115,47 @@ https://www.oktools.co.kr/tools/youtube-tracklist
 
 ---
 
-### 3) Bing 웹마스터 도구 등록
+### 3) Bing 웹마스터 도구 — 인증 완료, 색인 요청 단계
 
-1. [Bing Webmaster Tools](https://www.bing.com/webmasters) 접속
-2. 「Import from Google Search Console」로 GSC 인증을 그대로 가져오기
-3. 사이트맵 `sitemap.xml` 자동 등록 확인
-4. 「URL Inspection」으로 주요 페이지 색인 요청
-5. Bing이 IndexNow를 만들었으므로 Stage 2 핑이 가장 빠르게 반영됨
+**✅ 사이트 소유권 인증 완료** (`BingSiteAuth.xml` 배포됨, 2026-04-16)
+
+#### 3-A. Submit URLs (가장 효과적, 일일 10,000개 한도)
+
+1. [Bing Webmaster Tools](https://www.bing.com/webmasters) → 좌측 메뉴 **「Submit URLs」**
+2. 다음 URL 일괄 붙여넣기 → **Submit**:
+   ```
+   https://www.oktools.co.kr/
+   https://www.oktools.co.kr/tools/clock
+   https://www.oktools.co.kr/tools/lotto
+   https://www.oktools.co.kr/tools/random-number
+   https://www.oktools.co.kr/life/percentage
+   https://www.oktools.co.kr/finance/loan-calculator
+   https://www.oktools.co.kr/health/bmi
+   https://www.oktools.co.kr/fortune/tarot
+   https://www.oktools.co.kr/tools/youtube-tracklist
+   https://www.oktools.co.kr/finance/salary
+   ```
+
+#### 3-B. Sitemap 명시 제출
+
+좌측 메뉴 **「Sitemaps」** → **「Submit sitemap」**:
+```
+https://www.oktools.co.kr/sitemap.xml
+```
+
+#### 3-C. URL Inspection으로 개별 색인 요청
+
+좌측 메뉴 **「URL Inspection」** → URL 입력 → 「Request indexing」 버튼
+
+**주의:** 인증 직후엔 모든 URL이 「Not discovered」로 표시됨. 정상 상태이며
+Submit URLs 또는 Request indexing으로 큐에 등록하면 24~72시간 내 「Crawled → Indexed」로 진행.
+
+#### 3-D. Bing 색인 단계 이해
+
+```
+Discover (URL 발견)  →  Crawl (페이지 방문)  →  Index (검색 노출)
+```
+Discover만 트리거하면 나머지는 Bing이 자동 진행.
 
 ---
 
