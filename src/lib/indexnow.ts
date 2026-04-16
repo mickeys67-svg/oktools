@@ -71,6 +71,6 @@ export async function pingAllSitemapUrls(): Promise<IndexNowResult> {
   // sitemap.ts를 동적으로 import하여 URL 목록 추출
   const sitemapModule = await import("@/app/sitemap");
   const entries = sitemapModule.default();
-  const urls = entries.map((e) => (typeof e.url === "string" ? e.url : e.url.toString()));
+  const urls = entries.map((e) => String(e.url));
   return pingIndexNow(urls);
 }
