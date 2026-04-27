@@ -19,6 +19,7 @@
  */
 
 import { NextRequest, NextResponse } from "next/server";
+import { timingSafeEqual } from "node:crypto";
 import { pingIndexNow, pingAllSitemapUrls } from "@/lib/indexnow";
 
 export const runtime = "nodejs";
@@ -34,7 +35,13 @@ function unauthorized() {
 function checkToken(received: string | null): boolean {
   const expected = process.env.INDEXNOW_TOKEN;
   if (!expected || expected.length < 8) return false;
-  return received === expected;
+  if (typeof received !== "string") return false;
+  // Constant-time comparison to prevent timing attacks.
+  // timingSafeEqual requires equal-length buffers, so reject length mismatch up front.
+  const a = Buffer.from(received, "utf8");
+  const b = Buffer.from(expected, "utf8");
+  if (a.length !== b.length) return false;
+  return timingSafeEqual(a, b);
 }
 
 export async function GET(req: NextRequest) {

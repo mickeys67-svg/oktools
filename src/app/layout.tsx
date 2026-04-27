@@ -103,10 +103,11 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {/* Preconnect to font CDN for performance */}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
-        {/* Pretendard Variable Font */}
+        {/* Pretendard Variable Font — pinned to v1.3.9 with SRI to prevent CDN tampering */}
         <link
           rel="stylesheet"
           crossOrigin="anonymous"
+          integrity="sha384-GIdEBaqGN9mNkDkMkzMHW8EKUqtpPIe/sLj1X7DIrnc9uPtLROJgmuDlh+3rBw0j"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
         />
         {/* Dark mode: prevent flash */}
