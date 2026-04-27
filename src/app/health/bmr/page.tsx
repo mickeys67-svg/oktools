@@ -116,7 +116,7 @@ export default function BMRPage() {
           "@context": "https://schema.org",
           "@type": "WebApplication",
           "name": "기초대사량 계산기",
-          "description": "하루 기초대사량(BMR) 및 권장 칼로리 ���산",
+          "description": "하루 기초대사량(BMR) 및 권장 칼로리 계산",
           "url": "https://www.oktools.co.kr/health/bmr",
           "applicationCategory": "UtilityApplication",
           "operatingSystem": "Any",
@@ -132,7 +132,7 @@ export default function BMRPage() {
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.oktools.co.kr" },
             { "@type": "ListItem", "position": 2, "name": "건강 계산기", "item": "https://www.oktools.co.kr/health" },
-            { "@type": "ListItem", "position": 3, "name": "��초대사량 계산기" }
+            { "@type": "ListItem", "position": 3, "name": "기초대사량 계산기" }
           ]
         }) }}
       />

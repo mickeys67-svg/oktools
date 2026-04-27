@@ -43,6 +43,19 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  trailingSlash: false,
+
+  async redirects() {
+    return [
+      // non-www → www 301 (canonical host enforcement)
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "oktools.co.kr" }],
+        destination: "https://www.oktools.co.kr/:path*",
+        permanent: true,
+      },
+    ];
+  },
 
   async rewrites() {
     return [

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     url: "/life/traffic-fine",
     title: "과태료 계산기 - 속도위반 주정차위반 벌점 조회",
     description:
-      "무료 과태료 계산기로 속도위반·주정��위반 ��태료와 벌점을 조회하세요. 일반도로, 고속도로, 어린이보호구�� 기준 벌금과 면허정지 기준을 즉시 확인.",
+      "무료 과태료 계산기로 속도위반·주정차위반 과태료와 벌점을 조회하세요. 일반도로, 고속도로, 어린이보호구역 기준 벌금과 면허정지 기준을 즉시 확인.",
   },
   alternates: {
     canonical: "/life/traffic-fine",

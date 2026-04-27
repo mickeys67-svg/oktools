@@ -32,33 +32,45 @@ export default function DDayPage() {
       <DDayCalc />
       <ResultAd />
 
-      {/* Info Section */}
-      <section className="mt-10 space-y-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        <div>
-          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
-            D-Day 계산기 사용 가이드
-          </h2>
-          <p>
-            D-Day 계산기는 특정 날짜를 입력하면 오늘부터 남은 일수 또는 지난 일수를 자동으로 계산해주는 도구입니다.
-            시험일, 결혼 기념일, 여행 출발일, 프로젝트 마감일 등 중요한 날짜까지 남은 시간을 한눈에 파악할 수 있습니다.
-          </p>
-        </div>
-        <div>
-          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">활용 사례</h3>
-          <p>
-            수능 D-Day 카운트다운, 커플 100일·200일·365일 기념일 계산, 출산 예정일까지 남은 날,
-            자격증 시험까지 남은 공부 일수, 군대 전역일 카운트다운 등 다양한 상황에서 사용할 수 있습니다.
-            과거 날짜를 입력하면 사귄 지 며칠째인지, 입사한 지 몇 일인지도 확인할 수 있습니다.
-          </p>
-        </div>
-        <div>
-          <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">D-Day 계산 방식</h3>
-          <p>
-            D-Day는 목표 날짜에서 오늘 날짜를 빼는 단순 계산입니다. 결과가 양수이면 아직 남은 미래 날짜,
-            음수이면 이미 지난 과거 날짜입니다. 한국에서는 당일을 D-Day(D+0)로 표시하는 것이 일반적이며,
-            일부에서는 D-1(전날)부터 카운트하기도 합니다.
-          </p>
-        </div>
+      {/* Info Section — 기념일/커플/출산 중심 */}
+      <section className="mt-10 rounded-2xl border border-gray-100 bg-white p-5 text-sm leading-7 text-gray-700 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300">
+        <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">
+          커플 기념일·출산 D-Day 계산 가이드
+        </h2>
+        <p className="mb-3">
+          이 페이지는 커플 기념일과 출산 예정일을 중심으로 한 디데이 계산에 최적화되어 있습니다.
+          시험·프로젝트 일정 관리는 <Link className="text-primary-600 underline" href="/life/dday">생활 D-Day 카운터</Link>를,
+          임신 주수 단위 계산은 <Link className="text-primary-600 underline" href="/health/pregnancy-week">임신 주수 계산기</Link>를 이용하세요.
+        </p>
+
+        <h3 className="mt-5 mb-2 text-base font-bold text-gray-900 dark:text-gray-100">커플 100일·1주년 계산법</h3>
+        <p className="mb-3">
+          한국 커플 문화에서 사귄 날을 1일차로 세어 100일을 기념하는 관습이 있습니다.
+          1월 1일에 사귀기 시작했다면 100일은 <strong>4월 10일</strong>(사귄 날 +99일), 200일은 7월 19일, 1주년(365일)은 12월 31일입니다.
+          만약 사귄 다음 날을 1일로 세는 커플이라면 위 날짜에서 하루씩 더해주세요.
+          본 계산기는 사귄 날을 1일차로 계산하는 표준 방식을 사용합니다.
+        </p>
+
+        <h3 className="mt-5 mb-2 text-base font-bold text-gray-900 dark:text-gray-100">출산 예정일·아기 D-Day</h3>
+        <p className="mb-3">
+          출산 예정일(EDD)은 마지막 생리 첫날(LMP)로부터 280일(40주)이며,
+          예정일을 입력하면 임산부가 매일 D-N으로 카운트다운하기 좋습니다.
+          출산 후에는 같은 화면에서 D+로 전환되어 「우리 아기 태어난 지 며칠째」를 확인할 수 있어
+          백일잔치(D+99일), 돌(D+365일) 일정 계산에도 활용할 수 있습니다.
+        </p>
+
+        <h3 className="mt-5 mb-2 text-base font-bold text-gray-900 dark:text-gray-100">결혼·약혼·연애 기념일</h3>
+        <p className="mb-3">
+          결혼기념일·약혼식·프러포즈 받은 날·첫 만남 등 두 사람만의 특별한 날짜를 입력해
+          매년 다가오는 기념일까지의 남은 일수를 미리 확인할 수 있습니다.
+          소소한 깜짝 이벤트, 기념일 선물 준비, 여행 예약 시점 결정에 도움이 됩니다.
+        </p>
+
+        <h3 className="mt-5 mb-2 text-base font-bold text-gray-900 dark:text-gray-100">D-Day 표기 규칙</h3>
+        <p>
+          D-30 = 목표일 30일 전, D-Day(D-0) = 당일, D+30 = 목표일로부터 30일 경과.
+          한국에서는 당일을 D-Day(D-0)로 쓰는 것이 표준이며, 일부 일정 관리 앱은 D-1부터 카운트하므로 표기 차이를 확인하세요.
+        </p>
       </section>
 
       {/* 관련 도구 */}

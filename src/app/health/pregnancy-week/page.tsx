@@ -148,7 +148,7 @@ export default function PregnancyWeekPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          "name": "임신 주수 계산기",
+          "name": "태아 성장 계산기",
           "url": "https://www.oktools.co.kr/health/pregnancy-week",
           "applicationCategory": "HealthApplication",
           "operatingSystem": "All",
@@ -157,7 +157,7 @@ export default function PregnancyWeekPage() {
             "price": "0",
             "priceCurrency": "KRW"
           },
-          "description": "무료 임신 주수 계산기로 현재 임신 주수와 출산 예정일을 확인하세요. 마지막 생리일 입력만으로 임신 진행률, 삼분기, 태아 크기 정보를 즉시 확인할 수 있습니다."
+          "description": "주수별 태아의 키·체중·발달 상태를 시각적으로 확인하는 태아 성장 추적기. 마지막 생리일을 입력하면 5주차부터 40주차까지 매주 변화하는 태아 크기와 산모 변화를 한눈에 보여줍니다."
         }) }}
       />
     </div>
