@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const BASE_URL = "https://www.oktools.co.kr";
-const LAST_MODIFIED = "2026-04-04";
+const LAST_MODIFIED = "2026-04-28";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -17,7 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/tools`, priority: 0.7 },
     { url: `${BASE_URL}/fortune`, priority: 0.7 },
     { url: `${BASE_URL}/space`, priority: 0.6 },
-    { url: `${BASE_URL}/convert`, priority: 0.8 },
     { url: `${BASE_URL}/life`, priority: 0.7 },
   ].map((p) => ({ ...p, lastModified: LAST_MODIFIED, changeFrequency: "weekly" as const }));
 
@@ -87,6 +86,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/life/dday`, priority: 0.8 },
     { url: `${BASE_URL}/life/parental-leave`, priority: 0.8 },
     { url: `${BASE_URL}/life/workdays`, priority: 0.8 },
+    // Convert (single-page tool)
+    { url: `${BASE_URL}/convert`, priority: 0.8 },
   ].map((p) => ({ ...p, lastModified: LAST_MODIFIED, changeFrequency: "weekly" as const }));
 
   return [...staticPages, ...categoryPages, ...toolPages];

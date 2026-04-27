@@ -114,7 +114,7 @@ export default function PregnancyPage() {
           "@context": "https://schema.org",
           "@type": "WebApplication",
           "name": "임신 주수 계산기",
-          "description": "마지막 생리일 기�� 임신 주수 및 출산 예정일 계산",
+          "description": "마지막 생리일 기준 임신 주수 및 출산 예정일 계산",
           "url": "https://www.oktools.co.kr/health/pregnancy",
           "applicationCategory": "UtilityApplication",
           "operatingSystem": "Any",
