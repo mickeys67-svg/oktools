@@ -34,7 +34,7 @@ const securityHeaders = [
       "frame-src 'self' https://pagead2.googlesyndication.com https://tpc.googlesyndication.com https://www.google.com https://fundingchoicesmessages.google.com",
       "object-src 'none'",
       "base-uri 'self'",
-      "form-action 'self'",
+      "form-action 'self' https://accounts.google.com",
       "frame-ancestors 'none'",
       "upgrade-insecure-requests",
     ].join("; "),

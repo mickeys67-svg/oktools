@@ -53,6 +53,12 @@ export default function Header() {
               onClose={closeDropdown}
             />
           ))}
+          <Link
+            href="/board"
+            className="rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+          >
+            게시판
+          </Link>
         </div>
 
         {/* Right: Theme Toggle + Mobile Menu */}
@@ -80,6 +86,13 @@ export default function Header() {
           {categories.map((cat) => (
             <MobileCategory key={cat.id} category={cat} onNavigate={() => setMobileOpen(false)} />
           ))}
+          <Link
+            href="/board"
+            onClick={() => setMobileOpen(false)}
+            className="block border-t border-gray-100 py-3 text-sm font-semibold text-gray-900 dark:border-gray-800 dark:text-gray-100"
+          >
+            게시판
+          </Link>
         </div>
       )}
     </header>
