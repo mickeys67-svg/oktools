@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { getAllPosts, createPost } from "@/lib/board-db";
+import { checkContent } from "@/lib/word-filter";
 
 export async function GET() {
   const posts = getAllPosts(false);
@@ -18,6 +19,19 @@ export async function POST(req: NextRequest) {
 
   if (!title?.trim() || !content?.trim()) {
     return NextResponse.json({ error: "제목과 내용을 입력해주세요." }, { status: 400 });
+  }
+
+  const combined = `${title} ${content}`;
+  const flagged = checkContent(combined);
+
+  if (flagged.length > 0) {
+    return NextResponse.json(
+      {
+        error: "금지된 단어가 포함되어 있습니다.",
+        flaggedWords: flagged,
+      },
+      { status: 422 },
+    );
   }
 
   const post = createPost({

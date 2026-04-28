@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { addComment } from "@/lib/board-db";
+import { checkContent } from "@/lib/word-filter";
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const session = await auth();
@@ -16,8 +17,21 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     return NextResponse.json({ error: "댓글 내용을 입력해주세요." }, { status: 400 });
   }
 
+  const flagged = checkContent(content);
+
+  if (flagged.length > 0) {
+    return NextResponse.json(
+      {
+        error: "금지된 단어가 포함되어 있습니다.",
+        flaggedWords: flagged,
+      },
+      { status: 422 },
+    );
+  }
+
   const comment = addComment(id, {
     author: session.user.name ?? "익명",
+    authorEmail: session.user.email,
     content: content.trim(),
   });
 

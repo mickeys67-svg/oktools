@@ -6,7 +6,7 @@ import { getPendingPosts } from "@/lib/board-db";
 import AdminPanel from "@/components/board/AdminPanel";
 
 export const metadata: Metadata = {
-  title: "게시판 관리",
+  title: "게시판 관리 — 관리자 대시보드",
   robots: { index: false, follow: false },
 };
 
@@ -37,7 +37,7 @@ export default async function AdminPage() {
   const pendingPosts = getPendingPosts();
 
   return (
-    <div className="mx-auto max-w-[720px] px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-[900px] px-4 py-8 sm:px-6 sm:py-12">
       <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400">
         <Link href="/" className="hover:text-primary-600">홈</Link>
         <span className="mx-2">/</span>
@@ -48,10 +48,10 @@ export default async function AdminPage() {
 
       <div className="mb-8">
         <h1 className="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-gray-50">
-          게시판 관리
+          관리자 대시보드
         </h1>
         <p className="text-gray-500 dark:text-gray-400">
-          승인 대기 중인 게시글을 검토하고 승인하거나 삭제하세요.
+          게시글 승인, 삭제, 댓글 관리, 금지어 설정을 할 수 있습니다.
         </p>
       </div>
 

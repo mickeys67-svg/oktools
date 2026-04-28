@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/board-db";
+import { auth } from "@/lib/auth";
 import PostForm from "@/components/board/PostForm";
 import AuthButton from "@/components/board/AuthButton";
 
@@ -12,8 +13,10 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-export default function BoardPage() {
+export default async function BoardPage() {
   const posts = getAllPosts(false);
+  const session = await auth();
+  const isAdmin = !!(session as unknown as Record<string, unknown>)?.isAdmin;
 
   return (
     <div className="mx-auto max-w-[720px] px-4 py-8 sm:px-6 sm:py-12">
@@ -32,11 +35,33 @@ export default function BoardPage() {
             자유롭게 글을 작성하고 의견을 나눠보세요.
           </p>
         </div>
-        <AuthButton />
+        <div className="flex items-center gap-2">
+          {isAdmin && (
+            <Link
+              href="/board/admin"
+              className="rounded-lg border border-amber-300 px-3 py-1.5 text-sm font-medium text-amber-700 transition-colors hover:bg-amber-50 dark:border-amber-700 dark:text-amber-400 dark:hover:bg-amber-950"
+            >
+              관리
+            </Link>
+          )}
+          <AuthButton />
+        </div>
       </div>
 
       {/* Post submission form */}
       <PostForm />
+
+      {/* Write page link */}
+      {session?.user && (
+        <div className="mt-3 text-right">
+          <Link
+            href="/board/write"
+            className="text-sm text-primary-600 hover:underline dark:text-primary-400"
+          >
+            전체 화면으로 글쓰기 &rarr;
+          </Link>
+        </div>
+      )}
 
       {/* Post list */}
       <section className="mt-8">

@@ -15,11 +15,18 @@ export default function CommentSection({ postId, comments }: Props) {
   const router = useRouter();
   const [content, setContent] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [deleting, setDeleting] = useState<Record<string, boolean>>({});
+  const [message, setMessage] = useState("");
+  const [flaggedWords, setFlaggedWords] = useState<string[]>([]);
+
+  const isAdmin = !!(session as unknown as Record<string, unknown>)?.isAdmin;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!content.trim()) return;
     setSubmitting(true);
+    setMessage("");
+    setFlaggedWords([]);
 
     try {
       const res = await fetch(`/api/board/posts/${postId}/comments`, {
@@ -28,14 +35,36 @@ export default function CommentSection({ postId, comments }: Props) {
         body: JSON.stringify({ content }),
       });
 
+      const data = await res.json();
+
       if (res.ok) {
         setContent("");
         router.refresh();
+      } else if (res.status === 422 && data.flaggedWords) {
+        setFlaggedWords(data.flaggedWords);
+        setMessage(data.error);
+      } else {
+        setMessage(data.error ?? "오류가 발생했습니다.");
       }
     } catch {
-      // silently fail
+      setMessage("네트워크 오류가 발생했습니다.");
     } finally {
       setSubmitting(false);
+    }
+  }
+
+  async function handleDelete(commentId: string) {
+    if (!confirm("이 댓글을 삭제하시겠습니까?")) return;
+    setDeleting((prev) => ({ ...prev, [commentId]: true }));
+    try {
+      const res = await fetch(`/api/board/posts/${postId}/comments/${commentId}`, {
+        method: "DELETE",
+      });
+      if (res.ok) {
+        router.refresh();
+      }
+    } finally {
+      setDeleting((prev) => ({ ...prev, [commentId]: false }));
     }
   }
 
@@ -53,19 +82,30 @@ export default function CommentSection({ postId, comments }: Props) {
               key={comment.id}
               className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900"
             >
-              <div className="mb-2 flex items-center gap-2 text-sm">
-                <span className="font-medium text-gray-700 dark:text-gray-300">
-                  {comment.author}
-                </span>
-                <span className="text-xs text-gray-400 dark:text-gray-500">
-                  {new Date(comment.createdAt).toLocaleDateString("ko-KR", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })}
-                </span>
+              <div className="mb-2 flex items-center justify-between">
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="font-medium text-gray-700 dark:text-gray-300">
+                    {comment.author}
+                  </span>
+                  <span className="text-xs text-gray-400 dark:text-gray-500">
+                    {new Date(comment.createdAt).toLocaleDateString("ko-KR", {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}
+                  </span>
+                </div>
+                {isAdmin && (
+                  <button
+                    onClick={() => handleDelete(comment.id)}
+                    disabled={deleting[comment.id]}
+                    className="rounded px-2 py-1 text-xs text-red-500 transition-colors hover:bg-red-50 disabled:opacity-50 dark:text-red-400 dark:hover:bg-red-950"
+                  >
+                    {deleting[comment.id] ? "..." : "삭제"}
+                  </button>
+                )}
               </div>
               <p className="whitespace-pre-wrap text-sm text-gray-600 dark:text-gray-400">
                 {comment.content}
@@ -77,6 +117,22 @@ export default function CommentSection({ postId, comments }: Props) {
         <p className="mb-6 text-sm text-gray-400 dark:text-gray-500">
           아직 댓글이 없습니다.
         </p>
+      )}
+
+      {/* Word filter warning */}
+      {message && (
+        <div
+          className={`mb-4 rounded-lg px-4 py-3 text-sm ${
+            flaggedWords.length > 0
+              ? "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300"
+              : "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300"
+          }`}
+        >
+          <p>{message}</p>
+          {flaggedWords.length > 0 && (
+            <p className="mt-1 font-medium">감지된 단어: {flaggedWords.join(", ")}</p>
+          )}
+        </div>
       )}
 
       {/* Comment form */}

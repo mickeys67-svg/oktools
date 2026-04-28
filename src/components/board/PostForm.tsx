@@ -12,6 +12,7 @@ export default function PostForm() {
   const [content, setContent] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState("");
+  const [flaggedWords, setFlaggedWords] = useState<string[]>([]);
 
   if (!session?.user) return null;
 
@@ -20,6 +21,7 @@ export default function PostForm() {
     if (!title.trim() || !content.trim()) return;
     setSubmitting(true);
     setMessage("");
+    setFlaggedWords([]);
 
     try {
       const res = await fetch("/api/board/posts", {
@@ -28,14 +30,18 @@ export default function PostForm() {
         body: JSON.stringify({ title, content }),
       });
 
+      const data = await res.json();
+
       if (res.ok) {
         setTitle("");
         setContent("");
         setOpen(false);
         setMessage("게시글이 등록되었습니다. 관리자 승인 후 공개됩니다.");
         router.refresh();
+      } else if (res.status === 422 && data.flaggedWords) {
+        setFlaggedWords(data.flaggedWords);
+        setMessage(data.error);
       } else {
-        const data = await res.json();
         setMessage(data.error ?? "오류가 발생했습니다.");
       }
     } catch {
@@ -48,8 +54,19 @@ export default function PostForm() {
   return (
     <div>
       {message && (
-        <div className="mb-4 rounded-lg bg-blue-50 px-4 py-3 text-sm text-blue-700 dark:bg-blue-950 dark:text-blue-300">
-          {message}
+        <div
+          className={`mb-4 rounded-lg px-4 py-3 text-sm ${
+            flaggedWords.length > 0
+              ? "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300"
+              : "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300"
+          }`}
+        >
+          <p>{message}</p>
+          {flaggedWords.length > 0 && (
+            <p className="mt-1 font-medium">
+              감지된 단어: {flaggedWords.join(", ")}
+            </p>
+          )}
         </div>
       )}
 
