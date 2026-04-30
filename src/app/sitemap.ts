@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const BASE_URL = "https://www.oktools.co.kr";
-const LAST_MODIFIED = "2026-04-28";
+const LAST_MODIFIED = "2026-05-01";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -70,6 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/fortune/blood-type`, priority: 0.8 },
     { url: `${BASE_URL}/fortune/name-match`, priority: 0.8 },
     { url: `${BASE_URL}/fortune/zodiac-animal`, priority: 0.8 },
+    { url: `${BASE_URL}/fortune/ladder-game`, priority: 0.9 },
     // Space
     { url: `${BASE_URL}/space/planet-weight`, priority: 0.8 },
     { url: `${BASE_URL}/space/planet-age`, priority: 0.8 },

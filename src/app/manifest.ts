@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "오케이툴즈 - 계산기, 변환기, 유틸리티 모음",
     short_name: "오케이툴즈",
-    description: "60가지 무료 온라인 도구",
+    description: "61가지 무료 온라인 도구",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

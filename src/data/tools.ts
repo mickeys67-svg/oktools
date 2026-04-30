@@ -428,6 +428,15 @@ export const tools: Tool[] = [
     path: "/fortune/zodiac-animal",
     icon: "Rabbit",
   },
+  {
+    id: "ladder-game",
+    name: "3D 사다리게임",
+    description: "동물 캐릭터로 즐기는 화려한 3D 사다리타기 — 도망 이벤트 등 재미 요소",
+    category: "fortune",
+    path: "/fortune/ladder-game",
+    icon: "Dices",
+    popular: true,
+  },
 
   // ─── Space ────────────────────────────────────────────────────────
   {
