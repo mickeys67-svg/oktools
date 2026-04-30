@@ -3,68 +3,125 @@ import Link from "next/link";
 import LadderGame from "@/components/tools/LadderGame";
 import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
-const URL = "https://www.oktools.co.kr/fortune/ladder-game";
+const SITE = "https://www.oktools.co.kr";
+const PAGE_URL = `${SITE}/fortune/ladder-game`;
+const DATE_PUBLISHED = "2026-05-01";
+const DATE_MODIFIED = "2026-05-01";
 
 export const metadata: Metadata = {
   title: "3D 사다리게임 — 동물 캐릭터로 즐기는 화려한 사다리타기",
   description:
-    "원숭이·다람쥐·토끼·여우·호랑이·판다 6종 동물이 화려한 3D 사다리를 내려가는 무료 사다리타기 게임. 참여자 자유 추가, 가다가 도망가는 깜짝 이벤트까지 — 회식 메뉴, 청소 당번, 한턱 정하기에 딱.",
+    "원숭이·다람쥐·토끼·여우·호랑이·판다 6종 동물이 화려한 3D 사다리를 내려가는 무료 온라인 사다리타기 게임. 참가자 2~20명, 이름·상품 일괄 입력, 가다가 도망가는 깜짝 이벤트, 속도 슬라이더까지 — 회식 메뉴·청소 당번·한턱쏘기·이벤트 추첨에 가장 재미있는 무료 사다리 추첨기.",
   keywords: [
-    // 핵심 검색어
+    // 핵심 검색어 (가장 중요)
     "사다리타기",
     "사다리게임",
+    "3D 사다리게임",
     "사다리 추첨",
+    "사다리 추첨기",
     "온라인 사다리타기",
     "무료 사다리타기",
     "사다리타기 사이트",
     "사다리 만들기",
+    "사다리 게임 만들기",
     "랜덤 뽑기",
-    // 시나리오
+    "랜덤 추첨기",
+    // 시나리오 (구매 의도 검색어)
     "회식 메뉴 정하기",
+    "회식 사다리타기",
     "점심메뉴 추첨",
+    "점심 메뉴 사다리",
     "청소 당번 정하기",
     "한턱 정하기",
+    "한턱쏘기 사다리",
     "음료 내기",
+    "팀 빌딩 게임",
     "팀원 역할 분배",
     "당첨자 뽑기",
-    // 동물·재미
+    "추첨 사이트",
+    "이벤트 추첨",
+    "내기 사다리",
+    // 동물·재미 (브랜드 차별화)
     "동물 사다리타기",
+    "동물 캐릭터 사다리",
     "원숭이 사다리",
-    "3D 사다리게임",
+    "다람쥐 사다리",
     "화려한 사다리타기",
     "도망 사다리",
-    // 롱테일
+    "도망 이벤트 사다리",
+    // 기능 키워드
+    "20명 사다리타기",
+    "이름 일괄 입력 사다리",
+    "속도 조절 사다리",
+    // 롱테일·문장형
     "사다리 게임 만드는 사이트",
     "친구랑 사다리타기",
     "사무실 사다리타기",
-    // 영문
+    "회의 시작 게임",
+    "코로나 19 비대면 사다리",
+    "비대면 사다리 게임",
+    "단톡방 사다리",
+    // 글로벌 영문 (international SEO)
     "online ladder game",
+    "free ladder game",
     "Korean ladder game",
     "ghost leg game",
+    "ghost leg generator",
     "amidakuji online",
+    "amidakuji generator",
+    "random picker",
+    "random name picker",
+    "lucky draw online",
+    "decision maker tool",
+    "party game online",
+    "free random decision",
   ],
+  authors: [{ name: "오케이툴즈", url: SITE }],
+  creator: "오케이툴즈",
+  publisher: "오케이툴즈",
+  category: "Game",
   openGraph: {
-    url: "/fortune/ladder-game",
+    url: PAGE_URL,
     title: "3D 사다리게임 — 동물 캐릭터로 즐기는 화려한 사다리타기",
     description:
-      "6종 동물이 화려한 3D 사다리를 내려갑니다. 가다가 옆으로 도망가는 깜짝 이벤트까지 — 회식·청소·한턱 정하기에 딱.",
+      "6종 동물이 화려한 3D 사다리를 내려갑니다. 참가자 2~20명, 일괄 입력, 도망 이벤트, 속도 슬라이더까지 — 회식·청소·한턱 정하기·이벤트 추첨에 무료로 사용하세요.",
     type: "website",
     siteName: "오케이툴즈",
     locale: "ko_KR",
+    alternateLocale: ["en_US", "ja_JP"],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@oktools",
+    creator: "@oktools",
     title: "3D 사다리게임 — 동물 캐릭터로 즐기는 화려한 사다리타기",
     description:
-      "원숭이·다람쥐 등 6종 동물이 3D 사다리를 내려가는 무료 게임. 도망 이벤트·결과 공유 등 재미 요소 가득.",
+      "원숭이·다람쥐 등 6종 동물이 3D 사다리를 내려가는 무료 게임. 도망 이벤트·일괄 입력·속도 조절 등 재미 요소 가득.",
   },
-  alternates: { canonical: "/fortune/ladder-game" },
+  alternates: {
+    canonical: PAGE_URL,
+    languages: {
+      "ko-KR": PAGE_URL,
+      "x-default": PAGE_URL,
+    },
+  },
   robots: {
     index: true,
     follow: true,
     "max-snippet": -1,
     "max-image-preview": "large",
     "max-video-preview": -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  other: {
+    "format-detection": "telephone=no",
+    "og:locale:alternate": ["en_US", "ja_JP"],
   },
 };
 
@@ -106,9 +163,26 @@ export default function LadderGamePage() {
             사다리타기 게임 — 가장 재미있게 정하는 법
           </h2>
           <p className="mb-3">
-            사다리타기(다른 말로 사다리게임, ghost leg, amidakuji)는 친구·동료끼리
-            메뉴·당번·당첨자를 정할 때 가장 자주 쓰는 추첨 방식입니다. 오케이툴즈
-            3D 사다리게임은{" "}
+            사다리타기(다른 말로 사다리게임,{" "}
+            <a
+              href="https://en.wikipedia.org/wiki/Ghost_Leg"
+              target="_blank"
+              rel="noopener noreferrer external"
+              className="text-violet-600 underline-offset-2 hover:underline dark:text-violet-400"
+            >
+              Ghost Leg
+            </a>
+            ,{" "}
+            <a
+              href="https://en.wikipedia.org/wiki/Amidakuji"
+              target="_blank"
+              rel="noopener noreferrer external"
+              className="text-violet-600 underline-offset-2 hover:underline dark:text-violet-400"
+            >
+              Amidakuji
+            </a>
+            )는 친구·동료끼리 메뉴·당번·당첨자를 정할 때 가장 자주 쓰는 추첨
+            방식입니다. 오케이툴즈 3D 사다리게임은{" "}
             <strong>
               화려한 3D 보드 + 동물 캐릭터 + 가다가 도망가는 깜짝 이벤트
             </strong>
@@ -120,8 +194,10 @@ export default function LadderGamePage() {
               <strong className="text-gray-800 dark:text-gray-200">
                 참가자 추가
               </strong>{" "}
-              — +/− 버튼으로 2~10명까지 자유롭게 늘리거나 줄일 수 있습니다. 이름은
-              한글·영문 모두 12자까지 입력됩니다.
+              — +/− 버튼이나 빠른 설정(2/4/6/8/10/12/16/20)으로{" "}
+              <strong>2~20명</strong>까지 자유롭게 조정. 이름은{" "}
+              <strong>📋 일괄 입력</strong>으로 쉼표·줄바꿈 텍스트를 한 번에
+              붙여넣을 수 있습니다.
             </li>
             <li>
               <strong className="text-gray-800 dark:text-gray-200">
@@ -132,16 +208,20 @@ export default function LadderGamePage() {
             </li>
             <li>
               <strong className="text-gray-800 dark:text-gray-200">
-                결과 입력
+                결과(상품) 입력
               </strong>{" "}
-              — 직접 입력하거나, 점심메뉴·청소당번·한턱쏘기·음료내기 등 자주 쓰는{" "}
-              <strong>4종 프리셋</strong>으로 한 번에 채워 넣을 수 있습니다.
+              — 직접 입력, <strong>🎁 상품 일괄 입력</strong>으로 한 번에
+              붙여넣기, 또는 점심메뉴·청소당번·한턱쏘기·음료내기{" "}
+              <strong>4종 프리셋</strong> 중 선택. <strong>꽝 1명·나머지 당첨</strong>{" "}
+              자동 채우기 버튼으로 한 번에 세팅할 수도 있습니다.
             </li>
             <li>
               <strong className="text-gray-800 dark:text-gray-200">
                 옵션 선택
               </strong>{" "}
-              — 도망 이벤트, 결과 자동 섞기, 빠른 모드를 켜고 끌 수 있습니다.
+              — 도망 이벤트, 결과 자동 섞기, 동물 중복 허용 등을 켜고 끄고,{" "}
+              <strong>⚡ 속도 슬라이더(0.3x~3x)</strong>로 애니메이션 속도를 자유롭게
+              조절합니다(실행 중에도 실시간 반영).
             </li>
             <li>
               <strong className="text-gray-800 dark:text-gray-200">시작</strong>{" "}
@@ -299,11 +379,18 @@ export default function LadderGamePage() {
               없이 브라우저만 있으면 OK
             </li>
             <li>
-              참가자 <strong>2~10명</strong> 자유 조정, 결과도 자동 동기화
+              참가자 <strong>2~20명</strong> 자유 조정, 결과·인원 자동 동기화
+            </li>
+            <li>
+              <strong>이름·상품 일괄 입력</strong>(쉼표·줄바꿈)으로 단톡방 명단
+              그대로 붙여넣기
             </li>
             <li>
               <strong>4종 프리셋</strong>(점심메뉴·청소당번·한턱쏘기·음료내기)으로
-              1초 시작
+              1초 시작, 꽝 1명·나머지 당첨 자동 세팅
+            </li>
+            <li>
+              <strong>속도 슬라이더 0.3x~3x</strong> — 실행 중에도 실시간 조절
             </li>
             <li>
               가다가 옆 줄로 튀는 <strong>도망 이벤트</strong> — 다른 사다리에는
@@ -314,7 +401,7 @@ export default function LadderGamePage() {
               로그인 불필요
             </li>
             <li>
-              건너뛰기·다시 하기 등 진행 컨트롤, 모바일 반응형 지원
+              건너뛰기·다시 하기 등 진행 컨트롤, 모바일 자동 스케일·3D 회전 완화
             </li>
             <li>
               모션 민감도(<code>prefers-reduced-motion</code>) 자동 감지로 접근성
@@ -347,194 +434,300 @@ export default function LadderGamePage() {
         </div>
       </section>
 
-      {/* ── JSON-LD: BreadcrumbList ── */}
+      {/* ── JSON-LD: 통합 @graph (Game + WebApplication + WebPage + Article + HowTo + FAQPage + BreadcrumbList + Organization) ── */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
+            "@graph": [
+              // 1) Organization (publisher / creator)
               {
-                "@type": "ListItem",
-                position: 1,
-                name: "홈",
-                item: "https://www.oktools.co.kr",
+                "@type": "Organization",
+                "@id": `${SITE}/#organization`,
+                name: "오케이툴즈",
+                alternateName: "OK Tools",
+                url: SITE,
+                logo: {
+                  "@type": "ImageObject",
+                  "@id": `${SITE}/#logo`,
+                  url: `${SITE}/icon-512.png`,
+                  width: 512,
+                  height: 512,
+                  caption: "오케이툴즈 로고",
+                },
+                sameAs: [
+                  "https://www.oktools.co.kr",
+                ],
               },
+              // 2) WebSite (with potentialAction for sitelinks searchbox)
               {
-                "@type": "ListItem",
-                position: 2,
-                name: "운세/재미",
-                item: "https://www.oktools.co.kr/fortune",
+                "@type": "WebSite",
+                "@id": `${SITE}/#website`,
+                url: SITE,
+                name: "오케이툴즈",
+                inLanguage: "ko-KR",
+                publisher: { "@id": `${SITE}/#organization` },
+                description:
+                  "61가지 무료 온라인 도구 — 금융·건강·생활·운세·단위변환·우주 카테고리.",
               },
+              // 3) WebPage
               {
-                "@type": "ListItem",
-                position: 3,
+                "@type": "WebPage",
+                "@id": `${PAGE_URL}#webpage`,
+                url: PAGE_URL,
+                name: "3D 사다리게임 — 동물 캐릭터로 즐기는 화려한 사다리타기",
+                description:
+                  "원숭이·다람쥐·토끼·여우·호랑이·판다 6종 동물이 화려한 3D 사다리를 내려가는 무료 온라인 사다리타기 게임. 참가자 2~20명, 이름·상품 일괄 입력, 도망 이벤트, 속도 슬라이더 지원.",
+                isPartOf: { "@id": `${SITE}/#website` },
+                primaryImageOfPage: { "@id": `${PAGE_URL}#primaryimage` },
+                inLanguage: "ko-KR",
+                datePublished: DATE_PUBLISHED,
+                dateModified: DATE_MODIFIED,
+                breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+                potentialAction: [
+                  {
+                    "@type": "PlayAction",
+                    target: PAGE_URL,
+                    name: "사다리게임 시작",
+                  },
+                ],
+              },
+              // 4) ImageObject (primary OG image)
+              {
+                "@type": "ImageObject",
+                "@id": `${PAGE_URL}#primaryimage`,
+                url: `${PAGE_URL}/opengraph-image`,
+                contentUrl: `${PAGE_URL}/opengraph-image`,
+                width: 1200,
+                height: 630,
+                caption: "3D 사다리게임 — 동물 캐릭터로 즐기는 화려한 사다리타기",
+                inLanguage: "ko-KR",
+              },
+              // 5) BreadcrumbList
+              {
+                "@type": "BreadcrumbList",
+                "@id": `${PAGE_URL}#breadcrumb`,
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "홈", item: SITE },
+                  { "@type": "ListItem", position: 2, name: "운세/재미", item: `${SITE}/fortune` },
+                  { "@type": "ListItem", position: 3, name: "3D 사다리게임" },
+                ],
+              },
+              // 6) Game + WebApplication (multi-typed for both Game richcards and SoftwareApp signals)
+              {
+                "@type": ["Game", "WebApplication", "SoftwareApplication"],
+                "@id": `${PAGE_URL}#game`,
                 name: "3D 사다리게임",
-              },
-            ],
-          }),
-        }}
-      />
-
-      {/* ── JSON-LD: WebApplication ── */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            name: "3D 사다리게임",
-            alternateName: [
-              "동물 사다리타기",
-              "온라인 사다리게임",
-              "Ghost Leg Game Online",
-            ],
-            description:
-              "원숭이·다람쥐 등 6종 동물 캐릭터로 즐기는 무료 3D 사다리타기 게임. 참가자 자유 추가, 도망 이벤트, 결과 자동 섞기 지원.",
-            url: URL,
-            applicationCategory: "GameApplication",
-            operatingSystem: "Any",
-            browserRequirements: "Requires JavaScript",
-            softwareVersion: "1.0",
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "KRW",
-            },
-            inLanguage: "ko-KR",
-            featureList: [
-              "6종 동물 캐릭터 — 원숭이·다람쥐·토끼·여우·호랑이·판다",
-              "참가자 2~10명 자유 추가/제거",
-              "결과 자동 섞기",
-              "도망 이벤트 — 가다가 옆 줄로 점프",
-              "점심메뉴·청소당번·한턱쏘기·음료내기 프리셋",
-              "CSS 3D Transforms 기반 화려한 보드",
-              "100% 브라우저 처리, 무료, 로그인 불필요",
-              "모바일 반응형, 모션 접근성 자동 감지",
-            ],
-            creator: {
-              "@type": "Organization",
-              name: "오케이툴즈",
-              url: "https://www.oktools.co.kr",
-            },
-          }),
-        }}
-      />
-
-      {/* ── JSON-LD: HowTo ── */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HowTo",
-            name: "3D 사다리게임 — 동물 사다리타기 시작하는 법",
-            description:
-              "참가자와 결과를 입력하고 동물을 골라 화려한 3D 사다리를 내려가는 5단계 가이드.",
-            totalTime: "PT1M",
-            tool: [
-              { "@type": "HowToTool", name: "웹 브라우저 (Chrome, Edge, Safari)" },
-            ],
-            step: [
-              {
-                "@type": "HowToStep",
-                position: 1,
-                name: "참가자 추가",
-                text: "+/− 버튼으로 참가자를 2~10명까지 자유롭게 추가하고 이름을 입력합니다.",
-              },
-              {
-                "@type": "HowToStep",
-                position: 2,
-                name: "동물 선택",
-                text: "원숭이·다람쥐·토끼·여우·호랑이·판다 6종 중에서 각 참가자의 캐릭터를 고릅니다.",
-              },
-              {
-                "@type": "HowToStep",
-                position: 3,
-                name: "결과 입력",
-                text: "결과 슬롯에 직접 입력하거나, 점심메뉴·청소당번·한턱쏘기·음료내기 프리셋으로 한 번에 채웁니다.",
-              },
-              {
-                "@type": "HowToStep",
-                position: 4,
-                name: "옵션 선택",
-                text: "도망 이벤트, 결과 자동 섞기, 빠른 모드 등 옵션을 켜거나 끕니다.",
-              },
-              {
-                "@type": "HowToStep",
-                position: 5,
-                name: "시작",
-                text: "▶ 게임 시작 버튼을 누르면 동물들이 3D 사다리를 내려가고, 도착하면 결과 슬롯이 빛나며 컨페티가 터집니다.",
-              },
-            ],
-          }),
-        }}
-      />
-
-      {/* ── JSON-LD: FAQPage ── */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "사다리타기 결과는 어떻게 결정되나요?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "전통적인 사다리타기 알고리즘과 동일합니다. 각 row마다 인접한 두 줄 사이에 가로 발판이 무작위로 놓이고, 동물은 발판을 만나면 옆 줄로 이동합니다. 같은 row에서 발판이 겹치지 않도록 보정해 한쪽 방향으로만 쏠리는 경우를 막습니다.",
+                alternateName: [
+                  "동물 사다리타기",
+                  "온라인 사다리게임",
+                  "Ghost Leg Game Online",
+                  "Amidakuji Online",
+                  "Korean Ladder Game",
+                ],
+                description:
+                  "원숭이·다람쥐·토끼·여우·호랑이·판다 6종 동물 캐릭터로 즐기는 무료 3D 사다리타기 게임. 참가자 2~20명, 이름·상품 일괄 입력, 도망 이벤트, 속도 슬라이더 지원.",
+                url: PAGE_URL,
+                image: { "@id": `${PAGE_URL}#primaryimage` },
+                applicationCategory: "GameApplication",
+                applicationSubCategory: "Casual Game",
+                operatingSystem: "Any (Web)",
+                browserRequirements: "Requires JavaScript, modern web browser",
+                softwareVersion: "1.1",
+                datePublished: DATE_PUBLISHED,
+                dateModified: DATE_MODIFIED,
+                gamePlatform: ["Web Browser", "Mobile Web", "Desktop Web"],
+                genre: ["Casual", "Party", "Random Picker", "Decision Maker"],
+                playMode: ["MultiPlayer", "SinglePlayer"],
+                numberOfPlayers: {
+                  "@type": "QuantitativeValue",
+                  minValue: 2,
+                  maxValue: 20,
                 },
-              },
-              {
-                "@type": "Question",
-                name: "도망 이벤트는 어떻게 작동하나요?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "각 동물마다 약 28% 확률로 게임 도중 무작위 row에서 옆 줄로 점프합니다. 점프 후에는 그 줄에서 사다리 규칙대로 다시 내려갑니다. 옵션에서 끌 수 있으며, 켜둔 경우 결과 발표에서 '도망함' 뱃지로 누가 튀었는지 확인할 수 있습니다.",
+                characterAttribute: ["Monkey", "Squirrel", "Rabbit", "Fox", "Tiger", "Panda"],
+                offers: {
+                  "@type": "Offer",
+                  price: "0",
+                  priceCurrency: "KRW",
+                  availability: "https://schema.org/InStock",
+                  url: PAGE_URL,
                 },
+                inLanguage: ["ko-KR", "en-US"],
+                featureList: [
+                  "6종 동물 캐릭터 — 원숭이·다람쥐·토끼·여우·호랑이·판다",
+                  "참가자 2~20명 자유 추가/제거 + 빠른 설정 버튼",
+                  "이름·상품 일괄 입력 (쉼표·줄바꿈 구분)",
+                  "꽝 1명·나머지 당첨 자동 채우기",
+                  "결과 자동 섞기로 매번 다른 사다리",
+                  "도망 이벤트 — 가다가 옆 줄로 점프 (28% 확률)",
+                  "속도 슬라이더 0.3x ~ 3x (실행 중 실시간 조절)",
+                  "점심메뉴·청소당번·한턱쏘기·음료내기 4종 프리셋",
+                  "CSS 3D Transforms 기반 화려한 보드, 컨페티 효과",
+                  "100% 브라우저 처리, 무료, 로그인 불필요",
+                  "모바일 자동 스케일·3D 회전 완화",
+                  "prefers-reduced-motion 자동 감지로 접근성 배려",
+                ],
+                creator: { "@id": `${SITE}/#organization` },
+                publisher: { "@id": `${SITE}/#organization` },
+                mainEntityOfPage: { "@id": `${PAGE_URL}#webpage` },
               },
+              // 7) Article (the on-page editorial body)
               {
-                "@type": "Question",
-                name: "참가자는 최대 몇 명까지 가능한가요?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "2명부터 10명까지 지원합니다. 모바일에서도 보드가 자동으로 화면 폭에 맞게 축소되어 가로 스크롤 없이 한눈에 확인할 수 있습니다.",
-                },
+                "@type": "Article",
+                "@id": `${PAGE_URL}#article`,
+                headline: "3D 사다리게임 · 동물 사다리타기 가이드",
+                name: "3D 사다리게임 — 동물 캐릭터로 즐기는 화려한 사다리타기 가이드",
+                description:
+                  "온라인 사다리타기 게임의 사용법, 도망 이벤트 동작 원리, 회식·청소·한턱·이벤트 추첨 활용법을 정리한 가이드.",
+                url: PAGE_URL,
+                inLanguage: "ko-KR",
+                isPartOf: { "@id": `${PAGE_URL}#webpage` },
+                mainEntityOfPage: { "@id": `${PAGE_URL}#webpage` },
+                image: { "@id": `${PAGE_URL}#primaryimage` },
+                datePublished: DATE_PUBLISHED,
+                dateModified: DATE_MODIFIED,
+                author: { "@id": `${SITE}/#organization` },
+                publisher: { "@id": `${SITE}/#organization` },
+                articleSection: ["운세/재미", "온라인 게임", "추첨 도구"],
+                keywords:
+                  "사다리타기, 사다리게임, 3D 사다리게임, 동물 사다리, 도망 이벤트, 회식 메뉴, 청소 당번, ghost leg game, amidakuji",
+                wordCount: 1200,
               },
+              // 8) HowTo (how to play)
               {
-                "@type": "Question",
-                name: "결과 자동 섞기는 무슨 옵션인가요?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "게임 시작 시점에 결과 슬롯의 순서를 무작위로 섞어주는 옵션입니다. 같은 입력으로 여러 번 시작해도 매번 다른 결과가 나오게 하고 싶을 때 켭니다. 끄면 입력한 순서 그대로 결과가 나갑니다.",
-                },
+                "@type": "HowTo",
+                "@id": `${PAGE_URL}#howto`,
+                name: "3D 사다리게임 — 동물 사다리타기 시작하는 법",
+                description:
+                  "참가자·결과 입력에서 게임 시작·결과 발표까지, 60초 안에 끝나는 5단계 가이드.",
+                totalTime: "PT1M",
+                inLanguage: "ko-KR",
+                image: { "@id": `${PAGE_URL}#primaryimage` },
+                supply: [
+                  { "@type": "HowToSupply", name: "참가자 이름 목록 (2~20명)" },
+                  { "@type": "HowToSupply", name: "결과·상품 목록" },
+                ],
+                tool: [
+                  { "@type": "HowToTool", name: "웹 브라우저 (Chrome, Edge, Safari, Firefox)" },
+                ],
+                step: [
+                  {
+                    "@type": "HowToStep",
+                    position: 1,
+                    name: "참가자 추가",
+                    text: "빠른 설정 버튼(2/4/6/8/10/12/16/20) 또는 +/− 버튼으로 2~20명까지 조정하고, 📋 이름 일괄 입력에 단톡방 명단을 한 번에 붙여넣기.",
+                    url: `${PAGE_URL}#step-players`,
+                  },
+                  {
+                    "@type": "HowToStep",
+                    position: 2,
+                    name: "동물 선택",
+                    text: "원숭이·다람쥐·토끼·여우·호랑이·판다 6종 중에서 각 참가자의 캐릭터를 고릅니다(중복 허용).",
+                    url: `${PAGE_URL}#step-animals`,
+                  },
+                  {
+                    "@type": "HowToStep",
+                    position: 3,
+                    name: "결과(상품) 입력",
+                    text: "🎁 상품 일괄 입력으로 한 번에 채우거나, 점심메뉴·청소당번·한턱쏘기·음료내기 프리셋, 또는 꽝 1명·나머지 당첨 자동 버튼을 사용합니다.",
+                    url: `${PAGE_URL}#step-results`,
+                  },
+                  {
+                    "@type": "HowToStep",
+                    position: 4,
+                    name: "옵션·속도 조절",
+                    text: "도망 이벤트, 결과 자동 섞기, 동물 중복 허용 등을 토글하고, ⚡ 속도 슬라이더(0.3x~3x)로 애니메이션 속도를 조절합니다.",
+                    url: `${PAGE_URL}#step-options`,
+                  },
+                  {
+                    "@type": "HowToStep",
+                    position: 5,
+                    name: "게임 시작 & 결과 발표",
+                    text: "▶ 게임 시작 버튼을 누르면 동물들이 3D 사다리를 내려가고, 도착하면 결과 슬롯이 글로우로 빛나며 컨페티가 터집니다. 결과 카드에 동물·이름·상품·도망 여부가 한눈에 정리됩니다.",
+                    url: `${PAGE_URL}#step-play`,
+                  },
+                ],
               },
+              // 9) FAQPage
               {
-                "@type": "Question",
-                name: "어떤 상황에서 쓰면 좋나요?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "회식 메뉴 정하기, 청소 당번 정하기, 한턱쏘기, 음료 내기, 이벤트 당첨자 뽑기 등 무작위로 결과를 정해야 하는 모든 상황에 쓸 수 있습니다. 점심메뉴·청소당번 등 4종 프리셋이 내장돼 있어 1초 만에 시작할 수 있습니다.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "결과를 친구와 공유할 수 있나요?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "결과 화면을 그대로 캡처해 단톡방·SNS에 올리면 됩니다. 동물별 결과와 도망 여부가 한눈에 보이는 카드 형태로 정리되어 결과 검증과 인증이 동시에 됩니다.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "회원가입이나 결제가 필요한가요?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "아닙니다. 회원가입·로그인·결제 모두 필요 없이 100% 무료입니다. 모든 처리는 브라우저 내에서 이루어지므로 입력한 이름·결과 텍스트가 서버로 전송되지도 않습니다.",
-                },
+                "@type": "FAQPage",
+                "@id": `${PAGE_URL}#faq`,
+                inLanguage: "ko-KR",
+                mainEntity: [
+                  {
+                    "@type": "Question",
+                    name: "사다리타기 결과는 어떻게 결정되나요?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "전통적인 사다리타기 알고리즘과 동일합니다. 각 row마다 인접한 두 줄 사이에 가로 발판이 무작위로 놓이고, 동물은 발판을 만나면 옆 줄로 이동합니다. 같은 row에서 발판이 겹치지 않도록 보정해 한쪽 방향으로만 쏠리는 경우를 막습니다.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "도망 이벤트는 어떻게 작동하나요?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "각 동물마다 약 28% 확률로 게임 도중 무작위 row에서 옆 줄로 점프합니다. 점프 후에는 그 줄에서 사다리 규칙대로 다시 내려갑니다. 옵션에서 끌 수 있으며, 켜둔 경우 결과 발표에서 '도망함' 뱃지로 누가 튀었는지 확인할 수 있습니다.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "참가자는 최대 몇 명까지 가능한가요?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "2명부터 20명까지 지원합니다. 빠른 설정 버튼으로 한 번에 20명 세팅이 가능하고, 📋 이름 일괄 입력에 단톡방 명단을 통째로 붙여넣어도 됩니다. 모바일에서는 보드가 자동으로 화면 폭에 맞게 축소되어 한눈에 확인할 수 있습니다.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "이름·상품을 한 번에 입력할 수 있나요?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "네. 참가자 영역의 📋 이름 일괄 입력과 결과 영역의 🎁 상품 일괄 입력 버튼을 누르면 textarea가 열립니다. 쉼표(,) 또는 줄바꿈으로 구분된 텍스트를 붙여넣고 적용을 누르면 한 번에 모두 등록됩니다. 입력 개수만큼 참가자·결과 인원이 자동 동기화됩니다.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "애니메이션 속도를 조절할 수 있나요?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "네. 옵션 영역의 ⚡ 속도 슬라이더로 0.3배속(느림)부터 3배속(빠름)까지 자유롭게 조절할 수 있고, 게임 실행 중에도 슬라이더가 노출되어 실시간으로 변경됩니다. 시간이 없을 때는 ⏭ 건너뛰기 버튼으로 결과를 즉시 확인할 수 있습니다.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "결과 자동 섞기는 무슨 옵션인가요?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "게임 시작 시점에 결과 슬롯의 순서를 무작위로 섞어주는 옵션입니다. 같은 입력으로 여러 번 시작해도 매번 다른 결과가 나오게 하고 싶을 때 켭니다. 끄면 입력한 순서 그대로 결과가 나갑니다.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "어떤 상황에서 쓰면 좋나요?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "회식 메뉴 정하기, 청소 당번 정하기, 한턱쏘기, 음료 내기, 이벤트 당첨자 뽑기, 팀 빌딩 게임 등 무작위로 결과를 정해야 하는 모든 상황에 쓸 수 있습니다. 점심메뉴·청소당번 등 4종 프리셋이 내장돼 있어 1초 만에 시작할 수 있습니다.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "결과를 친구와 공유할 수 있나요?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "결과 화면을 그대로 캡처해 단톡방·SNS에 올리면 됩니다. 동물별 결과와 도망 여부가 한눈에 보이는 카드 형태로 정리되어 결과 검증과 인증이 동시에 됩니다.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "회원가입이나 결제가 필요한가요?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "아닙니다. 회원가입·로그인·결제 모두 필요 없이 100% 무료입니다. 모든 처리는 브라우저 내에서 이루어지므로 입력한 이름·결과 텍스트가 서버로 전송되지도 않습니다.",
+                    },
+                  },
+                ],
               },
             ],
           }),
