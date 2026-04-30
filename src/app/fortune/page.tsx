@@ -3,15 +3,15 @@ import Link from "next/link";
 import { getToolsByCategory, getCategoryById } from "@/data/tools";
 
 export const metadata: Metadata = {
-  title: "무료운세 모음 - 타로, 토정비결, MBTI궁합, 꿈해몽",
+  title: "무료운세 모음 - 타로, 토정비결, MBTI궁합, 꿈해몽, 3D 사다리게임",
   description:
-    "무료 타로카드 리딩, 토정비결, MBTI 궁합, 별자리 운세, 혈액형 궁합, 이름 궁합, 꿈해몽까지 한곳에서 무료로 확인하세요.",
-  keywords: ["무료운세", "타로카드", "토정비결", "MBTI궁합", "꿈해몽", "별자리운세", "혈액형궁합", "이름궁합", "띠계산기", "오늘의운세"],
+    "무료 타로카드, 토정비결, MBTI 궁합, 별자리 운세, 혈액형 궁합, 이름 궁합, 꿈해몽, 3D 사다리타기 게임까지 한곳에서 무료로 즐겨보세요.",
+  keywords: ["무료운세", "타로카드", "토정비결", "MBTI궁합", "꿈해몽", "별자리운세", "혈액형궁합", "이름궁합", "띠계산기", "오늘의운세", "사다리타기", "사다리게임"],
   openGraph: {
     url: "/fortune",
-    title: "무료운세 모음 - 타로, 토정비결, MBTI궁합, 꿈해몽",
+    title: "무료운세 모음 - 타로, 토정비결, MBTI궁합, 꿈해몽, 3D 사다리게임",
     description:
-      "무료 타로카드 리딩, 토정비결, MBTI 궁합, 별자리 운세, 혈액형 궁합, 이름 궁합, 꿈해몽까지 한곳에서 무료로 확인하세요.",
+      "무료 타로카드, 토정비결, MBTI 궁합, 별자리 운세, 혈액형 궁합, 이름 궁합, 꿈해몽, 3D 사다리타기 게임까지 한곳에서 무료로 즐겨보세요.",
   },
   alternates: {
     canonical: "/fortune",
@@ -98,7 +98,8 @@ export default function FortunePage() {
               { "@type": "ListItem", "position": 5, "name": "꿈해몽", "url": "https://www.oktools.co.kr/fortune/dream" },
               { "@type": "ListItem", "position": 6, "name": "혈액형 궁합", "url": "https://www.oktools.co.kr/fortune/blood-type" },
               { "@type": "ListItem", "position": 7, "name": "이름 궁합", "url": "https://www.oktools.co.kr/fortune/name-match" },
-              { "@type": "ListItem", "position": 8, "name": "띠 계산기", "url": "https://www.oktools.co.kr/fortune/zodiac-animal" }
+              { "@type": "ListItem", "position": 8, "name": "띠 계산기", "url": "https://www.oktools.co.kr/fortune/zodiac-animal" },
+              { "@type": "ListItem", "position": 9, "name": "3D 사다리게임", "url": "https://www.oktools.co.kr/fortune/ladder-game" }
             ]
           }
         }) }}
