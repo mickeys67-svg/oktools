@@ -12,7 +12,11 @@ export const metadata: Metadata = {
     description: "대출이자, 연봉실수령액, BMI, 전역일, 4대보험, 전월세전환율, 음주측정기, 혈액형궁합 등 61가지 무료 계산기. 설치 없이 바로 사용.",
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://www.oktools.co.kr/",
+    languages: {
+      "ko-KR": "https://www.oktools.co.kr/",
+      "x-default": "https://www.oktools.co.kr/",
+    },
   },
 };
 
