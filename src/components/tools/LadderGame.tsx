@@ -200,11 +200,11 @@ function shuffle<T>(arr: T[]): T[] {
 // Component (build: 2026-05-01-v2)
 // ─────────────────────────────────────────────────────────────────────────────
 
-const COL_W_DESKTOP = 64;
-const COL_W_MOBILE = 48;
-const ROW_H = 30;
-const TOP_PAD = 80;
-const BOT_PAD = 80;
+const COL_W_DESKTOP = 96;
+const COL_W_MOBILE = 60;
+const ROW_H = 38;
+const TOP_PAD = 92;
+const BOT_PAD = 92;
 
 export default function LadderGame() {
   const [mounted, setMounted] = useState(false);
@@ -255,10 +255,10 @@ export default function LadderGame() {
   const dense = players.length > 12;
   const colW = isMobile
     ? dense
-      ? 38
+      ? 48
       : COL_W_MOBILE
     : dense
-      ? 52
+      ? 76
       : COL_W_DESKTOP;
   useEffect(() => {
     if (!mounted) return;
@@ -927,24 +927,17 @@ export default function LadderGame() {
             </div>
           )}
 
-          {/* 3D Board */}
-          <div
-            className="relative overflow-x-auto"
-            style={{ perspective: "1400px" }}
-          >
+          {/* Board — 정면 뷰 (3D 회전 제거, depth는 발판/러너 translateZ로 표현) */}
+          <div className="relative overflow-x-auto">
             <div
               className="relative mx-auto"
               style={{
                 width: boardWidth,
                 height: boardHeight,
                 transformStyle: "preserve-3d",
-                transform: reducedMotion
-                  ? "none"
-                  : isMobile
-                    ? `rotateX(8deg) scale(${boardScale})`
-                    : `rotateX(14deg) rotateY(-4deg) scale(${boardScale})`,
+                transform: `scale(${boardScale})`,
                 transformOrigin: "top center",
-                transition: "transform 0.4s ease",
+                transition: "transform 0.3s ease",
               }}
             >
               {/* Background board */}
@@ -978,7 +971,7 @@ export default function LadderGame() {
                       }}
                     >
                       <div
-                        className="flex h-10 w-10 items-center justify-center rounded-2xl text-2xl shadow-md"
+                        className="flex h-12 w-12 items-center justify-center rounded-2xl text-3xl shadow-md sm:h-14 sm:w-14 sm:text-4xl"
                         style={{
                           background: `linear-gradient(135deg, ${animal.color}, ${p.color})`,
                           boxShadow: `0 4px 14px -2px ${p.color}66, inset 0 -2px 4px rgba(0,0,0,0.1)`,
@@ -1058,14 +1051,14 @@ export default function LadderGame() {
                 );
                 const colIdx = rp.cols[safeRow];
                 if (typeof colIdx !== "number" || Number.isNaN(colIdx)) return null;
-                const left = colIdx * colW + colW / 2 - 14;
+                const left = colIdx * colW + colW / 2 - 18;
                 const top = TOP_PAD + safeRow * ROW_H - 14;
                 const isEscaping =
                   rp.escapeAt !== undefined && safeRow === rp.escapeAt + 1;
                 return (
                   <div
                     key={`runner-${player.id}`}
-                    className="absolute flex h-7 w-7 items-center justify-center rounded-full text-lg"
+                    className="absolute flex h-9 w-9 items-center justify-center rounded-full text-2xl"
                     style={{
                       left,
                       top,
@@ -1135,16 +1128,16 @@ export default function LadderGame() {
                     >
                       <div
                         className={
-                          "flex min-h-[34px] w-[58px] items-center justify-center rounded-xl border-2 px-1 py-1 text-center text-[10px] font-bold leading-tight " +
+                          "flex min-h-[44px] items-center justify-center rounded-xl border-2 px-2 py-1.5 text-center text-xs font-bold leading-tight sm:text-sm " +
                           (isWinningSlot
                             ? "animate-pulse border-amber-400 bg-amber-100 text-amber-900 dark:bg-amber-900/40 dark:text-amber-200"
                             : "border-violet-300 bg-white text-gray-700 dark:border-violet-700 dark:bg-gray-900 dark:text-gray-200")
                         }
                         style={{
+                          width: colW - 8,
                           boxShadow: isWinningSlot
-                            ? "0 0 22px rgba(251, 191, 36, 0.85)"
-                            : "0 4px 10px rgba(139, 92, 246, 0.18)",
-                          transform: "translateZ(8px)",
+                            ? "0 0 26px rgba(251, 191, 36, 0.85)"
+                            : "0 4px 12px rgba(139, 92, 246, 0.2)",
                         }}
                       >
                         {r.text || "—"}

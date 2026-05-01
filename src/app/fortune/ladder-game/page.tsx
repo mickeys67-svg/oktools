@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LadderGame from "@/components/tools/LadderGame";
-import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
 const SITE = "https://www.oktools.co.kr";
 const PAGE_URL = `${SITE}/fortune/ladder-game`;
@@ -127,7 +126,7 @@ export const metadata: Metadata = {
 
 export default function LadderGamePage() {
   return (
-    <div className="mx-auto max-w-[720px] px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-[1100px] px-4 py-8 sm:px-6 sm:py-12">
       <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400">
         <Link href="/" className="hover:text-primary-600">
           홈
@@ -154,7 +153,6 @@ export default function LadderGamePage() {
       </p>
 
       <LadderGame />
-      <ResultAd />
 
       {/* ── SEO 본문 ─────────────────────────────────────────────── */}
       <section className="mt-10 space-y-8 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
@@ -264,8 +262,6 @@ export default function LadderGamePage() {
             이벤트가 한 번 발동되면 분위기가 폭발적으로 달아오릅니다.
           </p>
         </div>
-
-        <InArticleAd />
 
         <div>
           <h2 className="mb-3 text-lg font-bold text-gray-900 dark:text-gray-100">
