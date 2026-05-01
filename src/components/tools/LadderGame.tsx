@@ -224,7 +224,7 @@ export default function LadderGame() {
   const [results, setResults] = useState<ResultItem[]>(() =>
     DEFAULT_RESULTS.map((text) => ({ id: uid(), text }))
   );
-  const [enableEscape, setEnableEscape] = useState(true);
+  const [enableEscape, setEnableEscape] = useState(false);
   const [autoShuffle, setAutoShuffle] = useState(true);
   const [speed, setSpeed] = useState(1); // 0.3x ~ 3x
   const [allowDuplicateAnimals, setAllowDuplicateAnimals] = useState(true);
@@ -308,6 +308,36 @@ export default function LadderGame() {
     setTimeout(tryScroll, 120);
     setTimeout(tryScroll, 320);
   };
+
+  // ── 모바일: 게임 진행 중 현재 row가 화면 안에 보이도록 자동 스크롤
+  const lastFollowRowRef = useRef(-99);
+  useEffect(() => {
+    if (!mounted) return;
+    if (!isMobile || phase !== "running" || !ladder || reducedMotion) return;
+    // 너무 잦은 스크롤 방지 — 2 row 단위로만 보정
+    if (Math.abs(currentRow - lastFollowRowRef.current) < 2) return;
+    lastFollowRowRef.current = currentRow;
+    const wrap = containerRef.current;
+    if (!wrap) return;
+    const board = wrap.querySelector<HTMLDivElement>("[data-lg-board]");
+    if (!board) return;
+    const boardRect = board.getBoundingClientRect();
+    const safeRow = Math.min(currentRow, ladder.rows);
+    const runnerLocalY = TOP_PAD + safeRow * ROW_H + 14;
+    const runnerViewportY = boardRect.top + runnerLocalY * boardScale;
+    const targetY = window.innerHeight * 0.45; // 화면 살짝 위쪽
+    const delta = runnerViewportY - targetY;
+    if (Math.abs(delta) < 40) return;
+    window.scrollBy({ top: delta, behavior: "smooth" });
+  }, [
+    currentRow,
+    phase,
+    isMobile,
+    ladder,
+    boardScale,
+    mounted,
+    reducedMotion,
+  ]);
 
   // ── keep results length synced when player count changes
   useEffect(() => {
@@ -857,8 +887,8 @@ export default function LadderGame() {
               <Toggle
                 checked={enableEscape}
                 onChange={setEnableEscape}
-                label="🏃 도망 이벤트"
-                hint="가다가 옆 줄로 도망갑니다"
+                label="🏃 도망 이벤트 (선택)"
+                hint="켜면 28% 확률로 가다가 옆 줄로 점프"
               />
               <Toggle
                 checked={autoShuffle}
@@ -949,6 +979,7 @@ export default function LadderGame() {
           {/* Board — 정면 뷰 (3D 회전 제거, depth는 발판/러너 translateZ로 표현) */}
           <div className="relative overflow-x-auto">
             <div
+              data-lg-board
               className="relative mx-auto"
               style={{
                 width: boardWidth,
