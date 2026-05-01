@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { tools, categories } from "@/data/tools";
 
+const SITE = "https://www.oktools.co.kr";
+
 export const metadata: Metadata = {
   title: "오케이툴즈 소개",
   description:
@@ -72,6 +74,37 @@ export default function AboutPage() {
           페이지를 통해 알려주세요.
         </p>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "AboutPage",
+                "@id": `${SITE}/about#webpage`,
+                url: `${SITE}/about`,
+                name: "오케이툴즈 소개",
+                description:
+                  "오케이툴즈 - 61가지 무료 온라인 도구의 소개·운영 철학·카테고리 안내.",
+                isPartOf: { "@id": `${SITE}/#website` },
+                about: { "@id": `${SITE}/#organization` },
+                inLanguage: "ko-KR",
+                breadcrumb: { "@id": `${SITE}/about#breadcrumb` },
+              },
+              {
+                "@type": "BreadcrumbList",
+                "@id": `${SITE}/about#breadcrumb`,
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "홈", item: SITE },
+                  { "@type": "ListItem", position: 2, name: "소개" },
+                ],
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+const SITE = "https://www.oktools.co.kr";
+
 export const metadata: Metadata = {
   title: "문의하기",
   description: "오케이툴즈 문의하기 - 서비스 관련 문의, 건의사항, 오류 신고",
@@ -67,6 +69,47 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "ContactPage",
+                "@id": `${SITE}/contact#webpage`,
+                url: `${SITE}/contact`,
+                name: "문의하기",
+                description:
+                  "오케이툴즈 서비스 문의·건의사항·오류 신고 안내 페이지.",
+                isPartOf: { "@id": `${SITE}/#website` },
+                inLanguage: "ko-KR",
+                breadcrumb: { "@id": `${SITE}/contact#breadcrumb` },
+                mainEntity: {
+                  "@type": "Organization",
+                  "@id": `${SITE}/#organization`,
+                  contactPoint: {
+                    "@type": "ContactPoint",
+                    contactType: "customer support",
+                    email: "mickeys67@gmail.com",
+                    availableLanguage: ["Korean", "ko-KR"],
+                    areaServed: "KR",
+                  },
+                },
+              },
+              {
+                "@type": "BreadcrumbList",
+                "@id": `${SITE}/contact#breadcrumb`,
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "홈", item: SITE },
+                  { "@type": "ListItem", position: 2, name: "문의하기" },
+                ],
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }

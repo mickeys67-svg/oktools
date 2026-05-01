@@ -39,7 +39,10 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: SITE_URL,
-    languages: { "ko-KR": SITE_URL },
+    languages: {
+      "ko-KR": SITE_URL,
+      "x-default": SITE_URL,
+    },
   },
   openGraph: {
     type: "website",
@@ -176,16 +179,36 @@ export default function RootLayout({
                   "@type": "Organization",
                   "@id": `${SITE_URL}/#organization`,
                   name: "오케이툴즈",
+                  alternateName: ["OK Tools", "오케이 툴즈"],
                   url: SITE_URL,
-                  logo: `${SITE_URL}/opengraph-image`,
+                  logo: {
+                    "@type": "ImageObject",
+                    "@id": `${SITE_URL}/#logo`,
+                    url: `${SITE_URL}/icon-512.png`,
+                    width: 512,
+                    height: 512,
+                    caption: "오케이툴즈 로고",
+                  },
+                  sameAs: [SITE_URL],
                 },
                 {
                   "@type": "WebSite",
                   "@id": `${SITE_URL}/#website`,
                   name: "오케이툴즈",
+                  alternateName: "OK Tools",
                   url: SITE_URL,
                   publisher: { "@id": `${SITE_URL}/#organization` },
                   inLanguage: "ko-KR",
+                  description:
+                    "61가지 무료 온라인 도구 — 금융·건강·생활·운세·단위변환·우주 카테고리.",
+                  potentialAction: {
+                    "@type": "SearchAction",
+                    target: {
+                      "@type": "EntryPoint",
+                      urlTemplate: `${SITE_URL}/?q={search_term_string}`,
+                    },
+                    "query-input": "required name=search_term_string",
+                  },
                 },
               ],
             }),

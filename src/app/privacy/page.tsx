@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+const SITE = "https://www.oktools.co.kr";
+
 export const metadata: Metadata = {
   title: "개인정보 처리방침",
   description: "오케이툴즈 개인정보 처리방침 - 수집 정보, 쿠키, 제3자 서비스 안내",
@@ -93,6 +95,39 @@ export default function PrivacyPage() {
           페이지를 통해 연락해 주세요.
         </p>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebPage",
+                "@id": `${SITE}/privacy#webpage`,
+                url: `${SITE}/privacy`,
+                name: "개인정보 처리방침",
+                description:
+                  "오케이툴즈가 수집·처리하는 정보, 제3자 서비스(Analytics·AdSense), 쿠키, 데이터 보호에 대한 안내.",
+                isPartOf: { "@id": `${SITE}/#website` },
+                inLanguage: "ko-KR",
+                datePublished: "2026-04-01",
+                dateModified: "2026-04-30",
+                publisher: { "@id": `${SITE}/#organization` },
+                breadcrumb: { "@id": `${SITE}/privacy#breadcrumb` },
+              },
+              {
+                "@type": "BreadcrumbList",
+                "@id": `${SITE}/privacy#breadcrumb`,
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "홈", item: SITE },
+                  { "@type": "ListItem", position: 2, name: "개인정보 처리방침" },
+                ],
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
