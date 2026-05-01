@@ -292,6 +292,23 @@ export default function LadderGame() {
     return () => mq.removeEventListener("change", handler);
   }, [mounted]);
 
+  // ── 게임 시작 시 보드를 화면 상단으로 스크롤 (scroll-margin-top으로 16px 여백)
+  const scrollBoardIntoView = () => {
+    const tryScroll = () => {
+      const el = containerRef.current;
+      if (!el || el.getBoundingClientRect().height < 50) return;
+      el.scrollIntoView({
+        behavior: reducedMotion ? "auto" : "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    };
+    // setup unmount → running mount 후 레이아웃 안정 시점이 가변적이라 다단계 시도
+    requestAnimationFrame(() => requestAnimationFrame(tryScroll));
+    setTimeout(tryScroll, 120);
+    setTimeout(tryScroll, 320);
+  };
+
   // ── keep results length synced when player count changes
   useEffect(() => {
     setResults((prev) => {
@@ -519,6 +536,7 @@ export default function LadderGame() {
     setEscapeBubbles([]);
     setCurrentRow(0);
     setPhase("running");
+    scrollBoardIntoView();
   };
 
   const resetToSetup = () => {
@@ -543,6 +561,7 @@ export default function LadderGame() {
     setCurrentRow(0);
     setPhase("running");
     setConfetti(false);
+    scrollBoardIntoView();
   };
 
   const skipToEnd = () => {
@@ -871,7 +890,7 @@ export default function LadderGame() {
 
       {/* ── Board (running / done) ──────────────────────────────────────── */}
       {(phase === "running" || phase === "done") && ladder && runnerPaths && shuffledResults && (
-        <div ref={containerRef} className="space-y-4">
+        <div ref={containerRef} className="space-y-4 scroll-mt-4">
           {/* Status bar */}
           <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl bg-gradient-to-r from-violet-100 to-fuchsia-100 px-3 py-2 dark:from-violet-950/40 dark:to-fuchsia-950/40 sm:px-4">
             <span className="text-sm font-bold text-gray-800 dark:text-gray-100">
