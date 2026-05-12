@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
-import { auth } from "@/lib/auth";
+import { auth, isAdminSession } from "@/lib/auth";
 import { approvePost, deletePost } from "@/lib/board-db";
 
 export async function POST(_req: Request, { params }: { params: Promise<{ id: string }> }) {
   const session = await auth();
-  if (!(session as unknown as Record<string, unknown>)?.isAdmin) {
+  if (!isAdminSession(session)) {
     return NextResponse.json({ error: "관리자 권한이 필요합니다." }, { status: 403 });
   }
 
@@ -18,7 +18,7 @@ export async function POST(_req: Request, { params }: { params: Promise<{ id: st
 
 export async function DELETE(_req: Request, { params }: { params: Promise<{ id: string }> }) {
   const session = await auth();
-  if (!(session as unknown as Record<string, unknown>)?.isAdmin) {
+  if (!isAdminSession(session)) {
     return NextResponse.json({ error: "관리자 권한이 필요합니다." }, { status: 403 });
   }
 

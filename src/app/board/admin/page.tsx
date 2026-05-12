@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { auth } from "@/lib/auth";
+import { auth, isAdminSession } from "@/lib/auth";
 import { getPendingPosts } from "@/lib/board-db";
 import AdminPanel from "@/components/board/AdminPanel";
 
@@ -14,7 +14,7 @@ export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
   const session = await auth();
-  const isAdmin = !!(session as unknown as Record<string, unknown>)?.isAdmin;
+  const isAdmin = isAdminSession(session);
 
   if (!session) {
     redirect("/api/auth/signin?callbackUrl=/board/admin");

@@ -1,14 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
-import { auth } from "@/lib/auth";
+import { auth, isAdminSession } from "@/lib/auth";
 import { getBannedWords, addBannedWord, removeBannedWord } from "@/lib/word-filter";
 
-function isAdmin(session: unknown): boolean {
-  return !!(session as Record<string, unknown>)?.isAdmin;
+async function readWord(req: NextRequest): Promise<string | null> {
+  try {
+    const body = (await req.json()) as { word?: string };
+    return body.word?.trim() ?? null;
+  } catch {
+    return null;
+  }
 }
 
 export async function GET() {
   const session = await auth();
-  if (!isAdmin(session)) {
+  if (!isAdminSession(session)) {
     return NextResponse.json({ error: "관리자 권한이 필요합니다." }, { status: 403 });
   }
   return NextResponse.json({ words: getBannedWords() });
@@ -16,12 +21,12 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   const session = await auth();
-  if (!isAdmin(session)) {
+  if (!isAdminSession(session)) {
     return NextResponse.json({ error: "관리자 권한이 필요합니다." }, { status: 403 });
   }
 
-  const { word } = (await req.json()) as { word?: string };
-  if (!word?.trim()) {
+  const word = await readWord(req);
+  if (!word) {
     return NextResponse.json({ error: "단어를 입력해주세요." }, { status: 400 });
   }
 
@@ -34,12 +39,12 @@ export async function POST(req: NextRequest) {
 
 export async function DELETE(req: NextRequest) {
   const session = await auth();
-  if (!isAdmin(session)) {
+  if (!isAdminSession(session)) {
     return NextResponse.json({ error: "관리자 권한이 필요합니다." }, { status: 403 });
   }
 
-  const { word } = (await req.json()) as { word?: string };
-  if (!word?.trim()) {
+  const word = await readWord(req);
+  if (!word) {
     return NextResponse.json({ error: "단어를 입력해주세요." }, { status: 400 });
   }
 

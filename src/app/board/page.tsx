@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllPosts } from "@/lib/board-db";
-import { auth } from "@/lib/auth";
+import { getPinnedPosts, getRegularPosts } from "@/lib/board-db";
+import { auth, isAdminSession } from "@/lib/auth";
 import PostForm from "@/components/board/PostForm";
 import AuthButton from "@/components/board/AuthButton";
 
@@ -14,9 +14,10 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function BoardPage() {
-  const posts = getAllPosts(false);
+  const pinnedPosts = getPinnedPosts();
+  const posts = getRegularPosts();
   const session = await auth();
-  const isAdmin = !!(session as unknown as Record<string, unknown>)?.isAdmin;
+  const isAdmin = isAdminSession(session);
 
   return (
     <div className="mx-auto max-w-[720px] px-4 py-8 sm:px-6 sm:py-12">
@@ -61,6 +62,34 @@ export default async function BoardPage() {
             전체 화면으로 글쓰기 &rarr;
           </Link>
         </div>
+      )}
+
+      {/* Pinned (announcements) */}
+      {pinnedPosts.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 flex items-center gap-2 text-sm font-bold text-amber-700 dark:text-amber-400">
+            <span>📌</span>
+            <span>공지사항</span>
+          </h2>
+          <div className="grid gap-2">
+            {pinnedPosts.map((post) => (
+              <Link
+                key={post.id}
+                href={`/board/${post.id}`}
+                className="group rounded-xl border border-amber-200 bg-amber-50/50 p-4 transition-all hover:-translate-y-0.5 hover:border-amber-300 hover:shadow-md dark:border-amber-900/50 dark:bg-amber-950/20 dark:hover:border-amber-700"
+              >
+                <h3 className="mb-1 font-semibold text-amber-900 group-hover:text-amber-700 dark:text-amber-200">
+                  {post.title}
+                </h3>
+                <div className="flex items-center gap-3 text-xs text-amber-700/80 dark:text-amber-400/80">
+                  <span>{post.author}</span>
+                  <span>{new Date(post.createdAt).toLocaleDateString("ko-KR")}</span>
+                  <span className="ml-auto">댓글 {post.comments.length}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
       )}
 
       {/* Post list */}

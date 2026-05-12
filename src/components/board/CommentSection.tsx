@@ -19,7 +19,8 @@ export default function CommentSection({ postId, comments }: Props) {
   const [message, setMessage] = useState("");
   const [flaggedWords, setFlaggedWords] = useState<string[]>([]);
 
-  const isAdmin = !!(session as unknown as Record<string, unknown>)?.isAdmin;
+  const isAdmin = !!(session as unknown as { isAdmin?: boolean } | null)?.isAdmin;
+  const myEmail = session?.user?.email ?? null;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -97,7 +98,7 @@ export default function CommentSection({ postId, comments }: Props) {
                     })}
                   </span>
                 </div>
-                {isAdmin && (
+                {(isAdmin || (myEmail && comment.authorEmail === myEmail)) && (
                   <button
                     onClick={() => handleDelete(comment.id)}
                     disabled={deleting[comment.id]}

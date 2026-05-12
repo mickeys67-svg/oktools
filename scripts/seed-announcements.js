@@ -174,6 +174,7 @@ function main() {
       authorEmail: ann.authorEmail,
       createdAt: new Date(Date.now() - Math.random() * 86400000).toISOString(),
       approved: ann.approved,
+      pinned: true,
       comments: [],
     };
     db.posts.push(post);

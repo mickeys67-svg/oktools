@@ -88,6 +88,14 @@ export const metadata: Metadata = {
     siteName: "오케이툴즈",
     locale: "ko_KR",
     alternateLocale: ["en_US", "ja_JP"],
+    images: [
+      {
+        url: `${PAGE_URL}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: "3D 사다리게임 — 동물 캐릭터로 즐기는 화려한 사다리타기",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -96,6 +104,7 @@ export const metadata: Metadata = {
     title: "3D 사다리게임 — 동물 캐릭터로 즐기는 화려한 사다리타기",
     description:
       "원숭이·다람쥐 등 6종 동물이 3D 사다리를 내려가는 무료 게임. 도망 이벤트·일괄 입력·속도 조절 등 재미 요소 가득.",
+    images: [`${PAGE_URL}/opengraph-image`],
   },
   alternates: {
     canonical: PAGE_URL,

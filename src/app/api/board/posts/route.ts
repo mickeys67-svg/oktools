@@ -14,11 +14,21 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "로그인이 필요합니다." }, { status: 401 });
   }
 
-  const body = await req.json();
-  const { title, content } = body as { title?: string; content?: string };
+  let body: { title?: string; content?: string };
+  try {
+    body = (await req.json()) as { title?: string; content?: string };
+  } catch {
+    return NextResponse.json({ error: "잘못된 요청 형식입니다." }, { status: 400 });
+  }
+  const { title, content } = body;
 
   if (!title?.trim() || !content?.trim()) {
     return NextResponse.json({ error: "제목과 내용을 입력해주세요." }, { status: 400 });
+  }
+
+  // 길이 제한 — 비정상 요청 차단
+  if (title.length > 200 || content.length > 20000) {
+    return NextResponse.json({ error: "제목 또는 내용이 너무 깁니다." }, { status: 413 });
   }
 
   const combined = `${title} ${content}`;
