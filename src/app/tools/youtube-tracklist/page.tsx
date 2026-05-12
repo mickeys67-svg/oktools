@@ -3,6 +3,9 @@ import Link from "next/link";
 import YoutubeTracklist from "@/components/tools/YoutubeTracklist";
 import { ResultAd, InArticleAd } from "@/components/ui/ToolPageAds";
 
+const SITE = "https://www.oktools.co.kr";
+const PAGE_URL = `${SITE}/tools/youtube-tracklist`;
+
 export const metadata: Metadata = {
   title: "유튜브 타임스탬프 생성기 - 트랙리스트 자동 만들기 | YouTube 챕터 생성",
   description:
@@ -37,22 +40,31 @@ export const metadata: Metadata = {
     "auto chapter generator",
   ],
   openGraph: {
-    url: "/tools/youtube-tracklist",
+    url: PAGE_URL,
     title: "유튜브 타임스탬프 생성기 - 트랙리스트 자동 만들기 | YouTube 챕터",
     description:
       "유튜브 타임스탬프를 자동으로 만들어주는 무료 도구. 음악 폴더 선택만으로 트랙리스트 챕터를 즉시 생성. 무음 구간 감지, 파형 시각화 지원.",
     type: "website",
     siteName: "오케이툴즈",
     locale: "ko_KR",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "유튜브 타임스탬프 생성기",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "유튜브 타임스탬프 생성기 - 트랙리스트 자동 만들기",
     description:
       "유튜브 타임스탬프를 자동으로 만들어주는 무료 도구. 음악 폴더 선택만으로 챕터를 즉시 생성합니다.",
+    images: ["/opengraph-image"],
   },
   alternates: {
-    canonical: "/tools/youtube-tracklist",
+    canonical: PAGE_URL,
   },
   robots: {
     index: true,

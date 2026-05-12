@@ -12,6 +12,7 @@ export interface Post {
   createdAt: string;
   approved: boolean;
   rejected?: boolean;
+  pinned?: boolean;
   flaggedWords?: string[];
   comments: Comment[];
 }
@@ -40,8 +41,15 @@ function readDB(): DB {
   if (!fs.existsSync(DB_PATH)) {
     return { posts: [] };
   }
-  const raw = fs.readFileSync(DB_PATH, "utf-8");
-  return JSON.parse(raw) as DB;
+  try {
+    const raw = fs.readFileSync(DB_PATH, "utf-8");
+    if (!raw.trim()) return { posts: [] };
+    const parsed = JSON.parse(raw) as Partial<DB>;
+    return { posts: Array.isArray(parsed?.posts) ? parsed.posts : [] };
+  } catch (err) {
+    console.error("[board-db] failed to parse board.json:", err);
+    return { posts: [] };
+  }
 }
 
 function writeDB(db: DB) {
@@ -56,7 +64,25 @@ function writeDB(db: DB) {
 export function getAllPosts(includeUnapproved = false): Post[] {
   const db = readDB();
   const posts = includeUnapproved ? db.posts : db.posts.filter((p) => p.approved);
-  return posts.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+  // 공지(pinned) 우선, 그 다음 최신순
+  return posts.sort((a, b) => {
+    if (!!a.pinned !== !!b.pinned) return a.pinned ? -1 : 1;
+    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+  });
+}
+
+export function getPinnedPosts(): Post[] {
+  const db = readDB();
+  return db.posts
+    .filter((p) => p.approved && p.pinned)
+    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+}
+
+export function getRegularPosts(): Post[] {
+  const db = readDB();
+  return db.posts
+    .filter((p) => p.approved && !p.pinned)
+    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 }
 
 export function getPostById(id: string): Post | undefined {

@@ -10,10 +10,22 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const post = getPostById(id);
-  if (!post || !post.approved) return { title: "게시글을 찾을 수 없습니다" };
+  if (!post || !post.approved) {
+    return {
+      title: "게시글을 찾을 수 없습니다",
+      robots: { index: false, follow: false },
+    };
+  }
   return {
     title: post.title,
     description: post.content.slice(0, 160),
+    alternates: { canonical: `/board/${post.id}` },
+    openGraph: {
+      title: post.title,
+      description: post.content.slice(0, 160),
+      url: `/board/${post.id}`,
+      type: "article",
+    },
   };
 }
 

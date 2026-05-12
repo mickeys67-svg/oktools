@@ -10,11 +10,20 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   }
 
   const { id } = await params;
-  const body = await req.json();
-  const { content } = body as { content?: string };
+  let body: { content?: string };
+  try {
+    body = (await req.json()) as { content?: string };
+  } catch {
+    return NextResponse.json({ error: "잘못된 요청 형식입니다." }, { status: 400 });
+  }
+  const { content } = body;
 
   if (!content?.trim()) {
     return NextResponse.json({ error: "댓글 내용을 입력해주세요." }, { status: 400 });
+  }
+
+  if (content.length > 2000) {
+    return NextResponse.json({ error: "댓글이 너무 깁니다 (2000자 이하)." }, { status: 413 });
   }
 
   const flagged = checkContent(content);
