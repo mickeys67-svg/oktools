@@ -358,6 +358,14 @@ export const tools: Tool[] = [
     path: "/tools/youtube-tracklist",
     icon: "ListMusic",
   },
+  {
+    id: "paper-size",
+    name: "종이 사이즈 변환기",
+    description: "전지·국판·A4·ANSI·ARCH 60+ 규격 + 연(連)·평량 종이 무게 계산",
+    category: "tools",
+    path: "/tools/paper-size",
+    icon: "FileText",
+  },
 
   // ─── Fortune ──────────────────────────────────────────────────────
   {

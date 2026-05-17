@@ -7,12 +7,12 @@ const SITE = "https://www.oktools.co.kr";
 export const metadata: Metadata = {
   title: "오케이툴즈 소개",
   description:
-    "오케이툴즈 - 61가지 무료 온라인 도구. 금융, 건강, 생활, 운세, 단위변환, 우주 카테고리의 계산기와 변환기를 무료로 이용하세요.",
+    "오케이툴즈 - 62가지 무료 온라인 도구. 금융, 건강, 생활, 운세, 단위변환, 우주 카테고리의 계산기와 변환기를 무료로 이용하세요.",
   openGraph: {
     url: "/about",
     title: "오케이툴즈 소개",
     description:
-      "오케이툴즈 - 61가지 무료 온라인 도구. 금융, 건강, 생활, 운세, 단위변환, 우주 카테고리의 계산기와 변환기를 무료로 이용하세요.",
+      "오케이툴즈 - 62가지 무료 온라인 도구. 금융, 건강, 생활, 운세, 단위변환, 우주 카테고리의 계산기와 변환기를 무료로 이용하세요.",
   },
   alternates: { canonical: "/about" },
 };
@@ -87,7 +87,7 @@ export default function AboutPage() {
                 url: `${SITE}/about`,
                 name: "오케이툴즈 소개",
                 description:
-                  "오케이툴즈 - 61가지 무료 온라인 도구의 소개·운영 철학·카테고리 안내.",
+                  "오케이툴즈 - 62가지 무료 온라인 도구의 소개·운영 철학·카테고리 안내.",
                 isPartOf: { "@id": `${SITE}/#website` },
                 about: { "@id": `${SITE}/#organization` },
                 inLanguage: "ko-KR",
