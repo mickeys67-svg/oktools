@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "오케이툴즈 - 61가지 무료 온라인 도구";
+export const alt = "오케이툴즈 - 62가지 무료 온라인 도구";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -55,7 +55,7 @@ export default async function Image() {
             display: "flex",
           }}
         >
-          61가지 무료 온라인 도구
+          62가지 무료 온라인 도구
         </div>
         <div
           style={{ display: "flex", gap: 16, fontSize: 22, opacity: 0.8 }}

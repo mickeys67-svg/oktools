@@ -474,7 +474,7 @@ export default function LadderGamePage() {
                 inLanguage: "ko-KR",
                 publisher: { "@id": `${SITE}/#organization` },
                 description:
-                  "61가지 무료 온라인 도구 — 금융·건강·생활·운세·단위변환·우주 카테고리.",
+                  "62가지 무료 온라인 도구 — 금융·건강·생활·운세·단위변환·우주 카테고리.",
               },
               // 3) WebPage
               {
